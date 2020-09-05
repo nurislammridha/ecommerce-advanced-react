@@ -60,7 +60,7 @@ const HomeFlashSell = ({ router }, props) => {
     <>
       <Card className="sliderCard">
         <div className="sliderCard-header">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row flashSellButtonArea">
               <div className="col-lg-4">
                 <div className="flashtitle">

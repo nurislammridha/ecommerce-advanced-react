@@ -20,6 +20,8 @@ export default function Home(props) {
         <img src="/images/slider/slide1.png" />
         <HomeBanner />
         <HomeFlashSell />
+        <HomeFlashSell />
+        <HomeFlashSell />
         <HomeBrand />
         <HomeStroe />
         <HomeDoubleBanner />
