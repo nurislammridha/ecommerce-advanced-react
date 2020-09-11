@@ -56,7 +56,6 @@ const Header = ({ router }, props) => {
                 </div>
                 <div>
                   <FaBell className="header-carticon" />
-                  {/* <FaCartArrowDown className="header-carticon" /> */}
                   <span className="badge counter">
                     <span className="count">0</span>
                   </span>
