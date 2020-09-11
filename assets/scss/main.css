@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,600;1,700&display=swap');
 
-@import url("../scss/css-restcode.css");
-@import url("../../node_modules/slick-carousel/slick/slick.css");
-@import url("../../node_modules/slick-carousel/slick/slick-theme.css");
+@import url('../scss/css-restcode.css');
+@import url('../../node_modules/slick-carousel/slick/slick.css');
+@import url('../../node_modules/slick-carousel/slick/slick-theme.css');
 
 body {
   /* font-family: "Poppins", sans-serif; */
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*** Header Top ***/
@@ -216,8 +216,35 @@ button.ant-btn.playStoreBtn svg {
   font-weight: 600;
   text-decoration: none;
 }
+.gift-card {
+  padding: 9px 14px;
+  border-radius: 9px;
+}
+.gift-card-bgColor1 {
+  background-color: #633131;
+}
+.gift-card-bgColor2 {
+  background-color: #0099ff;
+}
+.gift-card-bgColor3 {
+  background-color: #f90000;
+}
+.gift-card-bgColor4 {
+  background-color: #707070;
+}
+.gift-card p {
+  color: #fff;
+}
+.giftCard-taka {
+  font-size: 20px;
+}
 .card.card-middle {
   margin-top: 50px;
+}
+.card-value {
+  font-size: 14px;
+  padding: 5px 0px;
+  font-weight: 600;
 }
 .sidebar-card-title h2 {
   font-size: 18px;
@@ -533,7 +560,7 @@ button.viewButton {
   color: #303030;
   font-size: 30px;
   font-weight: 700;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .stock {
   float: left;
@@ -800,7 +827,7 @@ button.viewButton {
   position: relative;
 }
 .chairreview::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 1px;
   width: 89%;
@@ -839,7 +866,7 @@ button.viewButton {
 }
 .chairreview.comment::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 1px;
   width: 282%;
   background: #e2e2e2;
@@ -1072,7 +1099,7 @@ button.viewButton {
   position: relative;
 }
 .carttotalprice:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 1px;
@@ -1085,13 +1112,13 @@ button.viewButton {
   color: #313131;
   font-size: 18px;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .cartsub h4 {
   color: #313131;
   font-size: 19px;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 button.productBtn.process.cancelbtn {
   background: #ed1b24;
@@ -1106,9 +1133,9 @@ button.productBtn.product.cartorder {
   margin-bottom: 30px;
 }
 .cartprice:before {
-  content: "\f00d";
+  content: '\f00d';
 
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   display: inline-block;
   font-weight: 900;
   margin-right: 7px;
@@ -1124,9 +1151,9 @@ button.productBtn.product.cartorder {
   bottom: 7px;
 }
 .cartprice:after {
-  content: "\f00d";
+  content: '\f00d';
 
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   display: inline-block;
   font-weight: 900;
   margin-right: 7px;
@@ -1231,7 +1258,7 @@ button.productBtn.product.cartorder {
 }
 .orderProductDetails::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 1px;
   width: 100%;
   background: #e6e6e6;
@@ -1239,7 +1266,7 @@ button.productBtn.product.cartorder {
 }
 .orderProductDetails::after {
   position: absolute;
-  content: "";
+  content: '';
   height: 1px;
   width: 100%;
   background: #e6e6e6;
@@ -1254,7 +1281,7 @@ button.productBtn.product.cartorder {
 }
 .homebanner.pb::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 286px;
   width: 100%;
   background: #fbfbfb;
