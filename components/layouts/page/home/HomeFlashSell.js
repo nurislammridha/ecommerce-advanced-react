@@ -1,8 +1,8 @@
-import React, { Component, useEffect } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
-import Rater from 'react-rater';
-import Slider from 'react-slick';
-import { Col, Card } from 'react-bootstrap';
+import React, { Component, useEffect } from "react";
+import { FaArrowRight } from "react-icons/fa";
+import Rater from "react-rater";
+import Slider from "react-slick";
+import { Col, Card } from "react-bootstrap";
 
 const HomeFlashSell = ({ router }, props) => {
   var settings = {
@@ -16,43 +16,43 @@ const HomeFlashSell = ({ router }, props) => {
   const item = [
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
     {
       id: 1,
-      name: 'farid',
+      name: "farid",
     },
   ];
 
@@ -64,7 +64,7 @@ const HomeFlashSell = ({ router }, props) => {
             <div className="row flashSellButtonArea">
               <div className="col-lg-4">
                 <div className="flashtitle">
-                  <h2>Flash Sales</h2>
+                  <h2>Gents</h2>
                   <p>Slogan goes Hear</p>
                 </div>
               </div>
@@ -79,8 +79,8 @@ const HomeFlashSell = ({ router }, props) => {
           </div>
         </div>
         <Slider {...settings}>
-          {item.map(() => (
-            <Col className="align-items-center">
+          {item.map((itemSingle, index) => (
+            <Col className="align-items-center" key={index}>
               <div className=" card ">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />

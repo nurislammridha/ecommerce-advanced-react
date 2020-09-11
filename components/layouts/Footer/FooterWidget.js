@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 const FooterWidget = () => {
   return (
@@ -15,7 +15,10 @@ const FooterWidget = () => {
                     <a href="">Sell on Mac cafe </a>
                   </li>
                   <li>
-                    <a href=""> Join Refferal Programe </a>
+                    <a href="" className="btn btn-outline-secondary btn-sm">
+                      {" "}
+                      Join Refferal Programe{" "}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -67,6 +70,9 @@ const FooterWidget = () => {
             <Col lg={3}>
               <div className="singleWidget">
                 <h2> Download app</h2>
+                <a href="#">
+                  <img src="/images/default/playstore.png" />
+                </a>
               </div>
             </Col>
           </Row>
