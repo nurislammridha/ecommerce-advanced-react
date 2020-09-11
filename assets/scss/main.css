@@ -185,6 +185,33 @@ button.ant-btn.playStoreBtn svg {
 .homebanner img {
   width: 100%;
 }
+/*** sidebar area **/
+.sidebar {
+  padding: 10px 20px;
+  margin: 50px 0px;
+}
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+}
+.sidebar ul li {
+  list-style: none;
+  padding: 15px 0px;
+}
+.sidebar ul li a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.card.card-middle {
+  margin-top: 50px;
+}
+.sidebar-card-title h2 {
+  font-size: 18px;
+  padding: 10px 14px;
+  margin-top: 3px;
+}
 
 /*** Flash Sell **/
 
