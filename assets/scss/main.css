@@ -1441,3 +1441,61 @@ button.productBtn.product.cartorder {
 .singlestatus.processing span {
   color: #f8a957;
 }
+.orderquantity.mycarttext {
+  float: left;
+  width: 15%;
+}
+.wishsingleproductText.mycarttext:before {
+  top: 101px;
+}
+.wishsingleproductText.mycarttext h2 {
+  padding: 8px 0px;
+  font-size: 18px;
+  color: #c59696;
+}
+.orderquantity.mycarttext h2 {
+  color: #7cc1ff;
+  font-size: 16px;
+}
+/* mycart */
+.mycartquantity {
+  float: left;
+  width: 13%;
+}
+
+.mycartquantity.one {
+  margin-top: 90px;
+  float: right;
+  width: 11%;
+}
+.mycartquantity.one svg {
+  font-size: 30px;
+}
+.mycartplace button {
+  color: white;
+  background: #f58509;
+  border: none;
+  border-radius: 5px;
+  line-height: 40px;
+  margin-left: 10px;
+  width: 300px;
+}
+.promotionsummery.one {
+  margin-top: 0px;
+}
+.promocodesection.mt-4 {
+  border: 1px solid #f3f3f3;
+  border-radius: 4px;
+  padding-top: 25px;
+}
+.orderProductDetails.cartline::before {
+  content: none;
+}
+.orderProductDetails.cartline::after {
+  width: 110%;
+  left: -15px;
+  background: #f3f3f3;
+}
+.innerwishlist.productorderdetailsbox.cartlistsection {
+  height: 200px;
+}
