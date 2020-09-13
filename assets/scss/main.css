@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
-@import url('../scss/css-restcode.css');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-@import url('../../node_modules/slick-carousel/slick/slick.css');
-@import url('../../node_modules/slick-carousel/slick/slick-theme.css');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap");
+@import url("../scss/css-restcode.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("../../node_modules/slick-carousel/slick/slick.css");
+@import url("../../node_modules/slick-carousel/slick/slick-theme.css");
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
 }
 
 /*** Header Top ***/
@@ -512,7 +520,7 @@ button.viewButton {
   color: #303030;
   font-size: 30px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .stock {
   float: left;
@@ -779,7 +787,7 @@ button.viewButton {
   position: relative;
 }
 .chairreview::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 1px;
   width: 89%;
@@ -818,7 +826,7 @@ button.viewButton {
 }
 .chairreview.comment::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 1px;
   width: 282%;
   background: #e2e2e2;
@@ -1051,7 +1059,7 @@ button.viewButton {
   position: relative;
 }
 .carttotalprice:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 1px;
@@ -1064,13 +1072,13 @@ button.viewButton {
   color: #313131;
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .cartsub h4 {
   color: #313131;
   font-size: 19px;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 button.productBtn.process.cancelbtn {
   background: #ed1b24;
@@ -1085,9 +1093,9 @@ button.productBtn.product.cartorder {
   margin-bottom: 30px;
 }
 .cartprice:before {
-  content: '\f00d';
+  content: "\f00d";
 
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   display: inline-block;
   font-weight: 900;
   margin-right: 7px;
@@ -1103,9 +1111,9 @@ button.productBtn.product.cartorder {
   bottom: 7px;
 }
 .cartprice:after {
-  content: '\f00d';
+  content: "\f00d";
 
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   display: inline-block;
   font-weight: 900;
   margin-right: 7px;
@@ -1210,7 +1218,7 @@ button.productBtn.product.cartorder {
 }
 .orderProductDetails::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 1px;
   width: 100%;
   background: #e6e6e6;
@@ -1218,7 +1226,7 @@ button.productBtn.product.cartorder {
 }
 .orderProductDetails::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 1px;
   width: 100%;
   background: #e6e6e6;
@@ -1233,7 +1241,7 @@ button.productBtn.product.cartorder {
 }
 .homebanner.pb::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 286px;
   width: 100%;
   background: #fbfbfb;
@@ -1243,4 +1251,193 @@ button.productBtn.product.cartorder {
   border: 1px solid #000;
   overflow: hidden;
   width: 100%;
+}
+/* productwishlist */
+.wishlisttitle {
+  background: white;
+  border: 1px solid #f3f3f3;
+  padding: 10px 19px;
+  margin-top: 51px;
+  border-radius: 4px;
+}
+
+.wishlisttitle h1 {
+  font-size: 16px;
+}
+.innerwishlist {
+  border: 1px solid black;
+  width: 100%;
+}
+.wishsingleproduct {
+  width: 20%;
+}
+.innerwishlist {
+  border: 1px solid lightgray;
+}
+
+.innerwishlist {
+  border: 1px solid lightgray;
+}
+
+.innerwishlist {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #f3f3f3;
+  border-radius: 0.25rem;
+  background: white;
+}
+.wishsingleproductText {
+  position: relative;
+}
+.wishsingleproductText::before {
+  position: absolute;
+  content: "50% off";
+  top: 58px;
+  left: 62px;
+  color: green;
+  font-size: 12px;
+}
+
+.wishsingleproduct {
+  width: 25%;
+  float: left;
+}
+
+.wishsingleproductText {
+  float: left;
+  width: 65%;
+  padding-top: 20px;
+}
+
+.wishsingleproductIcon {
+  width: 10%;
+  float: left;
+  padding-top: 22px;
+}
+
+.wishsingleproductText h1 {
+  font-size: 23px;
+  font-weight: 400;
+}
+.wishsingleproductText h4 {
+  padding: 8px 0px;
+  color: #ee4d39;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.wishsingleproductText h5 {
+  color: #6c6c6c;
+  font-weight: 400;
+  font-size: 17px;
+}
+.wishsingleproductIcon svg {
+  font-size: 34px;
+  color: #515151;
+}
+.wishbanner {
+  background: #fbfbfb;
+}
+/* myorder */
+.ordercode {
+  width: 50%;
+  float: left;
+}
+
+.ordercode h2 {
+  font-size: 16px;
+  color: #808080;
+  padding: 10px;
+  padding-left: 18px;
+  font-weight: 400;
+}
+
+.orderboxDetails {
+  border-bottom: 1px solid #f3f3f3;
+
+  height: 45px;
+}
+.ordercode.one {
+  text-align: right;
+  padding-right: 20px;
+}
+.wishsingleproductText.orderproducttext {
+  float: left;
+  width: 40%;
+}
+
+.orderquantity {
+  float: left;
+  width: 20%;
+}
+
+.ordertype {
+  float: left;
+  width: 20%;
+}
+.singleorderproduct {
+  float: left;
+  width: 20%;
+}
+.orderquantity h2 {
+  padding-top: 25px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.orderquantity h3 {
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+.innerwishlist.productorderdetailsbox {
+  height: 228px;
+}
+
+.orderstatus {
+  border-bottom: 1px solid #f3f3f3;
+
+  margin-top: 102px;
+}
+.orderstatus {
+  height: 40px;
+}
+.singlestatus {
+  float: left;
+  width: 50%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.singlestatus h2 {
+  padding-top: 15px;
+  font-weight: 400;
+  margin-left: -128px;
+  font-size: 15px;
+}
+.singlestatus.two {
+  padding-right: 20px;
+  text-align: right;
+  float: right;
+  width: 50%;
+}
+.singlestatus.two h2 {
+  margin-top: -41px;
+}
+.singlestatus span {
+  color: #fa3e3e;
+}
+.singlestatus.two.processing {
+  margin-top: 19px;
+}
+.singlestatus.delivered span {
+  color: #24acff;
+}
+.singlestatus.shipping span {
+  color: #eb8d8d;
+}
+
+.singlestatus.processing span {
+  color: #f8a957;
 }
