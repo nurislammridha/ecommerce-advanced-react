@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import Link from "next/link";
 const Login = ({ router }, props) => {
   return (
     <>
@@ -17,9 +18,6 @@ const Login = ({ router }, props) => {
                       type="email"
                       placeholder="Enter your register email or phone number"
                     />
-                    {/* <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text> */}
                   </Form.Group>
 
                   <Form.Group controlId="formBasicPassword">
@@ -29,18 +27,26 @@ const Login = ({ router }, props) => {
                       placeholder="Enter Password"
                     />
                   </Form.Group>
-                  {/* <Form.Group controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group> */}
-                  <Button variant="primary" type="submit">
-                    Login
-                  </Button>
+                  <Link href="/">
+                    <a>
+                      {" "}
+                      <Button variant="primary" type="submit">
+                        Login
+                      </Button>
+                    </a>
+                  </Link>
+
                   <h5>Forget Password?</h5>
                   <h6>New to Maccaf</h6>
 
-                  <button className="createbtn" type="submit">
-                    Create an account
-                  </button>
+                  <Link href="/">
+                    <a>
+                      {" "}
+                      <button className="createbtn" type="submit">
+                        Create an account
+                      </button>
+                    </a>
+                  </Link>
                 </Form>
               </div>
             </div>

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { withRouter } from "next/router";
-import HeaderTop from "./HeaderTop";
-import HeaderSearchBar from "./HeaderSearchBar";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { withRouter } from 'next/router';
+import HeaderTop from './HeaderTop';
+import HeaderSearchBar from './HeaderSearchBar';
 import {
   Dropdown,
   Form,
@@ -11,14 +11,14 @@ import {
   Navbar,
   Nav,
   NavDropdown,
-} from "react-bootstrap";
+} from 'react-bootstrap';
 import {
   FaSearchengin,
   FaCartArrowDown,
   FaNotesMedical,
   FaBell,
-} from "react-icons/fa";
-import Menu from "./Menu";
+} from 'react-icons/fa';
+import Menu from './Menu';
 
 const Header = ({ router }, props) => {
   return (
@@ -33,7 +33,7 @@ const Header = ({ router }, props) => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="header-category mr-3">
                 <NavDropdown title="Category" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
                     Another action
                   </NavDropdown.Item>
@@ -43,9 +43,11 @@ const Header = ({ router }, props) => {
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
                     Separated link
-                  </NavDropdown.Item>
+                  </NavDropdown.Item> */}
+                 
                 </NavDropdown>
               </Nav>
+
               <Form className="search">
                 <FormControl type="text" placeholder="Search" />
               </Form>
