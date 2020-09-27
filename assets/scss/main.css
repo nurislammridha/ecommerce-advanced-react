@@ -28,13 +28,17 @@ h6 {
   padding: 10px 0px;
   color: #fff;
 }
+.navigation.nav {
+  margin: 0px auto;
+}
 .navigation .nav-item a {
   color: #fff;
 }
 
 .header {
-  background-color: #1580c7f5;
+  background-color: #0099ff;
   color: #fff !important;
+  padding: 0px 0px;
 }
 
 .navbar-light .navbar-brand {
@@ -45,8 +49,14 @@ h6 {
 }
 
 .nav .nav-item {
-  margin-right: 19px;
-  border-right: 1px solid #fff;
+  margin-right: 30px;
+  border-right: 1px solid #c3cce924;
+}
+.nav-item {
+  border-right: 1px solid #c3cce924;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 30px;
 }
 .nav .nav-item:last-child {
   margin-right: 0px;
@@ -80,10 +90,10 @@ form.search {
   margin-top: 12px;
   border: 1px solid #fff;
   color: #fff;
-  margin-left: -15px;
-  background: red;
+  margin-left: -20px;
+  background: #ff2626;
   position: absolute;
-  top: 0;
+  top: 10px;
   border-radius: 50% !important;
 }
 
@@ -212,8 +222,35 @@ button.ant-btn.playStoreBtn svg {
   font-weight: 600;
   text-decoration: none;
 }
+.gift-card {
+  padding: 9px 14px;
+  border-radius: 9px;
+}
+.gift-card-bgColor1 {
+  background-color: #633131;
+}
+.gift-card-bgColor2 {
+  background-color: #0099ff;
+}
+.gift-card-bgColor3 {
+  background-color: #f90000;
+}
+.gift-card-bgColor4 {
+  background-color: #707070;
+}
+.gift-card p {
+  color: #fff;
+}
+.giftCard-taka {
+  font-size: 20px;
+}
 .card.card-middle {
   margin-top: 50px;
+}
+.card-value {
+  font-size: 14px;
+  padding: 5px 0px;
+  font-weight: 600;
 }
 .sidebar-card-title h2 {
   font-size: 18px;
@@ -227,8 +264,13 @@ button.ant-btn.playStoreBtn svg {
   background: #3b55bc;
 }
 
+.sliderCard {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .sliderCard-header {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #f6f6f6;
   margin-bottom: 23px;
 }
 
@@ -309,6 +351,9 @@ button.viewButton {
 }
 .sliderCard.card {
   padding: 20px 0px;
+  border: none;
+  box-shadow: 3px 4px 15px #3945a414;
+  margin-bottom: 50px;
 }
 .productPrice {
   text-align: center;
@@ -450,9 +495,10 @@ button.viewButton {
 }
 
 .singleWidget h2 {
-  color: #000;
+  color: #949494;
   font-size: 20px;
-  text-transform: uppercase;
+  margin-bottom: 25px;
+  text-transform: capitalize;
 }
 
 .singleWidget ul {
@@ -1498,4 +1544,34 @@ button.productBtn.product.cartorder {
 }
 .innerwishlist.productorderdetailsbox.cartlistsection {
   height: 200px;
+}
+/* login page */
+.Loginform {
+  background: white;
+  padding: 57px;
+  margin-top: 40px;
+}
+.Loginform button.btn.btn-primary {
+  width: 100%;
+}
+.Loginform h5 {
+  font-size: 18px;
+  color: orange;
+  padding-top: 15px;
+}
+.Loginform h6 {
+  text-align: center;
+}
+.Loginform h1 {
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+button.createbtn {
+  width: 100%;
+  background: white;
+  color: #0099ff;
+  border-color: #0099ff;
+  margin-top: 15px;
+  line-height: 35px;
+  border-radius: 4px;
 }
