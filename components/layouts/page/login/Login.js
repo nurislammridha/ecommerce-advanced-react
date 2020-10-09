@@ -35,8 +35,11 @@ const Login = ({ router }, props) => {
                       </Button>
                     </a>
                   </Link>
-
-                  <h5>Forget Password?</h5>
+                  <Link href="/">
+                    <a>
+                      <h5>Forget Password?</h5>
+                    </a>
+                  </Link>
                   <h6>New to Maccaf</h6>
 
                   <Link href="/">

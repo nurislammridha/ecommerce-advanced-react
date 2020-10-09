@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FaCartPlus, FaGooglePlay, FaUser } from "react-icons/fa";
 import Rater from "react-rater";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 const ElegantChair = ({ router }, props) => {
   return (
@@ -10,11 +11,20 @@ const ElegantChair = ({ router }, props) => {
           <div className="row">
             <div className="col-12">
               <div className="elegentchairmenu">
-                <ul>
+                {/* <ul>
                   <li> Akij Plastics</li>
                   <li>Chair </li>
                   <li> Chair Elegant Chair wave rose wood</li>
-                </ul>
+                </ul> */}
+                <Breadcrumb>
+                  <Breadcrumb.Item href="#"> Akij Plastics</Breadcrumb.Item>
+                  <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+                    Chair
+                  </Breadcrumb.Item>
+                  <Breadcrumb.Item active>
+                    Chair Elegant Chair wave rose wood
+                  </Breadcrumb.Item>
+                </Breadcrumb>
               </div>
             </div>
           </div>

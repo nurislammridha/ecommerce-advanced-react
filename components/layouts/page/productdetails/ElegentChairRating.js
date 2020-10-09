@@ -5,7 +5,7 @@ import Rater from "react-rater";
 const ElegentChairRating = ({ router }, props) => {
   return (
     <>
-      <div className="homebanner pb">
+      <div className="ratingbanner pb">
         <div className="container">
           <div className="elegentratingsection">
             <div className="row">

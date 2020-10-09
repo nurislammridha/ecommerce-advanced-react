@@ -15,7 +15,12 @@ h5,
 h6 {
   font-weight: 400;
 }
-
+a:hover {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
 /*** Header Top ***/
 
 .headerTop {
@@ -1723,6 +1728,9 @@ button.productBtn.product.cartorder {
   color: orange;
   padding-top: 15px;
 }
+.Loginform h5 :hover {
+  text-decoration: none;
+}
 .Loginform h6 {
   text-align: center;
 }
@@ -1772,4 +1780,19 @@ button.createbtn {
 }
 .formcondition {
   margin-top: 14px;
+}
+/*  */
+/*  */
+/* elegentchairbreadcrum */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "";
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: #6c757d;
+  content: ">";
+}
+.elegentchairmenu .breadcrumb {
+  background: white;
 }
