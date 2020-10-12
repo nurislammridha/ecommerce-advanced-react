@@ -12,10 +12,13 @@ const FooterWidget = () => {
                 <h2> Make money with us </h2>
                 <ul>
                   <li>
-                    <a href="">Sell on Mac cafe </a>
+                    <a href="">Sell on Maccafe </a>
                   </li>
                   <li>
-                    <a href="" className="btn btn-outline-secondary btn-sm">
+                    <a
+                      href=""
+                      className="btn btn-outline-secondary btn-sm mt-2"
+                    >
                       {" "}
                       Join Refferal Programe{" "}
                     </a>
@@ -29,13 +32,13 @@ const FooterWidget = () => {
                 <h2> Shop By </h2>
                 <ul>
                   <li>
-                    <a href="">Site Map </a>
+                    <a href="">Sitemap </a>
                   </li>
                   <li>
                     <a href=""> Brands</a>
                   </li>
                   <li>
-                    <a href=""> Deals & offer </a>
+                    <a href=""> Deals & offers </a>
                   </li>
                   <li>
                     <a href="">Gift cards </a>
@@ -48,21 +51,21 @@ const FooterWidget = () => {
               <div className="singleWidget">
                 <h2> Connect with us </h2>
                 <ul>
-                  <li>
+                  <li className="text-center">
                     <a href="">Facebook </a>
                   </li>
-                  <li>
-                    <a href=""> Instagrame</a>
+                  <li className="text-center">
+                    <a href=""> Instagram</a>
                   </li>
-                  <li>
+                  <li className="text-center">
                     <a href=""> Twitter </a>
                   </li>
-                  <li>
+                  <li className="text-center">
                     <a href=""> Youtube</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href=""> Contact Us </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </Col>
@@ -71,7 +74,7 @@ const FooterWidget = () => {
               <div className="singleWidget">
                 <h2> Download app</h2>
                 <a href="#">
-                  <img src="/images/default/playstore.png" />
+                  <img className="ml-5" src="/images/default/playstore.png" />
                 </a>
               </div>
             </Col>

@@ -9,7 +9,7 @@ const HomeFlashSell = ({ router }, props) => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 7,
     slidesToScroll: 1,
   };
 
@@ -64,8 +64,8 @@ const HomeFlashSell = ({ router }, props) => {
             <div className="row flashSellButtonArea">
               <div className="col-lg-4">
                 <div className="flashtitle">
-                  <h2>Gents</h2>
-                  <p>Slogan goes Hear</p>
+                  <h2>Section Name</h2>
+                  <p>Section Slogan(It's nullable)</p>
                 </div>
               </div>
               <div className="col-lg-4"></div>
@@ -90,9 +90,10 @@ const HomeFlashSell = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                   </div>
                   <div className="productPrice">
-                    <h4>
+                    <h4 className="pt-2">
                       ৳ 590.00 <span className="product-discount">50% off</span>
                     </h4>
+                    <p className="pt-2">Brand name,Slogan</p>
                   </div>
                 </div>
               </div>

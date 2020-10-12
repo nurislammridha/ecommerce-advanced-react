@@ -16,7 +16,7 @@ h6 {
   font-weight: 400;
 }
 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 a {
   text-decoration: none;
@@ -377,26 +377,28 @@ button.ant-btn.playStoreBtn svg {
 .sliderCard-header {
   border-bottom: 1px solid #f6f6f6;
   margin-bottom: 23px;
+  /* box-shadow: 3px 4px 15px #3945a414; */
 }
 
 .flashtitle h2 {
   color: #000;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .flashtitle p {
   line-height: 5px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 button.viewButton {
   background: #fff;
-  border: 1px solid #c1c1c1 !important;
-  border-radius: 50px;
+  border: 1px solid #e5f4ff !important;
+  border-radius: 4px;
   width: 110px;
   line-height: 30px;
   font-size: 14px;
+  color: #2989ff;
   outline: none !important;
 }
 
@@ -459,6 +461,7 @@ button.viewButton {
   border: none;
   box-shadow: 3px 4px 15px #3945a414;
   margin-bottom: 50px;
+  border: 1px solid #fbfbfb;
 }
 .productPrice {
   text-align: center;
@@ -467,9 +470,18 @@ button.viewButton {
   color: #b1c978;
   font-size: 14px;
 }
+span.product-discount {
+  font-size: 12px;
+  position: absolute;
 
+  right: 10px;
+  bottom: 35px;
+}
+h4.pt-2 {
+  margin-right: 22px;
+}
 .productPrice p {
-  font-size: 10px;
+  font-size: 13px;
   line-height: 0px;
 }
 
@@ -602,8 +614,9 @@ button.viewButton {
 .singleWidget h2 {
   color: #949494;
   font-size: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .singleWidget ul {
@@ -615,6 +628,9 @@ button.viewButton {
 .singleWidget ul li a {
   color: #000;
   line-height: 30px;
+}
+.singleWidget li {
+  text-align: center;
 }
 
 .singleWidget.iconwidget a {
@@ -1795,4 +1811,30 @@ button.createbtn {
 }
 .elegentchairmenu .breadcrumb {
   background: white;
+}
+
+/*  */
+.slick-next:before,
+.slick-prev:before {
+  color: lightgray;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  font-size: 54px;
+}
+button.slick-arrow.slick-next {
+  position: absolute;
+  right: 31px;
+  top: 66px;
+}
+button.slick-arrow.slick-prev {
+  z-index: 6;
+  position: absolute;
+  left: 3px;
+  top: 66px;
+}
+/* homesliderbaner */
+.homesliderbaner {
+  padding: 10px;
+  border-radius: 20px;
 }

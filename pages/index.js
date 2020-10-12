@@ -5,7 +5,7 @@ import HomeBrand from "../components/layouts/page/home/HomeBrand";
 import HomeStroe from "../components/layouts/page/home/HomeStroe";
 import HomeProduct from "../components/layouts/page/home/HomeProduct";
 import HomeFeaturList from "../components/layouts/page/home/HomeFeaturList";
-import HomeSlider from "../components/layouts/page/home/HomeSlider";
+
 import { Container } from "react-bootstrap";
 
 export default function Home(props) {
@@ -17,9 +17,8 @@ export default function Home(props) {
   return (
     <>
       <MainLayout>
-        <img src="/images/slider/slide1.png" />
+        <img className="homesliderbaner" src="/images/slider/slide1.png" />
         <Container fluid>
-          <HomeSlider />
           <HomeFlashSell />
           <HomeFlashSell />
           <HomeFlashSell />
