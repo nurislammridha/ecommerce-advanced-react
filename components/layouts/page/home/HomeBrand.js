@@ -13,7 +13,7 @@ const HomeBrand = ({ router }, props) => {
               </div>
             </div>
             <div className="viewTopRight">
-              <button className="viewButton">
+              <button className="viewButton storebutton">
                 View all
                 <FaArrowRight />
               </button>

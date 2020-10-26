@@ -9,6 +9,23 @@
   .promocodesection {
     margin-top: 0px;
   }
+  button.viewButton {
+    margin-bottom: 20px;
+  }
+  .bp {
+    padding: 20px 0px;
+  }
+  .pt {
+    padding-top: 30px;
+  }
+  .StoreImg {
+    width: 30%;
+    margin: 2px 10px;
+  }
+  span.product-discount {
+    right: 38px;
+    bottom: 36px;
+  }
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */
@@ -44,6 +61,17 @@
   }
   .cartprice:before {
     bottom: 3px;
+  }
+  button.viewButton {
+    width: 80px;
+  }
+  span.product-discount {
+    right: 107px;
+    bottom: 37px;
+  }
+  .StoreImg {
+    width: 100%;
+    height: auto;
   }
 }
 @media (max-width: 400px) {
@@ -113,5 +141,36 @@
   }
   .elegentrating {
     padding-top: 20px;
+  }
+  button.viewButton {
+    margin-bottom: 15px;
+  }
+  .sliderCard.card {
+    margin-bottom: 20px;
+  }
+  .bp {
+    padding: 20px 0px;
+  }
+  button.viewButton.brandbutton {
+    margin-top: 30px;
+  }
+  button.viewButton.storebutton {
+    margin-top: 30px;
+  }
+  .row.pt.storepadding {
+    padding-top: 25px;
+    margin-left: 0px auto;
+    text-align: center;
+  }
+  .sectionTitle h2 {
+    margin-bottom: 25px;
+  }
+  .StoreImg {
+    width: 100%;
+    height: auto;
+  }
+  span.product-discount {
+    right: 87px;
+    bottom: 37px;
   }
 }

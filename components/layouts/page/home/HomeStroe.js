@@ -13,14 +13,14 @@ const HomeStroe = ({ router }, props) => {
               </div>
             </div>
             <div className="viewTopRight">
-              <button className="viewButton">
+              <button className="viewButton brandbutton">
                 View all
                 <FaArrowRight />
               </button>
             </div>
           </div>
 
-          <div className="row pt">
+          <div className="row pt storepadding">
             <div className="singleStoreImg">
               <div className="StoreImg">
                 <img src="/images/default/logo1.png" />

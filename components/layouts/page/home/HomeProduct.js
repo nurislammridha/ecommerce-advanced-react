@@ -8,7 +8,7 @@ const HomeProduct = ({ router }, props) => {
       <div className="HomeProduct bp">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -29,7 +29,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -50,7 +50,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -71,7 +71,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -92,7 +92,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -113,7 +113,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -134,7 +134,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -155,7 +155,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -176,7 +176,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -197,7 +197,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -218,7 +218,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -239,7 +239,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -260,7 +260,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -281,7 +281,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -302,7 +302,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -323,7 +323,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -344,7 +344,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -365,7 +365,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -386,7 +386,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -407,7 +407,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -428,7 +428,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -449,7 +449,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -470,7 +470,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -491,7 +491,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -512,7 +512,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -533,7 +533,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -554,7 +554,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -575,7 +575,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -596,7 +596,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -617,7 +617,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -638,7 +638,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -659,7 +659,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -680,7 +680,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -701,7 +701,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -722,7 +722,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
@@ -743,7 +743,7 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-xl-2 col-lg-3">
+            <div className="col-xl-2 col-lg-3 col-6">
               <div className="singleProduct singleproductborder">
                 <div className="productImg">
                   <img src="/images/default/chair.png" />
