@@ -18,7 +18,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -39,7 +39,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -60,7 +60,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -81,7 +81,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -102,7 +102,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -123,7 +123,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -144,7 +144,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -165,7 +165,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -186,7 +186,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -207,7 +207,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -228,7 +228,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -249,7 +249,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -270,7 +270,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -291,7 +291,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -312,7 +312,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -333,7 +333,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -354,7 +354,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -375,7 +375,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -396,7 +396,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -417,7 +417,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -438,7 +438,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -459,7 +459,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -480,7 +480,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -501,7 +501,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -522,7 +522,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -543,7 +543,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -564,7 +564,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -585,7 +585,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -606,7 +606,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -627,7 +627,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -648,7 +648,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -669,7 +669,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -690,7 +690,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -711,7 +711,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -732,7 +732,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
@@ -753,7 +753,7 @@ const HomeProduct = ({ router }, props) => {
                     <h3>Elegant Chair</h3>
                     <p>Brown Color</p>
                   </div>
-                  <div className="productPrice">
+                  <div className="productPrice pt-2">
                     <h4>৳ 590.00</h4>
                     <p>৳ 590.00</p>
                   </div>
