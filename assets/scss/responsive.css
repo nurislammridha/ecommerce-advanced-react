@@ -26,6 +26,15 @@
     right: 38px;
     bottom: 36px;
   }
+  button.viewButton.sellbutton {
+    margin-top: -32px;
+  }
+  .selltitle h2:after {
+    width: 103%;
+
+    top: 43px;
+    left: -11px;
+  }
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */

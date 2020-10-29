@@ -382,7 +382,7 @@ button.ant-btn.playStoreBtn svg {
 
 .flashtitle h2 {
   color: #000;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
 }
 .flashtitle p {
@@ -1849,4 +1849,29 @@ button.slick-arrow.slick-prev {
 .homesliderbaner {
   padding: 10px;
   border-radius: 20px;
+}
+/* flashsell */
+.selltitle h2 {
+  position: relative;
+}
+.selltitle h2:after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 162%;
+  background: #f1f1f1;
+  top: 43px;
+  left: -15px;
+}
+.flashspan.mt-2 {
+  padding-top: 4px;
+}
+.card.p-3 {
+  box-shadow: 3px 4px 15px #3945a414;
+  border: none;
+  padding: 20px;
+  margin-top: 11px;
+}
+.sliderCard-header.flashsell {
+  border-bottom: none;
 }

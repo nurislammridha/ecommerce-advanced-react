@@ -8,7 +8,7 @@ const FlashSell = ({ router }, props) => {
   return (
     <>
 
-        <div className="sliderCard-header">
+        <div className="sliderCard-header flashsell">
           <div className="container-fluid">
               <div className="row">
               <div className="col-lg-6">
@@ -20,28 +20,28 @@ const FlashSell = ({ router }, props) => {
                
 
               <div className="col-lg-8">
-                <div className="flashtitle">
+                <div className="flashtitle selltitle">
                   <h2>Flash Sell</h2>
               
                 </div>
               </div>
               
               <div className="col-lg-4">
-                <button className="viewButton">
+                <button className="viewButton sellbutton">
                   View all
                   <FaArrowRight />
                 </button>
               </div>
             </div>
             <div className="row">
-                                 <div className="col-lg-3">
-                                   <div className="productImg">
+                                 <div className="col-lg-3 col-md-4 col-6">
+                                   <div className="productImg mt-2">
                                     <img src="/images/default/chair.png" />
                                    </div>
                                    <div className="productDetails flasdetails">
                                     <div className="productTitle text-left">
                                      <h3>Elegant Chair</h3>
-                                  <p className="pt-1">৳ 500 </p>
+                                  <p className="pt-2">৳ 500 </p>
                               
                                         </div>
                                         <div className="flashspan mt-2">
@@ -52,14 +52,14 @@ const FlashSell = ({ router }, props) => {
                 </div>
 
                                   </div>
-                                  <div className="col-lg-3">
-                                   <div className="productImg">
+                                  <div className="col-lg-3 col-md-4 col-6">
+                                   <div className="productImg mt-2">
                                     <img src="/images/default/chair.png" />
                                    </div>
                                    <div className="productDetails flasdetails">
                                     <div className="productTitle text-left">
                                      <h3>Elegant Chair</h3>
-                                     <p className="pt-1">৳ 500 </p>
+                                     <p className="pt-2">৳ 500 </p>
                                         </div>
                                         <div className="flashspan mt-2">
                                         <span className="pl-2 pr-2 rounded mt-1">0% Off</span>
@@ -69,14 +69,14 @@ const FlashSell = ({ router }, props) => {
                 </div>
 
                                   </div>
-                                  <div className="col-lg-3">
-                                   <div className="productImg">
+                                  <div className="col-lg-3 col-md-4 col-6">
+                                   <div className="productImg mt-2">
                                     <img src="/images/default/chair.png" />
                                    </div>
                                    <div className="productDetails flasdetails">
                                     <div className="productTitle text-left">
                                      <h3>Elegant Chair</h3>
-                                     <p className="pt-1">৳ 500 </p>
+                                     <p className="pt-2">৳ 500 </p>
                                         </div>
                                         <div className="flashspan mt-2">
                                         <span className="pl-2 pr-2 rounded mt-1">0% Off</span>
@@ -86,14 +86,14 @@ const FlashSell = ({ router }, props) => {
                 </div>
 
                                   </div>
-                                  <div className="col-lg-3">
+                                  <div className="col-lg-3 col-md-4 col-6">
                                    <div className="productImg">
                                     <img src="/images/default/chair.png" />
                                    </div>
                                    <div className="productDetails flasdetails">
                                     <div className="productTitle text-left pt-2">
                                      <h3>Elegant Chair</h3>
-                                     <p className="pt-1">৳ 500 </p>
+                                     <p className="pt-2">৳ 500 </p>
                                         </div>
                                         <div className="flashspan mt-2">
                                         <span className="pl-2 pr-2 rounded mt-1">0% Off</span>
@@ -117,28 +117,28 @@ const FlashSell = ({ router }, props) => {
                
 
               <div className="col-lg-8">
-                <div className="flashtitle">
-                  <h2>Flash Sell</h2>
+                <div className="flashtitle selltitle">
+                  <h2>New User Offer</h2>
               
                 </div>
               </div>
               {/* <div className="col-lg-4"></div>s */}
               <div className="col-lg-4">
-                <button className="viewButton">
+                <button className="viewButton sellbutton">
                   View all
                   <FaArrowRight />
                 </button>
               </div>
             </div>
-            <div className="row mt-2">
-                                 <div className="col-lg-3">
-                                   <div className="productImg">
+            <div className="row">
+                                 <div className="col-lg-3 col-md-4 col-6">
+                                   <div className="productImg mt-2">
                                     <img src="/images/default/chair.png" />
                                    </div>
                                    <div className="productDetails flasdetails">
                                     <div className="productTitle text-left">
                                      <h3>Elegant Chair</h3>
-                                  <p className="pt-1">৳ 500 </p>
+                                  <p className="pt-2">৳ 500 </p>
                                         </div>
                                         <div className="flashspan mt-2">
                                         <span className="pl-2 pr-2 rounded mt-1">0% Off</span>
@@ -148,14 +148,14 @@ const FlashSell = ({ router }, props) => {
                 </div>
 
                                   </div>
-                                  <div className="col-lg-3">
-                                   <div className="productImg">
+                                  <div className="col-lg-3 col-md-4 col-6">
+                                   <div className="productImg mt-2">
                                     <img src="/images/default/chair.png" />
                                    </div>
                                    <div className="productDetails flasdetails">
                                     <div className="productTitle text-left">
                                      <h3>Elegant Chair</h3>
-                                     <p className="pt-1">৳ 500 </p>
+                                     <p className="pt-2">৳ 500 </p>
                                         </div>
                 
                                         <div className="flashspan mt-2">
@@ -164,14 +164,14 @@ const FlashSell = ({ router }, props) => {
                 </div>
 
                                   </div>
-                                  <div className="col-lg-3">
-                                   <div className="productImg">
+                                  <div className="col-lg-3 col-md-4 col-6">
+                                   <div className="productImg mt-2">
                                     <img src="/images/default/chair.png" />
                                    </div>
                                    <div className="productDetails flasdetails">
                                     <div className="productTitle text-left">
                                      <h3>Elegant Chair</h3>
-                                     <p className="pt-1">৳ 500 </p>
+                                     <p className="pt-2">৳ 500 </p>
                                         </div>
                                         <div className="flashspan mt-2">
                                         <span className="pl-2 pr-2 rounded mt-1">0% Off</span>
@@ -181,17 +181,17 @@ const FlashSell = ({ router }, props) => {
                 </div>
 
                                   </div>
-                                  <div className="col-lg-3">
-                                   <div className="productImg">
+                                  <div className="col-lg-3 col-md-4 col-6">
+                                   <div className="productImg ">
                                     <img src="/images/default/chair.png" />
                                    </div>
                                    <div className="productDetails flasdetails">
                                     <div className="productTitle text-left pt-2">
                                      <h3>Elegant Chair</h3>
-                                     <p className="pt-1">৳ 500 </p>
+                                     <p className="pt-2">৳ 500 </p>
                                         </div>
                                         <div className="flashspan mt-2">
-                                        <span className="pl-2 pr-2 rounded mt-1">0% Off</span>
+                                        <span className="pl-2 pr-2 rounded">0% Off</span>
                                         </div>
                 
                   
