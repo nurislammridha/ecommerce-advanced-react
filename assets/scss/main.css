@@ -612,7 +612,7 @@ h4.pt-2 {
 }
 
 .singleWidget h2 {
-  color: #949494;
+  color: #004080;
   font-size: 20px;
   margin-bottom: 18px;
   text-transform: capitalize;
@@ -626,8 +626,8 @@ h4.pt-2 {
 }
 
 .singleWidget ul li a {
-  color: #000;
-  line-height: 30px;
+  color: #004080;
+  line-height: 36px;
 }
 .singleWidget li {
   text-align: center;
@@ -1874,4 +1874,26 @@ button.slick-arrow.slick-prev {
 }
 .sliderCard-header.flashsell {
   border-bottom: none;
+}
+/* footer */
+.footerwidget li {
+  display: inline-block;
+  padding-left: 15px;
+}
+.footerwidget li a {
+  text-decoration: underline;
+  color: #004080 !important;
+}
+.footertext p {
+  color: #004080;
+  line-height: 30px;
+}
+.footerbotomarea {
+  background: lightgray;
+  /* background: #ffffe6; */
+  /* height: 30px; */
+}
+.singleWidget h4 {
+  font-size: 16px;
+  color: #004080;
 }

@@ -182,4 +182,19 @@
     right: 87px;
     bottom: 37px;
   }
+  .singleWidget img.ml-5 {
+    margin-left: 58px;
+    margin-left: 95px !important;
+  }
+  .singleWidget h4 {
+    margin-left: 50px !important;
+  }
+  .footerwidget a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  .footertext p {
+    line-height: 20px;
+    font-size: 14px;
+  }
 }
