@@ -27,7 +27,8 @@ const Header = ({ router }, props) => {
         <div className="container-fluid">
           <Navbar>
             <Navbar.Brand href="#home">
-              <img src="/images/logo.png" />
+              <img src="/images/logos/logo-white.png" />
+              <span className="logo-bottom-text">#UnboxHappiness</span>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

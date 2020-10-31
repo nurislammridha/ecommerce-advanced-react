@@ -29,9 +29,10 @@ a {
   line-height: 40px;
 }
 .headerBottom {
-  background-color: #0b466d;
-  padding: 10px 0px;
+  background-color: #00C4EE;
+  padding: 0px 0px;
   color: #fff;
+  height: 60px;
 }
 .navigation.nav {
   margin: 0px auto;
@@ -41,7 +42,7 @@ a {
 }
 
 .header {
-  background-color: #0099ff;
+  background-color: #00C4EE;
   color: #fff !important;
   padding: 0px 0px;
 }
@@ -67,7 +68,9 @@ a {
   margin-right: 0px;
   border: none;
 }
-
+.logo-bottom-text {
+  font-size: 0.8em;
+}
 .socialTop a svg {
   color: #f1f1f1;
   margin-right: 10px;
