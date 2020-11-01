@@ -75,7 +75,11 @@ a {
   color: #f1f1f1;
   margin-right: 10px;
 }
-
+.header-category {
+  position: relative;
+  width: 200px;
+  z-index: 1000;
+}
 form.search {
   width: 60%;
 }
@@ -1818,6 +1822,7 @@ button.createbtn {
 /* flashsell */
 .flashspan span {
   background: linear-gradient(to right, #f66f08 0%, #f80e01 99%);
+  color: #fff;
 }
 .productDetails.flasdetails h3 {
   font-size: 16px;

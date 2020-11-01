@@ -19,8 +19,27 @@ import {
   FaBell,
 } from "react-icons/fa";
 import Menu from "./Menu";
+import ReactMegaMenu from "react-mega-menu";
 
 const Header = ({ router }, props) => {
+  const headerCategoryData = [
+    {
+      label: "Category1",
+      key: "Category1",
+      items: "Category1 content",
+    },
+    {
+      label: "Category2",
+      key: "Category2",
+      items: "Category2 content",
+    },
+    {
+      label: "Category3",
+      key: "Category3",
+      items: "Category3 content",
+    },
+  ];
+
   return (
     <>
       <div className="header">
@@ -33,8 +52,8 @@ const Header = ({ router }, props) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="header-category mr-3">
-                <NavDropdown title="Category" id="basic-nav-dropdown">
-                  {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                {/* <NavDropdown title="Category" id="basic-nav-dropdown"> */}
+                {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
                     Another action
                   </NavDropdown.Item>
@@ -45,7 +64,53 @@ const Header = ({ router }, props) => {
                   <NavDropdown.Item href="#action/3.4">
                     Separated link
                   </NavDropdown.Item> */}
-                </NavDropdown>
+                {/* </NavDropdown> */}
+                <div>
+                  <ReactMegaMenu
+                    tolerance={50} // optional, defaults to 100
+                    direction={"LEFT"} // optional, defaults to "RIGHT", takes in "RIGHT" || "LEFT"
+                    styleConfig={{
+                      menuProps: {
+                        style: {
+                          height: "20em",
+                          width: "10em",
+                          padding: "2px",
+                          margin: "0",
+                        },
+                      },
+                      contentProps: {
+                        style: {
+                          width: "10em",
+                          padding: "2px",
+                          background: "#fff",
+                          color: "#000",
+                          zIndex: 10000,
+                        },
+                      },
+                      menuItemProps: {
+                        style: {
+                          padding: "2px",
+                          height: "2em",
+                          color: "#000",
+                        },
+                      },
+                      menuItemSelectedProps: {
+                        style: {
+                          padding: "2px",
+                          height: "2em",
+                          backgroundColor: "#eee",
+                        },
+                      },
+                      containerProps: {
+                        style: {
+                          padding: "2px",
+                          backgroundColor: "#fff",
+                        },
+                      },
+                    }}
+                    data={headerCategoryData} // array of data to be rendered
+                  />
+                </div>
               </Nav>
 
               <Form className="search">
