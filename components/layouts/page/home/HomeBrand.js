@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
 
 const HomeBrand = ({ router }, props) => {
   return (
@@ -19,7 +20,12 @@ const HomeBrand = ({ router }, props) => {
               </button>
             </div>
           </div>
-
+          {/* <LoadingSkelleton
+            alignment="vertical"
+            count={3}
+            width={330}
+            height={100}
+          /> */}
           <div className="row pt">
             <div className="col-xl-4">
               <div className="singleBrandBox">

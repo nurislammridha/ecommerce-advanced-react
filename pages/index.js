@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import MainLayout from "../components/layouts/Layout";
 import HomeFlashSell from "../components/layouts/page/home/HomeFlashSell";
 import HomeBrand from "../components/layouts/page/home/HomeBrand";
-import HomeStroe from "../components/layouts/page/home/HomeStroe";
+import VendorList from "../components/layouts/page/home/VendorList";
 import HomeProduct from "../components/layouts/page/home/HomeProduct";
 import FlashSell from "../components/layouts/page/home/FlashSell";
 import HomeFeaturList from "../components/layouts/page/home/HomeFeaturList";
@@ -20,14 +20,14 @@ export default function Home(props) {
       <MainLayout>
         <img className="homesliderbaner" src="/images/slider/slide1.png" />
         <Container fluid>
-        <FlashSell/>
+          <FlashSell />
           <HomeFlashSell />
           <HomeFlashSell />
           <HomeFlashSell />
           <HomeBrand />
-          <HomeStroe />
+          <VendorList />
           <HomeProduct />
-         
+
           <HomeFeaturList />
         </Container>
       </MainLayout>
