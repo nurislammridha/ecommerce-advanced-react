@@ -14,6 +14,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
+  margin-bottom: 0px;
 }
 a:hover {
   text-decoration: none !important;
@@ -1915,4 +1916,32 @@ button.slick-arrow.slick-prev {
   color: #885f5f;
   font-weight: 500;
   /* color: #996565; */
+}
+/* search */
+.searchCardText.card-title.h5 {
+  font-size: 22px;
+}
+
+.searchCardText h1 {
+  font-size: 20px;
+}
+.sidebar-card-title.searchtext.pl-3.pt-3 {
+  margin-right: 15px;
+}
+.searchBorder.border-top {
+  width: 100%;
+  /* margin-left: -8px; */
+}
+.searchImg img {
+  height: 185px;
+}
+/* .searchBody.card-body {
+  height: 125px;
+} */
+p.text-secondary.mb-0 {
+  text-decoration: line-through;
+  display: inline;
+}
+.searchBody p.card-text.mb-0.float-left {
+  font-size: 14px;
 }
