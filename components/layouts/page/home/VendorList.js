@@ -36,7 +36,7 @@ const VendorList = ({ router }, props) => {
               alignment="vertical"
               count={6}
               width={100}
-              height={100}
+              height={70}
             />
           )}
 
