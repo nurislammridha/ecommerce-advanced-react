@@ -22,3 +22,7 @@ export const AUTH_REGISTER = "AUTH_REGISTER";
 /** Vendors */
 export const GET_VENDORS_LIST = "GET_VENDORS_LIST";
 export const GET_VENDORS_LOADING = "GET_VENDORS_LOADING";
+
+/** Brands */
+export const GET_BRANDS_LIST = "GET_BRANDS_LIST";
+export const GET_BRANDS_LOADING = "GET_BRANDS_LOADING";
