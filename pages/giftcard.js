@@ -70,7 +70,7 @@ export default function giftcard(props) {
                 </div>
                 <div className="row">
                   <div className="col-md-6">
-                    <p className="font-weight-bold">Your Purchase gift card</p>
+                    <p className="font-weight-bold">Available gift card for use</p>
                   </div>
                   <div className="col-md-6">
                     <p className="text-right font-weight-bold">
@@ -80,7 +80,7 @@ export default function giftcard(props) {
                 </div>
                 <div className="row">
                   <div className="col-md-3">
-                    <div className="gift-card gift-card-bgColor1">
+                    <div className="gift-card gift-card-bgColor2">
                       <p>Your gift card</p>
                       <p className="text-right giftCard-taka">&#x9f3; 1500</p>
                     </div>
@@ -89,7 +89,7 @@ export default function giftcard(props) {
                     </p>
                   </div>
                   <div className="col-md-3">
-                    <div className="gift-card gift-card-bgColor2">
+                    <div className="gift-card gift-card-bgColor4">
                       <p>Your gift card</p>
                       <p className="text-right giftCard-taka">&#x9f3; 1500</p>
                     </div>

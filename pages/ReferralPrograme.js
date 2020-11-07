@@ -52,26 +52,26 @@ export default function giftcard(props) {
                   <div className="col-md-4">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
-                        Your invaitaion code
+                       Invite User
                       </p>
                       <p className="text-center shareCode small">
-                        Share this code
+                        Current invite count 
                       </p>
-                      <p className="text-center card-value font-weight-bold codeValue">
-                        246789
+                      <p className="text-center card-value font-weight-bold ">
+                        
                       </p>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
-                        Your invaitaion code
+                      Amount
                       </p>
                       <p className="text-center shareCode small">
-                        Share this code
+                       Payable amount
                       </p>
-                      <p className="text-center card-value font-weight-bold codeValue">
-                        246789
+                      <p className="text-center card-value font-weight-bold ">
+                      ৳ 590
                       </p>
                     </div>
                   </div>
@@ -80,39 +80,39 @@ export default function giftcard(props) {
                   <div className="col-md-4">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
-                        Your invaitaion code
+                       Request for payment
                       </p>
                       <p className="text-center shareCode small">
-                        Share this code
+                        Pending for withdraw
                       </p>
-                      <p className="text-center card-value font-weight-bold codeValue">
-                        246789
+                      <p className="text-center card-value font-weight-bold ">
+                      ৳ 590
                       </p>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
-                        Your invaitaion code
+                      Approved payment
                       </p>
                       <p className="text-center shareCode small">
-                        Share this code
+                       From last payment
                       </p>
                       <p className="text-center card-value font-weight-bold codeValue">
-                        246789
+                      
                       </p>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
-                        Your invaitaion code
+                       Total User Invite
                       </p>
                       <p className="text-center shareCode small">
-                        Share this code
+                       Till now
                       </p>
                       <p className="text-center card-value font-weight-bold codeValue">
-                        246789
+                     
                       </p>
                     </div>
                   </div>

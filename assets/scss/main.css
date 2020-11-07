@@ -307,6 +307,7 @@ button.ant-btn.playStoreBtn svg {
 
 .referalCardBg {
   background: #ffffff;
+  height: 128px;
 }
 .referalCardBg p {
   color: #000;
@@ -314,6 +315,10 @@ button.ant-btn.playStoreBtn svg {
 .referalCardBg p {
   margin: 0;
   line-height: 24px;
+  padding-bottom: 5px;
+}
+p.text-center.card-value.font-weight-bold {
+  font-size: 21px;
 }
 .codeValue {
   font-size: 25px;
@@ -337,7 +342,7 @@ button.ant-btn.playStoreBtn svg {
 .requestingPayment button {
   width: 55px;
   height: 30px;
-  background: #b99322;
+  background: #f58509;
   border: none;
   color: #fff;
   font-size: 14px;
@@ -1944,4 +1949,16 @@ p.text-secondary.mb-0 {
 }
 .searchBody p.card-text.mb-0.float-left {
   font-size: 14px;
+}
+/* single product */
+.singleProduct {
+  background-color: #e9ecef;
+}
+/* product Gallery */
+.singleGalleryImg {
+  background-image: url(../img/banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
 }
