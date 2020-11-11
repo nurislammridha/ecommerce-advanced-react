@@ -18,5 +18,5 @@
 // export const API_POST_REGISTER =
 //   "http://127.0.0.1:8200/EcommerceWebsite/api/v1/users/register";
 
-export const API_SERVER_SHORT_URL = `http://172.21.176.1:8200/`;
+export const API_SERVER_SHORT_URL = `http://172.26.128.1:8200/`;
 export const API_URL = `${API_SERVER_SHORT_URL}Ecommerce-Advance-API/public/api/v1/`;
