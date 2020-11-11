@@ -1968,7 +1968,7 @@ span.favIcon {
   padding: 2px;
 }
 .galleryHeading h3 {
-  font-size: 20px;
+  font-size: 24px;
 }
 .galleryProductDetails h1 {
   font-size: 22px;
@@ -2003,4 +2003,33 @@ button.btn.btn-light.galleryAdd {
   color: white;
   width: 120px;
   height: 50px;
+}
+.singleProductHeader h1 {
+  font-size: 20px;
+}
+.storeButton button.border.border-success.rounded-pill,
+.storeButton button.border.border-danger.rounded-pill {
+  padding: 0px 31px;
+  box-shadow: 0px 0px 10px lightgray;
+  line-height: 26px;
+}
+.galleryStore h1 {
+  font-size: 19px;
+}
+.galleryStore p {
+  margin-bottom: 0px;
+}
+.galleryPrice span {
+  font-weight: 500;
+}
+.galleryPayment p {
+  /* margin-bottom: 0px; */
+}
+.galleryDescription button.btn.btn-warning.text-white,
+.galleryDescription
+  button.btn.btn-primary.bg-white.border-primary.text-primary {
+  padding: 0px 33px;
+  line-height: 29px;
+  margin: 0px auto;
+  display: block;
 }

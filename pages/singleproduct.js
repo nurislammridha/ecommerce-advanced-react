@@ -41,7 +41,7 @@ export default function singleproduct(props) {
                 </div>
                 <div className="col-xl-4 col-lg-4 bg-white">
                     <div className="singleGalleryProduct bg-white rounded">
-                      <div className="galleryHeading float-left mt-2">
+                      <div className="galleryHeading float-left mt-4 mb-2">
                         <h3>Product Title</h3>
                         </div>
                         <div className="galleryIcon float-right mt-3 ml-2">
@@ -57,24 +57,24 @@ export default function singleproduct(props) {
                  <Rater total={5} rating={2} /><span>39 Ratings & 174 Reviews</span>
                  
                 
-                <div className="galleryProductDetails">
-                <h1>৳ 134 <span className="text-warning priceOff">৳ 222</span></h1>
+                <div className="galleryProductDetails mt-1">
+                <h1 className="mb-2">৳ 134 <span className="text-warning priceOff">৳ 222</span></h1>
                     <p>Brand: <b>Brand Name</b></p>
                     <p>Availability: <span className="text-green" >In stock </span> / <sapn className="text-danger">Sold out</sapn></p>
-                   <p>Color:<span class="colorType border rounded text-dark">Red</span>
-                   <span class="colorTypeTwo border rounded text-primary ">Blue</span>
-                   <span class="colorType border rounded text-dark">Yellow</span></p>
-                   <p>Size:<span class="colorType border rounded text-dark">XS</span>
-                   <span class="colorType border rounded text-dark ">S</span>
-                   <span class="colorType  border rounded text-dark">M</span>
-                   <span class="colorType  border rounded text-dark">L</span>
-                   <span class="colorTypeTwo border rounded text-primary ">XL</span>
-                   <span class="colorType border rounded text-dark ">XXL</span>
+                   <p className="mb-2">Color:<span className="colorType border rounded text-dark">Red</span>
+                   <span className="colorTypeTwo border rounded text-primary ">Blue</span>
+                   <span className="colorType border rounded text-dark">Yellow</span></p>
+                   <p className="mb-2">Size:<span class="colorType border rounded text-dark">XS</span>
+                   <span className="colorType border rounded text-dark ">S</span>
+                   <span className="colorType  border rounded text-dark">M</span>
+                   <span className="colorType  border rounded text-dark">L</span>
+                   <span className="colorTypeTwo border rounded text-primary ">XL</span>
+                   <span className="colorType border rounded text-dark ">XXL</span>
                    </p>
-                   <p>Qty:</p>
+                   <p className="mt-2"> Qty:</p>
 
                 </div>
-                <div clasNAme="galleryButton">
+                <div clasNAme="galleryButton mt-2">
                <button className="btn btn-light galleryAdd">Add to cart</button>
               
                 <button className="btn btn-light galleryBuy">Buy Now</button>
@@ -82,6 +82,54 @@ export default function singleproduct(props) {
                     </div>
 
                 </div>
+                <div className="col-xl-3 col-lg-3">
+                  <div className="galleryStore bg-white p-3">
+                    <h1>Store Name</h1>
+                    <p><b>70%</b> Positive feedback</p>
+                    <p className="pb-2"><b>107 </b>Followers</p>
+                    <div className="storeButton mt-2">
+                    <button className="border border-success rounded-pill text-success bg-white">Chat</button>
+                    <button className="border border-danger rounded-pill text-danger bg-white ml-3">Follow</button>
+                    
+                    </div>
+                    <div className="galleryView mt-2 text-center">
+                    <a className="text-primary" href="">View Store</a>
+                    </div>
+                  </div>
+                  <div className="galleryPrice bg-white mt-2 p-3">
+                    <span className="">Best Price :৳134 </span>
+                    <span className="text-warning">(30% OFF)</span> 
+                    <div className="galleryPayment mt-3">
+                      <p classNameP="pb-2">artial Payment <spa className="text-success">Accepted</spa></p>
+                      <p>Cash on Delivery <spa className="text-danger">Not Availabe</spa></p>
+                     
+                    </div>
+                  </div>
+                  <div className="galleryDescription bg-white mt-2 p-3 pl-3">
+                    <p>15 days easy return </p>
+                    <p>Delivery Policy</p>
+                    <p>1 year Warranty</p>
+                    <p>Authentic Product</p>
+                  </div>
+                  <div className="galleryDescription bg-white mt-2 p-3 pl-3">
+                    <p>To get this product </p>
+                    <button className="btn btn-warning text-white">Login Now</button>
+                    <p  className="text-center">or</p>
+                    <button className="btn btn-primary bg-white border-primary text-primary">Sign Up</button>
+                   
+                  </div>
+
+                </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-7">
+                <div className="singleProductDetails bg-white mt-3">
+                <div className="singleProductHeader border-bottom">
+                  <h1>Product Details</h1>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-5"></div>
             </div>
           </div>
         </div>
