@@ -1,23 +1,23 @@
 import * as Types from "../../../Types";
 
 const initialState = {
-  myOrders: [],
+  wallets: [],
   loading: false,
   error: null,
 };
 
-const MyOrderReducer = (state = initialState, action) => {
+const WalletReducer = (state = initialState, action) => {
   switch (action.type) {
-    case Types.GET_MY_ORDERS_LOADING:
+    case Types.GET_WALLETS_LOADING:
       return {
         ...state,
         loading: action.payload,
       };
 
-    case Types.GET_MY_ORDERS_LIST:
+    case Types.GET_WALLETS_LIST:
       return {
         ...state,
-        myOrders: action.payload.data,
+        wallets: action.payload.data,
         loading: false,
       };
 
@@ -29,4 +29,4 @@ const MyOrderReducer = (state = initialState, action) => {
   }
 };
 
-export default MyOrderReducer;
+export default WalletReducer;
