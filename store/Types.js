@@ -22,3 +22,15 @@ export const AUTH_REGISTER = "AUTH_REGISTER";
 /** Vendors */
 export const GET_VENDORS_LIST = "GET_VENDORS_LIST";
 export const GET_VENDORS_LOADING = "GET_VENDORS_LOADING";
+
+/** Brands */
+export const GET_BRANDS_LIST = "GET_BRANDS_LIST";
+export const GET_BRANDS_LOADING = "GET_BRANDS_LOADING";
+
+/** ProductWishes */
+export const GET_PRODUCT_WISHES_LIST = "GET_PRODUCT_WISHES_LIST";
+export const GET_PRODUCT_WISHES_LOADING = "GET_PRODUCT_WISHES_LOADING";
+
+/** MyOrders */
+export const GET_MY_ORDERS_LIST = "GET_MY_ORDERS_LIST";
+export const GET_MY_ORDERS_LOADING = "GET_MY_ORDERS_LOADING";
