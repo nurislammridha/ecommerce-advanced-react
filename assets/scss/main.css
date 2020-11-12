@@ -2033,3 +2033,30 @@ button.btn.btn-light.galleryAdd {
   margin: 0px auto;
   display: block;
 }
+
+
+/** Multi Level Dropdown **/
+.dropdown-submenu{
+  position: relative;
+}
+.dropdown-submenu a::after{
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 3px;
+  top: 40%;
+}
+.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
+  display: flex;
+  flex-direction: column;
+  position: absolute !important;
+  margin-top: -30px;
+  left: 100%;
+}
+@media (max-width: 992px) {
+  .dropdown-menu{
+      width: 50%;
+  }
+  .dropdown-menu .dropdown-submenu{
+      width: auto;
+  }
+}

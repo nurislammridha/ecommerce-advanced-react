@@ -20,6 +20,7 @@ import {
 } from "react-icons/fa";
 import Menu from "./Menu";
 import ReactMegaMenu from "react-mega-menu";
+// import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
 
 const Header = ({ router }, props) => {
   const headerCategoryData = [
@@ -45,7 +46,7 @@ const Header = ({ router }, props) => {
       <div className="header">
         <div className="container-fluid">
           <Navbar>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
               <img src="/images/logos/logo-white.png" />
               <span className="logo-bottom-text">#UnboxHappiness</span>
             </Navbar.Brand>
@@ -53,7 +54,7 @@ const Header = ({ router }, props) => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="header-category mr-3">
                 <NavDropdown title="Category" id="basic-nav-dropdown">
-                  {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
                     Another action
                   </NavDropdown.Item>
@@ -63,54 +64,7 @@ const Header = ({ router }, props) => {
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
                     Separated link
-                  </NavDropdown.Item> */}
-                  {/* </NavDropdown> */}
-                  <div>
-                    <ReactMegaMenu
-                      tolerance={50} // optional, defaults to 100
-                      direction={"LEFT"} // optional, defaults to "RIGHT", takes in "RIGHT" || "LEFT"
-                      styleConfig={{
-                        menuProps: {
-                          style: {
-                            height: "20em",
-                            width: "10em",
-                            padding: "2px",
-                            margin: "0",
-                          },
-                        },
-                        contentProps: {
-                          style: {
-                            width: "10em",
-                            padding: "2px",
-                            background: "#fff",
-                            color: "#000",
-                            zIndex: 10000,
-                          },
-                        },
-                        menuItemProps: {
-                          style: {
-                            padding: "2px",
-                            height: "2em",
-                            color: "#000",
-                          },
-                        },
-                        menuItemSelectedProps: {
-                          style: {
-                            padding: "2px",
-                            height: "2em",
-                            backgroundColor: "#eee",
-                          },
-                        },
-                        containerProps: {
-                          style: {
-                            padding: "2px",
-                            backgroundColor: "#fff",
-                          },
-                        },
-                      }}
-                      data={headerCategoryData} // array of data to be rendered
-                    />
-                  </div>
+                  </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
 
