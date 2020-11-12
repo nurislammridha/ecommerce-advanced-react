@@ -441,8 +441,14 @@ button.viewButton {
   height: 120px;
   width: auto;
   margin: 0 auto;
+  padding-bottom: 20px;
+  transition: .4s;
 }
 
+.productImg img:hover {
+  padding-bottom: 5px;
+  transition: .4s;
+}
 .productTitle {
   text-align: center;
 }
@@ -461,8 +467,10 @@ button.viewButton {
 .productTitle h3 {
   font-size: 14px;
   font-weight: 700;
-  line-height: 11px;
+  line-height: 14px;
   color: #373a3c;
+  overflow: hidden;
+  height: 30px;
 }
 
 .productPrice h4 {

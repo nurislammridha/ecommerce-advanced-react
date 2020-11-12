@@ -15,6 +15,7 @@ const ProductReducer = (state = initialState, action) => {
       };
 
     case Types.GET_PRODUCTS:
+      console.log("action.payload.data", action.payload.data);
       return {
         ...state,
         products: action.payload.data,
