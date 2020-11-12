@@ -11,7 +11,7 @@ import {
   Form,
 } from "react-bootstrap";
 
-const Menu = ({ router }, props) => {
+const MainMenu = ({ router }, props) => {
   return (
     <>
       <div className="headerBottom">
@@ -55,4 +55,4 @@ const Menu = ({ router }, props) => {
   );
 };
 
-export default withRouter(Menu);
+export default withRouter(MainMenu);

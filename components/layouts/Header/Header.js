@@ -5,7 +5,7 @@ import { withRouter } from "next/router";
 import HeaderTop from "./HeaderTop";
 import HeaderSearchBar from "./HeaderSearchBar";
 import {
-  Dropdown,
+  // Dropdown,
   Form,
   FormControl,
   Button,
@@ -19,29 +19,55 @@ import {
   FaNotesMedical,
   FaBell,
 } from "react-icons/fa";
-import Menu from "./Menu";
-import ReactMegaMenu from "react-mega-menu";
-// import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
+import MainMenu from "./Menu";
+
+import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
+import "rc-menu/assets/index.css";
+
+function handleSelect(info) {
+  console.log("selected ", info);
+}
+
+function handleDeselect(info) {
+  console.log("deselect ", info);
+}
+
+const titleRight = <span>Category 1</span>;
+const titleRight1 = <span>sub menu 1</span>;
+const titleRight2 = <span>sub menu 2</span>;
+const titleRight3 = <span>sub menu 3</span>;
+
+const leftMenu = (
+  <Menu
+    multiple
+    onSelect={handleSelect}
+    onDeselect={handleDeselect}
+    defaultSelectedKeys={["2", "1-1"]}
+  >
+    <SubMenu title={titleRight} key="1">
+      <MenuItem key="1-1">0-1</MenuItem>
+      <MenuItem key="1-2">0-2</MenuItem>
+    </SubMenu>
+    <MenuItem key="3">outer</MenuItem>
+    <SubMenu title={titleRight1} key="4">
+      <MenuItem key="4-1">inner inner</MenuItem>
+      <Divider />
+      <SubMenu key="4-2" title={titleRight2}>
+        <MenuItem key="4-2-1">inn</MenuItem>
+        <SubMenu title={titleRight3} key="4-2-2">
+          <MenuItem key="4-2-2-1">inner inner</MenuItem>
+          <MenuItem key="4-2-2-2">inner inner2</MenuItem>
+        </SubMenu>
+      </SubMenu>
+    </SubMenu>
+    <MenuItem disabled key="disabled">
+      disabled
+    </MenuItem>
+    <MenuItem key="4-3">outer3</MenuItem>
+  </Menu>
+);
 
 const Header = ({ router }, props) => {
-  const headerCategoryData = [
-    {
-      label: "Category1",
-      key: "Category1",
-      items: "Category1 content",
-    },
-    {
-      label: "Category2",
-      key: "Category2",
-      items: "Category2 content",
-    },
-    {
-      label: "Category3",
-      key: "Category3",
-      items: "Category3 content",
-    },
-  ];
-
   return (
     <>
       <div className="header">
@@ -58,7 +84,7 @@ const Header = ({ router }, props) => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="header-category mr-3">
                 <NavDropdown title="Category" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
                     Another action
                   </NavDropdown.Item>
@@ -68,7 +94,8 @@ const Header = ({ router }, props) => {
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
                     Separated link
-                  </NavDropdown.Item>
+                  </NavDropdown.Item> */}
+                  <div className="menu-div-category">{leftMenu}</div>
                 </NavDropdown>
               </Nav>
 
@@ -105,7 +132,7 @@ const Header = ({ router }, props) => {
         </div>
       </div>
       <div className="menu">
-        <Menu />
+        <MainMenu />
       </div>
     </>
   );

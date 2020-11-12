@@ -2039,27 +2039,13 @@ button.btn.btn-light.galleryAdd {
 }
 
 /** Multi Level Dropdown **/
-.dropdown-submenu{
-  position: relative;
-}
-.dropdown-submenu a::after{
-  transform: rotate(-90deg);
+.menu-div-category {
+  width: 300px;
   position: absolute;
-  right: 3px;
-  top: 40%;
+  top: 0px;
+  z-index: 10000;
+  background: #fff!important;
 }
-.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
-  display: flex;
-  flex-direction: column;
-  position: absolute !important;
-  margin-top: -30px;
-  left: 100%;
-}
-@media (max-width: 992px) {
-  .dropdown-menu{
-      width: 50%;
-  }
-  .dropdown-menu .dropdown-submenu{
-      width: auto;
-  }
+.rc-menu-submenu-popup {
+  width: 300px!important;
 }
