@@ -19,9 +19,9 @@ const HomeProduct = ({ router }, props) => {
       <div className="HomeProduct bp">
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 mb-5">
               <div className="sectionTitle">
-                <h2>Shop by Stores</h2>
+                <h2>Shop by Recent Products</h2>
               </div>
             </div>
             <div className="viewTopRight">
@@ -35,8 +35,8 @@ const HomeProduct = ({ router }, props) => {
           {loading && (
             <LoadingSkelleton
               alignment="vertical"
-              count={6}
-              width={215}
+              count={5}
+              width={220}
               height={250}
             />
           )}
