@@ -51,10 +51,13 @@ const HomeBrand = ({ router }, props) => {
                   <div className="col-xl-4" key={index}>
                     <div className="singleBrandBox">
                       <div className="brandImg">
-                        <img src={brand.image} alt="" />
+                        <img
+                          src={`${process.env.NEXT_PUBLIC_URL}images/brands/${brand.image}`}
+                          alt=""
+                        />
                       </div>
                       <div className="brandTitle">
-                      <h3>{brand.name}</h3>
+                        <h3>{brand.name}</h3>
                       </div>
                     </div>
                   </div>
