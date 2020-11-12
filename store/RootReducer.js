@@ -6,13 +6,13 @@ import ProductWish from "./redux/productWishes/reducers/ProductWishReducer";
 import MyOrder from "./redux/myOrders/reducers/MyOrderReducer";
 import Wallet from "./redux/wallets/reducers/WalletReducer";
 // import SliderReducer from "./sliders/SliderReducer";
-// import CartReducer from "./orders/CartReducer";
+import CartReducer from "./redux/carts/reducers/CartReducer";
 // import AuthReducer from "./auth/AuthReducer";
 
 export default combineReducers({
   product: ProductReducer,
   // slider: SliderReducer,
-  // cart: CartReducer,
+  cart: CartReducer,
   // auth: AuthReducer,
   vendor: VendorReducer,
   brand: BrandReducer,
