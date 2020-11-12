@@ -28,7 +28,7 @@ const HeaderTop = ({ router }, props) => {
             </Col>
             <Col lg={6}>
               <div className="topRightMenu">
-                <a href=""> SELL ON Akij </a>
+                <a href=""> SELL ON Maccaf </a>
                 <a href=""> CUSTOMER CARE </a>
                 <a href=""> TRACK MY ORDER </a>
                 <a href=""> Language </a>

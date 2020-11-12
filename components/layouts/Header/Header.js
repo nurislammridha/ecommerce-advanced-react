@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { withRouter } from "next/router";
 import HeaderTop from "./HeaderTop";
@@ -46,10 +47,13 @@ const Header = ({ router }, props) => {
       <div className="header">
         <div className="container-fluid">
           <Navbar>
-            <Navbar.Brand href="/">
-              <img src="/images/logos/logo-white.png" />
-              <span className="logo-bottom-text">#UnboxHappiness</span>
-            </Navbar.Brand>
+            <Link href="/" className="text-white">
+              <Navbar.Brand href="/">
+                <img src="/images/logos/logo-white.png" />
+                <span className="logo-bottom-text">#UnboxHappiness</span>
+              </Navbar.Brand>
+            </Link>
+
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="header-category mr-3">
@@ -74,16 +78,23 @@ const Header = ({ router }, props) => {
               <div className="rightnavbar d-flex flex-row ml-3">
                 <div className="loginguest">
                   <p>Hey user/Guest</p>
-                  <p href="">Sign up or Login</p>
+                  <Link href="/login">
+                    <span className="text-white pointer">Sign up or Login</span>
+                  </Link>
                 </div>
                 <div>
-                  <FaBell className="header-carticon" />
-                  <span className="badge counter">
+                  <Link href="/notification">
+                    <FaBell className="header-carticon pointer" />
+                  </Link>
+
+                  <span className="badge counter pointer">
                     <span className="count">0</span>
                   </span>
                 </div>
                 <div>
-                  <FaCartArrowDown className="header-carticon" />
+                  <Link href="/cart">
+                    <FaCartArrowDown className="header-carticon pointer" />
+                  </Link>
                   <span className="badge counter">
                     <span className="count">0</span>
                   </span>

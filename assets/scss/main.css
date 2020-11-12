@@ -2034,7 +2034,9 @@ button.btn.btn-light.galleryAdd {
   margin: 0px auto;
   display: block;
 }
-
+.pointer{
+  cursor: pointer;
+}
 
 /** Multi Level Dropdown **/
 .dropdown-submenu{
