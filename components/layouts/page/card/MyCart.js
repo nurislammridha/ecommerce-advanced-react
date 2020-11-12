@@ -1,10 +1,21 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 // import NumericInput from "react-numeric-input";
 // import CancelIcon from "@material-ui/icons/Cancel";
 // import { Checkbox } from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCarts } from "../../../../store/redux/carts/actions/CartAction";
+import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
 
 const MyCart = ({ router }, props) => {
+  const dispatch = useDispatch();
+  const loading = useSelector((state) => state.cart.loading);
+  const carts = useSelector((state) => state.cart.carts);
+
+  useEffect(() => {
+    dispatch(fetchCarts());
+  }, []);
+
   return (
     <>
       <div className="wishbanner pb">
@@ -15,28 +26,47 @@ const MyCart = ({ router }, props) => {
                 <h1>My Cart</h1>
               </div>
 
-              <div className="mt-4">
-                <div className="innerwishlist productorderdetailsbox cartlistsection">
-                  <div className="singleorderproduct">
-                    <img src="/images/default/chair.png" />
-                  </div>
-                  <div className="wishsingleproductText mycarttext">
-                    <h1>Product title with link</h1>
-                    <h2>Seller: Shop no</h2>
-                    <h4>৳ 500</h4>
-                  </div>
-                  {/* <div className="mycartquantity">
-                    <NumericInput mobile className="form-control" />
-                  </div> */}
+              {!loading && carts.map.length === 0 && (
+                <div>No Cart Found !!</div>
+              )}
 
-                  <div className="orderquantity mycarttext">
-                    <h2>REMOVE</h2>
-                  </div>
-                  <div className="mycartquantity one">
-                    <FavoriteIcon />
-                  </div>
-                </div>
-              </div>
+              {loading && (
+                <LoadingSkelleton
+                  alignment="vertical"
+                  count={1}
+                  width={730}
+                  height={200}
+                />
+              )}
+
+              {carts.map.length > 0 && (
+                <>
+                  {carts.map((cart, index) => (
+                    <div className="mt-4">
+                      <div className="innerwishlist productorderdetailsbox cartlistsection">
+                        <div className="singleorderproduct">
+                          <img src="/images/default/chair.png" />
+                        </div>
+                        <div className="wishsingleproductText mycarttext">
+                          <h1>Product title with link</h1>
+                          <h2>Seller: Shop no</h2>
+                          <h4>৳ 500</h4>
+                        </div>
+                        {/* <div className="mycartquantity">
+                          <NumericInput mobile className="form-control" />
+                        </div> */}
+      
+                        <div className="orderquantity mycarttext">
+                          <h2>REMOVE</h2>
+                        </div>
+                        <div className="mycartquantity one">
+                          <FavoriteIcon />
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </>
+              )}
               <div className="mt-2">
                 <div className="innerwishlist productorderdetailsbox cartlistsection">
                   <div className="singleorderproduct">
