@@ -586,14 +586,15 @@ h4.pt-2 {
   display: inline-block;
   border: 1px solid #dfdfdf;
   border-radius: 12px;
-  margin-bottom: 10px;
-  height: 75px;
+  margin-bottom: 12px;
+  height: 100px;
   margin-right: 50px;
 }
 
 .StoreImg img {
   width: 100px;
   margin: 12px auto;
+  height: 40px;
 }
 
 .react-rater div {

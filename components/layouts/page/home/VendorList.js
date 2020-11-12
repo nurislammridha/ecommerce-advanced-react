@@ -49,7 +49,13 @@ const VendorList = ({ router }, props) => {
               <>
                 {vendors.map((vendor, index) => (
                   <div className="StoreImg" key={index}>
-                    <img src="/images/default/logo1.png" />
+                    <img
+                      src={`${process.env.NEXT_PUBLIC_URL}images/vendors/${vendor.logo}`}
+                      alt=""
+                    />
+                    <p className="text-center font-weight-bold">
+                      {vendor.name}
+                    </p>
                   </div>
                 ))}
               </>
