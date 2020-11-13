@@ -19,10 +19,11 @@ import {
   FaNotesMedical,
   FaBell,
 } from "react-icons/fa";
-import MainMenu from "./Menu";
+// import MainMenu from "./Menu";
 
-import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
-import "rc-menu/assets/index.css";
+// import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
+// import "rc-menu/assets/index.css";
+
 
 function handleSelect(info) {
   console.log("selected ", info);
@@ -37,35 +38,35 @@ const titleRight1 = <span>sub menu 1</span>;
 const titleRight2 = <span>sub menu 2</span>;
 const titleRight3 = <span>sub menu 3</span>;
 
-const leftMenu = (
-  <Menu
-    multiple
-    onSelect={handleSelect}
-    onDeselect={handleDeselect}
-    defaultSelectedKeys={["2", "1-1"]}
-  >
-    <SubMenu title={titleRight} key="1">
-      <MenuItem key="1-1">0-1</MenuItem>
-      <MenuItem key="1-2">0-2</MenuItem>
-    </SubMenu>
-    <MenuItem key="3">outer</MenuItem>
-    <SubMenu title={titleRight1} key="4">
-      <MenuItem key="4-1">inner inner</MenuItem>
-      <Divider />
-      <SubMenu key="4-2" title={titleRight2}>
-        <MenuItem key="4-2-1">inn</MenuItem>
-        <SubMenu title={titleRight3} key="4-2-2">
-          <MenuItem key="4-2-2-1">inner inner</MenuItem>
-          <MenuItem key="4-2-2-2">inner inner2</MenuItem>
-        </SubMenu>
-      </SubMenu>
-    </SubMenu>
-    <MenuItem disabled key="disabled">
-      disabled
-    </MenuItem>
-    <MenuItem key="4-3">outer3</MenuItem>
-  </Menu>
-);
+// const leftMenu = (
+//   <Menu
+//     multiple
+//     onSelect={handleSelect}
+//     onDeselect={handleDeselect}
+//     defaultSelectedKeys={["2", "1-1"]}
+//   >
+//     <SubMenu title={titleRight} key="1">
+//       <MenuItem key="1-1">0-1</MenuItem>
+//       <MenuItem key="1-2">0-2</MenuItem>
+//     </SubMenu>
+//     <MenuItem key="3">outer</MenuItem>
+//     <SubMenu title={titleRight1} key="4">
+//       <MenuItem key="4-1">inner inner</MenuItem>
+//       <Divider />
+//       <SubMenu key="4-2" title={titleRight2}>
+//         <MenuItem key="4-2-1">inn</MenuItem>
+//         <SubMenu title={titleRight3} key="4-2-2">
+//           <MenuItem key="4-2-2-1">inner inner</MenuItem>
+//           <MenuItem key="4-2-2-2">inner inner2</MenuItem>
+//         </SubMenu>
+//       </SubMenu>
+//     </SubMenu>
+//     <MenuItem disabled key="disabled">
+//       disabled
+//     </MenuItem>
+//     <MenuItem key="4-3">outer3</MenuItem>
+//   </Menu>
+// );
 
 const Header = ({ router }, props) => {
   return (
@@ -95,7 +96,7 @@ const Header = ({ router }, props) => {
                   <NavDropdown.Item href="#action/3.4">
                     Separated link
                   </NavDropdown.Item> */}
-                  <div className="menu-div-category">{leftMenu}</div>
+                  {/* <div className="menu-div-category">{leftMenu}</div> */}
                 </NavDropdown>
               </Nav>
 
@@ -131,9 +132,9 @@ const Header = ({ router }, props) => {
           </Navbar>
         </div>
       </div>
-      <div className="menu">
+      {/* <div className="menu">
         <MainMenu />
-      </div>
+      </div> */}
     </>
   );
 };

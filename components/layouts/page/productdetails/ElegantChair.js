@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import { FaCartPlus, FaGooglePlay, FaUser } from "react-icons/fa";
 import Rater from "react-rater";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
+import Link from "next/link";
+import { Dropdown,DropdownButton } from 'react-bootstrap';
+import AddIcon from '@material-ui/icons/Add';
 
 const ElegantChair = ({ router }, props) => {
   return (
@@ -39,7 +44,19 @@ const ElegantChair = ({ router }, props) => {
                 <h1>Elegant Chair-Wave- Rose Wood</h1>
                 <div className="review">
                   <Rater total={5} rating={2} /> <span> 58 Ratings </span>
+                <span className="float-right">  
+                {/* <Link href="/"> */}
+               <ShareIcon/>
+                  {/* </Link>  */}
+                {/* <Link href="/"> */}
+                <FavoriteIcon/>
+              
+                {/* </Link>  */}
+                
+                  </span>
+                  
                 </div>
+               
                 <div className="stock">
                   <span>Brand: AKIJ PLASTICS LTD.</span>
                 </div>
@@ -50,13 +67,29 @@ const ElegantChair = ({ router }, props) => {
                   <FaCartPlus />
                   <FaCartPlus />
                 </div>
+              
                 <div className="chairdetailstext">
-                  <h2>৳ 590</h2>
+                  <h2 className="text-warning">৳ 590</h2>
+                  <h4 className="text-danger">৳ 1200</h4><span className="text-dark">-38%</span>
                 </div>
+             {/* <div className="Promotion">
+               <h6 className="float-left">Promotions</h6>
+               <h6 className="float-right">Spend ৳ 2000 get ৳ 200 off
+               <DropdownButton  title="Dropdown button">
+                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                </DropdownButton>
+                </h6>
+             </div> */}
 
                 <div className="chaircolor">
                   <h2>Color:</h2>
-                  <h2>Quantity:</h2>
+                  <h2>Quantity:      
+                    {/* <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-5"><AddIcon/></button>
+                   <span className="colorType  border rounded text-dark">1</span>
+                   <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-1"><AddIcon/></button> */}
+                  </h2>
                 </div>
                 <div className="stock cart">
                   <span>Buy Now</span>
@@ -67,16 +100,17 @@ const ElegantChair = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-lg-4 deliverysection">
-              <div className="chairDeliverydetails">
+            <div className="col-lg-4 deliverysection bg-light p-3">
+              <div className="chairDeliverydetails  ">
                 <h2>Delivery Options</h2>
                 <div className="chairDeliveryoption three"></div>
                 <div className="chairDeliveryoption">
                   <p>Dhaka,Dhaka - South,Wari</p>
                   <p>Home Delivery</p>
+                  <p className="mt-n3 deliveryDays">3-5 days</p>
                   <p>Cash on Delivery Available</p>
                 </div>
-                <div className="chairDeliveryoption two">
+                {/* <div className="chairDeliveryoption two">
                   <p>Edit</p>
                   <p>৳ 245</p>
                 </div>
@@ -93,7 +127,8 @@ const ElegantChair = ({ router }, props) => {
                   <div className="elegentstoreImg three">
                     <img src="/images/default/playstore.png" />
                   </div>
-                </div>
+                </div> */}
+                <div className="clearfix"></div>
                 <div className="elegentrating">
                   <div className="elegentsinglerating">
                     <h6>88%</h6>
