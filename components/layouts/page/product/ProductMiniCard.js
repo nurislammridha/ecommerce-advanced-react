@@ -1,5 +1,6 @@
 import React from "react";
 import Rater from "react-rater";
+import Link from "next/link";
 
 const ProductMiniCard = (props) => {
   const { product } = props;
@@ -9,9 +10,11 @@ const ProductMiniCard = (props) => {
       {typeof product != "undefined" && (
         <div className="singleProduct singleproductborder">
           <div className="productImg">
-            <img
-              src={`${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`}
-            />
+            <Link href="/singleproduct">
+              <img
+                src={`${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`}
+              />
+            </Link>
           </div>
           <div className="productDetails">
             <div className="productTitle">
