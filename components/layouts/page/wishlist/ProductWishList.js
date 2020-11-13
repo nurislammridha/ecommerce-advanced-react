@@ -21,7 +21,7 @@ const ProductWishList = ({ router }, props) => {
           <div className="row">
             <div className="col-lg-3 offset-lg-1">
               <div className="sidebar card">
-                <ul>
+                 <ul>
                   <li>
                     <a href="">My Profile</a>
                   </li>
@@ -58,7 +58,8 @@ const ProductWishList = ({ router }, props) => {
                   <li>
                     <a href="">Refferal Programme</a>
                   </li>
-                </ul>
+                </ul> 
+             
               </div>
             </div>
 

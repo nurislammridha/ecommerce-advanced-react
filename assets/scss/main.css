@@ -442,12 +442,12 @@ button.viewButton {
   width: auto;
   margin: 0 auto;
   padding-bottom: 20px;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .productImg img:hover {
   padding-bottom: 5px;
-  transition: .4s;
+  transition: 0.4s;
 }
 .productTitle {
   text-align: center;
@@ -863,9 +863,9 @@ h4.pt-2 {
   font-size: 12px;
   font-weight: 500;
 }
-.elegentrating {
+/* .elegentrating {
   padding-top: 100px;
-}
+} */
 
 .elegentsinglerating {
   float: left;
@@ -1986,7 +1986,7 @@ span.favIcon {
   font-size: 24px;
 }
 .galleryProductDetails h1 {
-  font-size: 22px;
+  font-size: 26px;
 }
 .priceOff {
   text-decoration: line-through;
@@ -2048,7 +2048,7 @@ button.btn.btn-light.galleryAdd {
   margin: 0px auto;
   display: block;
 }
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
@@ -2058,8 +2058,35 @@ button.btn.btn-light.galleryAdd {
   position: absolute;
   top: 0px;
   z-index: 10000;
-  background: #fff!important;
+  background: #fff !important;
 }
 .rc-menu-submenu-popup {
-  width: 300px!important;
+  width: 300px !important;
+}
+/*single product  */
+.galleryDescription.bg-white.mt-2.p-3.pl-3 p {
+  margin-bottom: 0px;
+}
+button.btn.btn-light.increment.bg-light.border.rounded-circle.text-dark.ml-5 {
+  height: 30px;
+  width: 30px;
+}
+.sideBox.form-group {
+  margin-bottom: 0rem;
+}
+/* product details */
+.chairdetailstext h4 {
+  text-decoration: line-through;
+  display: inline-block;
+}
+.chairdetailstext span {
+  font-size: 20px;
+  margin-left: 5px;
+}
+.MuiSvgIcon-root .btn.btn-light.increment {
+  margin-left: -9px;
+  margin-top: -8px;
+}
+p.mt-n3.deliveryDays {
+  font-size: 13px;
 }

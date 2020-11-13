@@ -2,8 +2,10 @@ import React from 'react';
 import MainLayout from '../components/layouts/Layout';
 import Rater from "react-rater";
 import FavoriteIcon from '@material-ui/icons/Favorite';
-
 import ShareIcon from '@material-ui/icons/Share';
+import AddIcon from '@material-ui/icons/Add';
+
+
 
 export default function singleproduct(props) {
   return (
@@ -58,9 +60,9 @@ export default function singleproduct(props) {
                  
                 
                 <div className="galleryProductDetails mt-1">
-                <h1 className="mb-5">৳ 134 <span className="text-warning priceOff">৳ 222</span></h1>
-                    <p className="mt-5">Brand: <b>Brand Name</b></p>
-                    <p className="mt-5">Availability: <span className="text-green" >In stock </span> / <sapn className="text-danger">Sold out</sapn></p>
+                <h1 className="mb-3 mt-3">৳ 134 <span className="text-warning priceOff">৳ 222</span></h1>
+                    <p className="mt-3">Brand: <b>Brand Name</b></p>
+                    <p className="mt-3 mb-3">Availability: <span className="text-green" >In stock </span> / <sapn className="text-danger">Sold out</sapn></p>
                    <p className="mb-5">Color:<span className="colorType border rounded text-dark">Red</span>
                    <span className="colorTypeTwo border rounded text-primary ">Blue</span>
                    <span className="colorType border rounded text-dark">Yellow</span></p>
@@ -71,7 +73,11 @@ export default function singleproduct(props) {
                    <span className="colorTypeTwo border rounded text-primary ">XL</span>
                    <span className="colorType border rounded text-dark ">XXL</span>
                    </p>
-                   <p className="mb-5"> Qty:</p>
+                   <p className="mb-5"> Qty:
+                   <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-5"><AddIcon/></button>
+                   <span className="colorType  border rounded text-dark">1</span>
+                   <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-1"><AddIcon/></button>
+                   </p>
 
                 </div>
                 <div clasNAme="galleryButton mt-5">
@@ -96,12 +102,12 @@ export default function singleproduct(props) {
                     <a className="text-primary" href="">View Store</a>
                     </div>
                   </div>
-                  <div className="galleryPrice bg-white mt-2 p-3">
+                  <div className="galleryPrice bg-white mt-2 px-3 pt-3 pb-1">
                     <span className="">Best Price :৳134 </span>
-                    <span className="text-warning">(30% OFF)</span> 
-                    <div className="galleryPayment mt-3">
-                      <p classNameP="pb-2">artial Payment <spa className="text-success">Accepted</spa></p>
-                      <p>Cash on Delivery <spa className="text-danger">Not Availabe</spa></p>
+                    <span className="text-warning"> (30% OFF)</span> 
+                    <div className="galleryPayment mt-1">
+                      <p className="mb-0">Partial Payment <span className="text-success font-weight-bold">Accepted</span></p>
+                      <p>Cash on Delivery <span className="text-danger font-weight-bold">Not Availabe</span></p>
                      
                     </div>
                   </div>
@@ -112,7 +118,7 @@ export default function singleproduct(props) {
                     <p>Authentic Product</p>
                   </div>
                   <div className="galleryDescription bg-white mt-2 p-3 pl-3">
-                    <p>To get this product </p>
+                    <p className="mb-1">To get this product </p>
                     <button className="btn btn-warning text-white">Login Now</button>
                     <p  className="text-center">or</p>
                     <button className="btn btn-primary bg-white border-primary text-primary">Sign Up</button>
