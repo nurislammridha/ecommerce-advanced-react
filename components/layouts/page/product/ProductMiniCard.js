@@ -19,11 +19,23 @@ const ProductMiniCard = (props) => {
               <p>{product.category.name}</p>
             </div>
             <div className="productPrice pt-2">
-              <h4>৳ 590.00</h4>
-              <p>৳ 590.00</p>
+              {product.is_offer_enable != true && (
+                <h4>৳ {product.default_selling_price}</h4>
+              )}
+
+              {product.is_offer_enable != false && (
+                <>
+                  <h4>৳ {product.offer_selling_price}</h4>
+                  <p>
+                    <del>৳ {product.default_selling_price}</del>
+                  </p>
+                </>
+              )}
             </div>
+
             <div className="ratepoint">
-              <Rater total={5} rating={2} /> <span> (1) </span>
+              <Rater total={5} rating={parseFloat(product.average_rating)} />{" "}
+              <span> ({parseFloat(product.average_rating).toFixed(1)}) </span>
             </div>
           </div>
         </div>
