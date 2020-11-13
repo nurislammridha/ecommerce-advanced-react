@@ -58,23 +58,23 @@ export default function singleproduct(props) {
                  
                 
                 <div className="galleryProductDetails mt-1">
-                <h1 className="mb-2">৳ 134 <span className="text-warning priceOff">৳ 222</span></h1>
-                    <p>Brand: <b>Brand Name</b></p>
-                    <p>Availability: <span className="text-green" >In stock </span> / <sapn className="text-danger">Sold out</sapn></p>
-                   <p className="mb-2">Color:<span className="colorType border rounded text-dark">Red</span>
+                <h1 className="mb-5">৳ 134 <span className="text-warning priceOff">৳ 222</span></h1>
+                    <p className="mt-5">Brand: <b>Brand Name</b></p>
+                    <p className="mt-5">Availability: <span className="text-green" >In stock </span> / <sapn className="text-danger">Sold out</sapn></p>
+                   <p className="mb-5">Color:<span className="colorType border rounded text-dark">Red</span>
                    <span className="colorTypeTwo border rounded text-primary ">Blue</span>
                    <span className="colorType border rounded text-dark">Yellow</span></p>
-                   <p className="mb-2">Size:<span class="colorType border rounded text-dark">XS</span>
+                   <p className="mb-5">Size:<span class="colorType border rounded text-dark">XS</span>
                    <span className="colorType border rounded text-dark ">S</span>
                    <span className="colorType  border rounded text-dark">M</span>
                    <span className="colorType  border rounded text-dark">L</span>
                    <span className="colorTypeTwo border rounded text-primary ">XL</span>
                    <span className="colorType border rounded text-dark ">XXL</span>
                    </p>
-                   <p className="mt-2"> Qty:</p>
+                   <p className="mb-5"> Qty:</p>
 
                 </div>
-                <div clasNAme="galleryButton mt-2">
+                <div clasNAme="galleryButton mt-5">
                <button className="btn btn-light galleryAdd">Add to cart</button>
               
                 <button className="btn btn-light galleryBuy">Buy Now</button>
