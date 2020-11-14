@@ -7,6 +7,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import Link from "next/link";
 import { Dropdown,DropdownButton } from 'react-bootstrap';
 import AddIcon from '@material-ui/icons/Add';
+import PinDropIcon from '@material-ui/icons/PinDrop';
 
 const ElegantChair = ({ router }, props) => {
   return (
@@ -105,10 +106,11 @@ const ElegantChair = ({ router }, props) => {
                 <h2>Delivery Options</h2>
                 <div className="chairDeliveryoption three"></div>
                 <div className="chairDeliveryoption">
-                  <p>Dhaka,Dhaka - South,Wari</p>
-                  <p>Home Delivery</p>
-                  <p className="mt-n3 deliveryDays">3-5 days</p>
-                  <p>Cash on Delivery Available</p>
+                  <p><PinDropIcon/>Dhaka,Dhaka - South,Wari</p><br></br>
+                  <img src="/images/default/homedelivery.png" alt="" />
+                   <p>Home Delivery</p><br></br>
+                  <p className="mt-n3 deliveryDays pl-4">3-5 days</p><br></br>
+                  <img src="/images/default/cashdelivery.png" alt="" />  <p>Cash on Delivery Available</p>
                 </div>
                 {/* <div className="chairDeliveryoption two">
                   <p>Edit</p>
@@ -129,6 +131,21 @@ const ElegantChair = ({ router }, props) => {
                   </div>
                 </div> */}
                 <div className="clearfix"></div>
+                <div className="border-bottom"></div>
+                <div className="clearfix"></div>
+                <div className="chairDeliveryoption returnWarranty mt-2">
+                  <h6>Return & Warranty</h6>
+                  <img src="/images/default/homedelivery.png" alt="" />
+                   <p>7 Days Returns</p><br></br>
+                   <p className="mt-n3 deliveryDays pl-4">Change of mind is not applicable</p><br></br>
+                   <img src="/images/default/homedelivery.png" alt="" />
+                   <p>Warranty not available</p><br></br>
+                </div>
+                <div className="clearfix"></div>
+                <div className="clearfix"></div>
+              <div className="mt-2 bg-light">
+                <h6>Sold by</h6>
+              </div>
                 <div className="elegentrating">
                   <div className="elegentsinglerating">
                     <h6>88%</h6>
@@ -144,6 +161,8 @@ const ElegantChair = ({ router }, props) => {
                   </div>
                 </div>
               </div>
+             
+              <div className="clearfix"></div>
               <div className="elegentpayment">
                 <div className="elegentpaymenttext">
                   <p>Payment:</p>

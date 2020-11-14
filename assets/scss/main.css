@@ -2084,3 +2084,15 @@ button.btn.btn-light.increment.bg-light.border.rounded-circle.text-dark.ml-5 {
 p.mt-n3.deliveryDays {
   font-size: 13px;
 }
+.chairDeliveryoption img {
+  width: 34px;
+  display: inline-block;
+}
+.chairDeliveryoption p {
+  display: inline-block;
+}
+.border-bottom {
+  margin-left: -16px;
+
+  width: 108%;
+}
