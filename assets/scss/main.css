@@ -487,6 +487,13 @@ button.viewButton {
 .productPrice {
   text-align: center;
 }
+.productDetails {
+  overflow: hidden;
+  height: 120px;
+}
+.productPrice del {
+  color: #d04848f2;
+}
 .product-discount {
   color: #b1c978;
   font-size: 14px;
@@ -515,10 +522,9 @@ h4.pt-2 {
   float: right;
   width: 20px;
   position: relative;
-  top: -7px;
+  top: 5px;
   font-size: 10px;
 }
-
 .ratepoint {
   width: 100px;
 }

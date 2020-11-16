@@ -8,6 +8,7 @@ import FlashSell from "../components/layouts/page/home/FlashSell";
 import HomeFeaturList from "../components/layouts/page/home/HomeFeaturList";
 
 import { Container } from "react-bootstrap";
+import HomeCategoryWiseProduct from "../components/layouts/page/home/HomeCategoryWiseProduct";
 
 export default function Home(props) {
   useEffect(() => {
@@ -21,9 +22,11 @@ export default function Home(props) {
         <img className="homesliderbaner" src="/images/slider/slide1.png" />
         <Container fluid>
           <FlashSell />
-          <HomeFlashSell />
-          <HomeFlashSell />
-          <HomeFlashSell />
+
+          <HomeCategoryWiseProduct no={1} />
+
+          <HomeCategoryWiseProduct no={2} />
+
           <HomeBrand />
           <VendorList />
           <HomeProduct />

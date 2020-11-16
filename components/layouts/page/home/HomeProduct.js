@@ -1,4 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../../../store/redux/products/actions/ProductAction";
@@ -25,10 +26,12 @@ const HomeProduct = ({ router }, props) => {
               </div>
             </div>
             <div className="viewTopRight">
-              <button className="viewButton brandbutton">
-                View all
-                <FaArrowRight />
-              </button>
+              <Link href="products">
+                <button className="viewButton brandbutton">
+                  View all
+                  <FaArrowRight />
+                </button>
+              </Link>
             </div>
           </div>
 
