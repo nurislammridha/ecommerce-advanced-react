@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Dropdown,DropdownButton } from 'react-bootstrap';
 import AddIcon from '@material-ui/icons/Add';
 import PinDropIcon from '@material-ui/icons/PinDrop';
+import ChatIcon from '@material-ui/icons/Chat';
 
 const ElegantChair = ({ router }, props) => {
   return (
@@ -101,7 +102,7 @@ const ElegantChair = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-lg-4 deliverysection bg-light p-3">
+            <div className="col-lg-4 deliverysection bg-light p-3 ">
               <div className="chairDeliverydetails  ">
                 <h2>Delivery Options</h2>
                 <div className="chairDeliveryoption three"></div>
@@ -135,17 +136,23 @@ const ElegantChair = ({ router }, props) => {
                 <div className="clearfix"></div>
                 <div className="chairDeliveryoption returnWarranty mt-2">
                   <h6>Return & Warranty</h6>
-                  <img src="/images/default/homedelivery.png" alt="" />
-                   <p>7 Days Returns</p><br></br>
+                  <img src="/images/default/7days.png" alt="" />
+                   <p>7 Days Returns</p>
                    <p className="mt-n3 deliveryDays pl-4">Change of mind is not applicable</p><br></br>
-                   <img src="/images/default/homedelivery.png" alt="" />
+                   <img src="/images/default/nowarranty.png" alt="" />
                    <p>Warranty not available</p><br></br>
                 </div>
                 <div className="clearfix"></div>
                 <div className="clearfix"></div>
-              <div className="mt-2 bg-light">
+              <div className="mt-2 bg-light soldText">
                 <h6>Sold by</h6>
+                <div className="soldAgency">
+                <h2 className="float-left">Akij plastic</h2>
+                <p lassName="float-right text-right font-weight-bold"><ChatIcon/>Chat Now</p>
+                </div>
+               
               </div>
+              <div className="clearfix"></div>
                 <div className="elegentrating">
                   <div className="elegentsinglerating">
                     <h6>88%</h6>
@@ -158,6 +165,10 @@ const ElegantChair = ({ router }, props) => {
                   <div className="elegentsinglerating">
                     <h6>43%</h6>
                     <p>Chat Response Rate</p>
+                  </div>
+                  <div className="clearfix"></div>
+                  <div className="goStore text-center">
+                  <Link href="/">  GO TO STORE</Link>
                   </div>
                 </div>
               </div>

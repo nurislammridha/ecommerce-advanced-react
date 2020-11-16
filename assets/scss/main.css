@@ -2102,3 +2102,13 @@ p.mt-n3.deliveryDays {
 
   width: 108%;
 }
+.soldAgency p {
+  text-align: right;
+  color: #199cbd;
+}
+p.text-center.store {
+  color: #199cbd;
+}
+.soldText h6 {
+  color: gray;
+}
