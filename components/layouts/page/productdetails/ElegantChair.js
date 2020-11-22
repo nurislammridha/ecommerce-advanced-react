@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { FaCartPlus, FaGooglePlay, FaUser } from "react-icons/fa";
 import Rater from "react-rater";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ShareIcon from "@material-ui/icons/Share";
 import Link from "next/link";
-import { Dropdown,DropdownButton } from 'react-bootstrap';
-import AddIcon from '@material-ui/icons/Add';
-import PinDropIcon from '@material-ui/icons/PinDrop';
-import ChatIcon from '@material-ui/icons/Chat';
+import { Dropdown, DropdownButton } from "react-bootstrap";
+import AddIcon from "@material-ui/icons/Add";
+import PinDropIcon from "@material-ui/icons/PinDrop";
+import ChatIcon from "@material-ui/icons/Chat";
 
 const ElegantChair = ({ router }, props) => {
   return (
@@ -46,19 +46,17 @@ const ElegantChair = ({ router }, props) => {
                 <h1>Elegant Chair-Wave- Rose Wood</h1>
                 <div className="review">
                   <Rater total={5} rating={2} /> <span> 58 Ratings </span>
-                <span className="float-right">  
-                {/* <Link href="/"> */}
-               <ShareIcon/>
-                  {/* </Link>  */}
-                {/* <Link href="/"> */}
-                <FavoriteIcon/>
-              
-                {/* </Link>  */}
-                
+                  <span className="float-right">
+                    {/* <Link href="/"> */}
+                    <ShareIcon />
+                    {/* </Link>  */}
+                    {/* <Link href="/"> */}
+                    <FavoriteIcon />
+
+                    {/* </Link>  */}
                   </span>
-                  
                 </div>
-               
+
                 <div className="stock">
                   <span>Brand: AKIJ PLASTICS LTD.</span>
                 </div>
@@ -69,12 +67,13 @@ const ElegantChair = ({ router }, props) => {
                   <FaCartPlus />
                   <FaCartPlus />
                 </div>
-              
+
                 <div className="chairdetailstext">
                   <h2 className="text-warning">৳ 590</h2>
-                  <h4 className="text-danger">৳ 1200</h4><span className="text-dark">-38%</span>
+                  <h4 className="text-danger">৳ 1200</h4>
+                  <span className="text-dark">-38%</span>
                 </div>
-             {/* <div className="Promotion">
+                {/* <div className="Promotion">
                <h6 className="float-left">Promotions</h6>
                <h6 className="float-right">Spend ৳ 2000 get ৳ 200 off
                <DropdownButton  title="Dropdown button">
@@ -87,7 +86,8 @@ const ElegantChair = ({ router }, props) => {
 
                 <div className="chaircolor">
                   <h2>Color:</h2>
-                  <h2>Quantity:      
+                  <h2>
+                    Quantity:
                     {/* <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-5"><AddIcon/></button>
                    <span className="colorType  border rounded text-dark">1</span>
                    <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-1"><AddIcon/></button> */}
@@ -102,16 +102,23 @@ const ElegantChair = ({ router }, props) => {
               </div>
             </div>
 
-            <div className="col-lg-4 deliverysection bg-light p-3 ">
-              <div className="chairDeliverydetails  ">
+            <div className="col-lg-4 deliverysection">
+              <div className="chairDeliverydetails bg-light p-3">
                 <h2>Delivery Options</h2>
                 <div className="chairDeliveryoption three"></div>
-                <div className="chairDeliveryoption">
-                  <p><PinDropIcon/>Dhaka,Dhaka - South,Wari</p><br></br>
+                <div className="chairDeliveryoption productDetailsFloating">
+                  <p>
+                    <PinDropIcon />
+                    Dhaka,Dhaka - South,Wari
+                  </p>
+                  <br></br>
                   <img src="/images/default/homedelivery.png" alt="" />
-                   <p>Home Delivery</p><br></br>
-                  <p className="mt-n3 deliveryDays pl-4">3-5 days</p><br></br>
-                  <img src="/images/default/cashdelivery.png" alt="" />  <p>Cash on Delivery Available</p>
+                  <p>Home Delivery</p>
+                  <br></br>
+                  <p className="mt-n3 deliveryDays pl-4">3-5 days</p>
+                  <br></br>
+                  <img src="/images/default/cashdelivery.png" alt="" />{" "}
+                  <p>Cash on Delivery Available</p>
                 </div>
                 {/* <div className="chairDeliveryoption two">
                   <p>Edit</p>
@@ -134,25 +141,31 @@ const ElegantChair = ({ router }, props) => {
                 <div className="clearfix"></div>
                 <div className="border-bottom"></div>
                 <div className="clearfix"></div>
-                <div className="chairDeliveryoption returnWarranty mt-2">
+                <div className="chairDeliveryoption productDetailsFloating returnWarranty mt-2">
                   <h6>Return & Warranty</h6>
                   <img src="/images/default/7days.png" alt="" />
-                   <p>7 Days Returns</p>
-                   <p className="mt-n3 deliveryDays pl-4">Change of mind is not applicable</p><br></br>
-                   <img src="/images/default/nowarranty.png" alt="" />
-                   <p>Warranty not available</p><br></br>
+                  <p>7 Days Returns</p>
+                  <p className="mt-n3 deliveryDays pl-4">
+                    Change of mind is not applicable
+                  </p>
+                  <br></br>
+                  <img src="/images/default/nowarranty.png" alt="" />
+                  <p>Warranty not available</p>
+                  <br></br>
                 </div>
                 <div className="clearfix"></div>
                 <div className="clearfix"></div>
-              <div className="mt-2 bg-light soldText">
-                <h6>Sold by</h6>
-                <div className="soldAgency">
-                <h2 className="float-left">Akij plastic</h2>
-                <p lassName="float-right text-right font-weight-bold"><ChatIcon/>Chat Now</p>
+                <div className="mt-2 bg-light soldText">
+                  <h6>Sold by</h6>
+                  <div className="soldAgency">
+                    <h2 className="float-left">Akij plastic</h2>
+                    <p lassName="float-right text-right font-weight-bold">
+                      <ChatIcon />
+                      Chat Now
+                    </p>
+                  </div>
                 </div>
-               
-              </div>
-              <div className="clearfix"></div>
+                <div className="clearfix"></div>
                 <div className="elegentrating">
                   <div className="elegentsinglerating">
                     <h6>88%</h6>
@@ -167,14 +180,14 @@ const ElegantChair = ({ router }, props) => {
                     <p>Chat Response Rate</p>
                   </div>
                   <div className="clearfix"></div>
-                  <div className="goStore text-center">
-                  <Link href="/">  GO TO STORE</Link>
+                  <div className="goStore text-center font-weight-bold">
+                    <Link href="/"> GO TO STORE</Link>
                   </div>
                 </div>
               </div>
-             
+
               <div className="clearfix"></div>
-              <div className="elegentpayment">
+              <div className="elegentpayment mt-2">
                 <div className="elegentpaymenttext">
                   <p>Payment:</p>
                 </div>
@@ -184,6 +197,7 @@ const ElegantChair = ({ router }, props) => {
               </div>
             </div>
           </div>
+
           <div className="row">
             <div className="elegentsinglechair">
               <img src="/images/default/chair.png" />
