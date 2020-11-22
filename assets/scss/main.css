@@ -503,7 +503,7 @@ span.product-discount {
   position: absolute;
 
   right: 10px;
-  bottom: 35px;
+  /* bottom: 35px; */
 }
 h4.pt-2 {
   margin-right: 22px;
@@ -783,6 +783,9 @@ h4.pt-2 {
 .chairDeliveryoption {
   float: left;
   width: 62%;
+}
+.chairDeliveryoption.productDetailsFloating {
+  width: 100% !important;
 }
 .chairDeliverydetails h2 {
   font-size: 18px;
@@ -1137,7 +1140,7 @@ h4.pt-2 {
 }
 .cartitem h2 {
   color: #707070;
-  font-size: 12px;
+  font-size: 20px;
 }
 .cartselection.cartitem {
   margin-top: 10px;
@@ -1975,7 +1978,7 @@ p.text-secondary.mb-0 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 600px;
 }
 span.favIcon {
   height: 50px;
@@ -2111,4 +2114,90 @@ p.text-center.store {
 }
 .soldText h6 {
   color: gray;
+}
+/* singleproduct */
+.detailsTitle {
+  float: left;
+  width: 50%;
+}
+.singleDetail {
+  float: left;
+  width: 50%;
+}
+.singleDetail p,
+.singleDetailOne p {
+  font-weight: 600;
+}
+.border-top.singleProduct {
+  width: 106%;
+  margin-left: -28px;
+}
+.singleProductHeader h1 {
+  position: relative;
+}
+.singleProductHeader h1::before {
+  position: absolute;
+  content: "";
+  width: 104%;
+  height: 1px;
+  background-color: lightgray;
+  top: 29px;
+  left: -16px;
+}
+.border-bottom.productDescription {
+  width: 104%;
+}
+/* place order */
+.promocodesection.priceDetailsHeading {
+  margin-top: 0px;
+  padding-top: 0px;
+  height: auto;
+}
+.promocodesection.priceDetailsHeading h1 {
+  font-size: 19px;
+}
+.proceedBtn button.btn.btn-warning.text-white {
+  width: 100%;
+}
+.shippmentDetailsHeader h1 {
+  font-size: 20px;
+}
+.shippmentBoxText {
+  float: left;
+  width: 42%;
+}
+
+.shippmentBoxText h1 {
+  font-size: 20px;
+}
+
+.shippmentBoxText h5 {
+  font-size: 16px;
+}
+.shippingImg img {
+  height: 150px;
+}
+.shippmentDetailsTitle h3 {
+  font-size: 17px;
+  width: 11%;
+  float: left;
+}
+h3.d-inline.item {
+  width: 66%;
+  padding-left: 95px;
+}
+h3.d-inline.qty {
+  width: 6%;
+}
+h3.d-inline.unitPrice {
+  width: 16%;
+}
+.shippmentDetailsTitle {
+  background: #ebebeb;
+  height: 50px;
+
+  padding-top: 14px;
+}
+button.btn.btn-primary.float-right.mt-3.backCartbtn {
+  width: 27%;
 }
