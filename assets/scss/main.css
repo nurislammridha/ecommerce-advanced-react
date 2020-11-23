@@ -2159,6 +2159,45 @@ p.text-center.store {
 .proceedBtn button.btn.btn-warning.text-white {
   width: 100%;
 }
-.shippmentDetails h1 {
+.shippmentDetailsHeader h1 {
   font-size: 20px;
+}
+.shippmentBoxText {
+  float: left;
+  width: 42%;
+}
+
+.shippmentBoxText h1 {
+  font-size: 20px;
+}
+
+.shippmentBoxText h5 {
+  font-size: 16px;
+}
+.shippingImg img {
+  height: 150px;
+}
+.shippmentDetailsTitle h3 {
+  font-size: 17px;
+  width: 11%;
+  float: left;
+}
+h3.d-inline.item {
+  width: 66%;
+  padding-left: 95px;
+}
+h3.d-inline.qty {
+  width: 6%;
+}
+h3.d-inline.unitPrice {
+  width: 16%;
+}
+.shippmentDetailsTitle {
+  background: #ebebeb;
+  height: 50px;
+
+  padding-top: 14px;
+}
+button.btn.btn-primary.float-right.mt-3.backCartbtn {
+  width: 27%;
 }

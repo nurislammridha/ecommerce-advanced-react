@@ -54,6 +54,62 @@ const placeorder = ({ router }, props) => {
                     </form>
                   </div>
                 </div>
+                <div className="shippmentDetails">
+                  <div className="shippmentDetailsHeader mt-3 mb-3">
+                    <h1>Shippment Details</h1>
+                  </div>
+                  <div className="shippmentDetailsTitle">
+                    <h3 className="d-inline item">Items</h3>
+                    <h3 className="d-inline qty">Qty</h3>
+                    <h3 className="d-inline unitPrice">Unite price</h3>
+                    <h3 className="d-inline">Subtotal</h3>
+                  </div>
+                </div>
+                <div className="clearfix"></div>
+                <div className="">
+                  <div className="innerwishlist bg-white">
+                    <div className="wishsingleproduct shippingImg">
+                      <img src="/images/default/chair.png" />
+                    </div>
+                    <div className="shippmentBoxText pt-3">
+                      <h1>Product title with link</h1>
+
+                      <h5 className="text-danger">Seller: Seller shop name</h5>
+                    </div>
+                    <div className="wishsingleproductIcon">
+                      <p>2</p>
+                    </div>
+                    <div className="wishsingleproductIcon">
+                      <p>৳ 500</p>
+                    </div>
+                    <div className="wishsingleproductIcon">
+                      <p>৳ 1000</p>
+                    </div>
+                  </div>
+                  <div className="innerwishlist bg-white">
+                    <div className="wishsingleproduct shippingImg">
+                      <img src="/images/default/chair.png" />
+                    </div>
+                    <div className="shippmentBoxText pt-3">
+                      <h1>Product title with link</h1>
+
+                      <h5 className="text-danger">Seller: Seller shop name</h5>
+                    </div>
+                    <div className="wishsingleproductIcon">
+                      <p>2</p>
+                    </div>
+                    <div className="wishsingleproductIcon">
+                      <p>৳ 500</p>
+                    </div>
+                    <div className="wishsingleproductIcon">
+                      <p>৳ 1000</p>
+                    </div>
+                  </div>
+                  <div className="clearfix"></div>
+                  <button className="btn btn-primary float-right mt-3 backCartbtn">
+                    Back to Cart
+                  </button>
+                </div>
               </div>
 
               <div className="col-lg-4">
@@ -84,9 +140,6 @@ const placeorder = ({ router }, props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="shippmentDetails">
-              <h1>Shippment Details</h1>
             </div>
           </div>
         </div>
