@@ -2201,3 +2201,30 @@ h3.d-inline.unitPrice {
 button.btn.btn-primary.float-right.mt-3.backCartbtn {
   width: 27%;
 }
+/* Sellerlogin  */
+.Sellerlogin {
+  background-color: #fbfbfb;
+}
+.Sellerlogin button.text-white.btn.btn-warning {
+  width: 100%;
+}
+.sellerLoginForm h1 {
+  font-size: 18px !important;
+}
+.sellerLoginFooter h2 {
+  font-size: 20px;
+  color: gray;
+}
+.sellerLoginFooter.pt-4 {
+  background: #f4f4f4;
+}
+.sellerLoginHeader {
+  background: #1b2d4a;
+}
+.sellerLoginHeader h2 {
+  font-size: 24px;
+}
+button.border-rounded.text-white.btn.btn-primary {
+  background: #1b2d4a;
+  border: 1px solid #fff;
+}
