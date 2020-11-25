@@ -2228,3 +2228,17 @@ button.border-rounded.text-white.btn.btn-primary {
   background: #1b2d4a;
   border: 1px solid #fff;
 }
+h2.accountText {
+  font-size: 18px;
+}
+h1.creatAccountText {
+  font-size: 24px !important;
+}
+.Loginform.sellerLoginForm {
+  margin-top: 0px;
+}
+.registrationBoxshadow.card {
+  box-shadow: 0px 0px 3px lightgrey;
+  margin-top: 100px;
+  border-radius: 12px;
+}
