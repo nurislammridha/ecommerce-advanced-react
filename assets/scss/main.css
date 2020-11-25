@@ -2242,3 +2242,6 @@ h1.creatAccountText {
   margin-top: 100px;
   border-radius: 12px;
 }
+.accountTextarea.form-group {
+  width: 66%;
+}
