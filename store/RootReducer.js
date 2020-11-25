@@ -8,6 +8,7 @@ import Wallet from "./redux/wallets/reducers/WalletReducer";
 // import SliderReducer from "./sliders/SliderReducer";
 import CartReducer from "./redux/carts/reducers/CartReducer";
 // import AuthReducer from "./auth/AuthReducer";
+import Notification from "./redux/notifications/reducers/NotificationReducer";
 
 export default combineReducers({
   product: ProductReducer,
@@ -19,4 +20,5 @@ export default combineReducers({
   productWish: ProductWish,
   myOrder: MyOrder,
   wallet: Wallet,
+  notification: Notification,
 });
