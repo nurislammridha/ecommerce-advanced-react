@@ -2245,3 +2245,97 @@ h1.creatAccountText {
 .accountTextarea.form-group {
   width: 66%;
 }
+/* myprofile */
+.wishsingleproduct.shippingImg.myProfileImg {
+  width: 15%;
+}
+.shippmentBoxText.myProfileText {
+  width: 16%;
+}
+
+.wishsingleproductIcon.myProfileTime {
+  width: 27%;
+}
+.wishsingleproductIcon.myProfileTime p {
+  font-weight: 500;
+}
+.wishsingleproductIcon.myProfilePrice {
+  text-align: center;
+  font-weight: 500;
+  height: 100%;
+}
+.wishsingleproduct.shippingImg.myProfileImg {
+  height: 100px;
+}
+.wishsingleproduct.shippingImg.myProfileImg img {
+  height: 100px;
+}
+.innerwishlist.bg-white.myProfileBox {
+  height: 100px;
+}
+.myProfilePriceBtn button.btn.btn-outline-danger {
+  margin: auto;
+  display: block;
+  padding: 0px 6px;
+}
+.innerwishlist.bg-white.myProfileBox {
+  line-height: 50px;
+}
+.shippmentBoxText.myProfileText.border-right {
+  height: 100%;
+}
+.shippmentBoxText.myProfileText.border-right h5 {
+  margin-top: 37px;
+}
+.wishsingleproductIcon.myProfileStatus.border-left {
+  width: 13%;
+  height: 100%;
+}
+.myProfileStatus p,
+.myProfilePrice p {
+  font-weight: 500;
+
+  line-height: 20px;
+  margin-bottom: 0px;
+  margin-top: 16px;
+}
+
+.border-left.myProfilePriceBtn {
+  margin-top: 36px;
+}
+.row.bg-white.myProfileTitle.mb-2.py-2 {
+  width: 752px;
+  margin-left: 3px;
+  border: 1px solid #f3f3f3;
+}
+.wishsingleproductIcon.myProfilePrice.border-left {
+  width: 14%;
+}
+.myProfileAsset h1 {
+  font-size: 20px;
+}
+.gradientBox {
+  background: linear-gradient(to left, #ff5050 26%, #ff3300 100%);
+}
+
+.gradientBox img.rounded-circle.bg-white {
+  height: 70px;
+  width: 70px;
+  margin: auto;
+}
+
+.gradientBox {
+  padding-bottom: 6px;
+  padding-top: 21px;
+  border-radius: 9px;
+}
+.registerInfo {
+  width: 33%;
+}
+.registerInfo p {
+  margin-bottom: 0rem;
+  font-weight: 500;
+}
+.registerInfo.border-left.float-right {
+  height: 108px;
+}
