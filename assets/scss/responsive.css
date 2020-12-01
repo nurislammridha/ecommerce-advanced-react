@@ -35,6 +35,25 @@
     top: 43px;
     left: -11px;
   }
+  .myProfileCard {
+    margin-bottom: 10px;
+  }
+  .row.mt-5.mb-3.profileBox {
+    margin-top: -20px !important;
+  }
+  .row.bg-white.myProfileTitle.mb-2.py-2 {
+    width: 100%;
+    margin-left: 2px;
+  }
+  .float-left.profileItem {
+    width: 20%;
+  }
+  .float-left.profileItem {
+    width: 16%;
+  }
+  .profileItem.two h6 {
+    padding-left: 90px;
+  }
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */
@@ -196,5 +215,77 @@
   .footertext p {
     line-height: 20px;
     font-size: 14px;
+  }
+  .gradientBox {
+    margin-bottom: 13px;
+  }
+  .registerInfo.border-left.float-right {
+    height: 174px;
+  }
+  .row.bg-white.myProfileTitle.mb-2.py-2 {
+    width: 100%;
+  }
+  .shippmentBoxText h5 {
+    font-size: 11px;
+    margin-bottom: 0px;
+  }
+  .wishsingleproductIcon.myProfileTime p {
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .myProfileStatus p,
+  .myProfilePrice p {
+    padding: 1px;
+    font-size: 10px;
+  }
+  .myProfilePriceBtn button.btn.btn-outline-danger {
+    width: 55px;
+    font-size: 10px;
+  }
+  h5.d-inline {
+    font-size: 10px;
+  }
+  img.d-inline {
+    width: 40%;
+  }
+  .wishsingleproduct.shippingImg.myProfileImg img {
+    height: 80px;
+    margin-top: 10px;
+  }
+  .wishsingleproductIcon.myProfileTime p {
+    font-size: 10px;
+  }
+  .wishsingleproductIcon.myProfileTime {
+    width: 22%;
+  }
+  .wishsingleproductIcon.myProfilePrice.border-left {
+    width: 15%;
+  }
+  .shippmentBoxText.myProfileText.border-right h5 {
+    margin-top: 26px;
+  }
+  .border-left.myProfilePriceBtn {
+    margin-top: 28px;
+  }
+  .innerwishlist.bg-white.myProfileBox {
+    height: 84px;
+  }
+  .wishbanner.pb {
+    padding-bottom: 10px;
+  }
+  .myProfileStatus p,
+  .myProfilePrice p {
+    margin-top: 0px;
+  }
+  .row.bg-white.myProfileTitle.mb-2.py-2 {
+    margin-left: 1px;
+    width: 100%;
+  }
+  .myProfileTitle h6 {
+    font-size: 11px;
+  }
+  .float-left.profileItem {
+    width: 17%;
   }
 }

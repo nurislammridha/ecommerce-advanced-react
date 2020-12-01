@@ -2259,6 +2259,9 @@ h1.creatAccountText {
 .wishsingleproductIcon.myProfileTime p {
   font-weight: 500;
 }
+.myProfile h5 {
+  font-size: 14px;
+}
 .wishsingleproductIcon.myProfilePrice {
   text-align: center;
   font-weight: 500;
@@ -2304,12 +2307,12 @@ h1.creatAccountText {
   margin-top: 36px;
 }
 .row.bg-white.myProfileTitle.mb-2.py-2 {
-  width: 752px;
-  margin-left: 3px;
+  /* width: 752px; */
+  /* margin-left: 3px; */
   border: 1px solid #f3f3f3;
 }
 .wishsingleproductIcon.myProfilePrice.border-left {
-  width: 14%;
+  /* width: 14%; */
 }
 .myProfileAsset h1 {
   font-size: 20px;
@@ -2338,4 +2341,24 @@ h1.creatAccountText {
 }
 .registerInfo.border-left.float-right {
   height: 108px;
+}
+h5.d-inline {
+  font-size: 14px;
+}
+img.d-inline {
+  width: 50%;
+}
+
+.float-left.profileItem {
+  width: 18%;
+}
+.profileItem.two {
+  width: 10%;
+}
+.profileItem.two h6 {
+  padding-left: 30px;
+}
+.row.bg-white.myProfileTitle.mb-2.py-2.rounded {
+  width: 100%;
+  margin-left: 1px;
 }
