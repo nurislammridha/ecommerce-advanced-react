@@ -40,7 +40,14 @@ const ElegantChair = ({ router }, props) => {
               <div className="singlechair">
                 <img src="/images/default/singlechair.png" />
               </div>
+              <div className="elegentsinglechair">
+                <img src="/images/default/chair.png" />
+              </div>
+              <div className="elegentsinglechair two">
+                <img src="/images/default/chair2.png" />
+              </div>
             </div>
+
             <div className="col-lg-4">
               <div className="chairdetails">
                 <h1>Elegant Chair-Wave- Rose Wood</h1>
@@ -195,15 +202,6 @@ const ElegantChair = ({ router }, props) => {
                   <img src="/images/default/payment-gateway.png" />
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="elegentsinglechair">
-              <img src="/images/default/chair.png" />
-            </div>
-            <div className="elegentsinglechair two">
-              <img src="/images/default/chair2.png" />
             </div>
           </div>
         </div>

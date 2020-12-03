@@ -16,7 +16,7 @@ const singleProductRating = ({ router }, props) => {
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-6">
+              <div className="col-lg-6 col-sm-12">
                 <div className="elegentratingreview one">
                   <p>4.5/5</p>
                   <div className="review two">

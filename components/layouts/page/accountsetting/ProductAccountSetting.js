@@ -51,25 +51,29 @@ const ProductAccountSetting = ({ router }, props) => {
             </div>
 
             <div className="col-lg-7">
-              <div className="wishlisttitle mb-3">
+              <div className="wishlisttitle accountSetting mb-3">
                 <h1>Edit and Update your Information</h1>
               </div>
               <div className="d-inline">
                 <img className="d-inline" src="/images/default/chair.png" />
-                <span>You can change your profile photo at anytime</span>
+                <span className="accountText">
+                  You can change your profile photo at anytime
+                </span>
               </div>
 
               <Form>
                 <Row>
-                  <Col>
+                  {/* <Col> */}
+                  <div className="col-6">
                     <Form.Label>First name</Form.Label>
                     <Form.Control placeholder="Edit First name" />
-                  </Col>
-                  <Col>
+                    {/* </Col> */}
+                  </div>
+                  <div className="col-6">
                     <Form.Label>Last Name</Form.Label>
                     <Form.Control placeholder="Edit Last name" />
-                  </Col>
-                  <Col></Col>
+                  </div>
+                  {/* <Col></Col> */}
                 </Row>
                 <Row>
                   <Col>
@@ -80,29 +84,31 @@ const ProductAccountSetting = ({ router }, props) => {
                     <Form.Label className="mt-2">Contact Number</Form.Label>
                     <Form.Control placeholder="Phone number" />
                   </Col>
-                  <Col></Col>
+                  {/* <Col></Col> */}
                 </Row>
-                <Form.Group className="accountTextarea mt-2">
+
+                <div className=" col-12 accountTextarea mt-2 mb-1">
                   <Form.Label>Address</Form.Label>
                   <Form.Control
                     as="textarea"
-                    rows={3}
+                    rows={4}
                     placeholder="Edit Address"
                   />
-                </Form.Group>
+                </div>
+
                 <Row>
-                  <Col>
+                  <div className="col-xl-4 col-lg-4 col-6">
                     <Form.Label>Password</Form.Label>
                     <Form.Control placeholder="Type old password" />
-                  </Col>
-                  <Col>
+                  </div>
+                  <div className="col-xl-4 col-lg-4 col-6">
                     <Form.Label>New Password</Form.Label>
                     <Form.Control placeholder="Type new password" />
-                  </Col>
-                  <Col>
+                  </div>
+                  <div className="col-xl-4 col-lg-4 col-6">
                     <Form.Label>New Password</Form.Label>
                     <Form.Control placeholder="Type new password" />
-                  </Col>
+                  </div>
                 </Row>
                 <button className="btn btn-warning float-right text-white mt-3">
                   Save Changes

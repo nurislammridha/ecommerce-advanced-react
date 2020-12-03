@@ -912,16 +912,19 @@ h4.pt-2 {
   color: #f8da48 !important;
   padding-left: 1px !important;
 }
+
 .elegentsinglechair {
   float: left;
-  width: 8%;
-  height: 107px;
+  width: 46%;
+  height: auto;
   background: white;
-  margin-left: 169px;
+  margin-left: 10px;
   margin-top: 40px;
   border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 30px lightgrey;
   box-shadow: 0px 0px 30px lightgrey;
 }
+
 .elegentsinglechair.two {
   margin-left: 22px;
 }

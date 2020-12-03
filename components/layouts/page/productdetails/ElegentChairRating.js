@@ -9,14 +9,14 @@ const ElegentChairRating = ({ router }, props) => {
         <div className="container">
           <div className="elegentratingsection">
             <div className="row">
-              <div className="col-10">
+              <div className="col-xl-10 col-lg-10 col-md-10 col-12">
                 <div className="elegentratingreview">
                   <h1>Ratings & Reviews</h1>
                 </div>
               </div>
             </div>
             <div className="row">
-              <div className="col-3">
+              <div className="col-xl-3 col-lg-3 col-md-3 col-6">
                 <div className="elegentratingreview one">
                   <p>4.5/5</p>
                   <div className="review two">
@@ -24,7 +24,7 @@ const ElegentChairRating = ({ router }, props) => {
                   </div>
                 </div>
               </div>
-              <div className="col-3">
+              <div className="col-xl-3 col-lg-3 col-md-3 col-6">
                 <div className="elegentratingreview two">
                   <span>58 Ratings</span>
                   <div className="review">
