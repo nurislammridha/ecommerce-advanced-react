@@ -3,7 +3,9 @@ import { FaArrowRight } from "react-icons/fa";
 import Rater from "react-rater";
 import Slider from "react-slick";
 import { Col, Card } from "react-bootstrap";
+import Carousel from "react-multi-carousel";
 import { fetchHomePageProducts } from "../../../../store/redux/home/actions/HomePageAction";
+import "react-multi-carousel/lib/styles.css";
 import ProductMiniCard from "../product/ProductMiniCard";
 
 const HomeCategoryWiseProduct = (props) => {
@@ -12,52 +14,31 @@ const HomeCategoryWiseProduct = (props) => {
   const [category, setCategory] = useState(null);
 
   useEffect(() => {
-    initializeSlickSettings();
     initializeProductAndCategory();
   }, [props]);
 
-  const initializeSlickSettings = () => {
-    const settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 8,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true,
-          },
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2,
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
-        },
-      ],
-    };
-    // window.slickSettings(settings);
-    setSettings(settings);
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 6,
+      paritialVisibilityGutter: 60
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 4,
+      paritialVisibilityGutter: 50
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 3,
+      paritialVisibilityGutter: 30
+    }
   };
 
   const initializeProductAndCategory = async () => {
     const response = await fetchHomePageProducts(props.no);
     setCategory(response.category);
-    setProducts(response.products);
+    setProducts(response.products.data);
   };
 
   // const item = [
@@ -93,14 +74,20 @@ const HomeCategoryWiseProduct = (props) => {
               </div>
             </div>
           </div>
-          <Slider {...settings}>
+          <Carousel
+            ssr
+            // partialVisbile
+            // deviceType={deviceType}
+            itemClass="image-item"
+            responsive={responsive}
+          >
             {products.length > 0 &&
               products.map((product, index) => (
                 <Col className="align-items-center" key={index}>
                   <ProductMiniCard product={product} />
                 </Col>
               ))}
-          </Slider>
+          </Carousel>
         </Card>
       )}
     </>

@@ -27,6 +27,8 @@ export default function Home(props) {
 
           <HomeCategoryWiseProduct no={2} />
 
+          <HomeCategoryWiseProduct no={3} />
+
           <HomeBrand />
           <VendorList />
           <HomeProduct />
