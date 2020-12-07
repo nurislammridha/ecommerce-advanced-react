@@ -1,10 +1,9 @@
 import * as Types from "../../../Types";
 import axios from "axios";
-import { API_URL } from "../../../ApiEndpoint";
 
 export const fetchCarts = () => async (dispatch) => {
   dispatch({ type: Types.GET_CARTS_LOADING, payload: true });
-  const URL = `${API_URL}business`;
+  const URL = `${process.env.NEXT_PUBLIC_API_URL}business`;
 
   const res = await axios.get(URL);
   const payloadData = {

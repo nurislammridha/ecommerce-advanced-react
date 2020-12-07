@@ -1,6 +1,5 @@
 import * as Types from "../../../Types";
 import axios from "axios";
-import { API_URL } from "../../../ApiEndpoint";
 
 export const fetchProducts = () => async (dispatch) => {
   let payload = {
