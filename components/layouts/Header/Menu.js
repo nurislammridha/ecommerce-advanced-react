@@ -29,22 +29,22 @@ const MainMenu = ({ router }, props) => {
                   <Nav.Link eventKey="/products">Brands</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="link-1">Sitemap</Nav.Link>
+                  <Nav.Link eventKey="/search">Sitemap</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="link-2">Gift card</Nav.Link>
+                  <Nav.Link eventKey="/giftcard">Gift card</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="link-1">Feedback</Nav.Link>
+                  <Nav.Link eventKey="/">Feedback</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="link-1">First Purchase Offer</Nav.Link>
+                  <Nav.Link eventKey="/">First Purchase Offer</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="link-1">Audience Poll</Nav.Link>
+                  <Nav.Link eventKey="/AudiencePool">Audience Poll</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="link-1">Deals and offer</Nav.Link>
+                  <Nav.Link eventKey="/">Deals and offer</Nav.Link>
                 </Nav.Item>
               </Nav>
             </Navbar.Collapse>
