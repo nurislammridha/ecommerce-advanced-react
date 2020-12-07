@@ -10,7 +10,7 @@ const ProductMiniCard = (props) => {
       {typeof product != "undefined" && (
         <div className="singleProduct singleproductborder">
           <div className="productImg">
-            <Link href="/singleproduct">
+            <Link href="/productdetail">
               <img
                 src={`${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`}
               />

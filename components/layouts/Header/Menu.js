@@ -21,12 +21,12 @@ const MainMenu = ({ router }, props) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav
-                activeKey="/home"
-                onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+                activeKey="/"
+                onSelect={(selectedKey) => router.push(selectedKey)}
                 className="navigation"
               >
                 <Nav.Item>
-                  <Nav.Link href="/home">Brands</Nav.Link>
+                  <Nav.Link eventKey="/products">Brands</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="link-1">Sitemap</Nav.Link>
