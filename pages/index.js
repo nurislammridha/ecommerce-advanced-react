@@ -21,7 +21,7 @@ export default function Home(props) {
       <MainLayout>
         <img className="homesliderbaner" src="/images/slider/slide1.png" />
         <Container fluid>
-          <FlashSell />
+          {/* <FlashSell /> */}
 
           <HomeCategoryWiseProduct no={1} />
           <HomeCategoryWiseProduct no={2} />

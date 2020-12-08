@@ -26,8 +26,11 @@ const MainMenu = ({ router }, props) => {
                 className="navigation"
               >
                 <Nav.Item>
-                  <Nav.Link eventKey="/products">Brands</Nav.Link>
+                  <Nav.Link eventKey="/products">Products</Nav.Link>
                 </Nav.Item>
+                {/* <Nav.Item>
+                  <Nav.Link eventKey="/products">Brands</Nav.Link>
+                </Nav.Item> */}
                 <Nav.Item>
                   <Nav.Link eventKey="/search">Sitemap</Nav.Link>
                 </Nav.Item>
