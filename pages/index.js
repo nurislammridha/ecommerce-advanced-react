@@ -9,6 +9,7 @@ import HomeFeaturList from "../components/layouts/page/home/HomeFeaturList";
 
 import { Container } from "react-bootstrap";
 import HomeCategoryWiseProduct from "../components/layouts/page/home/HomeCategoryWiseProduct";
+import Head from "next/head";
 
 export default function Home(props) {
   useEffect(() => {
@@ -18,6 +19,12 @@ export default function Home(props) {
   }, []);
   return (
     <>
+    <Head>
+      <title>
+        Ecommerce Store
+      </title>
+      <meta name="description" content="Meta" />
+    </Head>
       <MainLayout>
         <img className="homesliderbaner" src="/images/slider/slide1.png" />
         <Container fluid>

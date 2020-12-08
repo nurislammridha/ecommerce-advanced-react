@@ -18,10 +18,10 @@ const ProductList = () => {
         <>
             {loading && (
                 <LoadingSkelleton
-                alignment="vertical"
-                count={5}
-                width={220}
-                height={250}
+                    alignment="vertical"
+                    count={5}
+                    width={220}
+                    height={250}
                 />
             )}
 

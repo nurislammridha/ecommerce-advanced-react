@@ -11,32 +11,8 @@ import LoadingSkelleton from "../../components/skelleton/LoadingSkelleton"
 import Head from 'next/head'
 
 export default function ProductBySlug({ product }) {
-    // const [product, setProduct] = useState(null)
-    // const dispatch = useDispatch();
     const router = useRouter();
     const loading = false;
-
-    // const loading = useSelector((state) => state.productDetail.loading);
-    // const productDetail = useSelector((state) => state.productDetail.productDetail);
-    // const products = useSelector((state) => state.product.products);
-
-    // const { productBySlug } = router.query;
-
-    useEffect(() => {
-        // if(loading){
-        // dispatch(fetchProductBySlug(productBySlug));
-        // dispatch(fetchProducts());
-        // console.log('productBySlug', productBySlug);
-        // }
-        // initializeData();
-    }, []);
-
-    const initializeData = async () => {
-        // const product = await fetchProductBySlug(productBySlug);
-        // setProduct(product);
-    }
-
-    // console.log('products', products);
 
     if (router.isFallback) {
         return (
@@ -50,7 +26,7 @@ export default function ProductBySlug({ product }) {
         <>
             <Head>
                 <title>
-                    Product Information - {product.title} || Maccaf
+                    {product.name} || Ecommerce
                 </title>
             </Head>
             <MainLayout>

@@ -19,15 +19,20 @@ const ProductMiniCard = (props) => {
                       fallbackImage="/images/default/fallback-image.png"
                       initialImage="/images/default/fallback-image.png"
                       alt={product.name}
-                      className="" />
+                      className="pointer" />
                 </LazyLoad>
             </div>
           </Link>
           <div className="productDetails">
-            <div className="productTitle">
-              <h3>{product.name}</h3>
-              <p>{product.category.name}</p>
-            </div>
+          <Link href={`/products/${product.sku}`}>
+            <a>
+              <div className="productTitle">
+                <h3>{product.name}</h3>
+                <p>{product.category.name}</p>
+              </div>
+            </a>
+          </Link>
+            
             <div className="productPrice pt-2">
               {product.is_offer_enable != true && (
                 <h4>৳ {product.default_selling_price}</h4>
