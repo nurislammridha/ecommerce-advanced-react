@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useState, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import Rater from "react-rater";
-import Slider from "react-slick";
+import Link from "next/link";
 import { Col, Card } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import { fetchHomePageProducts } from "../../../../store/redux/home/actions/HomePageAction";
@@ -41,16 +40,6 @@ const HomeCategoryWiseProduct = (props) => {
     setProducts(response.products.data);
   };
 
-  // const item = [
-  //   {
-  //     id: 1,
-  //     name: "farid",
-  //   },
-  // ];
-
-  console.log("products", products);
-  // console.log("items", item);
-
   return (
     <>
       {category != null && (
@@ -66,10 +55,12 @@ const HomeCategoryWiseProduct = (props) => {
                 </div>
                 <div className="col-lg-4"></div>
                 <div className="col-lg-4">
-                  <button className="viewButton">
-                    View all
-                    <FaArrowRight />
-                  </button>
+                    <Link href="products">
+                      <button className="viewButton">
+                        View all
+                        <FaArrowRight />
+                      </button>
+                  </Link>
                 </div>
               </div>
             </div>

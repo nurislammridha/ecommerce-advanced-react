@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchVendors } from "../../../../store/redux/vendors/actions/VendorAction";
 import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
+import ReactImageFallback from "react-image-fallback";
 
-const VendorList = ({ router }, props) => {
+const VendorList = (props) => {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.vendor.loading);
   const vendors = useSelector((state) => state.vendor.vendors);
@@ -24,10 +26,12 @@ const VendorList = ({ router }, props) => {
               </div>
             </div>
             <div className="viewTopRight">
+            <Link href="products">
               <button className="viewButton brandbutton">
                 View all
                 <FaArrowRight />
               </button>
+              </Link>
             </div>
           </div>
 
@@ -49,10 +53,17 @@ const VendorList = ({ router }, props) => {
               <>
                 {vendors.map((vendor, index) => (
                   <div className="StoreImg" key={index}>
-                    <img
+                  <ReactImageFallback
+                    src={`${process.env.NEXT_PUBLIC_URL}images/vendors/${vendor.logo}`}
+                    fallbackImage="/images/default/fallback-image.png"
+                    initialImage="/images/default/fallback-image.png"
+                    alt={vendor.name}
+                    className="" />
+
+                    {/* <img
                       src={`${process.env.NEXT_PUBLIC_URL}images/vendors/${vendor.logo}`}
                       alt=""
-                    />
+                    /> */}
                     <p className="text-center font-weight-bold">
                       {vendor.name}
                     </p>

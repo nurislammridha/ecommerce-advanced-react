@@ -1,6 +1,8 @@
 import React from "react";
 import Rater from "react-rater";
 import Link from "next/link";
+import LazyLoad from 'react-lazyload';
+import ReactImageFallback from "react-image-fallback";
 
 const ProductMiniCard = (props) => {
   const { product } = props;
@@ -11,9 +13,14 @@ const ProductMiniCard = (props) => {
         <div className="singleProduct singleproductborder">
           <div className="productImg">
             <Link href="/productdetail">
-              <img
-                src={`${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`}
-              />
+              <LazyLoad height={200} once>
+                <ReactImageFallback
+                    src={`${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`}
+                    fallbackImage="/images/default/fallback-image.png"
+                    initialImage="/images/default/fallback-image.png"
+                    alt={product.name}
+                    className="" />
+              </LazyLoad>
             </Link>
           </div>
           <div className="productDetails">
