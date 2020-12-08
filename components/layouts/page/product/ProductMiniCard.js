@@ -11,18 +11,18 @@ const ProductMiniCard = (props) => {
     <>
       {typeof product != "undefined" && (
         <div className="singleProduct singleproductborder">
-          <div className="productImg">
-            <Link href="/productdetail">
-              <LazyLoad height={200} once>
-                <ReactImageFallback
-                    src={`${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`}
-                    fallbackImage="/images/default/fallback-image.png"
-                    initialImage="/images/default/fallback-image.png"
-                    alt={product.name}
-                    className="" />
-              </LazyLoad>
-            </Link>
-          </div>
+          <Link href={`/products/${product.sku}`}>
+            <div className="productImg">
+                <LazyLoad height={200} once>
+                  <ReactImageFallback
+                      src={`${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`}
+                      fallbackImage="/images/default/fallback-image.png"
+                      initialImage="/images/default/fallback-image.png"
+                      alt={product.name}
+                      className="" />
+                </LazyLoad>
+            </div>
+          </Link>
           <div className="productDetails">
             <div className="productTitle">
               <h3>{product.name}</h3>

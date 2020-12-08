@@ -66,11 +66,13 @@ const HomeCategoryWiseProduct = (props) => {
             </div>
           </div>
           <Carousel
-            ssr
             // partialVisbile
             // deviceType={deviceType}
             itemClass="image-item"
             responsive={responsive}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            autoPlay={true}
           >
             {products.length > 0 &&
               products.map((product, index) => (
