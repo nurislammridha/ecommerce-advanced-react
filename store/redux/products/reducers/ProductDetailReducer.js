@@ -1,24 +1,25 @@
 import * as Types from "../../../Types";
 
 const initialState = {
-  products: [],
   loading: false,
-  error: null
+  productDetail: null
 };
 
-const ProductReducer = (state = initialState, action) => {
+const ProductDetailReducer = (state = initialState, action) => {
   switch (action.type) {
-    case Types.GET_PRODUCTS_LOADING:
+    case Types.GET_PRODUCTS_DETAILS_LOADING:
       return {
         ...state,
         loading: action.payload,
       };
-    case Types.GET_PRODUCTS:
+
+    case Types.GET_PRODUCTS_BY_SLUG:
       return {
         ...state,
-        products: action.payload.data,
+        productDetail: action.payload.data,
         loading: false,
       };
+
     default:
       return {
         ...state,
@@ -27,4 +28,4 @@ const ProductReducer = (state = initialState, action) => {
   }
 };
 
-export default ProductReducer;
+export default ProductDetailReducer;

@@ -166,7 +166,7 @@ const ElegantChair = ({ router }, props) => {
                   <h6>Sold by</h6>
                   <div className="soldAgency">
                     <h2 className="float-left">Akij plastic</h2>
-                    <p lassName="float-right text-right font-weight-bold">
+                    <p className="float-right text-right font-weight-bold">
                       <ChatIcon />
                       Chat Now
                     </p>

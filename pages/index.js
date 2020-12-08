@@ -24,9 +24,7 @@ export default function Home(props) {
           <FlashSell />
 
           <HomeCategoryWiseProduct no={1} />
-
           <HomeCategoryWiseProduct no={2} />
-
           <HomeCategoryWiseProduct no={3} />
 
           <HomeBrand />
