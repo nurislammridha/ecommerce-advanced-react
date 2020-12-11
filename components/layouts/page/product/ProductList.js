@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from '../../../../store/redux/products/actions/ProductAction';
-import LoadingSkelleton from '../../../skelleton/LoadingSkelleton';
+import LoadingSkelleton from '../../../master/skelleton/LoadingSkelleton';
 import ProductMiniCard from './ProductMiniCard';
 
 const ProductList = () => {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchVendors } from "../../../../store/redux/vendors/actions/VendorAction";
-import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
+import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
 import ReactImageFallback from "react-image-fallback";
 
 const VendorList = (props) => {

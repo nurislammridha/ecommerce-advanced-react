@@ -4,7 +4,7 @@ import Rater from "react-rater";
 import { Card, Media } from 'react-bootstrap';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNotifications } from "../../../../store/redux/notifications/actions/NotificationAction";
-import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
+import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
 
 const Notification = ({ router }, props) => {
   const dispatch = useDispatch();

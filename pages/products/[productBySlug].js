@@ -7,7 +7,7 @@ import ProductDetailInfo from "../../components/layouts/page/productdetails/Prod
 import ProductDetailsDescrition from "../../components/layouts/page/productdetails/ProductDetailsDescrition"
 import ElegentChairRating from "../../components/layouts/page/productdetails/ElegentChairRating"
 import { fetchProductBySlug, fetchProducts } from "../../store/redux/products/actions/ProductAction"
-import LoadingSkelleton from "../../components/skelleton/LoadingSkelleton"
+import LoadingSkelleton from "./../../components/master/skelleton/LoadingSkelleton";
 import Head from 'next/head'
 
 export default function ProductBySlug({ product }) {

@@ -5,7 +5,7 @@ import React, { Component, useState, useEffect } from "react";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCarts } from "../../../../store/redux/carts/actions/CartAction";
-import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
+import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
 
 const MyCart = ({ router }, props) => {
   const dispatch = useDispatch();

@@ -4,7 +4,7 @@ import Rater from "react-rater";
 import { Card, Media } from 'react-bootstrap';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWallets } from "../../../../store/redux/wallets/actions/WalletAction";
-import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
+import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
 
 const Wallet = ({ router }, props) => {
   const dispatch = useDispatch();

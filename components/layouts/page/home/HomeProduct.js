@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../../../store/redux/products/actions/ProductAction";
-import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
+import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
 import ProductMiniCard from "../product/ProductMiniCard";
 
 const HomeProduct = ({ router }, props) => {

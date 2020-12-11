@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBrands } from "../../../../store/redux/brands/actions/BrandAction";
-import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
+import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
 
 const HomeBrand = ({ router }, props) => {
   const dispatch = useDispatch();

@@ -3,7 +3,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import Rater from "react-rater";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMyOrders } from "../../../../store/redux/myOrders/actions/MyOrderAction";
-import LoadingSkelleton from "../../../skelleton/LoadingSkelleton";
+import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
 
 const MyOrder = ({ router }, props) => {
   const dispatch = useDispatch();
