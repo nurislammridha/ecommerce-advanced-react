@@ -14,14 +14,6 @@ export default function ProductBySlug({ product }) {
     const router = useRouter();
     const loading = false;
 
-    if (router.isFallback) {
-        return (
-            <div>
-                Loading...
-            </div>
-        )
-    }
-
     return (
         <>
             <Head>
@@ -70,5 +62,5 @@ export async function getStaticPaths() {
     const paths = products.map((product) => ({
         params: { productBySlug: product.sku }
     }));
-    return { paths, fallback: true }
+    return { paths, fallback: false }
 }
