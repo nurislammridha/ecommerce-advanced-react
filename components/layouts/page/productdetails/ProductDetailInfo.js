@@ -8,9 +8,25 @@ import Link from "next/link";
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import ChatIcon from "@material-ui/icons/Chat";
 import ReactImageFallback from "react-image-fallback";
+import AddIcon from "@material-ui/icons/Add";
+import { Remove, RemoveCircle } from "@material-ui/icons";
+import { useState } from "react";
 
 const ProductDetailInfo = (props) => {
     const { product } = props;
+    console.log('product :>> ', product);
+    //product quantity     
+    const [quantity, setQuantity] = useState(1);
+    // manage product price with current quantity
+    if (product.is_offer_enable != true) {
+        const newPrice = product.default_selling_price * quantity;
+        product.price = newPrice;
+        product.quantity = quantity;
+    } else {
+        const TotalPrice = product.offer_selling_price * quantity;
+        product.price = TotalPrice;
+        product.quantity = quantity;
+    }
 
     return (
         <>
@@ -47,7 +63,7 @@ const ProductDetailInfo = (props) => {
                                         fallbackImage="/images/default/fallback-image.png"
                                         initialImage="/images/default/fallback-image.png"
                                         alt={product.name}
-                                        className="" 
+                                        className=""
                                     />
                                 </div>
                                 {/* <div className="elegentsinglechair">
@@ -75,7 +91,7 @@ const ProductDetailInfo = (props) => {
                                     </div>
 
                                     <div className="stock">
-                                        <span>Brand: 
+                                        <span>Brand:
                                             {(typeof product.brand != 'undefined' && product.brand != null) ? product.brand.name : ''}
                                         </span>
                                     </div>
@@ -88,21 +104,25 @@ const ProductDetailInfo = (props) => {
                                     </div>
 
                                     <div className="chairdetailstext">
-                                    
-                                    {product.is_offer_enable != true && (
-                                        <h2 className="text-warning">৳ {product.default_selling_price}</h2>
-                                    )}
 
-                                    {product.is_offer_enable != false && (
-                                        <>
-                                        <h2 className="text-warning">৳ {product.offer_selling_price}</h2>
-                                        {/* <p>
+                                        {product.is_offer_enable != true && (
+                                            <h2 className="text-warning">৳ {
+                                                product.price ? product.price : product.default_selling_price
+                                            } </h2>
+                                        )}
+
+                                        {product.is_offer_enable != false && (
+                                            <>
+                                              <h2 className="text-warning">৳ {
+                                                    product.price ? product.price : product.offer_selling_price
+                                                } </h2>
+                                                {/* <p>
                                             <del>৳ {product.default_selling_price}</del>
                                         </p> */}
-                                        <h4 className="text-danger">৳ {product.default_selling_price}</h4>
-                                        </>
-                                    )}
-                                    
+                                                <h4 className="text-danger">৳ {product.default_selling_price}</h4>
+                                            </>
+                                        )}
+
                                         {/* <h4 className="text-danger">৳ 1200</h4>
                                         <span className="text-dark">-38%</span> */}
                                     </div>
@@ -120,17 +140,17 @@ const ProductDetailInfo = (props) => {
                                     <div className="chaircolor">
                                         <h2>Color:</h2>
                                         <h2>
-                                            Quantity:
-                                            {/* <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-5"><AddIcon/></button>
-                                        <span className="colorType  border rounded text-dark">1</span>
-                                        <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-1"><AddIcon/></button> */}
+                                            Quantity :
+                                            <button className="btn btn-light increment bg-light border rounded-circle text-dark ml-3" onClick={() => quantity > 1 && setQuantity(quantity - 1)}> <Remove /></button>
+                                            <span className="colorType border rounded text-dark">{quantity}</span>
+                                            <button className="btn btn-light increment bg-light border rounded-circle text-dark ml-2" onClick={() => setQuantity(quantity + 1)}><AddIcon /></button>
                                         </h2>
-                                    </div>
-                                    <div className="stock cart">
-                                        <span>Buy Now</span>
                                     </div>
                                     <div className="stock cart two">
                                         <span>Add to cart</span>
+                                    </div>
+                                    <div className="stock cart">
+                                        <span>Buy Now</span>
                                     </div>
                                 </div>
                             </div>
