@@ -15,7 +15,7 @@ import { useState } from "react";
 const ProductDetailInfo = (props) => {
     const { product } = props;
     console.log('product :>> ', product);
-    //product quantity     
+    //product quantity set
     const [quantity, setQuantity] = useState(1);
     // manage product price with current quantity
     if (product.is_offer_enable != true) {
