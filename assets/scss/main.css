@@ -2077,6 +2077,10 @@ button.btn.btn-light.increment.bg-light.border.rounded-circle.text-dark.ml-5 {
   height: 30px;
   width: 30px;
 }
+.quantity-btn {
+  height: 50px;
+  width: 50px;
+}
 .sideBox.form-group {
   margin-bottom: 0rem;
 }
