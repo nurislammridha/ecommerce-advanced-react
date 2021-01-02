@@ -4,6 +4,14 @@ const initialState = {
   carts: [],
   loading: false,
   error: null,
+  cartProduct: {
+    productID: null,
+    productName: '',
+    quantity: '',
+    price: '',
+    offerPrice: '',
+    productImage: ''
+  }
 };
 
 const CartReducer = (state = initialState, action) => {
@@ -13,11 +21,22 @@ const CartReducer = (state = initialState, action) => {
         ...state,
         loading: action.payload,
       };
-
+    case Types.POST_CARTS_LOADING:
+      return {
+        ...state,
+        cartProduct: {
+          productID: null,
+          productName: '',
+          quantity: '',
+          price: '',
+          offerPrice: '',
+          productImage: ''
+        }
+      };
     case Types.GET_CARTS:
       return {
         ...state,
-        carts: action.payload.data,
+        carts: action.payload.carts,
         loading: false,
       };
 

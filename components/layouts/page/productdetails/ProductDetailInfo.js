@@ -9,25 +9,51 @@ import PinDropIcon from "@material-ui/icons/PinDrop";
 import ChatIcon from "@material-ui/icons/Chat";
 import ReactImageFallback from "react-image-fallback";
 import AddIcon from "@material-ui/icons/Add";
-import { Remove, RemoveCircle } from "@material-ui/icons";
+import { Remove } from "@material-ui/icons";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getCartsAction, addToCartAction } from "../../../../store/actions/orders/CartAction";
 
 const ProductDetailInfo = (props) => {
     const { product } = props;
     console.log('product :>> ', product);
     //product quantity set
     const [quantity, setQuantity] = useState(1);
-    // manage product price with current quantity
-    if (product.is_offer_enable != true) {
-        const newPrice = product.default_selling_price * quantity;
-        product.price = newPrice;
-        product.quantity = quantity;
-    } else {
-        const TotalPrice = product.offer_selling_price * quantity;
-        product.price = TotalPrice;
-        product.quantity = quantity;
+    const [idAdded, setIsAdded] = useState(false)
+
+    const dispatch = useDispatch();
+    const loading = useSelector((state) => state.cart.loading);
+    const Getcarts = useSelector((state) => state.cart.carts);
+    const cartState = useSelector((state) => state.cart);
+
+    useEffect(() => {
+        dispatch(getCartsAction());
+    }, []);
+
+    // // manage product price with current quantity
+    // if (product.is_offer_enable !== true) {
+    //     const newPrice = product.default_selling_price * quantity;
+    //     product.price = newPrice;
+    //     product.quantity = quantity;
+    // } else {
+    //     const TotalPrice = product.offer_selling_price * quantity;
+    //     product.price = TotalPrice;
+    //     product.quantity = quantity;
+    // }
+
+    const cartProduct = {
+        productID: product.id,
+        productName: product.name,
+        quantity: quantity,
+        price: product.default_selling_price,
+        offerPrice: product.offer_selling_price,
+        productImage: `${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`
     }
 
+    const addToCart = (cartProduct, id) => {
+        dispatch(addToCartAction(cartProduct, id))
+    }
     return (
         <>
             {
@@ -113,7 +139,7 @@ const ProductDetailInfo = (props) => {
 
                                         {product.is_offer_enable != false && (
                                             <>
-                                              <h2 className="text-warning">৳ {
+                                                <h2 className="text-warning">৳ {
                                                     product.price ? product.price : product.offer_selling_price
                                                 } </h2>
                                                 {/* <p>
@@ -141,13 +167,13 @@ const ProductDetailInfo = (props) => {
                                         <h2>Color:</h2>
                                         <h2>
                                             Quantity :
-                                            <button className="btn btn-light increment bg-light border rounded-circle text-dark ml-3" onClick={() => quantity > 1 && setQuantity(quantity - 1)}> <Remove /></button>
+                                            <button className="btn btn-light quantity-btn decrement bg-light border rounded-circle text-dark ml-3" onClick={() => quantity > 1 && setQuantity(quantity - 1)}> <Remove /></button>
                                             <span className="colorType border rounded text-dark">{quantity}</span>
-                                            <button className="btn btn-light increment bg-light border rounded-circle text-dark ml-2" onClick={() => setQuantity(quantity + 1)}><AddIcon /></button>
+                                            <button className="btn btn-light quantity-btn  increment bg-light border rounded-circle text-dark ml-2" onClick={() => setQuantity(quantity + 1)}><AddIcon /></button>
                                         </h2>
                                     </div>
                                     <div className="stock cart two">
-                                        <span>Add to cart</span>
+                                        <span onClick={()=> addToCart(cartProduct, product.id)}>Add to cart</span>
                                     </div>
                                     <div className="stock cart">
                                         <span>Buy Now</span>
@@ -162,8 +188,8 @@ const ProductDetailInfo = (props) => {
                                     <div className="chairDeliveryoption productDetailsFloating">
                                         <p>
                                             <PinDropIcon />
-                    Dhaka,Dhaka - South,Wari
-                  </p>
+                                            Dhaka,Dhaka - South,Wari
+                                        </p>
                                         <br></br>
                                         <img src="/images/default/homedelivery.png" alt="" />
                                         <p>Home Delivery</p>
@@ -174,23 +200,23 @@ const ProductDetailInfo = (props) => {
                                         <p>Cash on Delivery Available</p>
                                     </div>
                                     {/* <div className="chairDeliveryoption two">
-                  <p>Edit</p>
-                  <p>৳ 245</p>
-                </div>
-                <div className="elegentchairestore">
-                  <h3>Store by</h3>
-                  <div className="elegentstoreImg">
-                    <img src="/images/default/store1.png" />
-                  </div>
-                  <div className="elegentstoreImg two">
-                    <h5>Akij Plastics Ltd</h5>
-                    <p>Flagship Store</p>
-                    <Rater total={5} rating={2} />
-                  </div>
-                  <div className="elegentstoreImg three">
-                    <img src="/images/default/playstore.png" />
-                  </div>
-                </div> */}
+                                    <p>Edit</p>
+                                    <p>৳ 245</p>
+                                    </div>
+                                    <div className="elegentchairestore">
+                                    <h3>Store by</h3>
+                                    <div className="elegentstoreImg">
+                                        <img src="/images/default/store1.png" />
+                                    </div>
+                                    <div className="elegentstoreImg two">
+                                        <h5>Akij Plastics Ltd</h5>
+                                        <p>Flagship Store</p>
+                                        <Rater total={5} rating={2} />
+                                    </div>
+                                    <div className="elegentstoreImg three">
+                                        <img src="/images/default/playstore.png" />
+                                    </div>
+                                    </div> */}
                                     <div className="clearfix"></div>
                                     <div className="border-bottom"></div>
                                     <div className="clearfix"></div>

@@ -23,6 +23,7 @@ import MainMenu from "./Menu";
 
 import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
 import "rc-menu/assets/index.css";
+import { getCartsAction } from "../../../store/actions/orders/CartAction";
 
 function handleSelect(info) {
   console.log("selected ", info);
@@ -68,6 +69,11 @@ const leftMenu = (
 );
 
 const Header = ({ router }, props) => {
+  const dispatch = useDispatch();
+  const carts = useSelector((state) => state.cart.carts);
+  useEffect(() => {
+    dispatch(getCartsAction());
+  }, []);
   return (
     <>
       <div className="header">
@@ -123,7 +129,7 @@ const Header = ({ router }, props) => {
                     <FaCartArrowDown className="header-carticon pointer" />
                   </Link>
                   <span className="badge counter">
-                    <span className="count">0</span>
+                    <span className="count">{carts ? carts.length : 0}</span>
                   </span>
                 </div>
               </div>

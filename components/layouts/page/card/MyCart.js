@@ -4,16 +4,20 @@ import React, { Component, useState, useEffect } from "react";
 // import { Checkbox } from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCarts } from "../../../../store/redux/carts/actions/CartAction";
 import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
+import { getCartsAction } from "../../../../store/actions/orders/CartAction";
+import NumericInput from "react-numeric-input";
+import AddIcon from "@material-ui/icons/Add";
+import { Remove } from "@material-ui/icons";
 
 const MyCart = ({ router }, props) => {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.cart.loading);
   const carts = useSelector((state) => state.cart.carts);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
-    dispatch(fetchCarts());
+    dispatch(getCartsAction());
   }, []);
 
   return (
@@ -26,9 +30,9 @@ const MyCart = ({ router }, props) => {
                 <h1>My Cart</h1>
               </div>
 
-              {!loading && carts.map.length === 0 && (
+              {/* {!loading && carts.map.length === 0 && (
                 <div>No Cart Found !!</div>
-              )}
+              )} */}
 
               {loading && (
                 <LoadingSkelleton
@@ -39,56 +43,37 @@ const MyCart = ({ router }, props) => {
                 />
               )}
 
-              {carts.map.length > 0 && (
-                <>
-                  {carts.map((cart, index) => (
-                    <div className="mt-4">
-                      <div className="innerwishlist productorderdetailsbox cartlistsection">
-                        <div className="singleorderproduct">
-                          <img src="/images/default/chair.png" />
-                        </div>
-                        <div className="wishsingleproductText mycarttext">
-                          <h1>Product title with link</h1>
-                          <h2>Seller: Shop no</h2>
-                          <h4>৳ 500</h4>
-                        </div>
-                        {/* <div className="mycartquantity">
-                          <NumericInput mobile className="form-control" />
-                        </div> */}
-      
-                        <div className="orderquantity mycarttext">
-                          <h2>REMOVE</h2>
-                        </div>
-                        <div className="mycartquantity one">
-                          <FavoriteIcon />
-                        </div>
+              {
+                carts.map(item =>
+                  <div className="mt-2 p-3">
+                    <div className="innerwishlist productorderdetailsbox cartlistsection">
+                      <div className="singleorderproduct">
+                        <img className="img-fluid w-75 m-2" src={item.productImage} />
+                      </div>
+                      <div className="wishsingleproductText mycarttext">
+                        <h1>{item.productName}</h1>
+                        <h2>Seller: Shop no</h2>
+                        <h4>৳ {item.price}</h4>
+                        <h2>
+                          Quantity :
+                          <button className="btn btn-light quantity-btn decrement bg-light border rounded-circle text-dark ml-3" onClick={() => quantity > 1 && setQuantity(quantity - 1)}> <Remove /></button>
+                          <span className="colorType border rounded text-dark">{quantity}</span>
+                          <button className="btn btn-light quantity-btn  increment bg-light border rounded-circle text-dark ml-2" onClick={() => setQuantity(quantity + 1)}><AddIcon /></button>
+                        </h2>
+                      </div>
+                      {/* <div className="mycartquantity">
+                        <NumericInput mobile className="form-control" />
+                      </div> */}
+
+                      <div className="orderquantity mycarttext">
+                        <h2>REMOVE</h2>
+                      </div>
+                      <div className="mycartquantity one">
+                        <FavoriteIcon />
                       </div>
                     </div>
-                  ))}
-                </>
-              )}
-              <div className="mt-2">
-                <div className="innerwishlist productorderdetailsbox cartlistsection">
-                  <div className="singleorderproduct">
-                    <img src="/images/default/chair.png" />
                   </div>
-                  <div className="wishsingleproductText mycarttext">
-                    <h1>Product title with link</h1>
-                    <h2>Seller: Shop no</h2>
-                    <h4>৳ 500</h4>
-                  </div>
-                  {/* <div className="mycartquantity">
-                    <NumericInput mobile className="form-control" />
-                  </div> */}
-
-                  <div className="orderquantity mycarttext">
-                    <h2>REMOVE</h2>
-                  </div>
-                  <div className="mycartquantity one">
-                    <FavoriteIcon />
-                  </div>
-                </div>
-              </div>
+                )}
             </div>
 
             <div className="col-lg-4">

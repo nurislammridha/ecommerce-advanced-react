@@ -761,18 +761,18 @@ h4.pt-2 {
   padding-bottom: 7px;
 }
 .stock.cart span {
-  background: #ff4747;
-  padding: 10px 29px;
-  color: #ffffff;
-  border-radius: 20px;
-  margin-top: 45%;
-  font-size: 18px;
+  background-color: #ff4747!important;
+  padding: 10px 29px!important;
+  color: #ffffff!important;
+  border-radius: 20px!important;
+  margin-top: 45%!important;
+  font-size: 18px!important;
 }
 .stock.cart {
-  padding-top: 48px;
+  padding-top: 48px!important;
 }
 .stock.cart.two span {
-  background: #ff9a00;
+  background: #ff9a00!important;
 }
 .chaircolor h2 {
   color: #373a3c;
@@ -1658,7 +1658,7 @@ button.productBtn.product.cartorder {
   padding-top: 20px;
 }
 .innerwishlist.productorderdetailsbox {
-  height: 228px;
+  height: auto;
 }
 
 .orderstatus {
@@ -2074,8 +2074,8 @@ button.btn.btn-light.galleryAdd {
   margin-bottom: 0px;
 }
 button.btn.btn-light.increment.bg-light.border.rounded-circle.text-dark.ml-5 {
-  height: 30px;
-  width: 30px;
+  height: 30px!important;
+  width: 30px!important;
 }
 .quantity-btn {
   height: 50px;

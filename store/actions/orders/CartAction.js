@@ -1,13 +1,26 @@
+import { useState } from "react";
 import * as Types from "../../Types";
 
-export const addToCartAction = (product, quantity = 1) => async (dispatch) => {
-  dispatch({ type: Types.POST_CARTS_LOADING, payload: true });
-  addToCartData(product, quantity);
-  const payloadData = getCartData();
+// export const addToCartAction = (product, quantity = 1) => async (dispatch) => {
+//   dispatch({ type: Types.POST_CARTS_LOADING, payload: true });
+//   addToCartData(product, quantity);
+//   const payloadData = getCartData();
 
-  setTimeout(() => {
-    dispatch({ type: Types.POST_CARTS_DATA, payload: payloadData });
-  }, 100);
+//   setTimeout(() => {
+//     dispatch({ type: Types.POST_CARTS_DATA, payload: payloadData });
+//   }, 100);
+// };
+
+export const addToCartAction = (cartProduct, id) => async (dispatch) => {
+  const previousCart = getCartData().carts;
+  let carts = [...previousCart]
+  if (carts.find(data => data.productID === id)) {
+    alert('This product already added in your carts!')
+  } else {
+    carts.push(cartProduct);
+    localStorage.setItem("carts", JSON.stringify(carts))
+  }
+  dispatch({ type: Types.POST_CARTS_LOADING, payload: carts });
 };
 
 export const getCartsAction = () => async (dispatch) => {
@@ -15,7 +28,6 @@ export const getCartsAction = () => async (dispatch) => {
   const data = getCartData();
   dispatch({ type: Types.GET_CARTS, payload: data });
 };
-
 export const updateCartQtyAction = (product_id, qty) => async (dispatch) => {
   const cartStorageData = localStorage.getItem("carts");
   let data = {
