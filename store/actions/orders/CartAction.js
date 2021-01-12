@@ -35,21 +35,17 @@ export const updateCartQtyAction = (product_id, quantity) => async (dispatch) =>
     carts: [],
     products: [],
   };
-  console.log("quantity check in action", quantity);
 
   if (typeof cartStorageData !== "undefined" && cartStorageData !== null) {
     data.carts = JSON.parse(cartStorageData);
     data.products = data.carts.products;
 
-    // let findProducts = data.carts.filter(function (x) {
-    //   return x.id === product_id;
-    // });
     let findProducts = data.carts.filter(
       (item) => item.productID === product_id
     );
     if (findProducts.length) {
       const getProductIndex = data.carts.indexOf(findProducts[0]);
-      findProducts[0].quantity = 5;
+      findProducts[0].quantity = quantity;
       data.carts[getProductIndex] = findProducts[0];
       localStorage.setItem("carts", JSON.stringify(data.carts));
     }
