@@ -13,12 +13,12 @@ import * as Types from "../../Types";
 
 export const addToCartAction = (cartProduct, id) => async (dispatch) => {
   const previousCart = getCartData().carts;
-  let carts = [...previousCart]
-  if (carts.find(data => data.productID === id)) {
-    alert('This product already added in your carts!')
+  let carts = [...previousCart];
+  if (carts.find((data) => data.productID === id)) {
+    alert("This product already added in your carts!");
   } else {
     carts.push(cartProduct);
-    localStorage.setItem("carts", JSON.stringify(carts))
+    localStorage.setItem("carts", JSON.stringify(carts));
   }
   dispatch({ type: Types.POST_CARTS_LOADING, payload: carts });
 };
@@ -28,30 +28,34 @@ export const getCartsAction = () => async (dispatch) => {
   const data = getCartData();
   dispatch({ type: Types.GET_CARTS, payload: data });
 };
-export const updateCartQtyAction = (product_id, qty) => async (dispatch) => {
+//update cart products quantity
+export const updateCartQtyAction = (product_id, quantity) => async (dispatch) => {
   const cartStorageData = localStorage.getItem("carts");
   let data = {
     carts: [],
     products: [],
   };
+  console.log("quantity check in action", quantity);
 
   if (typeof cartStorageData !== "undefined" && cartStorageData !== null) {
     data.carts = JSON.parse(cartStorageData);
     data.products = data.carts.products;
 
-    let findProducts = data.carts.products.filter(function (x) {
-      return x.id === product_id;
-    });
-
-    if (findProducts.length > 0) {
-      const getProductIndex = data.carts.products.indexOf(findProducts[0]);
-      findProducts[0].qty = qty;
-      data.carts.products[getProductIndex] = findProducts[0];
+    // let findProducts = data.carts.filter(function (x) {
+    //   return x.id === product_id;
+    // });
+    let findProducts = data.carts.filter(
+      (item) => item.productID === product_id
+    );
+    if (findProducts.length) {
+      const getProductIndex = data.carts.indexOf(findProducts[0]);
+      findProducts[0].quantity = 5;
+      data.carts[getProductIndex] = findProducts[0];
       localStorage.setItem("carts", JSON.stringify(data.carts));
     }
   }
 
-  dispatch({ type: Types.UPDATE_CARTS_DATA, payload: getCartData() });
+  // dispatch({ type: Types.UPDATE_CARTS_DATA, payload: getCartData() });
 };
 
 export const deleteCartItemAction = (product_id) => async (dispatch) => {
