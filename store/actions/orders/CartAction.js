@@ -21,6 +21,7 @@ export const addToCartAction = (cartProduct, id) => async (dispatch) => {
     localStorage.setItem("carts", JSON.stringify(carts));
   }
   dispatch({ type: Types.POST_CARTS_LOADING, payload: carts });
+  dispatch(getCartsAction())
 };
 
 export const getCartsAction = () => async (dispatch) => {
@@ -71,6 +72,7 @@ export const deleteCartItemAction = (product_id) => async (dispatch) => {
     localStorage.setItem("carts", JSON.stringify(findProducts));
   }
   dispatch({ type: Types.DELETE_CARTS_DATA, payload: getCartData() });
+  dispatch(getCartsAction())
 };
 
 export const postEmptyCartMessage = () => async (dispatch) => {
