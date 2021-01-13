@@ -33,7 +33,9 @@ const MyCart = ({ router }, props) => {
   const decrementQunatity = (id, quantity) => {
     console.log('quantity :>> ', quantity);
     carts.find((item) => item.productID === id && item.quantity > 1 && setQuantity((item.quantity -= 1)))
-    dispatch(updateCartQtyAction(id, (quantity -= 1)));
+    if (quantity > 1) {
+      dispatch(updateCartQtyAction(id, (quantity -= 1)));
+    }
   };
 
   //delete cart products
