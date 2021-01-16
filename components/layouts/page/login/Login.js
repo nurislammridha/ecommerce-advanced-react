@@ -42,7 +42,7 @@ const Login = ({ router }, props) => {
                   </Link>
                   <h6>New to Maccaf</h6>
 
-                  <Link href="/">
+                  <Link href="/register">
                     <a>
                       {" "}
                       <button className="createbtn" type="submit">
