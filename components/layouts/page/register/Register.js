@@ -1,16 +1,21 @@
 import React, { Component } from "react";
 import {
   Button,
-  FormGroup,
-  FormControl,
-  ControlLabel,
   Row,
   Col,
 } from "react-bootstrap";
 import Link from "next/link";
 import Form from "react-bootstrap/Form";
+import { useState } from "react";
+import RegisterTwo from "./RegisterTwo"
+
 // import Row from "react-bootstrap/Row";
 const Register = ({ router }, props) => {
+  const [stepNo, setStepNo] = useState(1)
+  const handleRegisterStepOne = (e) => {
+    setStepNo(2)
+    e.preventDefault()
+  }
   return (
     <>
       <div className="wishbanner pb">
@@ -20,37 +25,49 @@ const Register = ({ router }, props) => {
               <div className="Loginform">
                 <h1>Create Account</h1>
                 <Form>
-                  <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Your Name</Form.Label>
+                  {
+                    stepNo === 1 &&
+                    <>
+                      <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Your Name</Form.Label>
+                        <Row>
+                          <Col>
+                            <Form.Control placeholder="First name" />
+                          </Col>
+                          <Col>
+                            <Form.Control placeholder="Last name" />
+                          </Col>
+                        </Row>
+                      </Form.Group>
+                      <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Mobile number</Form.Label>
+                        <Form.Control
+                          type="number"
+                          placeholder="Enter a valid mobile number"
+                        />
+                      </Form.Group>
+                      <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Referral Code (Optional)</Form.Label>
+                        <Form.Control type="test" placeholder="Maccaf" />
+                      </Form.Group>
+                      <Button onClick={(e) => handleRegisterStepOne(e)} variant="primary" type="submit">
+                        Next
+                      </Button>
+                    </>
+                  }
 
-                    <Row>
-                      <Col>
-                        <Form.Control placeholder="First name" />
-                      </Col>
-                      <Col>
-                        <Form.Control placeholder="Last name" />
-                      </Col>
-                    </Row>
-                  </Form.Group>
-                  <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Mobile number</Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="Enter a valid mobile number"
-                    />
-                  </Form.Group>
-                  <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Referral Code (Optional)</Form.Label>
-                    <Form.Control type="password" placeholder="Maccaf" />
-                  </Form.Group>
-                  <Link href="/">
-                    <a>
+                  {
+                    stepNo === 2 &&
+                    <>
+                      <RegisterTwo stepNo={stepNo} setStepNo={setStepNo} />
+                    </>
+                  }
+                  {/* <a onClick={() => setStepNo(2)}>
                       {" "}
                       <Button variant="primary" type="submit">
                         Next
                       </Button>
-                    </a>
-                  </Link>
+                    </a> */}
 
                   <div className="signform">
                     <div className="signinlink">
