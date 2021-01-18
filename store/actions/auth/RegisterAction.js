@@ -5,6 +5,23 @@ import * as JwtDecode from "jwt-decode";
 import axios from "axios";
 import { API_POST_REGISTER } from "../../ApiEndpoint";
 
+
+//handle change register input field 
+export const ChangeRegisterInputField = (name, value) => (dispatch) => {
+  const registerData = {
+    name: name,
+    value: value
+  }
+  dispatch({type: Types.CHANGE_REGISTER_INPUT_FIELD, payload: registerData})
+}
+
+// handle register first step 
+export const handleRegisterFirstStep = (registerInput) => (dispatch)=>{
+  if (registerInput.first_name.length === 0) {
+    console.log("please enter your first name")
+    return false;
+  }
+}
 export const registerAction = (registerData) => async (dispatch) => {
   console.log("registerData", registerData);
   return 1;

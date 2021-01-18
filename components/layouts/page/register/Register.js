@@ -8,12 +8,21 @@ import Link from "next/link";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import RegisterTwo from "./RegisterTwo"
+import { useDispatch, useSelector } from "react-redux";
+import { ChangeRegisterInputField, handleRegisterFirstStep } from "../../../../store/actions/auth/RegisterAction";
 
 // import Row from "react-bootstrap/Row";
 const Register = ({ router }, props) => {
+  const dispatch = useDispatch()
   const [stepNo, setStepNo] = useState(1)
+  const registerInput = useSelector((state)=> state.registerReducer.registerInput)
+  //handle change input 
+  const handleChangeTextInput = (name, value) => {
+    dispatch(ChangeRegisterInputField(name, value))
+  }
   const handleRegisterStepOne = (e) => {
     setStepNo(2)
+    dispatch(handleRegisterFirstStep(registerInput))
     e.preventDefault()
   }
   return (
@@ -32,10 +41,18 @@ const Register = ({ router }, props) => {
                         <Form.Label>Your Name</Form.Label>
                         <Row>
                           <Col>
-                            <Form.Control placeholder="First name" />
+                            <Form.Control
+                              placeholder="First name"
+                              name="first_name"
+                              onChange={(e) => handleChangeTextInput('first_name', e.target.value)}
+                            />
                           </Col>
                           <Col>
-                            <Form.Control placeholder="Last name" />
+                            <Form.Control
+                              placeholder="Last name"
+                              name="last_name"
+                              onChange={(e)=> handleChangeTextInput('last_name', e.target.value)}
+                            />
                           </Col>
                         </Row>
                       </Form.Group>
@@ -44,6 +61,8 @@ const Register = ({ router }, props) => {
                         <Form.Control
                           type="number"
                           placeholder="Enter a valid mobile number"
+                          name="phone_no"
+                          onChange={(e)=> handleChangeTextInput('phone_no', e.target.value)}
                         />
                       </Form.Group>
                       <Form.Group controlId="formBasicPassword">
