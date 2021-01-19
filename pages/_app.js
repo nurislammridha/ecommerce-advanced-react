@@ -15,6 +15,9 @@ import "../node_modules/slick-carousel/slick/slick.css";
 import "../assets/scss/main.css";
 import "../assets/scss/responsive.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 
 class MyApp extends App {
   render() {

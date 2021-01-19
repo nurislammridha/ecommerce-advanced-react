@@ -4,6 +4,7 @@ import * as JwtDecode from "jwt-decode";
 
 import axios from "axios";
 import { API_POST_REGISTER } from "../../ApiEndpoint";
+import { showToast } from "../../../components/master/Helper/ToastHelper";
 
 
 //handle change register input field 
@@ -12,15 +13,30 @@ export const ChangeRegisterInputField = (name, value) => (dispatch) => {
     name: name,
     value: value
   }
-  dispatch({type: Types.CHANGE_REGISTER_INPUT_FIELD, payload: registerData})
+  dispatch({ type: Types.CHANGE_REGISTER_INPUT_FIELD, payload: registerData })
 }
 
 // handle register first step 
-export const handleRegisterFirstStep = (registerInput) => (dispatch)=>{
+export const handleRegisterFirstStep = (registerInput, setStepNo) => (dispatch) => {
   if (registerInput.first_name.length === 0) {
-    console.log("please enter your first name")
+    showToast('error', "First name can't be blank!")
     return false;
   }
+  if (registerInput.last_name.length === 0) {
+    showToast('error', "Last name can't be blank!")
+    return false;
+  }
+  if (registerInput.phone_no === null) {
+    showToast('error', "Mobile number can't be blank!")
+    return false;
+  }
+  showToast('success', "Check your phone, we sent you a one time password")
+  setStepNo(2)
+}
+
+// customer register step two / final 
+export const customerRegister = (registerInput) => (dispatch) => {
+  
 }
 export const registerAction = (registerData) => async (dispatch) => {
   console.log("registerData", registerData);

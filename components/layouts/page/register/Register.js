@@ -9,22 +9,31 @@ import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import RegisterTwo from "./RegisterTwo"
 import { useDispatch, useSelector } from "react-redux";
+import { useForm } from "react-hook-form";
 import { ChangeRegisterInputField, handleRegisterFirstStep } from "../../../../store/actions/auth/RegisterAction";
 
 // import Row from "react-bootstrap/Row";
 const Register = ({ router }, props) => {
   const dispatch = useDispatch()
+  const { register, handleSubmit, watch, errors } = useForm();
   const [stepNo, setStepNo] = useState(1)
-  const registerInput = useSelector((state)=> state.registerReducer.registerInput)
+  const registerInput = useSelector((state) => state.registerReducer.registerInput)
+
+  console.log('registerInput :>> ', registerInput);
   //handle change input 
   const handleChangeTextInput = (name, value) => {
     dispatch(ChangeRegisterInputField(name, value))
   }
   const handleRegisterStepOne = (e) => {
-    setStepNo(2)
-    dispatch(handleRegisterFirstStep(registerInput))
+    dispatch(handleRegisterFirstStep(registerInput, setStepNo))
     e.preventDefault()
   }
+
+  // // final customer register 
+  // const customerRegister = (e) => {
+  //   dispatch(customerRegister(registerInput));
+  //   e.preventDefault();
+  // }
   return (
     <>
       <div className="wishbanner pb">
@@ -44,14 +53,18 @@ const Register = ({ router }, props) => {
                             <Form.Control
                               placeholder="First name"
                               name="first_name"
+                              value={registerInput.first_name}
                               onChange={(e) => handleChangeTextInput('first_name', e.target.value)}
+                              ref={register({ required: true })}
                             />
                           </Col>
                           <Col>
                             <Form.Control
                               placeholder="Last name"
                               name="last_name"
-                              onChange={(e)=> handleChangeTextInput('last_name', e.target.value)}
+                              value={registerInput.last_name}
+                              onChange={(e) => handleChangeTextInput('last_name', e.target.value)}
+                              ref={register({ required: true })}
                             />
                           </Col>
                         </Row>
@@ -62,14 +75,16 @@ const Register = ({ router }, props) => {
                           type="number"
                           placeholder="Enter a valid mobile number"
                           name="phone_no"
-                          onChange={(e)=> handleChangeTextInput('phone_no', e.target.value)}
+                          value={registerInput.phone_no}
+                          onChange={(e) => handleChangeTextInput('phone_no', e.target.value)}
+                          ref={register({ required: true })}
                         />
                       </Form.Group>
                       <Form.Group controlId="formBasicPassword">
                         <Form.Label>Referral Code (Optional)</Form.Label>
                         <Form.Control type="test" placeholder="Maccaf" />
                       </Form.Group>
-                      <Button onClick={(e) => handleRegisterStepOne(e)} variant="primary" type="submit">
+                      <Button onClick={(e) => handleRegisterStepOne(e)} variant="primary">
                         Next
                       </Button>
                     </>
@@ -78,7 +93,7 @@ const Register = ({ router }, props) => {
                   {
                     stepNo === 2 &&
                     <>
-                      <RegisterTwo stepNo={stepNo} setStepNo={setStepNo} />
+                      <RegisterTwo handleChangeTextInput={handleChangeTextInput} stepNo={stepNo} setStepNo={setStepNo} />
                     </>
                   }
                   {/* <a onClick={() => setStepNo(2)}>
