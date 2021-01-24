@@ -4,14 +4,15 @@ import Link from "next/link";
 import Form from "react-bootstrap/Form";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { customerRegister } from "../../../../store/actions/auth/RegisterAction";
+import { ChangeRegisterInputField, customerRegister } from "../../../../store/actions/auth/RegisterAction";
 // import Row from "react-bootstrap/Row";
 const RegisterStepTwo = (props) => {
   const { handleChangeTextInput } = props;
   const { register, handleSubmit, watch, errors } = useForm();
 
   const dispatch = useDispatch()
-  const registerInput = useSelector((state) => state.registerReducer.registerInput)
+  const registerInput = useSelector((state) => state.registerReducer.registerInput);
+
   // final customer register 
   const customerRegisterAction = (e) => {
     dispatch(customerRegister(registerInput));

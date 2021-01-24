@@ -35,7 +35,30 @@ export const handleRegisterFirstStep = (registerInput, setStepNo) => (dispatch) 
 }
 
 // customer register step two / final 
-export const customerRegister = (registerInput) => (dispatch) => {
+export const customerRegister = (registerInput) => async (dispatch) => {
+  if (registerInput.password.length === 0) {
+    showToast('error', "Password can't be blank!")
+    return false;
+  }
+  if (registerInput.password_confirmation.length === 0) {
+    showToast('error', "Confirm password can't be blank!")
+    return false;
+  }
+  const RegisterAPI = `http://api.anjulis.com/api/v1/auth/register`;
+  const config = {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+    }
+  };
+  if (registerInput.password === registerInput.password_confirmation) {
+    axios.post(RegisterAPI, registerInput, config)
+    .then((res)=>{
+      console.log('res :>> ', res);
+    })
+  }else{
+    showToast('error', "Pssword  & confirm password doesn't match!")
+  }
   
 }
 export const registerAction = (registerData) => async (dispatch) => {

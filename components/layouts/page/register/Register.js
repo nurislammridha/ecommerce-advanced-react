@@ -19,7 +19,6 @@ const Register = ({ router }, props) => {
   const [stepNo, setStepNo] = useState(1)
   const registerInput = useSelector((state) => state.registerReducer.registerInput)
 
-  console.log('registerInput :>> ', registerInput);
   //handle change input 
   const handleChangeTextInput = (name, value) => {
     dispatch(ChangeRegisterInputField(name, value))
@@ -29,11 +28,6 @@ const Register = ({ router }, props) => {
     e.preventDefault()
   }
 
-  // // final customer register 
-  // const customerRegister = (e) => {
-  //   dispatch(customerRegister(registerInput));
-  //   e.preventDefault();
-  // }
   return (
     <>
       <div className="wishbanner pb">
