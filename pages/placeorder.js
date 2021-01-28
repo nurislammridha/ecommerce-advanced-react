@@ -1,10 +1,23 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import NumericInput from "react-numeric-input";
 import CancelIcon from "@material-ui/icons/Cancel";
 import MainLayout from "../components/layouts/Layout";
 import { Checkbox } from "@material-ui/core";
+import { useDispatch, useSelector } from "react-redux";
+import { getCartsAction } from "../store/actions/orders/CartAction";
 
 const placeorder = ({ router }, props) => {
+  const dispatch = useDispatch()
+  const loading = useSelector((state) => state.cart.loading);
+  const carts = useSelector((state) => state.cart.carts);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
+  const shippingCost = useSelector((state) => state.cart.shippingCost);
+
+  useEffect(() => {
+    dispatch(getCartsAction());
+    // calculateTotalQtyAndPrices();
+  }, []);
   return (
     <>
       <MainLayout>
@@ -12,9 +25,9 @@ const placeorder = ({ router }, props) => {
           <div className="container">
             <div className="row">
               <div className="col-lg-8">
-                <div class="card mt-5">
-                  <div class="card-body">
-                    <h5 class="card-title">Shipping Address</h5>
+                <div className="card mt-5">
+                  <div className="card-body">
+                    <h5 className="card-title">Shipping Address</h5>
                     <form>
                       <div className="row">
                         <div className="col">
@@ -67,44 +80,31 @@ const placeorder = ({ router }, props) => {
                 </div>
                 <div className="clearfix"></div>
                 <div className="">
-                  <div className="innerwishlist bg-white">
-                    <div className="wishsingleproduct shippingImg">
-                      <img src="/images/default/chair.png" />
-                    </div>
-                    <div className="shippmentBoxText pt-3">
-                      <h1>Product title with link</h1>
 
-                      <h5 className="text-danger">Seller: Seller shop name</h5>
-                    </div>
-                    <div className="wishsingleproductIcon">
-                      <p>2</p>
-                    </div>
-                    <div className="wishsingleproductIcon">
-                      <p>৳ 500</p>
-                    </div>
-                    <div className="wishsingleproductIcon">
-                      <p>৳ 1000</p>
-                    </div>
-                  </div>
-                  <div className="innerwishlist bg-white">
-                    <div className="wishsingleproduct shippingImg">
-                      <img src="/images/default/chair.png" />
-                    </div>
-                    <div className="shippmentBoxText pt-3">
-                      <h1>Product title with link</h1>
+                  {
+                    carts.length && carts.map((item, index) => (
+                      <div className="innerwishlist bg-white">
+                        <div className="wishsingleproduct shippingImg">
+                          <img className="img-fluid w-75 p-3" src={item.productImage} alt="product image" />
+                        </div>
+                        <div className="shippmentBoxText pt-3">
+                          <h1>{item.productName}</h1>
+                          <h5 className="text-danger">Seller: Seller shop name</h5>
+                        </div>
+                        <div className="wishsingleproductIcon">
+                          <p>{item.quantity}</p>
+                        </div>
+                        <div className="wishsingleproductIcon">
+                          <p>৳ {item.offerPrice !== null && item.price !== "" ? item.offerPrice : item.price}</p>
+                        </div>
+                        <div className="wishsingleproductIcon">
+                          {/* item.quantity * item.offerPrice */}
+                          <p>৳ {item.offerPrice !== null && item.price !== "" ? item.quantity * item.offerPrice : item.quantity * item.price}</p>
+                        </div>
+                      </div>
+                    ))
+                  }
 
-                      <h5 className="text-danger">Seller: Seller shop name</h5>
-                    </div>
-                    <div className="wishsingleproductIcon">
-                      <p>2</p>
-                    </div>
-                    <div className="wishsingleproductIcon">
-                      <p>৳ 500</p>
-                    </div>
-                    <div className="wishsingleproductIcon">
-                      <p>৳ 1000</p>
-                    </div>
-                  </div>
                   <div className="clearfix"></div>
                   <button className="btn btn-primary float-right mt-3 backCartbtn">
                     Back to Cart
@@ -123,14 +123,14 @@ const placeorder = ({ router }, props) => {
                     <p>Shipping cost</p>
                   </div>
                   <div className="float-right">
-                    <p>৳ 0.00</p>
-                    <p>৳ 0.00</p>
-                    <p>৳ 0.00</p>
+                    <p>৳ {totalPrice}</p>
+                    <p className="ml-4">{totalQuantity}</p>
+                    <p>৳ {shippingCost}</p>
                   </div>
                   <div className="clearfix"></div>
                   <div className="border-top pt-1">
                     <p className="float-left">Total Price</p>
-                    <p className="float-right">৳ 2300.00</p>
+                    <p className="float-right">৳ {totalPrice + shippingCost}</p>
                   </div>
                   <div className="clearfix"></div>
                   <div className="proceedBtn">

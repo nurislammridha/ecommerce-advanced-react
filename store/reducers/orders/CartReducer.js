@@ -9,15 +9,44 @@ const initialState = {
   add_message: "",
   delete_message: "",
   error: null,
+  cartProduct: {
+    productID: null,
+    productName: '',
+    quantity: '',
+    price: '',
+    offerPrice: '',
+    productImage: ''
+  },
+  // Place Order Part
+  totalQuantity: 0,
+  totalPrice: 0,
+  shippingCost: 0,
 };
 
 const CartReducer = (state = initialState, action) => {
   switch (action.type) {
+    // case Types.POST_CARTS_LOADING:
+    //   return {
+    //     ...state,
+    //     loading_add: action.payload,
+    //     add_message: "Item Added to the cart successfully",
+    //   };
+    case Types.GET_CARTS_LOADING:
+      return {
+        ...state,
+        loading: action.payload,
+      };
     case Types.POST_CARTS_LOADING:
       return {
         ...state,
-        loading_add: action.payload,
-        add_message: "Item Added to the cart successfully",
+        cartProduct: {
+          productID: null,
+          productName: '',
+          quantity: '',
+          price: '',
+          offerPrice: '',
+          productImage: ''
+        }
       };
     case Types.EMPTY_CART_MESSAGE:
       return {
@@ -38,9 +67,13 @@ const CartReducer = (state = initialState, action) => {
       };
 
     case Types.GET_CARTS:
+      console.log('action.payload.carts', action.payload);
       return {
         ...state,
         carts: action.payload.carts,
+        totalQuantity: calculateTotalQtyAndPrices(action.payload.carts).totalQuantity,
+        totalPrice: calculateTotalQtyAndPrices(action.payload.carts).totalPrice,
+        shippingCost: calculateTotalQtyAndPrices(action.payload.carts).shippingCost,
         products: action.payload.products,
         loading: false,
         errors: null,
@@ -55,22 +88,22 @@ const CartReducer = (state = initialState, action) => {
         errors: null,
       };
 
-    case Types.UPDATE_CARTS_DATA:
-      return {
-        ...state,
-        carts: action.payload.carts,
-        products: action.payload.products,
-        errors: null,
-      };
+    // case Types.UPDATE_CARTS_DATA:
+    //   return {
+    //     ...state,
+    //     carts: action.payload.carts,
+    //     products: action.payload.products,
+    //     errors: null,
+    //   };
 
-    case Types.DELETE_CARTS_DATA:
-      return {
-        ...state,
-        carts: action.payload.carts,
-        products: action.payload.products,
-        errors: null,
-        delete_message: "Cart Item has been deleted !",
-      };
+    // case Types.DELETE_CARTS_DATA:
+    //   return {
+    //     ...state,
+    //     carts: action.payload.carts,
+    //     products: action.payload.products,
+    //     errors: null,
+    //     delete_message: "Cart Item has been deleted !",
+    //   };
 
     default:
       return {
@@ -79,5 +112,19 @@ const CartReducer = (state = initialState, action) => {
       break;
   }
 };
+
+const calculateTotalQtyAndPrices = (carts) => {
+  const response = {
+    totalQuantity: 0,
+    totalPrice: 0,
+  }
+  for (let i = 0; i < carts.length; i++) {
+    response.totalQuantity += carts[i].quantity;
+
+    response.totalPrice += (carts[i].offerPrice !== null && carts[i].price !== "" ? carts[i].quantity * carts[i].offerPrice : carts[i].quantity * carts[i].price);
+    response.shippingCost = (response.totalPrice / 100) * 5;
+  }
+  return response;
+}
 
 export default CartReducer;

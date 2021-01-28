@@ -13,7 +13,7 @@ import { Remove } from "@material-ui/icons";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getCartsAction, addToCartAction } from "../../../../store/actions/orders/CartAction";
+import { getCartsAction, addToCartAction, updateCartQtyAction } from "../../../../store/actions/orders/CartAction";
 
 const ProductDetailInfo = (props) => {
     const { product } = props;
@@ -26,7 +26,8 @@ const ProductDetailInfo = (props) => {
     const loading = useSelector((state) => state.cart.loading);
     const Getcarts = useSelector((state) => state.cart.carts);
     const cartState = useSelector((state) => state.cart);
-
+    const carts = useSelector((state) => state.cart.carts);
+    const findCurrentCart = carts.find(id => id.productID === product.id);
     useEffect(() => {
         dispatch(getCartsAction());
     }, []);
@@ -50,6 +51,18 @@ const ProductDetailInfo = (props) => {
         offerPrice: product.offer_selling_price,
         productImage: `${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`
     }
+    // increase quantity 
+    const increaseQuantity = (id, quantity) => {
+        carts.find((item) => item.productID === id && setQuantity((item.quantity += 1)));
+        dispatch(updateCartQtyAction(id, (quantity += 1)));
+    };
+    //decrease quantity
+    const decrementQunatity = (id, quantity) => {
+        carts.find((item) => item.productID === id && item.quantity > 1 && setQuantity((item.quantity -= 1)))
+        if (quantity > 1) {
+            dispatch(updateCartQtyAction(id, (quantity -= 1)));
+        }
+    };
 
     const addToCart = (cartProduct, id) => {
         dispatch(addToCartAction(cartProduct, id))
@@ -167,13 +180,15 @@ const ProductDetailInfo = (props) => {
                                         <h2>Color:</h2>
                                         <h2>
                                             Quantity :
-                                            <button className="btn btn-light quantity-btn decrement bg-light border rounded-circle text-dark ml-3" onClick={() => quantity > 1 && setQuantity(quantity - 1)}> <Remove /></button>
-                                            <span className="colorType border rounded text-dark">{quantity}</span>
-                                            <button className="btn btn-light quantity-btn  increment bg-light border rounded-circle text-dark ml-2" onClick={() => setQuantity(quantity + 1)}><AddIcon /></button>
+                                            <button className="btn btn-light quantity-btn decrement bg-light border rounded-circle text-dark ml-3" onClick={(id, quantity) => decrementQunatity(cartProduct.productID, cartProduct.quantity)}> <Remove /></button>
+
+                                            <span className="colorType border rounded text-dark">{findCurrentCart && findCurrentCart.quantity ? findCurrentCart.quantity : quantity}</span>
+
+                                            <button className="btn btn-light quantity-btn  increment bg-light border rounded-circle text-dark ml-2" onClick={(id, quantity) => increaseQuantity(cartProduct.productID, cartProduct.quantity)}><AddIcon /></button>
                                         </h2>
                                     </div>
                                     <div className="stock cart two">
-                                        <span onClick={()=> addToCart(cartProduct, product.id)}>Add to cart</span>
+                                        <span onClick={() => addToCart(cartProduct, product.id)}>Add to cart</span>
                                     </div>
                                     <div className="stock cart">
                                         <span>Buy Now</span>
