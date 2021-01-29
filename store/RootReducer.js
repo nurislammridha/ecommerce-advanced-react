@@ -7,10 +7,10 @@ import ProductWish from "./redux/productWishes/reducers/ProductWishReducer";
 import MyOrder from "./redux/myOrders/reducers/MyOrderReducer";
 import Wallet from "./redux/wallets/reducers/WalletReducer";
 // import SliderReducer from "./sliders/SliderReducer";
-import CartReducer from "./redux/carts/reducers/CartReducer";
 // import AuthReducer from "./auth/AuthReducer";
 import Notification from "./redux/notifications/reducers/NotificationReducer";
 import RegisterReducer from "./reducers/auth/RegisterReducer";
+import CartReducer from "./reducers/orders/CartReducer";
 
 export default combineReducers({
   product: ProductReducer,

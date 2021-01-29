@@ -18,6 +18,8 @@ const MyCart = ({ router }, props) => {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.cart.loading);
   const carts = useSelector((state) => state.cart.carts);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
@@ -31,7 +33,6 @@ const MyCart = ({ router }, props) => {
   };
   //decrease quantity
   const decrementQunatity = (id, quantity) => {
-    console.log('quantity :>> ', quantity);
     carts.find((item) => item.productID === id && item.quantity > 1 && setQuantity((item.quantity -= 1)))
     if (quantity > 1) {
       dispatch(updateCartQtyAction(id, (quantity -= 1)));
@@ -132,8 +133,8 @@ const MyCart = ({ router }, props) => {
                       <p>Total Price</p>
                     </div>
                     <div className="orderProductText">
-                      <p>৳ 500</p>
-                      <p> 2</p>
+                      <p>৳ {totalPrice}</p>
+                      <p> {totalQuantity}</p>
                       <p>৳ 500</p>
                     </div>
                   </div>

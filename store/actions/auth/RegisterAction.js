@@ -44,15 +44,15 @@ export const customerRegister = (registerInput) => async (dispatch) => {
     showToast('error', "Confirm password can't be blank!")
     return false;
   }
-  const RegisterAPI = `http://api.anjulis.com/api/v1/auth/register`;
-  const config = {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
-    }
-  };
+  const RegisterAPI = `https://api.anjulis.com/api/v1/auth/register`;
+  // const config = {
+  //   headers: {
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+  //   }
+  // };
   if (registerInput.password === registerInput.password_confirmation) {
-    axios.post(RegisterAPI, registerInput, config)
+    axios.post(RegisterAPI, registerInput)
     .then((res)=>{
       console.log('res :>> ', res);
     })
@@ -61,34 +61,35 @@ export const customerRegister = (registerInput) => async (dispatch) => {
   }
   
 }
-export const registerAction = (registerData) => async (dispatch) => {
-  console.log("registerData", registerData);
-  return 1;
-  let loginResponse = {
-    userData: {},
-    tokenData: {},
-    isLoggedIn: false,
-    loginMessage: "",
-    isLoading: false,
-  };
 
-  try {
-    loginResponse.isLoading = true;
-    dispatch({ type: Types.AUTH_REGISTER, payload: loginResponse });
+// export const registerAction = (registerData) => async (dispatch) => {
+//   console.log("registerData", registerData);
+//   return 1;
+//   let loginResponse = {
+//     userData: {},
+//     tokenData: {},
+//     isLoggedIn: false,
+//     loginMessage: "",
+//     isLoading: false,
+//   };
 
-    const res = await axios.post(`${API_POST_REGISTER}`, registerData);
-    // Successfully Logged in
-    loginResponse = {
-      userData: res.data.user,
-      tokenData: res.data.access_token,
-      isLoggedIn: res.data.status,
-      loginMessage: res.data.message,
-      isLoading: false,
-    };
-    localStorage.setItem("loginData", JSON.stringify(loginResponse));
-    dispatch({ type: Types.AUTH_REGISTER, payload: loginResponse });
-  } catch (error) {
-    // loginResponse
-    dispatch({ type: Types.AUTH_REGISTER, payload: loginResponse });
-  }
-};
+//   try {
+//     loginResponse.isLoading = true;
+//     dispatch({ type: Types.AUTH_REGISTER, payload: loginResponse });
+
+//     const res = await axios.post(`${API_POST_REGISTER}`, registerData);
+//     // Successfully Logged in
+//     loginResponse = {
+//       userData: res.data.user,
+//       tokenData: res.data.access_token,
+//       isLoggedIn: res.data.status,
+//       loginMessage: res.data.message,
+//       isLoading: false,
+//     };
+//     localStorage.setItem("loginData", JSON.stringify(loginResponse));
+//     dispatch({ type: Types.AUTH_REGISTER, payload: loginResponse });
+//   } catch (error) {
+//     // loginResponse
+//     dispatch({ type: Types.AUTH_REGISTER, payload: loginResponse });
+//   }
+// };
