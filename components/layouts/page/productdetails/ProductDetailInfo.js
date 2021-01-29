@@ -17,7 +17,7 @@ import { getCartsAction, addToCartAction, updateCartQtyAction } from "../../../.
 
 const ProductDetailInfo = (props) => {
     const { product } = props;
-    console.log('product :>> ', product);
+    // console.log('product :>> ', product);
     //product quantity set
     const [quantity, setQuantity] = useState(1);
     const [idAdded, setIsAdded] = useState(false)
@@ -49,7 +49,12 @@ const ProductDetailInfo = (props) => {
         quantity: quantity,
         price: product.default_selling_price,
         offerPrice: product.offer_selling_price,
-        productImage: `${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`
+        productImage: `${process.env.NEXT_PUBLIC_URL}images/products/${product.featured_image}`,
+        business: {
+            businessID: product.business_id,
+            businessName: product.business.name,
+            businessLogo: `${process.env.NEXT_PUBLIC_URL}images/vendors/${product.business.logo_url}`,
+        },
     }
     // increase quantity 
     const increaseQuantity = (id, quantity) => {

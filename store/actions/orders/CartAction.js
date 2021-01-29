@@ -53,6 +53,7 @@ export const updateCartQtyAction = (product_id, quantity) => async (dispatch) =>
     }
   }
   dispatch({ type: Types.UPDATE_CARTS_DATA, payload: getCartData() });
+  dispatch(getCartsAction());
 };
 
 //delete cart product

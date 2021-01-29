@@ -120,7 +120,6 @@ const calculateTotalQtyAndPrices = (carts) => {
   }
   for (let i = 0; i < carts.length; i++) {
     response.totalQuantity += carts[i].quantity;
-
     response.totalPrice += (carts[i].offerPrice !== null && carts[i].price !== "" ? carts[i].quantity * carts[i].offerPrice : carts[i].quantity * carts[i].price);
     response.shippingCost = (response.totalPrice / 100) * 5;
   }

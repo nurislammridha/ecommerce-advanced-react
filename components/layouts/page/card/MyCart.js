@@ -14,6 +14,8 @@ import NumericInput from "react-numeric-input";
 import AddIcon from "@material-ui/icons/Add";
 import { Remove } from "@material-ui/icons";
 import Link from "next/link";
+import { FaTrash } from "react-icons/fa";
+import { Button } from "@material-ui/core";
 
 const MyCart = ({ router }, props) => {
   const dispatch = useDispatch();
@@ -80,7 +82,20 @@ const MyCart = ({ router }, props) => {
                     <div className="wishsingleproductText mycarttext">
                       <h1>{item.productName}</h1>
                       <h2>Seller: Shop no</h2>
-                      <h4>৳ {item.price}</h4>
+                      <div className="row">
+                        <h4 >
+                          {
+                            item.offerPrice !== null ? (
+                              <del> {item.price} </del>) :
+                              <>৳ {item.price}</>
+                          }
+                        </h4>
+                        {
+                          item.offerPrice !== null && (
+                            <h4 className="ml-5">Offer Price ৳{item.offerPrice}</h4>
+                          )}
+
+                      </div>
                       <h2>
                         Quantity:
                         <div className="cart-quantity-area">
@@ -112,9 +127,9 @@ const MyCart = ({ router }, props) => {
                       </div> */}
 
                     <div style={{ cursor: 'pointer' }} className="orderquantity mycarttext cursor-pointer" onClick={(id) => deleteCartProduct(item.productID)}>
-                      <h2>REMOVE</h2>
+                      <FaTrash />
                     </div>
-                    <div className="mycartquantity one">
+                    <div className="mycartquantity one cursor-pointer">
                       <FavoriteIcon />
                     </div>
                   </div>
@@ -138,12 +153,12 @@ const MyCart = ({ router }, props) => {
                     <div className="orderProductText">
                       <p>৳ {totalPrice}</p>
                       <p> {totalQuantity}</p>
-                      <p>৳ 500</p>
+                      <p>৳ {totalPrice}</p>
                     </div>
                   </div>
 
-                  <div className="mycartplace">
-                    <Link href="placeorder"><button>PLACE ORDER</button></Link>
+                  <div className="mycartplace" disabled={true}>
+                    <Link href="placeorder"><button disabled={carts.length === 0 ? true : false}>PLACE ORDER</button></Link>
                   </div>
                 </div>
               </div>

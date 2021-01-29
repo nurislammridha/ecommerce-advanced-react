@@ -26,6 +26,7 @@
         "font-awesome": "^4.7.0",
         "jquery": "^3.5.1",
         "jwt-decode": "^2.2.0",
+        "moment": "^2.29.1",
         "next": "^9.5.4",
         "next-images": "^1.6.2",
         "next-redux-wrapper": "^6.0.2",

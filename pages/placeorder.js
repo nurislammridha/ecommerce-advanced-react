@@ -5,6 +5,7 @@ import MainLayout from "../components/layouts/Layout";
 import { Checkbox } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartsAction } from "../store/actions/orders/CartAction";
+import { orderInputChange } from "../store/actions/orders/OrderAction";
 
 const placeorder = ({ router }, props) => {
   const dispatch = useDispatch()
@@ -13,11 +14,17 @@ const placeorder = ({ router }, props) => {
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const shippingCost = useSelector((state) => state.cart.shippingCost);
-
+  const orderInputData = useSelector((state) => state.OrderReducer.orderInputData);
   useEffect(() => {
     dispatch(getCartsAction());
-    // calculateTotalQtyAndPrices();
   }, []);
+  console.log('orderInputData :>> ', orderInputData);
+  const handleInputChage = (name, value, e) => {
+    dispatch(orderInputChange(name, value))
+  }
+  const placeOrderSubmit = (e) => {
+    e.preventDefault()
+  }
   return (
     <>
       <MainLayout>
@@ -28,13 +35,16 @@ const placeorder = ({ router }, props) => {
                 <div className="card mt-5">
                   <div className="card-body">
                     <h5 className="card-title">Shipping Address</h5>
-                    <form>
+                    <form onSubmit={(e) => placeOrderSubmit(e)}>
                       <div className="row">
                         <div className="col">
                           <label>Email</label>
                           <input
                             type="text"
                             className="form-control"
+                            name="Receiveremail"
+                            value={orderInputData.Receiveremail}
+                            onChange={(e) => handleInputChage('Receiveremail', e.target.value)}
                             placeholder="Enter your or Receiver name"
                           />
                         </div>
@@ -44,6 +54,9 @@ const placeorder = ({ router }, props) => {
                             type="text"
                             className="form-control"
                             placeholder="Contact Number"
+                            name="contactNumber"
+                            value={orderInputData.contactNumber}
+                            onChange={(e) => handleInputChage('contactNumber', e.target.value)}
                           />
                         </div>
                       </div>
@@ -53,6 +66,9 @@ const placeorder = ({ router }, props) => {
                           <textarea
                             className="form-control"
                             placeholder="Type your full address"
+                            name="shipping_details"
+                            value={orderInputData.shipping_details}
+                            onChange={(e) => handleInputChage('shipping_details', e.target.value)}
                           ></textarea>
                         </div>
                         <div className="col">
@@ -61,6 +77,9 @@ const placeorder = ({ router }, props) => {
                             type="text"
                             className="form-control"
                             placeholder="Enter your email address (optional)"
+                            name="optionaEmail"
+                            value={orderInputData.optionaEmail}
+                            onChange={(e) => handleInputChage('optionaEmail', e.target.value)}
                           />
                         </div>
                       </div>
@@ -134,7 +153,10 @@ const placeorder = ({ router }, props) => {
                   </div>
                   <div className="clearfix"></div>
                   <div className="proceedBtn">
-                    <button className="btn btn-warning text-white pb-2">
+                    <button
+                      className="btn btn-warning text-white pb-2"
+                      disabled={(orderInputData.Receiveremail !== '' && orderInputData.contactNumber !== null && orderInputData.shipping_details !== '' && carts.length > 0) ? false : true}
+                    >
                       PROCEED
                     </button>
                   </div>

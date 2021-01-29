@@ -11,12 +11,14 @@ import Wallet from "./redux/wallets/reducers/WalletReducer";
 import Notification from "./redux/notifications/reducers/NotificationReducer";
 import RegisterReducer from "./reducers/auth/RegisterReducer";
 import CartReducer from "./reducers/orders/CartReducer";
+import OrderReducer from "./reducers/orders/OrderReducer";
 
 export default combineReducers({
   product: ProductReducer,
   productDetail: ProductDetailReducer,
   // slider: SliderReducer,
   cart: CartReducer,
+  OrderReducer: OrderReducer,
   // auth: AuthReducer,
   vendor: VendorReducer,
   brand: BrandReducer,
