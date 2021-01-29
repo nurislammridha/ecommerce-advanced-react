@@ -44,17 +44,15 @@ export const customerRegister = (registerInput) => async (dispatch) => {
     showToast('error', "Confirm password can't be blank!")
     return false;
   }
-  const RegisterAPI = `https://api.anjulis.com/api/v1/auth/register`;
-  // const config = {
-  //   headers: {
-  //     "Access-Control-Allow-Origin": "*",
-  //     "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
-  //   }
-  // };
+
+  const URL = `${process.env.NEXT_PUBLIC_API_URL}auth/register`;
+
   if (registerInput.password === registerInput.password_confirmation) {
-    axios.post(RegisterAPI, registerInput)
+    axios.post(URL, registerInput)
     .then((res)=>{
       console.log('res :>> ', res);
+    }).catch(err => {
+      // log
     })
   }else{
     showToast('error', "Pssword  & confirm password doesn't match!")
