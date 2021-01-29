@@ -84,7 +84,7 @@ const MyCart = ({ router }, props) => {
                         Quantity:
                         <div className="cart-quantity-area">
                           <button
-                            className="btn btn-light quantity-btn decrement bg-light text-dark ml-3"
+                            className="btn btn-light quantity-btn decrement bg-light text-dark"
                             onClick={(id, quantity) =>
                               decrementQunatity(item.productID, item.quantity)
                             }
