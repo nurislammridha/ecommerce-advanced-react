@@ -13,6 +13,7 @@ import {
 import NumericInput from "react-numeric-input";
 import AddIcon from "@material-ui/icons/Add";
 import { Remove } from "@material-ui/icons";
+import Link from "next/link";
 
 const MyCart = ({ router }, props) => {
   const dispatch = useDispatch();
@@ -142,7 +143,7 @@ const MyCart = ({ router }, props) => {
                   </div>
 
                   <div className="mycartplace">
-                    <button>PLACE ORDER</button>
+                    <Link href="placeorder"><button>PLACE ORDER</button></Link>
                   </div>
                 </div>
               </div>
