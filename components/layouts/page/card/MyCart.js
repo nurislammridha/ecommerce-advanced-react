@@ -81,34 +81,36 @@ const MyCart = ({ router }, props) => {
                       <h2>Seller: Shop no</h2>
                       <h4>৳ {item.price}</h4>
                       <h2>
-                        Quantity :
-                        <button
-                          className="btn btn-light quantity-btn decrement bg-light border rounded-circle text-dark ml-3"
-                          onClick={(id, quantity) =>
-                            decrementQunatity(item.productID, item.quantity)
-                          }
-                        >
-                          {" "}
-                          <Remove />
-                        </button>
-                        <span className="colorType border rounded text-dark">
-                          {item.quantity}
-                        </span>
-                        <button
-                          className="btn btn-light quantity-btn  increment bg-light border rounded-circle text-dark ml-2"
-                          onClick={(id, quantity) =>
-                            increaseQuantity(item.productID, item.quantity)
-                          }
-                        >
-                          <AddIcon />
-                        </button>
+                        Quantity:
+                        <div className="cart-quantity-area">
+                          <button
+                            className="btn btn-light quantity-btn decrement bg-light text-dark ml-3"
+                            onClick={(id, quantity) =>
+                              decrementQunatity(item.productID, item.quantity)
+                            }
+                          >
+                            {" "}
+                            <Remove />
+                          </button>
+                          <span className="colorType rounded text-dark">
+                            {item.quantity}
+                          </span>
+                          <button
+                            className="btn btn-light quantity-btn  increment bg-light text-dark ml-2"
+                            onClick={(id, quantity) =>
+                              increaseQuantity(item.productID, item.quantity)
+                            }
+                          >
+                            <AddIcon />
+                          </button>
+                        </div>
                       </h2>
                     </div>
                     {/* <div className="mycartquantity">
                         <NumericInput mobile className="form-control" />
                       </div> */}
 
-                    <div style={{cursor: 'pointer'}} className="orderquantity mycarttext cursor-pointer" onClick={(id) => deleteCartProduct(item.productID)}>
+                    <div style={{ cursor: 'pointer' }} className="orderquantity mycarttext cursor-pointer" onClick={(id) => deleteCartProduct(item.productID)}>
                       <h2>REMOVE</h2>
                     </div>
                     <div className="mycartquantity one">
