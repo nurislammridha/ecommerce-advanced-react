@@ -35,7 +35,7 @@ const placeorder = ({ router }, props) => {
                 <div className="card mt-5">
                   <div className="card-body">
                     <h5 className="card-title">Shipping Address</h5>
-                    <form onSubmit={(e) => placeOrderSubmit(e)}>
+                    <form onSubmit={(e) => placeOrderSubmit(e)} autoComplete="off">
                       <div className="row">
                         <div className="col">
                           <label>Email</label>

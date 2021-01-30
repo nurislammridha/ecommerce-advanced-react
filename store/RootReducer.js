@@ -12,6 +12,7 @@ import Notification from "./redux/notifications/reducers/NotificationReducer";
 import RegisterReducer from "./reducers/auth/RegisterReducer";
 import CartReducer from "./reducers/orders/CartReducer";
 import OrderReducer from "./reducers/orders/OrderReducer";
+import AuthReducer from "./reducers/auth/AuthReducer";
 
 export default combineReducers({
   product: ProductReducer,
@@ -19,7 +20,7 @@ export default combineReducers({
   // slider: SliderReducer,
   cart: CartReducer,
   OrderReducer: OrderReducer,
-  // auth: AuthReducer,
+  authReducer: AuthReducer,
   vendor: VendorReducer,
   brand: BrandReducer,
   productWish: ProductWish,

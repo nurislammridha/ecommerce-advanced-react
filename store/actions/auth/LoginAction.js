@@ -1,9 +1,17 @@
 import * as Types from "../../Types";
 import * as JwtDecode from "jwt-decode";
 // import { generateToken } from "../../services/token/TokenService";
-
 import axios from "axios";
-import { API_POST_LOGIN } from "../../ApiEndpoint";
+// import { API_POST_LOGIN } from "../../ApiEndpoint";
+
+
+export const handleLoginInput = (name, value) => (dispatch) => {
+  const formData = {
+    name: name,
+    value: value
+  }
+  dispatch({type: Types.CHANGE_LOGIN_INPUT_FIELD, payload: formData})
+}
 
 export const loginAction = (loginData) => async (dispatch) => {
   let loginResponse = {

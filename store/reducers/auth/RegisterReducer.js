@@ -2,17 +2,18 @@ import * as Types from "../../Types";
 
 // Initial state
 const initialState = {
+    isLoading: false,
     is_first_validated: false,
     registerInput: {
         first_name: '',
-        surname: '',
         last_name: '',
-        email: '',
+        email: null,
         phone_no: null,
-        password: '',
-        password_confirmation: '',
-        language: "en"
-    }
+        otp: "",
+        password: "",
+        password_confirmation: ""
+    },
+    registerFirstData: null,
 };
 const RegisterReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -23,10 +24,19 @@ const RegisterReducer = (state = initialState, action) => {
                 ...state,
                 registerInput
             };
-            case Types.REGISTER_FIRST_STEP: 
+        case Types.REGISTER_FIRST_STEP:
+            const payloadData = action.payload;
+            const newReg = { ...state.registerInput };
             return {
                 ...state,
-                registerInput: action.payload
+                isLoading: action.payload.isLoading,
+                registerInput: newReg,
+            }
+        case Types.AUTH_REGISTER:
+            return {
+                ...state,
+                isLoading: action.payload.isLoading,
+                registerInput: initialState.registerInput
             }
         default:
             break;

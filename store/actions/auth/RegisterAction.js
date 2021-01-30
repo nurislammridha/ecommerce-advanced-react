@@ -17,7 +17,7 @@ export const ChangeRegisterInputField = (name, value) => (dispatch) => {
 }
 
 // handle register first step 
-export const handleRegisterFirstStep = (registerInput, setStepNo) => (dispatch) => {
+export const RegisterFirstStep = (registerInput, setStepNo) => (dispatch) => {
   if (registerInput.first_name.length === 0) {
     showToast('error', "First name can't be blank!")
     return false;
@@ -30,12 +30,46 @@ export const handleRegisterFirstStep = (registerInput, setStepNo) => (dispatch) 
     showToast('error', "Mobile number can't be blank!")
     return false;
   }
-  showToast('success', "Check your phone, we sent you a one time password")
-  setStepNo(2)
+  let response = {
+    message: null,
+    status: false,
+    isLoading: true,
+  }
+  dispatch({ type: Types.REGISTER_FIRST_STEP, payload: response })
+  const URL = `${process.env.NEXT_PUBLIC_API_URL}auth/register`;
+  axios.post(URL, registerInput)
+    .then((res) => {
+      if (res.data.status) {
+        response.message = res.data.message;
+        response.isLoading = false;
+        showToast('success', response.message);
+        dispatch({ type: Types.REGISTER_FIRST_STEP, payload: response })
+        setStepNo(2)
+      }
+    }).catch((error) => {
+      const { response } = error;
+      const { request, ...errorObject } = response;
+      response.isLoading = false;
+      dispatch({ type: Types.REGISTER_FIRST_STEP, payload: response })
+
+      if (response.data.errors) {
+        const errorMessage = response.data.errors.phone_no[0];
+        showToast('error', errorMessage);
+      } else {
+        showToast('error', response.data.message);
+        return;
+      }
+    })
+  dispatch({ type: Types.REGISTER_FIRST_STEP, payload: response })
+
 }
 
 // customer register step two / final 
 export const customerRegister = (registerInput) => async (dispatch) => {
+  if (registerInput.otp.length === 0) {
+    showToast('error', "O can't be blank!")
+    return false;
+  }
   if (registerInput.password.length === 0) {
     showToast('error', "Password can't be blank!")
     return false;
@@ -44,50 +78,29 @@ export const customerRegister = (registerInput) => async (dispatch) => {
     showToast('error', "Confirm password can't be blank!")
     return false;
   }
-
-  const URL = `${process.env.NEXT_PUBLIC_API_URL}auth/register`;
-
-  if (registerInput.password === registerInput.password_confirmation) {
-    axios.post(URL, registerInput)
-    .then((res)=>{
-      console.log('res :>> ', res);
-    }).catch(err => {
-      // log
-    })
-  }else{
-    showToast('error', "Pssword  & confirm password doesn't match!")
+  let response = {
+    message: null,
+    status: false,
+    data: null,
+    isLoading: true,
   }
-  
+  dispatch({ type: Types.AUTH_REGISTER, payload: response })
+  axios.post(`${process.env.NEXT_PUBLIC_API_URL}auth/register-next`, registerInput)
+    .then((res) => {
+      if (res.data.status) {
+        response.message = res.data.message;
+        response.data = null;
+        response.isLoading = false;
+        showToast('success', response.message);
+        dispatch({ type: Types.AUTH_REGISTER, payload: response })
+      }
+    })
+    .catch((err) => {
+      const { response } = err;
+      const { request, ...errorObject } = response;
+      response.isLoading = false;
+      dispatch({ type: Types.AUTH_REGISTER, payload: response })
+      showToast('error', response.data.message);
+    })
+    dispatch({ type: Types.AUTH_REGISTER, payload: response })
 }
-
-// export const registerAction = (registerData) => async (dispatch) => {
-//   console.log("registerData", registerData);
-//   return 1;
-//   let loginResponse = {
-//     userData: {},
-//     tokenData: {},
-//     isLoggedIn: false,
-//     loginMessage: "",
-//     isLoading: false,
-//   };
-
-//   try {
-//     loginResponse.isLoading = true;
-//     dispatch({ type: Types.AUTH_REGISTER, payload: loginResponse });
-
-//     const res = await axios.post(`${API_POST_REGISTER}`, registerData);
-//     // Successfully Logged in
-//     loginResponse = {
-//       userData: res.data.user,
-//       tokenData: res.data.access_token,
-//       isLoggedIn: res.data.status,
-//       loginMessage: res.data.message,
-//       isLoading: false,
-//     };
-//     localStorage.setItem("loginData", JSON.stringify(loginResponse));
-//     dispatch({ type: Types.AUTH_REGISTER, payload: loginResponse });
-//   } catch (error) {
-//     // loginResponse
-//     dispatch({ type: Types.AUTH_REGISTER, payload: loginResponse });
-//   }
-// };

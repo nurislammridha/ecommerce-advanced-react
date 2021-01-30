@@ -2,6 +2,10 @@ import * as Types from "../../Types";
 
 // Initial state
 const initialState = {
+  loginInpiut: {
+    email: '',
+    password: '',
+  },
   isLoggedIn: false,
   userData: {},
   tokenData: "",
@@ -17,6 +21,13 @@ const AuthReducer = (state = initialState, action) => {
   const newState = { ...state };
 
   switch (action.type) {
+    case Types.CHANGE_LOGIN_INPUT_FIELD:
+      const loginInpiut = { ...state.loginInpiut };
+      loginInpiut[action.payload.name] = action.payload.value;
+      return {
+        ...state,
+        loginInpiut
+      };
     case Types.AUTH_LOGIN_CHECK:
       return {
         ...state,

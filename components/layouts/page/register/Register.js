@@ -3,6 +3,7 @@ import {
   Button,
   Row,
   Col,
+  Spinner,
 } from "react-bootstrap";
 import Link from "next/link";
 import Form from "react-bootstrap/Form";
@@ -10,7 +11,7 @@ import { useState } from "react";
 import RegisterTwo from "./RegisterTwo"
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { ChangeRegisterInputField, handleRegisterFirstStep } from "../../../../store/actions/auth/RegisterAction";
+import { ChangeRegisterInputField, RegisterFirstStep } from "../../../../store/actions/auth/RegisterAction";
 
 // import Row from "react-bootstrap/Row";
 const Register = ({ router }, props) => {
@@ -18,13 +19,14 @@ const Register = ({ router }, props) => {
   const { register, handleSubmit, watch, errors } = useForm();
   const [stepNo, setStepNo] = useState(1)
   const registerInput = useSelector((state) => state.registerReducer.registerInput)
+  const isLoading = useSelector((state) => state.registerReducer.isLoading)
 
   //handle change input 
   const handleChangeTextInput = (name, value) => {
     dispatch(ChangeRegisterInputField(name, value))
   }
-  const handleRegisterStepOne = (e) => {
-    dispatch(handleRegisterFirstStep(registerInput, setStepNo))
+  const handleRegisterFirstStep = (e) => {
+    dispatch(RegisterFirstStep(registerInput, setStepNo))
     e.preventDefault()
   }
 
@@ -36,7 +38,7 @@ const Register = ({ router }, props) => {
             <div className="col-lg-6 offset-lg-3">
               <div className="Loginform">
                 <h1>Create Account</h1>
-                <Form>
+                <Form autoComplete="off" autoSave="off">
                   {
                     stepNo === 1 &&
                     <>
@@ -78,16 +80,30 @@ const Register = ({ router }, props) => {
                         <Form.Label>Referral Code (Optional)</Form.Label>
                         <Form.Control type="test" placeholder="Maccaf" />
                       </Form.Group>
-                      <Button onClick={(e) => handleRegisterStepOne(e)} variant="primary">
-                        Next
-                      </Button>
+                      {
+                        isLoading === true && (
+                          <>
+
+                            <Button disabled={true} variant="primary">
+                              <Spinner animation="border" role="status"> </Spinner> Submitting...
+                            </Button>
+                          </>
+                        )
+                      }
+                      {
+                        isLoading === false && (
+                          <Button onClick={(e) => handleRegisterFirstStep(e)} variant="primary">
+                            Submit
+                          </Button>
+                        )
+                      }
                     </>
                   }
 
                   {
                     stepNo === 2 &&
                     <>
-                      <RegisterTwo handleChangeTextInput={handleChangeTextInput} stepNo={stepNo} setStepNo={setStepNo} />
+                      <RegisterTwo handleChangeTextInput={handleChangeTextInput} />
                     </>
                   }
                   {/* <a onClick={() => setStepNo(2)}>
