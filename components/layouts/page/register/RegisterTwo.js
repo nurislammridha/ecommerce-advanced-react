@@ -15,8 +15,8 @@ const RegisterStepTwo = (props) => {
 
   // final customer register 
   const customerRegisterAction = (e) => {
-    dispatch(customerRegister(registerInput));
     e.preventDefault();
+    dispatch(customerRegister(registerInput));
   }
   return (
     <>

@@ -2,6 +2,7 @@ import * as Types from "../../Types";
 
 // Initial state
 const initialState = {
+    is_first_validated: false,
     registerInput: {
         first_name: '',
         surname: '',
