@@ -37,31 +37,40 @@ export const RegisterFirstStep = (registerInput, setStepNo) => (dispatch) => {
   }
   dispatch({ type: Types.REGISTER_FIRST_STEP, payload: response })
   const URL = `${process.env.NEXT_PUBLIC_API_URL}auth/register`;
-  axios.post(URL, registerInput)
-    .then((res) => {
-      if (res.data.status) {
-        response.message = res.data.message;
+  try {
+    axios.post(URL, registerInput)
+      .then((res) => {
+        if (res.data.status) {
+          response.message = res.data.message;
+          response.isLoading = false;
+          showToast('success', response.message);
+          dispatch({ type: Types.REGISTER_FIRST_STEP, payload: response })
+          setStepNo(2)
+        }
+      }).catch((error) => {
+        const responseLog = error.response;
         response.isLoading = false;
-        showToast('success', response.message);
-        dispatch({ type: Types.REGISTER_FIRST_STEP, payload: response })
-        setStepNo(2)
-      }
-    }).catch((error) => {
-      const { response } = error;
-      const { request, ...errorObject } = response;
-      response.isLoading = false;
-      dispatch({ type: Types.REGISTER_FIRST_STEP, payload: response })
+        if (typeof responseLog !== 'undefined') {
+          const { request, ...errorObject } = responseLog;
+          dispatch({ type: Types.REGISTER_FIRST_STEP, payload: responseLog })
 
-      if (response.data.errors) {
-        const errorMessage = response.data.errors.phone_no[0];
-        showToast('error', errorMessage);
-      } else {
-        showToast('error', response.data.message);
-        return;
-      }
-    })
+          if (responseLog.data.errors) {
+            const errorMessage = responseLog.data.errors.phone_no[0];
+            showToast('error', errorMessage);
+          } else {
+            showToast('error', responseLog.data.message);
+            return;
+          }
+        }else{
+          response.isLoading = false;
+          showToast('error', "Something went wrong !");
+        }
+      })
+  } catch (error) {
+    response.isLoading = false;
+    showToast('error', 'Network Error, Please Fix this !');
+  }
   dispatch({ type: Types.REGISTER_FIRST_STEP, payload: response })
-
 }
 
 // customer register step two / final 
@@ -102,5 +111,5 @@ export const customerRegister = (registerInput) => async (dispatch) => {
       dispatch({ type: Types.AUTH_REGISTER, payload: response })
       showToast('error', response.data.message);
     })
-    dispatch({ type: Types.AUTH_REGISTER, payload: response })
+  dispatch({ type: Types.AUTH_REGISTER, payload: response })
 }
