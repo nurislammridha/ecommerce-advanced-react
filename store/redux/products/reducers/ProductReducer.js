@@ -16,7 +16,7 @@ const ProductReducer = (state = initialState, action) => {
     case Types.GET_PRODUCTS:
       return {
         ...state,
-        products: action.payload.data,
+        products: (action.payload.data !== null && typeof action.payload.data !== 'undefined') ? action.payload.data : [],
         loading: false,
       };
     default:
