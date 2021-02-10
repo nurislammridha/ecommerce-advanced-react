@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { ChangeRegisterInputField, customerRegister } from "../../../../store/actions/auth/RegisterAction";
 // import Row from "react-bootstrap/Row";
-const RegisterStepTwo = () => {
+const RegisterStepTwo = ({ setStepNo }) => {
   const { register, handleSubmit, watch, errors } = useForm();
   const password = useRef({});
   password.current = watch("password", "");
@@ -71,26 +71,28 @@ const RegisterStepTwo = () => {
         {errors.password_confirmation && <p className="text-danger">{errors.password_confirmation.message}</p>}
       </Form.Group>
 
-      {/* <Button variant="primary" type="submit" onClick={handleSubmit(handleRegister)}>
-            Sign up
-         </Button> */}
-      {
-        isLoading === true && (
-          <>
+      <div className="d-flex">
+        <Button variant="primary" className="mr-2 btn-secondary" onClick={(e) => setStepNo(1)}>
+          Back
+         </Button>
+        {
+          isLoading === true && (
+            <>
 
-            <Button disabled={true} variant="primary">
-              <Spinner animation="border" role="status"> </Spinner> Submitting...
+              <Button disabled={true} variant="primary">
+                <Spinner animation="border" role="status"> </Spinner> Submitting...
              </Button>
-          </>
-        )
-      }
-      {
-        isLoading === false && (
-          <Button type="submit" variant="primary" onClick={handleSubmit(handleRegister)} >
-            Submit
-          </Button>
-        )
-      }
+            </>
+          )
+        }
+        {
+          isLoading === false && (
+            <Button type="submit" variant="primary" onClick={handleSubmit(handleRegister)} >
+              Submit
+            </Button>
+          )
+        }
+      </div>
 
       <div className="formcondition">
         <span>By clicking 'SIGN UP', I agree with Maccaf's </span>

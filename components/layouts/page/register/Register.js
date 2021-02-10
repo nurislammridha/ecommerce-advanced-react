@@ -103,7 +103,7 @@ const Register = ({ router }, props) => {
                   {
                     stepNo === 2 &&
                     <>
-                      <RegisterTwo handleChangeTextInput={handleChangeTextInput} />
+                      <RegisterTwo setStepNo={setStepNo} handleChangeTextInput={handleChangeTextInput} />
                     </>
                   }
                   {/* <a onClick={() => setStepNo(2)}>
