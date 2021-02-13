@@ -28,7 +28,7 @@ const ProductMiniCard = (props) => {
             <a>
               <div className="productTitle">
                 <h3>{product.name}</h3>
-                <p>{product.category.name}</p>
+                <p>{product.category && product.category.name ? product.category.name : ''}</p>
               </div>
             </a>
           </Link>

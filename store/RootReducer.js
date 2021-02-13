@@ -13,6 +13,8 @@ import RegisterReducer from "./reducers/auth/RegisterReducer";
 import CartReducer from "./reducers/orders/CartReducer";
 import OrderReducer from "./reducers/orders/OrderReducer";
 import AuthReducer from "./reducers/auth/AuthReducer";
+import VendorRegisterReducer from "./reducers/auth/VendorRegisterReducer";
+import MenuReducer from "../components/layouts/Header/_redux/MenuReducer/MenuReducer";
 
 export default combineReducers({
   product: ProductReducer,
@@ -28,4 +30,6 @@ export default combineReducers({
   wallet: Wallet,
   notification: Notification,
   registerReducer: RegisterReducer,
+  VendorRegisterReducer: VendorRegisterReducer,
+  MenuReducer: MenuReducer,
 });
