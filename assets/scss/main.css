@@ -1768,6 +1768,7 @@ button.productBtn.product.cartorder {
     position: relative;
 }
 
+
 /* .wishsingleproductText::before {
     position: absolute;
     content: "50% off";
@@ -2498,6 +2499,17 @@ button:not(:disabled) {
 
 .sideBox.form-group {
     margin-bottom: 0rem;
+}
+
+.sidebar-section {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.sidebar-section .form-group {
+    margin-bottom: 5px!important;
+    color: #6c757d;
 }
 
 
