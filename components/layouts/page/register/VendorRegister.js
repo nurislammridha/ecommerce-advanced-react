@@ -11,22 +11,23 @@ import { useState } from "react";
 import RegisterTwo from "./RegisterTwo"
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { ChangeRegisterInputField, RegisterFirstStep } from "../../../../store/actions/auth/RegisterAction";
+import { ChangeRegisterInputField, vendorRegisterFirstStep } from "../../../../store/actions/auth/VendorRegisterAction";
+import VendorRegisterTwo from "./VendorRegisterTwo";
 
 // import Row from "react-bootstrap/Row";
-const Register = ({ router }, props) => {
+const VendorRegister = ({ router }, props) => {
   const dispatch = useDispatch()
   const { register, handleSubmit, watch, errors } = useForm();
   const [stepNo, setStepNo] = useState(1)
-  const registerInput = useSelector((state) => state.registerReducer.registerInput)
-  const isLoading = useSelector((state) => state.registerReducer.isLoading)
+  const registerInput = useSelector((state) => state.VendorRegisterReducer.registerInput)
+  const isLoading = useSelector((state) => state.VendorRegisterReducer.isLoading)
 
   //handle change input 
   const handleChangeTextInput = (name, value) => {
     dispatch(ChangeRegisterInputField(name, value))
   }
   const handleRegisterFirstStep = (e) => {
-    dispatch(RegisterFirstStep(registerInput, setStepNo))
+    dispatch(vendorRegisterFirstStep(registerInput, setStepNo))
     e.preventDefault()
   }
 
@@ -37,8 +38,8 @@ const Register = ({ router }, props) => {
           <div className="row">
             <div className="col-lg-6 offset-lg-3">
               <div className="Loginform">
-                <h1>Create Account</h1>
-                <Form autoComplete="off" autoSave="off">
+                <h1>Vendor Registration</h1>
+                <Form autoComplete="off" autoave="off">
                   {
                     stepNo === 1 &&
                     <>
@@ -77,6 +78,18 @@ const Register = ({ router }, props) => {
                         />
                       </Form.Group>
                       <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Business Name</Form.Label>
+                        <Form.Control
+                          type="text"
+                          placeholder="Business Name"
+                          name="business_name"
+                          value={registerInput.business_name}
+                          onChange={(e) => handleChangeTextInput('business_name', e.target.value)}
+                          ref={register({ required: true })}
+                        />
+                      </Form.Group>
+                   
+                      <Form.Group controlId="formBasicPassword">
                         <Form.Label>Referral Code (Optional)</Form.Label>
                         <Form.Control type="test" placeholder="Maccaf" />
                       </Form.Group>
@@ -103,7 +116,7 @@ const Register = ({ router }, props) => {
                   {
                     stepNo === 2 &&
                     <>
-                      <RegisterTwo setStepNo={setStepNo} handleChangeTextInput={handleChangeTextInput} />
+                      <VendorRegisterTwo setStepNo={setStepNo} handleChangeTextInput={handleChangeTextInput} />
                     </>
                   }
                   {/* <a onClick={() => setStepNo(2)}>
@@ -137,4 +150,4 @@ const Register = ({ router }, props) => {
   );
 };
 
-export default Register;
+export default VendorRegister;
