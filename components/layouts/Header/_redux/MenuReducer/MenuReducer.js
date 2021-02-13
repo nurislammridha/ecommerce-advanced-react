@@ -1,4 +1,4 @@
-import * as Types from "../Type/Type";
+import * as Types from "../Type/Types";
 
 // Initial state
 const initialState = {
@@ -11,9 +11,8 @@ const MenuReducer = (state = initialState, action) => {
         case Types.GET_CATEGORY_LIST: 
         console.log('action.payload :>> ', action.payload);
         return{
-
+            categoriesMenuList: action.payload,
         }
-   
         default:
             break;
     }
