@@ -3,20 +3,19 @@ import * as Types from "../Type/Types";
 // Initial state
 const initialState = {
     isLoading: false,
-    categoriesMenuList : []
-   
+    categoriesMenuList: []
+
 };
 const MenuReducer = (state = initialState, action) => {
     switch (action.type) {
-        case Types.GET_CATEGORY_LIST: 
-        console.log('action.payload :>> ', action.payload);
-        return{
-            categoriesMenuList: action.payload,
-        }
+        case Types.GET_CATEGORY_LIST:
+            return {
+                categoriesMenuList: action.payload,
+            }
         default:
             break;
     }
-    return {...state}
+    return { ...state }
 };
 
 export default MenuReducer;

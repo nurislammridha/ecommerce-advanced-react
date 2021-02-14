@@ -68,15 +68,17 @@ const leftMenu = (
   </Menu>
 );
 
-const Header = ({ router }, props) => {
+const Header = () => {
   const dispatch = useDispatch();
   const carts = useSelector((state) => state.cart.carts);
   const categoriesMenuList = useSelector((state) => state.MenuReducer.categoriesMenuList);
   console.log('categoriesMenuList :>> ', categoriesMenuList);
+
   useEffect(() => {
     dispatch(getCartsAction());
     dispatch(getCategoriesList())
   }, []);
+
   return (
     <>
       <div className="header">
@@ -93,19 +95,7 @@ const Header = ({ router }, props) => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="header-category mr-3">
                 <NavDropdown title="Category" id="basic-nav-dropdown">
-                  {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item> */}
                   <div className="menu-div-category">
-                    {/* {leftMenu} */}
                     <Menu
                       multiple
                       onSelect={handleSelect}
@@ -113,11 +103,23 @@ const Header = ({ router }, props) => {
                       defaultSelectedKeys={["2", "1-1"]}
                     >
                       {
-                        categoriesMenuList && categoriesMenuList.map((item, index) => {
-                          <MenuItem key="1-2">0-2</MenuItem>
-                        })
+                        categoriesMenuList && categoriesMenuList.map((category) => (
+                          category.childs.length === 0 ? (
+                            <MenuItem key={category.short_code}>{category.name}</MenuItem>
+                          ) :
+                            <SubMenu title={category.name} key={category.short_code}>
+                              {
+                                category.childs.length > 0 ? (
+                                  category.childs.map((subCategory) => (
+                                    <MenuItem key={subCategory.short_code}>{subCategory.name}</MenuItem>
+                                  ))
+                                ) : ''
+                              }
+                            </SubMenu>
+                        ))
                       }
-                      {/* <SubMenu title={titleRight} key="1">
+                      {/* 
+                      <SubMenu title={titleRight} key="1">
                         <MenuItem key="1-1">0-1</MenuItem>
                         <MenuItem key="1-2">0-2</MenuItem>
                       </SubMenu>
@@ -135,10 +137,9 @@ const Header = ({ router }, props) => {
                       </SubMenu>
                       <MenuItem disabled key="disabled">
                         disabled
-    </MenuItem>
+                      </MenuItem>
                       <MenuItem key="4-3">outer3</MenuItem> */}
                     </Menu>
-
                   </div>
                 </NavDropdown>
               </Nav>
