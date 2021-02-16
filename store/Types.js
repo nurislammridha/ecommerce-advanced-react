@@ -60,3 +60,8 @@ export const GET_NOTIFICATIONS_LOADING = "GET_NOTIFICATIONS_LOADING";
 export const ORDER_INPUT_CHANGE = "ORDER_INPUT_CHANGE";
 export const ORDER_SUBMIT = "ORDER_SUBMIT";
 export const ORDER_SUBMITTING = "ORDER_SUBMITTING";
+
+// ******************************Product Filter**********************************/
+export const CHANGE_PRODUCT_FILTER = "CHANGE_PRODUCT_FILTER";
+export const GET_CATEGORIES_LIST = "GET_CATEGORIES_LIST";
+export const GET_BRANDS_LIST_DATA = "GET_BRANDS_LIST_DATA";

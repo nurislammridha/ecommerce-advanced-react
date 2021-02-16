@@ -2875,3 +2875,9 @@ img.d-inline {
     width: 100%;
     margin-left: 1px;
 }
+.filterClass{
+    border: 1px solid #e2d0d0!important;
+    padding: 2px 10px!important;
+    border-radius: 15px!important;
+    outline: none!important;
+}
