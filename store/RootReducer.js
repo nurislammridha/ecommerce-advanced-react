@@ -15,6 +15,7 @@ import OrderReducer from "./reducers/orders/OrderReducer";
 import AuthReducer from "./reducers/auth/AuthReducer";
 import VendorRegisterReducer from "./reducers/auth/VendorRegisterReducer";
 import MenuReducer from "../components/layouts/Header/_redux/MenuReducer/MenuReducer";
+import HomeCarouselReducer from "../pages/api/_redux/reducer/reducer";
 
 export default combineReducers({
   product: ProductReducer,
@@ -32,4 +33,5 @@ export default combineReducers({
   registerReducer: RegisterReducer,
   VendorRegisterReducer: VendorRegisterReducer,
   MenuReducer: MenuReducer,
+  HomeCarouselReducer: HomeCarouselReducer,
 });

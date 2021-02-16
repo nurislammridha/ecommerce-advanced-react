@@ -8,6 +8,10 @@ const initialState = {
 const HomeCarouselReducer = (state = initialState, action) => {
     switch (action.type) {
         case Types.GET_HOME_CAROUSEL_LIST:
+            return {
+                ...state,
+                sliderList: action.payload,
+            }
         default:
             return {
                 ...state,
