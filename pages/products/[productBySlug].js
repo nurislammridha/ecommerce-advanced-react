@@ -47,26 +47,36 @@ export default function ProductBySlug({ product }) {
     );
 }
 
-export async function getStaticProps({ params }) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}get-item-detail/${params.productBySlug}`)
+// export async function getStaticProps({ params }) {
+//     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}get-item-detail/${params.productBySlug}`)
+//     const dataJSON = await res.json();
+//     const data = dataJSON.data;
+//     return { props: { product: data } }
+// }
+
+// export async function getStaticPaths() {
+//     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}get-items`);
+//     const dataJSON = await res.json();
+//     const products = dataJSON.data.data;
+
+//     const paths = products.map((product) => ({
+//         params: { productBySlug: product.sku }
+//     }));
+//     return { paths, fallback: false }
+//     // const router = useRouter();
+//     // const { productBySlug } = router.query
+//     // const paths = [{sku: 'asus-12'}].map((product) => ({
+//     //     params: { productBySlug: product.sku }
+//     // }));
+//     // return { paths, fallback: false }
+// }
+
+export const getServerSideProps = async (context) => {
+    const productBySlug = context.params.productBySlug
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}get-item-detail/${productBySlug}`)
     const dataJSON = await res.json();
     const data = dataJSON.data;
-    return { props: { product: data } }
-}
-
-export async function getStaticPaths() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}get-items`);
-    const dataJSON = await res.json();
-    const products = dataJSON.data.data;
-
-    const paths = products.map((product) => ({
-        params: { productBySlug: product.sku }
-    }));
-    return { paths, fallback: false }
-    // const router = useRouter();
-    // const { productBySlug } = router.query
-    // const paths = [{sku: 'asus-12'}].map((product) => ({
-    //     params: { productBySlug: product.sku }
-    // }));
-    // return { paths, fallback: false }
+    return {
+        props: { product: data }
+    }
 }
