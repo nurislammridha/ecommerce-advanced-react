@@ -63,4 +63,10 @@ export async function getStaticPaths() {
         params: { productBySlug: product.sku }
     }));
     return { paths, fallback: false }
+    // const router = useRouter();
+    // const { productBySlug } = router.query
+    // const paths = [{sku: 'asus-12'}].map((product) => ({
+    //     params: { productBySlug: product.sku }
+    // }));
+    // return { paths, fallback: false }
 }

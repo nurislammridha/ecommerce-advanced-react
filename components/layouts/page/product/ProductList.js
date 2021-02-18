@@ -31,6 +31,47 @@ const ProductList = () => {
 
   return (
     <>
+      {
+        (category !== null || brand !== null || min_price !== null || max_price !== null) && (
+          <div className={classes.root}>
+            <p>
+              Filtered By:
+              {
+                category != null &&
+                <Button className="filterClass ml-2">
+                  Category: {(category !== null ? category.name : '')}
+                  <span className="ml-2 cursor-pointer"><FontAwesomeIcon icon={faTimesCircle} /></span>
+                </Button>
+              }
+              {
+                brand != null &&
+                <Button className="filterClass ml-2">
+                  Brand: {(brand !== null ? brand.name : '')}
+                  <span className="ml-2 cursor-pointer"><FontAwesomeIcon icon={faTimesCircle} /></span>
+                </Button>
+              }
+
+              {
+                min_price != null &&
+                <Button className="filterClass ml-2">
+                  Min Price: {(min_price !== null ? min_price : '')}
+                  <span className="ml-2 cursor-pointer"><FontAwesomeIcon icon={faTimesCircle} /></span>
+                </Button>
+              }
+
+              {
+                max_price != null &&
+                <Button className="filterClass ml-2">
+                  Max Price: {(max_price !== null ? max_price : '')}
+                  <span className="ml-2 cursor-pointer"><FontAwesomeIcon icon={faTimesCircle} /></span>
+                </Button>
+              }
+
+            </p>
+          </div>
+        )
+      }
+
       {loading && (
         <LoadingSkelleton
           alignment="vertical"
@@ -39,18 +80,7 @@ const ProductList = () => {
           height={250}
         />
       )}
-      {
-        (category !== null || brand !== null || min_price !== null || max_price !== null) && products.length > 0 && (
-          <div className={classes.root}>
-            <p>
-              Filtered By: <Button className="filterClass">
-                {((category !== null ? category.name : '') || (brand !== null ? brand.name : '') || (min_price !== null ? min_price : '') || (max_price !== null ? max_price : ''))}
-                <span className="ml-2 cursor-pointer"><FontAwesomeIcon icon={faTimesCircle} /></span>
-              </Button>
-            </p>
-          </div>
-        )
-      }
+
       <div className="row">
         {!loading && products.length === 0 && (
 
@@ -67,6 +97,7 @@ const ProductList = () => {
             </div>
           ))}
       </div>
+    
     </>
   );
 }

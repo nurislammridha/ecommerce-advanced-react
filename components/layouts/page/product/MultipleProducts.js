@@ -2,14 +2,16 @@ import React, { Component, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Rater from "react-rater";
 import Link from "next/link";
+import { useRouter } from 'next/router'
 
 
 import { Form } from "react-bootstrap";
 import ProductList from "./ProductList";
 import { GetCategoryList, getBrandList, handleChangeCategoryFilter } from "../../../../store/redux/products/actions/ProductAction";
 import { useDispatch, useSelector } from "react-redux";
-const MultipleProducts = ({ router }, props) => {
+const MultipleProducts = (props) => {
   const dispatch = useDispatch()
+  const router = useRouter()
   const category = useSelector((state) => state.product.category);
   const brands = useSelector((state) => state.product.brands);
   const filterProduct = useSelector((state) => state.product.filterProduct);
@@ -20,6 +22,31 @@ const MultipleProducts = ({ router }, props) => {
 
   const handleChangeProductFilter = (name, value, e) => {
     dispatch(handleChangeCategoryFilter(name, value));
+    console.log('filterProduct', filterProduct);
+    
+    let push_data = "?"
+    const { category, brand, min_price, max_price } = filterProduct;
+    
+    if(name === 'category' && value !== null){
+      push_data +=  `category=${value.id}`;
+    }
+    
+    if(name === 'brand' && value !== null){
+      push_data +=  `brand=${value.id}`;
+    }
+    
+    if(name === 'min_price'){
+      push_data +=  `min_price=${value}`;
+    }
+     
+    if(name === 'max_price'){
+      push_data +=  `max_price=${value}`;
+    }
+    
+    router.push({
+      pathname: '/products',
+      search: push_data
+    })
   }
   return (
     <>
@@ -116,7 +143,7 @@ const MultipleProducts = ({ router }, props) => {
 
                 </div> */}
 
-                <div className="sidebar-section">
+                {/* <div className="sidebar-section">
                   <h6>Rating</h6>
 
 
@@ -127,10 +154,7 @@ const MultipleProducts = ({ router }, props) => {
                   <div className="ratingiew">
                     <Link href="/">View More</Link>
                   </div>
-
-
-
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-10">

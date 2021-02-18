@@ -68,7 +68,7 @@ export const getBrandList = () => async (dispatch) => {
     });
 };
 //handle change product list change
-export const handleChangeCategoryFilter = (name, value) => (dispatch) => {
+export const handleChangeCategoryFilter = (name, value) => async (dispatch) => {
   const filterProduct = {
     name: name,
     value: value,
