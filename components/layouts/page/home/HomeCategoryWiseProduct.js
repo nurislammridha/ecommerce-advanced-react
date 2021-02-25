@@ -29,8 +29,10 @@ const HomeCategoryWiseProduct = (props) => {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 3,
-      paritialVisibilityGutter: 30
+      items: 1,
+      paritialVisibilityGutter: 30,
+     
+     
     }
   };
 
@@ -57,7 +59,7 @@ const HomeCategoryWiseProduct = (props) => {
                 <div className="col-lg-4">
                     <Link href="products">
                       <button className="viewButton">
-                        View all
+                        View all 
                         <FaArrowRight />
                       </button>
                   </Link>

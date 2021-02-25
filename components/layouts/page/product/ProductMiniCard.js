@@ -1,3 +1,4 @@
+
 import React from "react";
 import Rater from "react-rater";
 import Link from "next/link";
@@ -10,6 +11,7 @@ const ProductMiniCard = (props) => {
   return (
     <>
       {typeof product != "undefined" && (
+       
         <div className="singleProduct singleproductborder">
           <Link href={`/products/${product.sku}`}>
             <div className="productImg">
@@ -23,7 +25,8 @@ const ProductMiniCard = (props) => {
                 </LazyLoad>
             </div>
           </Link>
-          <div className="productDetails">
+        
+          <div className="productDetails ">
           <Link href={`/products/${product.sku}`}>
             <a>
               <div className="productTitle">
@@ -33,7 +36,7 @@ const ProductMiniCard = (props) => {
             </a>
           </Link>
             
-            <div className="productPrice pt-2">
+            <div className="productPrice pt-2 float-left">
               {product.is_offer_enable != true && (
                 <h4>৳ {product.default_selling_price}</h4>
               )}
@@ -47,14 +50,23 @@ const ProductMiniCard = (props) => {
                 </>
               )}
             </div>
+            <div className="float-right product-cart">
+            <img src="/images/default/cart.png" className=" p-2" alt="" />
+          </div>
 
-            <div className="ratepoint">
+            <div className="ratepoint ">
               <Rater total={5} rating={parseFloat(product.average_rating)} />{" "}
               <span> ({parseFloat(product.average_rating).toFixed(1)}) </span>
             </div>
+            
           </div>
+         
+          
         </div>
+       
+        
       )}
+     
     </>
   );
 };

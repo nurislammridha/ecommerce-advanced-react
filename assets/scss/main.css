@@ -508,6 +508,7 @@ button.viewButton {
     margin: 0 auto;
     padding-bottom: 20px;
     transition: 0.4s;
+  
 }
 
 .productImg img:hover {
@@ -515,9 +516,7 @@ button.viewButton {
     transition: 0.4s;
 }
 
-.productTitle {
-    text-align: center;
-}
+
 
 .productTitle h2 {
     font-size: 16px;
@@ -542,6 +541,7 @@ button.viewButton {
 .productPrice h4 {
     font-size: 12px;
     font-weight: 900;
+    text-align: left;
 }
 
 .sliderCard.card {
@@ -559,10 +559,14 @@ button.viewButton {
 .productDetails {
     overflow: hidden;
     height: 120px;
+    position: relative;
 }
 
 .productPrice del {
     color: #d04848f2;
+    position: absolute;
+    left:57px;
+    top: 58px;
 }
 
 .product-discount {
@@ -2295,9 +2299,9 @@ p.text-secondary.mb-0 {
 
 /* single product */
 
-.singleProduct {
+/* .singleProduct {
     background-color: #e9ecef;
-}
+} */
 
 
 /* product Gallery */
@@ -2882,4 +2886,46 @@ img.d-inline {
     border-radius: 15px!important;
     outline: none!important;
     margin-left: 10px;
+}
+/* home page start */
+.MuiPaper-elevation1 {
+   
+    box-shadow: none!important;
+}
+button.offer-zone-btn {
+    border-radius: 15px;
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.product-cart {
+    height: 25px;
+    width: 25px;
+    background:#F0F0F0;
+    border-radius: 50%;
+}
+.productImg {
+    position: relative;
+}
+.productImg::before {
+    position: absolute;
+    content: url(/images/default/favorite.png);
+    right:-2px;
+    top:4px;
+    z-index: 5;
+   
+}
+
+.productImg::after {
+    position: absolute;
+  content: "";
+    right:-4px;
+    top:0; 
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    box-shadow: 0px 0px 4px black;
+    z-index: 3;
+
 }

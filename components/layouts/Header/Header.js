@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { withRouter } from "next/router";
 import HeaderTop from "./HeaderTop";
 import HeaderSearchBar from "./HeaderSearchBar";
+import { InputBase, Paper, IconButton } from "@material-ui/core";
 import {
   // Dropdown,
   Form,
@@ -83,16 +84,20 @@ const Header = () => {
     <>
       <div className="header">
         <div className="container-fluid">
+        
           <Navbar>
+        
             <Link href="/" className="text-white">
               <Navbar.Brand href="/">
                 <img src="/images/logos/logo-white.png" />
                 <span className="logo-bottom-text">#UnboxHappiness</span>
               </Navbar.Brand>
             </Link>
+         
 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
+            
               <Nav className="header-category mr-3">
                 <NavDropdown title="Category" id="basic-nav-dropdown">
                   <div className="menu-div-category">
@@ -143,16 +148,36 @@ const Header = () => {
                   </div>
                 </NavDropdown>
               </Nav>
+              
+  
 
-              <Form className="search">
-                <FormControl type="text" placeholder="Search" />
-              </Form>
+              {/* <Form className="search">
+                <FormControl type="text" placeholder="Search Products" />
+              </Form> */}
+                  
+             
+             
+               <div className="col-lg-6">
+                <Paper className="searchInput">
+                  <IconButton aria-label="Search" className="searchPlaceholder">
+                    <i className="flaticon-search "></i>
+                  </IconButton>
+                  <InputBase
+                    placeholder="Search Products"
+                    
+                  />
+                </Paper>
+                </div>
+            
               <div className="rightnavbar d-flex flex-row ml-3">
                 <div className="loginguest">
                   <p>Hey user/Guest</p>
                   <Link href="/login">
                     <span className="text-white pointer">Sign up or Login</span>
                   </Link>
+                </div>
+                <div className="mt-1 ml-3">
+                  <button className="offer-zone-btn">Offer Zone</button>
                 </div>
                 <div>
                   <Link href="/notification">
@@ -172,10 +197,12 @@ const Header = () => {
                   </span>
                 </div>
               </div>
+             
             </Navbar.Collapse>
           </Navbar>
         </div>
       </div>
+      
       <div className="menu">
         <MainMenu />
       </div>
