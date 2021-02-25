@@ -52,7 +52,7 @@ const ElegantChair = ({ router }, props) => {
               <div className="chairdetails">
                 <h1>Elegant Chair-Wave- Rose Wood</h1>
                 <div className="review">
-                  <Rater total={5} rating={2} /> <span> 58 Ratings </span>
+                  <Rater total={5} rating={2} /> <span> 58 Ratings</span>
                   <span className="float-right">
                     {/* <Link href="/"> */}
                     <ShareIcon />

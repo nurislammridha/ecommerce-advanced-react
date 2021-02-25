@@ -2492,7 +2492,7 @@ button:not(:disabled) {
 .quantity-btn {
     height: 40px;
     width: 40px;
-    box-shadow: 10px 10px 35px 28px #8080800f;
+    /* box-shadow: 10px 10px 35px 28px #8080800f; */
 }
 
 .cart-quantity-area {
@@ -2928,4 +2928,17 @@ button.offer-zone-btn {
     box-shadow: 0px 0px 4px black;
     z-index: 3;
 
+}
+span.favoriteicon-border {
+    position: relative;
+}
+span.favoriteicon-border::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border:1px solid lightgray;
+    right: -1px;
+    top:1px;
 }

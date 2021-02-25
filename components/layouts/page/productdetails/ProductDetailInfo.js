@@ -125,10 +125,12 @@ const ProductDetailInfo = (props) => {
                                         <Rater total={5} rating={2} /> <span> 58 Ratings </span>
                                         <span className="float-right">
                                             {/* <Link href="/"> */}
-                                            <ShareIcon />
+                                            <ShareIcon />Share
+                                         
                                             {/* </Link>  */}
                                             {/* <Link href="/"> */}
-                                            <FavoriteIcon />
+                                            <span className="favoriteicon-border"> <FavoriteIcon /></span>
+                                           
 
                                             {/* </Link>  */}
                                         </span>

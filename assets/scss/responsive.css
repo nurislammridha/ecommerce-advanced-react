@@ -74,8 +74,10 @@
     margin-bottom: 10px;
   }
   .col-lg-4.deliverysection {
-    padding-left: 0px;
-    margin-top: 29px;
+    /* padding-left: 0px;
+    margin-top: 29px; */
+    padding-left: 51px;
+    margin-top: -8px;
   }
   .elegentsinglechair {
     margin-bottom: 20px;
@@ -95,6 +97,49 @@
   .productdescriptiondetails {
     width: 100%;
   }
+  .stock.cart {
+    padding-top: 17px!important;
+}
+.chaircolor h2 {
+  padding-top: 0px;
+}
+.elegentpaymenttext.one {
+ 
+  margin-left: 21px;
+  margin-top: 23px;
+}
+.elegentpayment.mt-2 {
+  margin-top: -11px;
+}
+.productdescriptiondetails {
+  margin-top: -36px;
+}
+
+
+}
+@media only screen and (max-width: 700px) {
+.col-lg-4.deliverysection {
+  padding-left: 0px;
+  margin-top: 27px;
+}
+.chairdetails {
+  margin-top: -89px;
+}
+.elegentsinglerating {
+  float: left;
+  width: 17%;
+  padding-top: 10px;
+  padding-left:0px;
+}
+.elegentsinglerating.two {
+  width: 13%;
+}
+.goStore {
+  text-align: left;
+}
+.elegentpayment.mt-2 {
+  margin-top: -10px!important;
+}
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */
@@ -189,6 +234,19 @@
   .productdescriptiondetails {
     width: 100%;
   }
+  .singlechair img {
+    margin-left: 0px;
+  }
+  .elegentchairmenu {
+     padding-left:0px;
+  }
+  .chairdetails {
+    margin-top: -60px;
+}
+.stock {
+  
+  width: 40%;
+}
 }
 @media (max-width: 400px) {
   .itemselection {
