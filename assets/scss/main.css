@@ -1890,6 +1890,7 @@ button.productBtn.product.cartorder {
 
 .innerwishlist.productorderdetailsbox {
     height: auto;
+    padding-bottom: 40px;
 }
 
 .orderstatus {

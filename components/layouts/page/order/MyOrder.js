@@ -93,6 +93,9 @@ const MyOrder = ({ router }, props) => {
                             <h2>View Details</h2>
                           </div>
                         </div>
+                        <div className="clear-fix"></div>
+                    
+
                         <div className="singleorderproduct">
                           <img src="/images/default/chair.png" />
                         </div>
@@ -108,12 +111,12 @@ const MyOrder = ({ router }, props) => {
                         </div>
                         <div className="orderquantity">
                           <h2>Payment Type</h2>
-                          <h3>COD</h3>
+                          <h3 className="cod-text">COD</h3>
                         </div>
-      
-                        <div className="orderstatus">
+                        <div className="clear-fix"></div>
+                        <div className="orderstatus ">
                           <div className="singlestatus">
-                            <h2>
+                            <h2 className="order-status">
                               Order status:<span> Payment Pending</span>
                             </h2>
                           </div>
@@ -121,6 +124,7 @@ const MyOrder = ({ router }, props) => {
                             <h2>Total Amount: ৳ 500 </h2>
                           </div>
                         </div>
+                        <div className="clear-fix"></div>
                       </div>
                     </div>
                   ))}

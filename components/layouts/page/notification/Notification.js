@@ -124,7 +124,7 @@ const Notification = ({ router }, props) => {
                 </Media.Body>
               </Media>
             </div>
-            <div className="card p-2 shadow-sm mt-3">
+            <div className="card p-2 shadow-sm mt-3 mb-3">
               <Media>
                 <img
                   width={80}

@@ -1,3 +1,20 @@
+
+@media only screen and (max-width: 1024px) {
+  .singlestatus h2 {
+   
+    margin-left: 10px;
+  }
+  .singlestatus {
+    width: 51%;
+  }
+  .wishsingleproductText h1{
+    padding-top: 3px;
+    font-size: 21px;
+  }
+  .orderquantity h2 {
+    padding-left: 3px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .carousel-image {
     width: 100%;
@@ -183,6 +200,51 @@ margin-top: 49px;
 button.btn.btn-outline-danger {
   font-size: 13px;
 }
+.wishsingleproductText h1 {
+  font-size: 13px;
+}
+.wishsingleproductText h4 {
+  padding: 0px;
+  
+  font-size: 13px;
+}
+.wishsingleproductText h5 {
+  font-size: 12px;
+}
+
+.orderquantity h2 {
+  padding-top: 22px;
+  font-size: 13px;
+  
+}
+.orderquantity h3 {
+  
+  font-size: 12px;
+  
+  padding-top: 20px;
+}
+.orderstatus {
+ 
+  margin-top: 54px;
+}
+.singlestatus {
+ 
+  width: 51%;
+}
+.singlestatus h2 {
+  padding-top: 7px;
+  margin-left: -83px;
+  font-size: 11px;
+}
+.singlestatus.two h2 {
+  margin-top: -21px;
+}
+h3.cod-text {
+  margin-top: -14px;
+}
+.orderstatus {
+   border-bottom: none!important;
+}
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */
@@ -314,6 +376,51 @@ button.btn.btn-outline-danger {
 .myProfileTitle h6 {
   font-size: 12px;
   padding-left: 4px;
+}
+.wishsingleproductText h1 {
+  font-size: 13px;
+}
+.wishsingleproductText h4 {
+  padding: 0px;
+  
+  font-size: 13px;
+}
+.wishsingleproductText h5 {
+  font-size: 12px;
+}
+.orderquantity h2 {
+  padding-top: 22px;
+  font-size: 13px;
+  
+}
+.orderquantity h3 {
+  
+  font-size: 12px;
+  
+  padding-top: 20px;
+}
+.orderstatus {
+ 
+  margin-top: 54px;
+}
+.singlestatus {
+ 
+  width: 51%;
+}
+.singlestatus h2 {
+  padding-top:0px;
+  
+  margin-left:5px;
+  font-size: 11px;
+}
+.singlestatus.two h2 {
+  margin-top: -21px;
+}
+h3.cod-text {
+  margin-top: -14px;
+}
+.orderstatus {
+   border-bottom: none!important;
 }
 }
 @media (max-width: 400px) {
