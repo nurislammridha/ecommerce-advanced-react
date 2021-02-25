@@ -2901,24 +2901,17 @@ button.offer-zone-btn {
     color: white;
 }
 .product-cart {
-    height: 25px;
-    width: 25px;
+    height: 32px;
+    width: 32px;
     background:#F0F0F0;
     border-radius: 50%;
+    border:1px solid gray;
 }
 .productImg {
     position: relative;
 }
-.productImg::before {
-    position: absolute;
-    content: url(/images/default/favorite.png);
-    right:-2px;
-    top:4px;
-    z-index: 5;
-   
-}
 
-.productImg::after {
+/* .productImg::after {
     position: absolute;
   content: "";
     right:-4px;
@@ -2929,7 +2922,7 @@ button.offer-zone-btn {
     box-shadow: 0px 0px 4px black;
     z-index: 3;
 
-}
+} */
 span.favoriteicon-border {
     position: relative;
 }
@@ -2964,4 +2957,10 @@ span.favoriteicon-border::before {
 .register-logo h2{
     font-size: 20px;
     padding: 10px;
+}
+/* homeproduct */
+.product-review {
+    position: absolute;
+    top: 9px;
+    right: 19px;
 }

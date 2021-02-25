@@ -98,7 +98,7 @@ const ProductDetailInfo = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row single-product-box">
                             <div className="col-lg-4">
                                 <div className="singlechair">
                                     {/* <img src="/images/default/singlechair.png" /> */}

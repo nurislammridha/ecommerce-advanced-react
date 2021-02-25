@@ -25,7 +25,7 @@ import MainMenu from "./Menu";
 import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
 import "rc-menu/assets/index.css";
 import { getCartsAction } from "../../../store/actions/orders/CartAction";
-import { getCategoriesList } from './_redux/MenuAction/MenuAction';
+import { getCategoriesList } from "./_redux/MenuAction/MenuAction";
 
 function handleSelect(info) {
   console.log("selected ", info);
@@ -72,58 +72,65 @@ const leftMenu = (
 const Header = () => {
   const dispatch = useDispatch();
   const carts = useSelector((state) => state.cart.carts);
-  const categoriesMenuList = useSelector((state) => state.MenuReducer.categoriesMenuList);
-  console.log('categoriesMenuList :>> ', categoriesMenuList);
+  const categoriesMenuList = useSelector(
+    (state) => state.MenuReducer.categoriesMenuList
+  );
+  console.log("categoriesMenuList :>> ", categoriesMenuList);
 
   useEffect(() => {
     dispatch(getCartsAction());
-    dispatch(getCategoriesList())
+    dispatch(getCategoriesList());
   }, []);
 
   return (
     <>
       <div className="header">
         <div className="container-fluid">
-        
-          <Navbar>
-        
-            <Link href="/" className="text-white">
-              <Navbar.Brand href="/">
-                <img src="/images/logos/logo-white.png" />
-                <span className="logo-bottom-text">#UnboxHappiness</span>
-              </Navbar.Brand>
-            </Link>
-         
+          <div className="row">
+            <Navbar>
+              <div className="">
+                <Link href="/" className="text-white">
+                  <Navbar.Brand href="/">
+                    <img src="/images/logos/logo-white.png" />
+                    <span className="logo-bottom-text">#UnboxHappiness</span>
+                  </Navbar.Brand>
+                </Link>
+              </div>
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-            
-              <Nav className="header-category mr-3">
-                <NavDropdown title="Category" id="basic-nav-dropdown">
-                  <div className="menu-div-category">
-                    <Menu
-                      multiple
-                      onSelect={handleSelect}
-                      onDeselect={handleDeselect}
-                      defaultSelectedKeys={["2", "1-1"]}
-                    >
-                      {
-                        categoriesMenuList && categoriesMenuList.map((category) => (
-                          category.childs.length === 0 ? (
-                            <MenuItem key={category.short_code}>{category.name}</MenuItem>
-                          ) :
-                            <SubMenu title={category.name} key={category.short_code}>
-                              {
-                                category.childs.length > 0 ? (
-                                  category.childs.map((subCategory) => (
-                                    <MenuItem key={subCategory.short_code}>{subCategory.name}</MenuItem>
-                                  ))
-                                ) : ''
-                              }
-                            </SubMenu>
-                        ))
-                      }
-                      {/* 
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <div className="">
+                  <Nav className="header-category mr-3">
+                    <NavDropdown title="Category" id="basic-nav-dropdown">
+                      <div className="menu-div-category">
+                        <Menu
+                          multiple
+                          onSelect={handleSelect}
+                          onDeselect={handleDeselect}
+                          defaultSelectedKeys={["2", "1-1"]}
+                        >
+                          {categoriesMenuList &&
+                            categoriesMenuList.map((category) =>
+                              category.childs.length === 0 ? (
+                                <MenuItem key={category.short_code}>
+                                  {category.name}
+                                </MenuItem>
+                              ) : (
+                                <SubMenu
+                                  title={category.name}
+                                  key={category.short_code}
+                                >
+                                  {category.childs.length > 0
+                                    ? category.childs.map((subCategory) => (
+                                        <MenuItem key={subCategory.short_code}>
+                                          {subCategory.name}
+                                        </MenuItem>
+                                      ))
+                                    : ""}
+                                </SubMenu>
+                              )
+                            )}
+                          {/* 
                       <SubMenu title={titleRight} key="1">
                         <MenuItem key="1-1">0-1</MenuItem>
                         <MenuItem key="1-2">0-2</MenuItem>
@@ -144,65 +151,71 @@ const Header = () => {
                         disabled
                       </MenuItem>
                       <MenuItem key="4-3">outer3</MenuItem> */}
-                    </Menu>
+                        </Menu>
+                      </div>
+                    </NavDropdown>
+                  </Nav>
+                </div>
+                {/* <div className="col-lg-6 ">
+                  <Form className="search">
+                  <i className="fas fa-search"></i>
+                    <FormControl type="text" placeholder="Search Product" 
+
+                    />
+                   
+                  </Form>
+                </div> */}
+                <div className="col-lg-6 ">
+                  <Paper className="searchInput">
+                    <IconButton
+                      aria-label="Search"
+                      className="searchPlaceholder"
+                    >
+                    <i className="fas fa-search"></i>
+                     
+                    </IconButton>
+                    <InputBase placeholder="Search Products" />
+                  </Paper>
+                </div>
+                <div className="col-lg-6">
+                  <div className="rightnavbar d-flex flex-row ml-3">
+                    <div className="loginguest">
+                      <p>Hey user/Guest</p>
+                      <Link href="/login">
+                        <span className="text-white pointer">
+                          Sign up or Login
+                        </span>
+                      </Link>
+                    </div>
+                    <div className="mt-1 ml-3">
+                      <button className="offer-zone-btn">Offer Zone</button>
+                    </div>
+                    <div>
+                      <Link href="/notification">
+                        <FaBell className="header-carticon pointer" />
+                      </Link>
+
+                      <span className="badge counter pointer">
+                        <span className="count">0</span>
+                      </span>
+                    </div>
+                    <div>
+                      <Link href="/cart">
+                        <FaCartArrowDown className="header-carticon pointer" />
+                      </Link>
+                      <span className="badge counter">
+                        <span className="count">
+                          {carts ? carts.length : 0}
+                        </span>
+                      </span>
+                    </div>
                   </div>
-                </NavDropdown>
-              </Nav>
-              
-  
-
-              {/* <Form className="search">
-                <FormControl type="text" placeholder="Search Products" />
-              </Form> */}
-                  
-             
-             
-               <div className="col-lg-6">
-                <Paper className="searchInput">
-                  <IconButton aria-label="Search" className="searchPlaceholder">
-                    <i className="flaticon-search "></i>
-                  </IconButton>
-                  <InputBase
-                    placeholder="Search Products"
-                    
-                  />
-                </Paper>
                 </div>
-            
-              <div className="rightnavbar d-flex flex-row ml-3">
-                <div className="loginguest">
-                  <p>Hey user/Guest</p>
-                  <Link href="/login">
-                    <span className="text-white pointer">Sign up or Login</span>
-                  </Link>
-                </div>
-                <div className="mt-1 ml-3">
-                  <button className="offer-zone-btn">Offer Zone</button>
-                </div>
-                <div>
-                  <Link href="/notification">
-                    <FaBell className="header-carticon pointer" />
-                  </Link>
-
-                  <span className="badge counter pointer">
-                    <span className="count">0</span>
-                  </span>
-                </div>
-                <div>
-                  <Link href="/cart">
-                    <FaCartArrowDown className="header-carticon pointer" />
-                  </Link>
-                  <span className="badge counter">
-                    <span className="count">{carts ? carts.length : 0}</span>
-                  </span>
-                </div>
-              </div>
-             
-            </Navbar.Collapse>
-          </Navbar>
+              </Navbar.Collapse>
+            </Navbar>
+          </div>
         </div>
       </div>
-      
       <div className="menu">
         <MainMenu />
       </div>

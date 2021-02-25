@@ -25,7 +25,15 @@ const ProductMiniCard = (props) => {
                 </LazyLoad>
             </div>
           </Link>
-        
+          <Link href="">
+            <a>
+            <div className="product-review">
+            
+            <img src="/images/default/favorite.png" alt="" />
+         
+          </div>
+          </a>
+          </Link>
           <div className="productDetails ">
           <Link href={`/products/${product.sku}`}>
             <a>
@@ -35,6 +43,7 @@ const ProductMiniCard = (props) => {
               </div>
             </a>
           </Link>
+          
             
             <div className="productPrice pt-2 float-left">
               {product.is_offer_enable != true && (
@@ -50,9 +59,15 @@ const ProductMiniCard = (props) => {
                 </>
               )}
             </div>
+            <Link href="">
+            <a>
             <div className="float-right product-cart">
+            
             <img src="/images/default/cart.png" className=" p-2" alt="" />
+         
           </div>
+          </a>
+          </Link>
 
             <div className="ratepoint ">
               <Rater total={5} rating={parseFloat(product.average_rating)} />{" "}
