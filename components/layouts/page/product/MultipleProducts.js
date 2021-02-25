@@ -111,13 +111,13 @@ const MultipleProducts = (props) => {
                 <div className="sidebar-section">
                   <h6>Price</h6>
                   <div className="row">
-                    <div className="col-5 m-0">
-                      <input type="text" className="form-control" placeholder="Min"
+                    <div className="col-6 m-0">
+                      <input type="text" className="form-control sidebar-section-input" placeholder="Min"
                         onChange={(e) => handleChangeProductFilter('min_price', e.target.value)}
                       />
                     </div>
-                    <div className="col-5 m-0">
-                      <input type="text" className="form-control" placeholder="Max"
+                    <div className="col-6 m-0">
+                      <input type="text" className="form-control sidebar-section-input" placeholder="Max"
                         onChange={(e) => handleChangeProductFilter('max_price', e.target.value)}
                       />
                     </div>

@@ -36,7 +36,7 @@ export default function giftcard(props) {
                 </div>
 
                 <div className="row mb-md-3">
-                  <div className="col-md-4">
+                  <div className="col-md-4 mb-2">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
                         Your invaitaion code
@@ -49,7 +49,7 @@ export default function giftcard(props) {
                       </p>
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-4  mb-2">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
                        Invite User
@@ -62,7 +62,7 @@ export default function giftcard(props) {
                       </p>
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-4  mb-2">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
                       Amount
@@ -77,7 +77,7 @@ export default function giftcard(props) {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-4">
+                  <div className="col-md-4  mb-2">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
                        Request for payment
@@ -90,7 +90,7 @@ export default function giftcard(props) {
                       </p>
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-4  mb-2">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
                       Approved payment
@@ -103,7 +103,7 @@ export default function giftcard(props) {
                       </p>
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-4  mb-2">
                     <div className="referalCardBg p-4">
                       <p className="text-center font-weight-bold">
                        Total User Invite

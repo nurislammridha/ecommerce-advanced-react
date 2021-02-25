@@ -2947,3 +2947,21 @@ span.favoriteicon-border::before {
 .accountTextarea.mt-2.mb-1 {
     margin-left: -15px;
 }
+.item-quantity {
+    margin-left: 104px;
+}
+/* register tow */
+.register-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    
+    display: block;
+    margin:auto;
+    margin-bottom: 20px;
+}
+.register-logo h2{
+    font-size: 20px;
+    padding: 10px;
+}

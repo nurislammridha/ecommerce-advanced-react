@@ -138,7 +138,7 @@ const placeorder = ({ router }, props) => {
                 <div className="placeOrderSummery bg-white p-3">
                   <div className="float-left">
                     <p>Price </p>
-                    <p className="placeOrderSummery">Number of Items</p>
+                    <p>Number of Items</p>
                     <p>Shipping cost</p>
                   </div>
                   <div className="float-right">

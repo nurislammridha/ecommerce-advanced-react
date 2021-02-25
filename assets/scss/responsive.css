@@ -27,6 +27,12 @@ h3.d-inline.unitPrice {
 .item-quantity {
   margin-left: 10px;
 }
+label.form-check-label {
+  font-size: 13px;
+}
+input.form-control.sidebar-section-input {
+  font-size: 11px;
+}
 }
 @media only screen and (max-width: 768px) {
   .carousel-image {
