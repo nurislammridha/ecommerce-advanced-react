@@ -24,6 +24,7 @@ export default function giftcard(props) {
               <div className="card audienceContainer mt-3">
                 <h2>Which Product do you want</h2>
                 <div className="pool-container d-flex flex-row">
+             
                   <div className="p-2 shadow-sm mt-3 align-items-center media-container">
                     <Media className="audienceMedia">
                       <img
@@ -45,6 +46,7 @@ export default function giftcard(props) {
                       </Media.Body>
                     </Media>
                   </div>
+                  
                   <div className="p-2 shadow-sm mt-3 align-items-center media-container">
                     <Media className="audienceMedia">
                       <img
@@ -65,6 +67,7 @@ export default function giftcard(props) {
                         </div>
                       </Media.Body>
                     </Media>
+                 
                   </div>
                 </div>
               </div>

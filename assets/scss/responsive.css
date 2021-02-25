@@ -140,6 +140,15 @@
 .elegentpayment.mt-2 {
   margin-top: -10px!important;
 }
+.wishlisttitle {
+  margin-top: -36px;
+}
+.sidebar.card {
+  margin-top: 20px;
+}
+.audienceMedia.media {
+  display: block!important;
+}
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */
