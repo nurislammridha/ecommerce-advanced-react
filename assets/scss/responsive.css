@@ -164,6 +164,25 @@ justify-content: center;
   
   padding-top: 19px!important;
 }
+.wishbanner.pb {
+  
+margin-top: 49px;
+}
+.orderProductDetails.cartline::after {
+  width: 108%;
+}
+.profileItem.two h6 {
+  padding-left: 0px;
+}
+.myProfileStatus p,.myProfilePrice p{
+  font-size: 12px;
+}
+.myProfileTime{
+  padding-top: 0px!important;
+}
+button.btn.btn-outline-danger {
+  font-size: 13px;
+}
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */
@@ -270,6 +289,31 @@ justify-content: center;
 .stock {
   
   width: 40%;
+}
+.profileItem.two h6 {
+  padding-left: 37px;
+}
+.myProfileStatus p,.myProfilePrice p{
+  font-size: 10px;
+}
+.myProfileTime{
+  padding-top: 0px!important;
+}
+button.btn.btn-outline-danger {
+  font-size: 10px;
+}
+.shippmentBoxText h5 {
+  font-size: 13px;
+}
+.myProfileTime p{
+  font-size: 12px;
+  line-height: 21px;
+  margin-top: 32px;
+  font-weight: 800;
+}
+.myProfileTitle h6 {
+  font-size: 12px;
+  padding-left: 4px;
 }
 }
 @media (max-width: 400px) {
