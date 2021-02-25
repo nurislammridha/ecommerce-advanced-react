@@ -14,6 +14,19 @@
   .orderquantity h2 {
     padding-left: 3px;
   }
+  h3.d-inline.item {
+    width: 30%;
+    padding-left: 13px;
+}
+h3.d-inline.qty {
+  width: 16%;
+}
+h3.d-inline.unitPrice {
+  width: 32%;
+}
+.item-quantity {
+  margin-left: 10px;
+}
 }
 @media only screen and (max-width: 768px) {
   .carousel-image {
@@ -244,6 +257,22 @@ h3.cod-text {
 }
 .orderstatus {
    border-bottom: none!important;
+}
+h3.d-inline.item {
+  width: 24%;
+  padding-left: 10px;
+}
+h3.d-inline.qty {
+  width: 16%;
+}
+h3.d-inline.unitPrice {
+  width: 32%;
+}
+button.btn.btn-primary.float-right.mt-3.backCartbtn {
+  width: 36%;
+}
+.item-quantity {
+  margin-left: 10px;
 }
 }
 /*# sourceMappingURL=responsive.css.map */
