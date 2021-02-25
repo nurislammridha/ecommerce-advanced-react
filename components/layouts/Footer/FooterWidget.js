@@ -76,7 +76,7 @@ const FooterWidget = () => {
                 <a href="#">
                   <img className="ml-5" src="/images/default/playstore.png" />
                 </a>
-                <h4 className="pt-5 pl-5">Hotline: 01XXXXXXXXX</h4>
+                <h4 className="pt-5 text-center">Hotline: 01XXXXXXXXX</h4>
               </div>
             </Col>
           </Row>

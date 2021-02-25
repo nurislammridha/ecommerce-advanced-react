@@ -2942,3 +2942,7 @@ span.favoriteicon-border::before {
     right: -1px;
     top:1px;
 }
+/* accountsetting */
+.accountTextarea.mt-2.mb-1 {
+    margin-left: -15px;
+}

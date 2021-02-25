@@ -149,6 +149,21 @@
 .audienceMedia.media {
   display: block!important;
 }
+span.accountText {
+  font-size: 9px;
+}
+.singleWidget img{
+justify-content: center;
+}
+.singleWidget img {
+  
+  display: block;
+  margin: auto!important;
+}
+.singleWidget h4 {
+  
+  padding-top: 19px!important;
+}
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */
