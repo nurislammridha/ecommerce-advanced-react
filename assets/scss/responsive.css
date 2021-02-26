@@ -280,6 +280,19 @@ button.btn.btn-primary.float-right.mt-3.backCartbtn {
 .item-quantity {
   margin-left: 10px;
 }
+button.border-rounded.text-white.btn.btn-primary {
+  
+  margin-bottom: 14px;
+  
+}
+.Loginform.sellerLoginForm {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.registrationBoxshadow.card {
+ width: 24rem;
+  margin-top:0px;
+}
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */
@@ -456,6 +469,9 @@ h3.cod-text {
 }
 .orderstatus {
    border-bottom: none!important;
+}
+.registrationBoxshadow.card {
+  width: 24rem!important;
 }
 }
 @media (max-width: 400px) {

@@ -37,8 +37,9 @@ const RegisterStepTwo = ({ setStepNo }) => {
           <div className="row">
             <div className="col-lg-6 offset-lg-3">
               <div className="Loginform">
-               <div className="register-logo">
-               <h2>Logo</h2></div>
+                <div className="register-logo">
+                  <h2>Logo</h2>
+                </div>
                 <h1>Create Account</h1>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>Type OTP</Form.Label>
