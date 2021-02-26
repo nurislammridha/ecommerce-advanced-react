@@ -15,8 +15,8 @@ export default function singleproduct(props) {
           <div class="container-fluid ">
             <div className="row">
               <div className="col-12 ">
-                <nav aria-label="breadcrumb ">
-                  <ol class="breadcrumb p-3">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb p-3 single-product-breadcrumb">
                     <li class="breadcrumb-item">
                       <a href="#">Category</a>
                     </li>
@@ -31,14 +31,21 @@ export default function singleproduct(props) {
               </div>
             </div>
             <div className="row">
-              <div className="col-xl-1 col-lg-1">
-                <div className="singleGallery bg-white rounded">
-                  <p>Gallery</p>
+            
+                <div className="col-xl-1 col-lg-1 bg-white">
+              
+                  <div className="singleGallery mt-2 rounded">
+                    <p className="p-3 border rounded">Gallery</p>
+                    <p className="p-3 border rounded">Gallery</p>
+                    <p className="p-3 border rounded">Gallery</p>
+                    <p className="p-3 border rounded">Gallery</p>
+                    <p className="p-3 border rounded">Gallery</p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-xl-4 col-lg-4">
-                <div className="singleGalleryImg bg-white rounded"></div>
-              </div>
+                <div className="col-xl-4 col-lg-4">
+                  <div className="singleGalleryImg bg-white rounded"></div>
+                </div>
+             
               <div className="col-xl-4 col-lg-4 bg-white">
                 <div className="singleGalleryProduct bg-white rounded">
                   <div className="galleryHeading float-left mt-4 mb-2">

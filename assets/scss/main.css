@@ -2964,3 +2964,9 @@ span.favoriteicon-border::before {
     top: 9px;
     right: 19px;
 }
+.singleProduct{
+    background: #fbfbfb;
+}
+ol.breadcrumb.p-3.single-product-breadcrumb {
+    background: transparent;
+}
