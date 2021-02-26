@@ -31,7 +31,12 @@ const sellerlogin = ({ router }, props) => {
       <div className="Sellerlogin pb pt-5">
         <div className="container">
           <div className="row bg-white pb-3">
-            <div className="col-lg-6 "></div>
+            <div className="col-lg-6 mt-5 ">
+            <div className="map-section">
+            <img src="/images/default/map.png" />
+            </div>
+
+            </div>
             <div className="col-lg-6 ">
               <div className="Loginform sellerLoginForm">
                 <h1>
