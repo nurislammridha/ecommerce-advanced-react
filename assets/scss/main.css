@@ -2970,3 +2970,7 @@ span.favoriteicon-border::before {
 ol.breadcrumb.p-3.single-product-breadcrumb {
     background: transparent;
 }
+.App {
+    display: none;
+
+}

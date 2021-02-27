@@ -51,6 +51,7 @@
         "react-owl-carousel": "^2.3.1",
         "react-rater": "^5.1.1",
         "react-redux": "^7.2.2",
+        "react-responsive-multi-level-menu": "^2.2.5",
         "react-slick": "^0.27.13",
         "react-star-ratings": "^2.3.0",
         "react-toastify": "^6.2.0",

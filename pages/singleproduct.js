@@ -35,6 +35,7 @@ export default function singleproduct(props) {
                 <div className="col-xl-1 col-lg-1 bg-white">
               
                   <div className="singleGallery mt-2 rounded">
+                  
                     <p className="p-3 border rounded">Gallery</p>
                     <p className="p-3 border rounded">Gallery</p>
                     <p className="p-3 border rounded">Gallery</p>

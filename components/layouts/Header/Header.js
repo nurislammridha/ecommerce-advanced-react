@@ -26,6 +26,7 @@ import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
 import "rc-menu/assets/index.css";
 import { getCartsAction } from "../../../store/actions/orders/CartAction";
 import { getCategoriesList } from "./_redux/MenuAction/MenuAction";
+import Menubar from "react-responsive-multi-level-menu";
 
 function handleSelect(info) {
   console.log("selected ", info);
@@ -68,7 +69,52 @@ const leftMenu = (
     <MenuItem key="4-3">outer3</MenuItem>
   </Menu>
 );
-
+// 
+const menuItems = [
+  {
+    value: "Fashion",
+    items: [
+      {
+        value: "Men",
+        items: [
+          {
+            value: "Shirts"
+          }
+        ]
+      },
+      {
+        value: "Women",
+        items: [
+          {
+            value: "Jackets"
+          },
+          {
+            value: "T-Shirts"
+          },
+          {
+            value: "Underwear"
+          }
+        ]
+      },
+      {
+        value: "Children"
+      }
+    ]
+  },
+  {
+    value: "Electronics"
+  },
+  {
+    value: "Furnitures",
+    items: []
+  },
+  {
+    value: "Jewelery&watches",
+    items: []
+  }
+];
+const color = "#348DF4";
+const animation = ["fadeIn", "fadeOut"];
 const Header = () => {
   const dispatch = useDispatch();
   const carts = useSelector((state) => state.cart.carts);
@@ -216,6 +262,13 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {/* <MobileHeader/> */}
+      <div className="App">
+     
+      <Menubar backgroundColor={color} data={menuItems} animation={animation} />
+    </div>
+      {/*  */}
+
       <div className="menu">
         <MainMenu />
       </div>
