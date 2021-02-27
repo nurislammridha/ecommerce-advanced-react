@@ -26,6 +26,7 @@ import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
 import "rc-menu/assets/index.css";
 import { getCartsAction } from "../../../store/actions/orders/CartAction";
 import { getCategoriesList } from "./_redux/MenuAction/MenuAction";
+
 import Menubar from "react-responsive-multi-level-menu";
 
 function handleSelect(info) {
