@@ -16,7 +16,10 @@ h6 {
     font-weight: 400;
     margin-bottom: 0px;
 }
-
+a{
+    color: #000000!important;
+    font-size: 12px;
+}
 a:hover {
     text-decoration: none !important;
 }
@@ -791,6 +794,7 @@ h4.pt-2 {
     color: #373a3c;
     font-weight: 600 !important;
     text-transform: uppercase;
+    margin-top: -6px;
 }
 
 .stock span {
@@ -856,20 +860,21 @@ h4.pt-2 {
     padding-bottom: 7px;
 }
 
-.stock.cart span {
+.stock.cart button {
     background-color: #ff4747!important;
     padding: 10px 29px!important;
     color: #ffffff!important;
     border-radius: 20px!important;
     margin-top: 45%!important;
     font-size: 18px!important;
+    border: none;
 }
 
 .stock.cart {
     padding-top: 48px!important;
 }
 
-.stock.cart.two span {
+.stock.cart.two button {
     background: #ff9a00!important;
 }
 
@@ -2972,4 +2977,10 @@ ol.breadcrumb.p-3.single-product-breadcrumb {
 }
 .homebanner.single-product-section.bp {
     padding-top: 20px;
+}
+/* productdetails */
+.chairdetailstext h2.text-warning{
+    color: #ffc107!important;
+    display: inline-block;
+    padding-right: 10px;
 }
