@@ -61,6 +61,9 @@ export const ORDER_INPUT_CHANGE = "ORDER_INPUT_CHANGE";
 export const ORDER_SUBMIT = "ORDER_SUBMIT";
 export const ORDER_SUBMITTING = "ORDER_SUBMITTING";
 
+/** Audience Poll */
+export const GET_AUDIENCE_POLL = "GET_AUDIENCE_POLL";
+export const GET_AUDIENCE_POLL_LOADING = "GET_AUDIENCE_POLL_LOADING";
 // ******************************Product Filter**********************************/
 export const CHANGE_PRODUCT_FILTER = "CHANGE_PRODUCT_FILTER";
 export const GET_CATEGORIES_LIST = "GET_CATEGORIES_LIST";
