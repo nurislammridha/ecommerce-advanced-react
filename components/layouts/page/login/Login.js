@@ -1,21 +1,25 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Button, FormGroup, FormControl, ControlLabel, Spinner } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { handleLoginInput } from "../../../../store/actions/auth/LoginAction";
+import { handleLoginInput, loginAction } from "../../../../store/actions/auth/LoginAction";
+import { useForm } from "react-hook-form";
 const Login = ({ router }, props) => {
   const dispatch = useDispatch();
   const loginInpiut = useSelector((state) => state.authReducer.loginInpiut);
-
-  console.log('loginInpiut :>> ', loginInpiut);
+  const isLoading = useSelector((state) => state.authReducer.isLoading);
+  const { register, handleSubmit, errors, setValue } = useForm();
 
   const handleLoginInputChange = (name, value) => {
-    dispatch(handleLoginInput(name, value))
+    dispatch(handleLoginInput(name, value));
   }
+
   const handleLogin = (e) => {
-    
+    dispatch(loginAction(loginInpiut));
+    // e.preventDefault();
   }
+
   return (
     <>
       <div className="wishbanner pb">
@@ -24,16 +28,30 @@ const Login = ({ router }, props) => {
             <div className="col-lg-5 offset-lg-3">
               <div className="Loginform">
                 <h1>Login</h1>
-                <Form autoComplete="off">
+                <form
+                  onSubmit={handleSubmit(handleLogin)}
+                  method="post"
+                  autoComplete="off"
+                  encType="multipart/form-data">
+
                   <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email or phone number</Form.Label>
                     <Form.Control
-                      type="email"
+                      type="text"
                       name="email"
                       value={loginInpiut.email}
                       onChange={(e) => handleLoginInputChange('email', e.target.value)}
                       placeholder="Enter your register email or phone number"
+                      ref={register({
+                        required: true,
+                        maxLength: 100,
+                      })}
                     />
+                    <div className="text-danger m-2">
+                      {errors.email &&
+                        errors.email.type === 'required' &&
+                        "Please enter email or phone !"}
+                    </div>
                   </Form.Group>
 
                   <Form.Group controlId="formBasicPassword">
@@ -44,16 +62,37 @@ const Login = ({ router }, props) => {
                       name="password"
                       value={loginInpiut.password}
                       onChange={(e) => handleLoginInputChange('password', e.target.value)}
+                      ref={register({
+                        required: true,
+                        maxLength: 100,
+                      })}
                     />
+                    <div className="text-danger m-2">
+                      {errors.password &&
+                        errors.password.type === 'required' &&
+                        "Please enter password !"}
+                    </div>
                   </Form.Group>
-                  <Link href="/">
-                    <a>
-                      {" "}
-                      <Button variant="primary" type="submit">
-                        Login
-                      </Button>
-                    </a>
-                  </Link>
+                  {
+                    !isLoading && (
+                      <a>
+                        {" "}
+                        <Button variant="primary" type="submit">
+                          Login
+                        </Button>
+                      </a>
+                    )
+                  }
+                  {
+                    isLoading && (
+                      <a>
+                        {" "}
+                        <Button disabled={true} variant="primary" type="submit">
+                          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Login
+                        </Button>
+                      </a>
+                    )
+                  }
                   <Link href="/">
                     <a>
                       <h5>Forget Password?</h5>
@@ -69,7 +108,7 @@ const Login = ({ router }, props) => {
                       </button>
                     </a>
                   </Link>
-                </Form>
+                </form>
               </div>
             </div>
           </div>
