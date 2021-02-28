@@ -34,7 +34,16 @@ const RegisterStepTwo = ({ setStepNo }) => {
           name="otp"
           onChange={(e) => handleChangeTextInput('otp', e.target.value)}
           placeholder="Enter your one time password"
+          ref={register({
+            required: true,
+            maxLength: 100,
+          })}
         />
+        <div className="text-danger m-2">
+          {errors.otp &&
+            errors.otp.type === 'required' &&
+            "OTP can't be blank!"}
+        </div>
       </Form.Group>
       <Form.Group controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
