@@ -18,11 +18,7 @@ const ElegantChair = ({ router }, props) => {
           <div className="row">
             <div className="col-12">
               <div className="elegentchairmenu">
-                {/* <ul>
-                  <li> Akij Plastics</li>
-                  <li>Chair </li>
-                  <li> Chair Elegant Chair wave rose wood</li>
-                </ul> */}
+               
                 <Breadcrumb>
                   <Breadcrumb.Item href="#"> Akij Plastics</Breadcrumb.Item>
                   <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">

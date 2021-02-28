@@ -958,7 +958,7 @@ h4.pt-2 {
 
 .elegentchairmenu {
     padding-left: 32px;
-    padding-bottom: 36px;
+    padding-bottom: 17px;
 }
 
 .elegentstoreImg.two h5 {
@@ -2969,4 +2969,7 @@ span.favoriteicon-border::before {
 }
 ol.breadcrumb.p-3.single-product-breadcrumb {
     background: transparent;
+}
+.homebanner.single-product-section.bp {
+    padding-top: 20px;
 }

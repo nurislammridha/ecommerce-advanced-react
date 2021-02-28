@@ -76,7 +76,7 @@ const ProductDetailInfo = (props) => {
         <>
             {
                 product != null &&
-                <div className="homebanner bp">
+                <div className="homebanner single-product-section bp">
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-12">
