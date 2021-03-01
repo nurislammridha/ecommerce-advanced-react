@@ -19,6 +19,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 toast.configure();
 
+// Import axios.js so that it can inject token in every request
+require('../services/axios');
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
