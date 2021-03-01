@@ -15,6 +15,7 @@ const initialState = {
   isLoadingRegister: false,
   registrationStatus: false,
   redirected_route: null,
+  loginLoading: false,
 };
 
 const AuthReducer = (state = initialState, action) => {

@@ -18,18 +18,7 @@ export const ChangeRegisterInputField = (name, value) => (dispatch) => {
 
 // handle register first step 
 export const RegisterFirstStep = (registerInput, setStepNo) => (dispatch) => {
-  if (registerInput.first_name.length === 0) {
-    showToast('error', "First name can't be blank!")
-    return false;
-  }
-  if (registerInput.last_name.length === 0) {
-    showToast('error', "Last name can't be blank!")
-    return false;
-  }
-  if (registerInput.phone_no === null) {
-    showToast('error', "Mobile number can't be blank!")
-    return false;
-  }
+  
   let response = {
     message: null,
     status: false,
@@ -76,7 +65,7 @@ export const RegisterFirstStep = (registerInput, setStepNo) => (dispatch) => {
 // customer register step two / final 
 export const customerRegister = (registerInput) => async (dispatch) => {
   if (registerInput.otp.length === 0) {
-    showToast('error', "O can't be blank!")
+    showToast('error', "OTP can't be blank!")
     return false;
   }
   if (registerInput.password.length === 0) {

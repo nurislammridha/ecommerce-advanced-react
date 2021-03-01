@@ -2,6 +2,7 @@ import * as Types from "../../Types";
 import * as JwtDecode from "jwt-decode";
 // import { generateToken } from "../../services/token/TokenService";
 import axios from "axios";
+import { showToast } from "../../../components/master/Helper/ToastHelper";
 // import { API_POST_LOGIN } from "../../ApiEndpoint";
 
 
@@ -10,38 +11,49 @@ export const handleLoginInput = (name, value) => (dispatch) => {
     name: name,
     value: value
   }
-  dispatch({type: Types.CHANGE_LOGIN_INPUT_FIELD, payload: formData})
+  dispatch({ type: Types.CHANGE_LOGIN_INPUT_FIELD, payload: formData })
 }
 
-export const loginAction = (loginData) => async (dispatch) => {
-  let loginResponse = {
+//Login 
+export const loginAction = (loginData) => (dispatch) => {
+  let response = {
     userData: {},
     tokenData: {},
     isLoggedIn: false,
     loginMessage: "",
-    isLoading: false,
-  };
-
-  try {
-    loginResponse.isLoading = true;
-    dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: loginResponse });
-
-    const res = await axios.post(`${API_POST_LOGIN}`, loginData);
-    // Successfully Logged in
-    loginResponse = {
-      userData: res.data.user,
-      tokenData: res.data.access_token,
-      isLoggedIn: res.data.status,
-      loginMessage: res.data.message,
-      isLoading: false,
-    };
-    localStorage.setItem("loginData", JSON.stringify(loginResponse));
-    dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: loginResponse });
-  } catch (error) {
-    // loginResponse
-    dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: loginResponse });
+    isLoading: true,
   }
-};
+  dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: response })
+  const URL = `${process.env.NEXT_PUBLIC_API_URL}auth/login`;
+  try {
+    axios.post(URL, loginData)
+      .then((res) => {
+        if (res.data.status) {
+          const { data } = res.data;
+          response.userData = data.user;
+          response.tokenData = data.access_token;
+          response.message = res.data.message;
+          response.isLoading = false;
+          localStorage.setItem("loginData", JSON.stringify(response));
+          localStorage.setItem("access_token", JSON.stringify(response.tokenData));
+          dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: response })
+        }
+      })
+      .catch((error) => {
+        const responseLog = error.response;
+        response.isLoading = false;
+        if (typeof responseLog !== 'undefined') {
+          const { request, ...errorObject } = responseLog;
+          showToast('error', responseLog.data.message);
+          dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: responseLog })
+        }
+      })
+  } catch (error) {
+    response.isLoading = false;
+    showToast('error', 'Network Error, Please Fix this !');
+  }
+  dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: response })
+}
 
 export const getAuthData = () => async (dispatch) => {
   let data = getLoginData();
