@@ -1,4 +1,4 @@
-import * as Types from "../../Types";
+import * as Types from "../Types/Types";
 
 // Initial state
 const initialState = {
@@ -9,9 +9,9 @@ const wishListReducer = (state = initialState, action) => {
     const newState = { ...state };
     switch (action.type) {
         case Types.WISHLIST_ADDED:
-            console.log('action.payload :>> ', action.payload);
             return {
                 ...state,
+                isLoading: action.payload.isLoading,
             }
 
         default:

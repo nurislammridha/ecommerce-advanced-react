@@ -4,7 +4,7 @@ import { WishListAdded } from './_redux/Action/wishListAction'
 const WishList = ({ product }) => {
     const dispatch = useDispatch()
     const [isWishList, setIsWishList] = useState(false)
-
+    const isLoading = ((state) => state.wishListReducer.isLoading)
     const handleAddedWishList = (product) => {
         setIsWishList(true);
         dispatch(WishListAdded(product.id))
