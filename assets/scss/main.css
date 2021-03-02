@@ -155,21 +155,29 @@ form.search {
     font-size: 30px;
     color: #fff;
     margin-right: 10px;
-    margin-top: 7px;
+    margin-top: 20px;
     cursor: pointer;
 }
 
 .main-menu-mobile-mode {
-    background: #00c4ee
+    background: #00c4ee;
+    /* position: fixed; */
 }
 
 .mobile-menu-area {
     position: absolute;
     width: 100%;
     z-index: 100;
+    left: 0px;
 }
 
-@media all and (min-width: 650px) {
+.navbar-sticky-top {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+@media all and (min-width: 990px) {
     .main-menu-desktop-mode {
         display: block;
     }
@@ -179,7 +187,7 @@ form.search {
     }
 }
 
-@media all and (max-width: 649px) {
+@media all and (max-width: 989px) {
     .main-menu-desktop-mode {
         display: none;
     }

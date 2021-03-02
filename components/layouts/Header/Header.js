@@ -140,17 +140,29 @@ const Header = () => {
     );
   }
 
+  const printCartMenu = () => {
+    return (
+      <>
+        <Link href="/cart">
+          <FaCartArrowDown className="header-carticon pointer" />
+        </Link>
+        <span className="badge counter">
+          <span className="count">
+            {carts ? carts.length : 0}
+          </span>
+        </span>
+      </>
+    )
+  }
+
   return (
     <div className="main-menu">
-
       <div className="main-menu-desktop-mode">
         <div className="header">
           <div className="container-fluid">
             <div className="row">
               <Navbar>
-
                 {printLogo()}
-
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <div className="">
@@ -184,43 +196,13 @@ const Header = () => {
                                     </SubMenu>
                                   )
                               )}
-                            {/* 
-                        <SubMenu title={titleRight} key="1">
-                          <MenuItem key="1-1">0-1</MenuItem>
-                          <MenuItem key="1-2">0-2</MenuItem>
-                        </SubMenu>
-                        <MenuItem key="3">outer</MenuItem>
-                        <SubMenu title={titleRight1} key="4">
-                          <MenuItem key="4-1">inner inner</MenuItem>
-                          <Divider />
-                          <SubMenu key="4-2" title={titleRight2}>
-                            <MenuItem key="4-2-1">inn</MenuItem>
-                            <SubMenu title={titleRight3} key="4-2-2">
-                              <MenuItem key="4-2-2-1">inner inner</MenuItem>
-                              <MenuItem key="4-2-2-2">inner inner2</MenuItem>
-                            </SubMenu>
-                          </SubMenu>
-                        </SubMenu>
-                        <MenuItem disabled key="disabled">
-                          disabled
-                        </MenuItem>
-                        <MenuItem key="4-3">outer3</MenuItem> */}
                           </Menu>
                         </div>
                       </NavDropdown>
                     </Nav>
                   </div>
-                  {/* <div className="col-lg-6 ">
-                    <Form className="search">
-                    <i className="fas fa-search"></i>
-                      <FormControl type="text" placeholder="Search Product" 
-
-                      />
-                     
-                    </Form>
-                  </div> */}
                   <div className="col-lg-6 ">
-                   <SearchInput />
+                    <SearchInput />
                   </div>
                   <div className="col-lg-6">
                     <div className="rightnavbar d-flex flex-row ml-3">
@@ -239,20 +221,12 @@ const Header = () => {
                         <Link href="/notification">
                           <FaBell className="header-carticon pointer" />
                         </Link>
-
                         <span className="badge counter pointer">
                           <span className="count">0</span>
                         </span>
                       </div>
                       <div>
-                        <Link href="/cart">
-                          <FaCartArrowDown className="header-carticon pointer" />
-                        </Link>
-                        <span className="badge counter">
-                          <span className="count">
-                            {carts ? carts.length : 0}
-                          </span>
-                        </span>
+                        {printCartMenu()}
                       </div>
                     </div>
                   </div>
@@ -262,12 +236,16 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="main-menu-mobile-mode">
+
+      <div className="main-menu-mobile-mode navbar-sticky-top mb-5">
         <div className="float-left">
           {printLogo()}
         </div>
-        <div className="float-left mt-2">
+        <div className="float-left mt-3">
           <SearchInput />
+        </div>
+        <div className="float-left mt-3">
+          {printCartMenu()}
         </div>
         <div className="float-right">
           <i
@@ -281,7 +259,7 @@ const Header = () => {
         <div className="clearfix"></div>
       </div>
 
-      <div className="menu">
+      <div className="menu main-menu-desktop-mode">
         <MainMenu />
       </div>
     </div>
