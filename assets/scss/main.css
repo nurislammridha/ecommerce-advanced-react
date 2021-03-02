@@ -18,10 +18,12 @@ h6 {
     font-weight: 400;
     margin-bottom: 0px;
 }
-a{
-    color: #000000!important;
+
+a {
+    color: #000000 !important;
     font-size: 12px;
 }
+
 a:hover {
     text-decoration: none !important;
 }
@@ -150,37 +152,51 @@ form.search {
 
 /** Mobile & Desktop Menu View Option */
 .menu-bar-icon {
-  font-size: 30px;
-  color: #fff;
-  margin-right: 10px;
-  margin-top: 7px;
-  cursor: pointer;
-}
-.main-menu-mobile-mode{
-    background: #00c4ee
-}
-.mobile-menu-area {
-  position: absolute;
-  width: 100%;
-  z-index: 100;
-}
-@media all and (min-width: 650px) {
-  .main-menu-desktop-mode {
-    display: block;
-  }
-  .main-menu-mobile-mode {
-    display: none;
-  }
+    font-size: 30px;
+    color: #fff;
+    margin-right: 10px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
-@media all and (max-width: 649px) {
-  .main-menu-desktop-mode {
-    display: none;
-  }
-  .main-menu-mobile-mode {
-    display: block;
-  }
+.main-menu-mobile-mode {
+    background: #00c4ee;
+    /* position: fixed; */
 }
+
+.mobile-menu-area {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    left: 0px;
+}
+
+.navbar-sticky-top {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+@media all and (min-width: 990px) {
+    .main-menu-desktop-mode {
+        display: block;
+    }
+
+    .main-menu-mobile-mode {
+        display: none;
+    }
+}
+
+@media all and (max-width: 989px) {
+    .main-menu-desktop-mode {
+        display: none;
+    }
+
+    .main-menu-mobile-mode {
+        display: block;
+    }
+}
+
 /** Mobile & Desktop Menu View Option */
 
 
@@ -548,7 +564,7 @@ button.viewButton {
     margin: 0 auto;
     padding-bottom: 20px;
     transition: 0.4s;
-  
+
 }
 
 .productImg img:hover {
@@ -605,7 +621,7 @@ button.viewButton {
 .productPrice del {
     color: #d04848f2;
     position: absolute;
-    left:57px;
+    left: 57px;
     top: 58px;
 }
 
@@ -898,21 +914,21 @@ h4.pt-2 {
 }
 
 .stock.cart button {
-    background-color: #ff4747!important;
-    padding: 10px 29px!important;
-    color: #ffffff!important;
-    border-radius: 20px!important;
-    margin-top: 45%!important;
-    font-size: 18px!important;
+    background-color: #ff4747 !important;
+    padding: 10px 29px !important;
+    color: #ffffff !important;
+    border-radius: 20px !important;
+    margin-top: 45% !important;
+    font-size: 18px !important;
     border: none;
 }
 
 .stock.cart {
-    padding-top: 48px!important;
+    padding-top: 48px !important;
 }
 
 .stock.cart.two button {
-    background: #ff9a00!important;
+    background: #ff9a00 !important;
 }
 
 .chaircolor h2 {
@@ -2289,6 +2305,14 @@ button.slick-arrow.slick-prev {
 
 
 /* search */
+.searchInput .search-text {
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.searchInput .search-icon i {
+    font-size: 15px;
+}
 
 .sidebar-card-title.searchtext h2 {
     padding: 0px;
@@ -2339,6 +2363,32 @@ p.text-secondary.mb-0 {
     font-size: 14px;
 }
 
+.searchInput {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.search-suggestion-area {
+    height: 300px;
+    z-index: 10;
+    position: absolute;
+    background: #eee;
+    width: 92.5%;
+    border-radius: 0px 0px 25px 25px;
+    color: #111;
+    overflow-y: auto;
+}
+
+.search-suggestion-item {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    width: 100% !important;
+    background: white;
+}
+
+.search-suggestion-item .search-title {
+    font-size: 15px;
+    margin-top: 10px;
+}
 
 /* single product */
 
@@ -2384,7 +2434,7 @@ span.colorType {
     font-weight: 600;
     margin-left: 7px;
     margin-left: -1px;
-    border: none!important;
+    border: none !important;
     margin-right: -9px;
     padding-right: 15px;
     padding-left: 15px;
@@ -2474,8 +2524,8 @@ button.btn.btn-light.galleryAdd {
 }
 
 button.btn.btn-light.increment.bg-light.border.rounded-circle.text-dark.ml-5 {
-    height: 30px!important;
-    width: 30px!important;
+    height: 30px !important;
+    width: 30px !important;
 }
 
 element.style {}
@@ -2492,16 +2542,16 @@ button:not(:disabled) {
 }
 
 .text-dark {
-    color: #343a40!important;
+    color: #343a40 !important;
 }
 
 .ml-3,
 .mx-3 {
-    margin-left: 1rem!important;
+    margin-left: 1rem !important;
 }
 
 .bg-light {
-    background-color: #f8f9fa!important;
+    background-color: #f8f9fa !important;
 }
 
 .btn-light {
@@ -2555,7 +2605,7 @@ button:not(:disabled) {
 }
 
 .sidebar-section .form-group {
-    margin-bottom: 5px!important;
+    margin-bottom: 5px !important;
     color: #6c757d;
 }
 
@@ -2578,7 +2628,7 @@ button:not(:disabled) {
 }
 
 .btn .MuiSvgIcon-root {
-    font-size: 1rem!important;
+    font-size: 1rem !important;
 }
 
 p.mt-n3.deliveryDays {
@@ -2924,17 +2974,19 @@ img.d-inline {
 }
 
 .filterClass {
-    border: 1px solid #e2d0d0!important;
-    padding: 2px 10px!important;
-    border-radius: 15px!important;
-    outline: none!important;
+    border: 1px solid #e2d0d0 !important;
+    padding: 2px 10px !important;
+    border-radius: 15px !important;
+    outline: none !important;
     margin-left: 10px;
 }
+
 /* home page start */
 .MuiPaper-elevation1 {
-   
-    box-shadow: none!important;
+
+    box-shadow: none !important;
 }
+
 button.offer-zone-btn {
     border-radius: 15px;
     font-size: 12px;
@@ -2942,13 +2994,15 @@ button.offer-zone-btn {
     border: 1px solid white;
     color: white;
 }
+
 .product-cart {
     height: 32px;
     width: 32px;
-    background:#F0F0F0;
+    background: #F0F0F0;
     border-radius: 50%;
-    border:1px solid gray;
+    border: 1px solid gray;
 }
+
 .productImg {
     position: relative;
 }
@@ -2968,56 +3022,66 @@ button.offer-zone-btn {
 span.favoriteicon-border {
     position: relative;
 }
+
 span.favoriteicon-border::before {
     position: absolute;
     content: "";
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    border:1px solid lightgray;
+    border: 1px solid lightgray;
     right: -1px;
-    top:1px;
+    top: 1px;
 }
+
 /* accountsetting */
 .accountTextarea.mt-2.mb-1 {
     margin-left: -15px;
 }
+
 .item-quantity {
     margin-left: 104px;
 }
+
 /* register tow */
 .register-logo {
     height: 60px;
     width: 60px;
     border-radius: 50%;
     border: 1px solid lightgray;
-    
+
     display: block;
-    margin:auto;
+    margin: auto;
     margin-bottom: 20px;
 }
-.register-logo h2{
+
+.register-logo h2 {
     font-size: 20px;
     padding: 10px;
 }
+
 /* homeproduct */
 .product-review {
     position: absolute;
     top: 9px;
     right: 19px;
 }
-.singleProduct{
+
+.singleProduct {
     background: #fbfbfb;
 }
+
 ol.breadcrumb.p-3.single-product-breadcrumb {
     background: transparent;
 }
+
 .homebanner.single-product-section.bp {
     padding-top: 20px;
 }
+
 /* productdetails */
-.chairdetailstext h2.text-warning{
-    color: #ffc107!important;
+.chairdetailstext h2.text-warning {
+    color: #ffc107 !important;
     display: inline-block;
     padding-right: 10px;
 }
