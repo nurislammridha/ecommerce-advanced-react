@@ -5,7 +5,6 @@ import { withRouter } from "next/router";
 import HeaderTop from "./HeaderTop";
 import HeaderSearchBar from "./HeaderSearchBar";
 import MobileMenu from "./MobileMenu";
-import { InputBase, Paper, IconButton } from "@material-ui/core";
 import {
   // Dropdown,
   Form,
@@ -29,6 +28,7 @@ import { getCartsAction } from "../../../store/actions/orders/CartAction";
 import { getCategoriesList } from "./_redux/MenuAction/MenuAction";
 
 import Menubar from "react-responsive-multi-level-menu";
+import SearchInput from "../../search-input/SearchInput";
 
 function handleSelect(info) {
   console.log("selected ", info);
@@ -134,15 +134,15 @@ const Header = () => {
 
   const printLogo = () => {
     return (
-       <div className="">
-                  <Link href="/" className="text-white">
-                    <Navbar.Brand href="/">
-                      <img src="/images/logos/logo-white.png" />
-                      <span className="logo-bottom-text">#UnboxHappiness</span>
-                    </Navbar.Brand>
-                  </Link>
-                </div>
-      );
+      <div className="">
+        <Link href="/" className="text-white">
+          <Navbar.Brand href="/">
+            <img src="/images/logos/logo-white.png" />
+            <span className="logo-bottom-text">#UnboxHappiness</span>
+          </Navbar.Brand>
+        </Link>
+      </div>
+    );
   }
 
   return (
@@ -154,7 +154,7 @@ const Header = () => {
             <div className="row">
               <Navbar>
 
-               { printLogo() }
+                {printLogo()}
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -175,19 +175,19 @@ const Header = () => {
                                     {category.name}
                                   </MenuItem>
                                 ) : (
-                                  <SubMenu
-                                    title={category.name}
-                                    key={category.short_code}
-                                  >
-                                    {category.childs.length > 0
-                                      ? category.childs.map((subCategory) => (
+                                    <SubMenu
+                                      title={category.name}
+                                      key={category.short_code}
+                                    >
+                                      {category.childs.length > 0
+                                        ? category.childs.map((subCategory) => (
                                           <MenuItem key={subCategory.short_code}>
                                             {subCategory.name}
                                           </MenuItem>
                                         ))
-                                      : ""}
-                                  </SubMenu>
-                                )
+                                        : ""}
+                                    </SubMenu>
+                                  )
                               )}
                             {/* 
                         <SubMenu title={titleRight} key="1">
@@ -225,16 +225,7 @@ const Header = () => {
                     </Form>
                   </div> */}
                   <div className="col-lg-6 ">
-                    <Paper className="searchInput">
-                      <IconButton
-                        aria-label="Search"
-                        className="searchPlaceholder"
-                      >
-                      <i className="fas fa-search"></i>
-                       
-                      </IconButton>
-                      <InputBase placeholder="Search Products" />
-                    </Paper>
+                   <SearchInput />
                   </div>
                   <div className="col-lg-6">
                     <div className="rightnavbar d-flex flex-row ml-3">
@@ -278,19 +269,19 @@ const Header = () => {
       </div>
       <div className="main-menu-mobile-mode">
         <div className="float-left">
-            { printLogo() }
+          {printLogo()}
         </div>
         <div className="float-left">
-            Search Bar
+          Search Bar
         </div>
         <div className="float-right">
-              <i
-                className="fas fa-bars menu-bar-icon"
-                onClick={() => setEnableMenu(!enableMobileMenu)}
-              ></i>
-              <div className="mobile-menu-area">
-                {enableMobileMenu && <MobileMenu categories={categoriesMenuList} />}
-              </div>
+          <i
+            className="fas fa-bars menu-bar-icon"
+            onClick={() => setEnableMenu(!enableMobileMenu)}
+          ></i>
+          <div className="mobile-menu-area">
+            {enableMobileMenu && <MobileMenu categories={categoriesMenuList} />}
+          </div>
         </div>
         <div className="clearfix"></div>
       </div>
