@@ -2,14 +2,9 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { withRouter } from "next/router";
-import HeaderTop from "./HeaderTop";
-import HeaderSearchBar from "./HeaderSearchBar";
 import MobileMenu from "./MobileMenu";
 import {
   // Dropdown,
-  Form,
-  FormControl,
-  Button,
   Navbar,
   Nav,
   NavDropdown,
@@ -271,8 +266,8 @@ const Header = () => {
         <div className="float-left">
           {printLogo()}
         </div>
-        <div className="float-left">
-          Search Bar
+        <div className="float-left mt-2">
+          <SearchInput />
         </div>
         <div className="float-right">
           <i

@@ -2355,6 +2355,32 @@ p.text-secondary.mb-0 {
     font-size: 14px;
 }
 
+.searchInput {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.search-suggestion-area {
+    height: 300px;
+    z-index: 10;
+    position: absolute;
+    background: #eee;
+    width: 92.5%;
+    border-radius: 0px 0px 25px 25px;
+    color: #111;
+    overflow-y: auto;
+}
+
+.search-suggestion-item {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    width: 100% !important;
+    background: white;
+}
+
+.search-suggestion-item .search-title {
+    font-size: 15px;
+    margin-top: 10px;
+}
 
 /* single product */
 
