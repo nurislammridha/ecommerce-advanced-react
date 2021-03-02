@@ -169,6 +169,7 @@ form.search {
     width: 100%;
     z-index: 100;
     left: 0px;
+    top: 72px;
 }
 
 .navbar-sticky-top {

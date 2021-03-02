@@ -67,7 +67,6 @@ const CartReducer = (state = initialState, action) => {
       };
 
     case Types.GET_CARTS:
-      console.log('action.payload.carts', action.payload);
       return {
         ...state,
         carts: action.payload.carts,

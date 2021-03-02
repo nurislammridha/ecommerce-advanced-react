@@ -24,6 +24,7 @@ import { getCategoriesList } from "./_redux/MenuAction/MenuAction";
 
 import Menubar from "react-responsive-multi-level-menu";
 import SearchInput from "../../search-input/SearchInput";
+import { getUserDataAction } from "../../getUserData/Action/UserDataAction";
 
 function handleSelect(info) {
   console.log("selected ", info);
@@ -118,11 +119,11 @@ const Header = () => {
   const categoriesMenuList = useSelector(
     (state) => state.MenuReducer.categoriesMenuList
   );
-  console.log("categoriesMenuList :>> ", categoriesMenuList);
 
   useEffect(() => {
     dispatch(getCartsAction());
     dispatch(getCategoriesList());
+    dispatch(getUserDataAction());
   }, []);
 
   const [enableMobileMenu, setEnableMenu] = useState(false);
@@ -154,6 +155,10 @@ const Header = () => {
       </>
     )
   }
+  const userData = useSelector((state) => state.UserDataReducer.userData)
+  const getUserData = false;
+  console.log('userData :>> ', userData);
+
 
   return (
     <div className="main-menu">
@@ -207,12 +212,18 @@ const Header = () => {
                   <div className="col-lg-6">
                     <div className="rightnavbar d-flex flex-row ml-3">
                       <div className="loginguest">
-                        <p>Hey user/Guest</p>
-                        <Link href="/login">
-                          <span className="text-white pointer">
-                            Sign up or Login
-                          </span>
-                        </Link>
+                        {
+                          userData === 'undefined' ?
+                            <>
+                              <p>Hey user/Guest</p>
+                              <Link href="/login">
+                                <span className="text-white pointer">
+                                  Sign up or Login
+                                 </span>
+                              </Link>
+                            </> : <p>{'5'}</p>
+                        }
+
                       </div>
                       <div className="mt-1 ml-3">
                         <button className="offer-zone-btn">Offer Zone</button>
