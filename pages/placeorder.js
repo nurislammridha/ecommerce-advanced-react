@@ -5,7 +5,8 @@ import MainLayout from "../components/layouts/Layout";
 import { Checkbox } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartsAction } from "../store/actions/orders/CartAction";
-import { orderInputChange } from "../store/actions/orders/OrderAction";
+import { getOrderInfo, orderInputChange, storeSells } from "../store/actions/orders/OrderAction";
+import { toast } from "react-toastify";
 
 const placeorder = ({ router }, props) => {
   const dispatch = useDispatch()
@@ -15,15 +16,18 @@ const placeorder = ({ router }, props) => {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const shippingCost = useSelector((state) => state.cart.shippingCost);
   const orderInputData = useSelector((state) => state.OrderReducer.orderInputData);
+  const placeOrder = useSelector((state) => state.OrderReducer.placeOrder);
+  const isLoading = useSelector((state) => state.OrderReducer.isLoading);
+
   useEffect(() => {
     dispatch(getCartsAction());
   }, []);
-  console.log('orderInputData :>> ', orderInputData);
+
   const handleInputChage = (name, value, e) => {
     dispatch(orderInputChange(name, value))
   }
   const placeOrderSubmit = (e) => {
-    e.preventDefault()
+    dispatch(storeSells(orderInputData, carts, totalQuantity, shippingCost, totalPrice))
   }
   return (
     <>
@@ -86,49 +90,55 @@ const placeorder = ({ router }, props) => {
                     </form>
                   </div>
                 </div>
-                <div className="shippmentDetails">
-                  <div className="shippmentDetailsHeader mt-3 mb-3">
-                    <h1>Shippment Details</h1>
-                  </div>
-                  <div className="shippmentDetailsTitle">
-                    <h3 className="d-inline item">Items</h3>
-                    <h3 className="d-inline qty">Qty</h3>
-                    <h3 className="d-inline unitPrice">Unite price</h3>
-                    <h3 className="d-inline">Subtotal</h3>
-                  </div>
-                </div>
-                <div className="clearfix"></div>
-                <div className="item-quantity">
 
-                  {
-                    carts.length && carts.map((item, index) => (
-                      <div className="innerwishlist bg-white">
-                        <div className="wishsingleproduct shippingImg">
-                          <img className="img-fluid w-75 p-3" src={item.productImage} alt="product image" />
+                {
+                  carts.length > 0 && (
+                    <>
+                      <div className="shippmentDetails">
+                        <div className="shippmentDetailsHeader mt-3 mb-3">
+                          <h1>Shipment Details</h1>
                         </div>
-                        <div className="shippmentBoxText pt-3">
-                          <h1>{item.productName}</h1>
-                          <h5 className="text-danger">Seller: Seller shop name</h5>
-                        </div>
-                        <div className="wishsingleproductIcon">
-                          <p>{item.quantity}</p>
-                        </div>
-                        <div className="wishsingleproductIcon">
-                          <p>৳ {item.offerPrice !== null && item.price !== "" ? item.offerPrice : item.price}</p>
-                        </div>
-                        <div className="wishsingleproductIcon">
-                          {/* item.quantity * item.offerPrice */}
-                          <p>৳ {item.offerPrice !== null && item.price !== "" ? item.quantity * item.offerPrice : item.quantity * item.price}</p>
+                        <div className="shippmentDetailsTitle">
+                          <h3 className="d-inline item">Items</h3>
+                          <h3 className="d-inline qty">Qty</h3>
+                          <h3 className="d-inline unitPrice">Unite price</h3>
+                          <h3 className="d-inline">Subtotal</h3>
                         </div>
                       </div>
-                    ))
-                  }
+                      <div className="clearfix"></div>
+                      <div className="item-quantity">
 
-                  <div className="clearfix"></div>
-                  <button className="btn btn-primary float-right mt-3 backCartbtn">
-                    Back to Cart
+                        {carts.map((item, index) => (
+                          <div className="innerwishlist bg-white">
+                            <div className="wishsingleproduct shippingImg">
+                              <img className="img-fluid w-75 p-3" src={item.productImage} alt="product image" />
+                            </div>
+                            <div className="shippmentBoxText pt-3">
+                              <h1>{item.productName}</h1>
+                              <h5 className="text-danger">Seller: Seller shop name</h5>
+                            </div>
+                            <div className="wishsingleproductIcon">
+                              <p>{item.quantity}</p>
+                            </div>
+                            <div className="wishsingleproductIcon">
+                              <p>৳ {item.offerPrice !== null && item.price !== "" ? item.offerPrice : item.price}</p>
+                            </div>
+                            <div className="wishsingleproductIcon">
+                              {/* item.quantity * item.offerPrice */}
+                              <p>৳ {item.offerPrice !== null && item.price !== "" ? item.quantity * item.offerPrice : item.quantity * item.price}</p>
+                            </div>
+                          </div>
+                        ))
+                        }
+                      </div>
+                    </>
+                  )
+                }
+
+                <div className="clearfix"></div>
+                <button className="btn btn-primary float-right mt-3 backCartbtn">
+                  Back to Cart
                   </button>
-                </div>
               </div>
 
               <div className="col-lg-4">
@@ -153,12 +163,26 @@ const placeorder = ({ router }, props) => {
                   </div>
                   <div className="clearfix"></div>
                   <div className="proceedBtn">
-                    <button
-                      className="btn btn-warning text-white pb-2"
-                      disabled={(orderInputData.Receiveremail !== '' && orderInputData.contactNumber !== null && orderInputData.shipping_details !== '' && carts.length > 0) ? false : true}
-                    >
-                      PROCEED
-                    </button>
+                    {
+                      !isLoading && (
+                        <button
+                          className="btn btn-warning text-white pb-2"
+                          disabled={(orderInputData.Receiveremail !== '' && orderInputData.contactNumber !== '' && orderInputData.shipping_details !== '' && carts.length > 0) ? false : true}
+                          onClick={(e) => placeOrderSubmit()}>
+                          PROCEED
+                        </button>
+                      )
+                    }
+                    {
+                      isLoading && (
+                        <button
+                          className="btn btn-warning text-white pb-2"
+                          disabled={true}>
+                          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Processing...
+                        </button>
+                      )
+                    }
+
                   </div>
                 </div>
               </div>
