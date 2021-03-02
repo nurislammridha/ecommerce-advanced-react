@@ -103,55 +103,44 @@ const RegisterStepTwo = ({ setStepNo }) => {
         </Button>
         {isLoading === true && (
           <>
-            <div className="d-flex">
-              <Button
-                variant="primary"
-                className="mr-2 btn-secondary"
-                onClick={(e) => setStepNo(1)}
-              >
-                Back
-              </Button>
-              {isLoading === true && (
-                <>
-                  <Button disabled={true} variant="primary">
-                    <Spinner animation="border" role="status">
-                      {" "}
-                    </Spinner>{" "}
+            <Button disabled={true} variant="primary">
+              <Spinner animation="border" role="status">
+                {" "}
+              </Spinner>{" "}
                     Submitting...
                   </Button>
-                </>
-              )}
-              {isLoading === false && (
-                <Button
-                  type="submit"
-                  variant="primary"
-                  onClick={handleSubmit(handleRegister)}
-                >
-                  Submit
-                </Button>
-              )}
-            </div>
-
-            <div className="formcondition">
-              <span>By clicking 'SIGN UP', I agree with Maccaf's </span>
-              <Link href="/">
-                <a>
-                  {" "}
-                  <span>Terms of Use</span>{" "}
-                </a>
-              </Link>{" "}
-              and{" "}
-              <Link href="/">
-                <a>
-                  {"   "}
-                  <span>Privacy Policy</span>
-                </a>
-              </Link>
-            </div>
           </>
         )}
+
+        {
+          !isLoading && (
+            <Button type="submit" variant="primary" onClick={handleSubmit(handleRegister)} >
+              Submit
+            </Button>
+          )
+        }
+
+
+      </div>
+
+      <div className="formcondition">
+        <span>By clicking 'SIGN UP', I agree with Maccaf's </span>
+        <Link href="/">
+          <a>
+            {" "}
+            <span>Terms of Use</span>{" "}
+          </a>
+        </Link>{" "}
+              and{" "}
+        <Link href="/">
+          <a>
+            {"   "}
+            <span>Privacy Policy</span>
+          </a>
+        </Link>
       </div>
     </>
+
   );
 };
 

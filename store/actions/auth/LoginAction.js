@@ -35,7 +35,7 @@ export const loginAction = (loginData) => (dispatch) => {
           response.message = res.data.message;
           response.isLoading = false;
           localStorage.setItem("loginData", JSON.stringify(response));
-          localStorage.setItem("access_token", JSON.stringify(response.tokenData));
+          localStorage.setItem("access_token", response.tokenData);
           dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: response })
         }
       })
