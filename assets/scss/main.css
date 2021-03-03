@@ -107,7 +107,7 @@ form.search {
 }
 
 .loginguest {
-    line-height: 1px;
+    /* line-height: 1px; */
     justify-content: center;
     flex: 1;
     align-items: center;
@@ -3085,4 +3085,11 @@ ol.breadcrumb.p-3.single-product-breadcrumb {
     color: #ffc107 !important;
     display: inline-block;
     padding-right: 10px;
+}
+button#dropdown-item-button {
+    background: none;
+    border: none;
+}
+.dropdown-menu{
+    margin-top: 5px!important;
 }

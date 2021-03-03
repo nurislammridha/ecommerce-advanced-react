@@ -1,21 +1,25 @@
 import * as Types from "../Types/Types";
 
 export const getUserDataAction = () => async (dispatch) => {
-    // dispatch({ type: Types.GET_CARTS_LOADING, payload: true });
-    const data = getUserData();
-    dispatch({ type: Types.GET_USER_STORAGE_DATA, payload: data });
+  const data = getUserData();
+  dispatch({ type: Types.GET_USER_STORAGE_DATA, payload: data });
+};
+//logout user    
+export const handleLogoutUser = () => (dispatch) => {
+  const logout = localStorage.removeItem('loginData');
+  dispatch(getUserDataAction())
+  dispatch({type: Types.LOGOUT_USER, payload: logout});
+}
+function getUserData() {
+  const userStorageData = JSON.parse(localStorage.getItem("loginData"));
+  let data = {
+    userData: null,
+    access_token: null,
   };
 
-function getUserData() {
-    const userStorageData = localStorage.getItem("loginData");
-    let data = {
-      userData: {},
-      tokenData: null,
-    };
-  
-    if (typeof userStorageData !== "undefined" && userStorageData !== null) {
-      data.userData = JSON.parse(userStorageData.userData);
-      data.tokenData = JSON.parse(userStorageData.tokenData);
-    }
-    return data;
+  if (typeof userStorageData !== "undefined" && userStorageData !== null) {
+    data.userData = userStorageData.userData;
+    data.access_token = userStorageData.tokenData;
   }
+  return data;
+}

@@ -8,6 +8,8 @@ import {
   Navbar,
   Nav,
   NavDropdown,
+  DropdownButton,
+  Dropdown,
 } from "react-bootstrap";
 import {
   FaSearchengin,
@@ -24,7 +26,7 @@ import { getCategoriesList } from "./_redux/MenuAction/MenuAction";
 
 import Menubar from "react-responsive-multi-level-menu";
 import SearchInput from "../../search-input/SearchInput";
-import { getUserDataAction } from "../../getUserData/Action/UserDataAction";
+import { getUserDataAction, handleLogoutUser } from "../../getUserData/Action/UserDataAction";
 
 function handleSelect(info) {
   console.log("selected ", info);
@@ -156,9 +158,11 @@ const Header = () => {
     )
   }
   const userData = useSelector((state) => state.UserDataReducer.userData)
-  const getUserData = false;
-  console.log('userData :>> ', userData);
 
+  const handleLogout = () => {
+    dispatch(handleLogoutUser())
+    
+  }
 
   return (
     <div className="main-menu">
@@ -213,7 +217,7 @@ const Header = () => {
                     <div className="rightnavbar d-flex flex-row ml-3">
                       <div className="loginguest">
                         {
-                          userData === 'undefined' ?
+                          userData === null ?
                             <>
                               <p>Hey user/Guest</p>
                               <Link href="/login">
@@ -221,7 +225,16 @@ const Header = () => {
                                   Sign up or Login
                                  </span>
                               </Link>
-                            </> : <p>{'5'}</p>
+                            </> :
+                            //  <p>{userData.first_name}</p>
+                            <DropdownButton className="user-profile" id="dropdown-item-button" title={userData.first_name}>
+                              <Link className="dropdown-item" href="/myprofile">
+                                <Dropdown.Item as="button">
+                                  <i className="fas fa-user mr-2"></i> Profile
+                              </Dropdown.Item>
+                              </Link>
+                              <Dropdown.Item as="button" onClick={() => handleLogout()}><i className="fas fa-sign-out-alt mr-2"></i>Logout</Dropdown.Item>
+                            </DropdownButton>
                         }
 
                       </div>
