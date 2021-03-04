@@ -11,7 +11,6 @@ const ProductProfile = ({ router }, props) => {
     dispatch(getUserDataAction())
   }, [])
   const userData = useSelector((state) => state.UserDataReducer.userData);
-  console.log('userData :>> ', userData);
   return (
     <>
       <div className="wishbanner pb">
@@ -42,7 +41,7 @@ const ProductProfile = ({ router }, props) => {
                 <div className="bg-white p-3 pb-4">
                   <div className="registerInfo border-right float-left">
                     <h6 className="text-success pb-2">
-                      Your registered name
+                      User Information
                       </h6>
                     <p>{`${userData !== null && userData.first_name} ${userData !== null && userData.last_name}`}</p>
                       <p>username : {userData !== null && userData.username}</p>
@@ -55,7 +54,7 @@ const ProductProfile = ({ router }, props) => {
 
                   <div className="registerInfo pl-4  float-left">
                     <h6 className="text-primary pb-2">
-                      Your contact information
+                      Contact Information
                       </h6>
                     <p>{userData !== null && userData.email}</p>
                     <p>{userData !== null && userData.phone_no}</p>

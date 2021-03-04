@@ -21,6 +21,7 @@ export const loginAction = (loginData) => (dispatch) => {
     userData: {},
     tokenData: {},
     isLoggedIn: false,
+    isLogging: false,
     loginMessage: "",
     isLoading: true,
   }
@@ -35,6 +36,7 @@ export const loginAction = (loginData) => (dispatch) => {
           response.tokenData = data.access_token;
           response.message = res.data.message;
           response.isLoading = false;
+          response.isLogging = true;
           localStorage.setItem("loginData", JSON.stringify(response));
           localStorage.setItem("access_token", response.tokenData);
           dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: response });
@@ -55,6 +57,11 @@ export const loginAction = (loginData) => (dispatch) => {
     showToast('error', 'Network Error, Please Fix this !');
   }
   dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: response })
+}
+
+export const emptyDispatch = () => (dispatch) => {
+  const isLogging = false;
+  dispatch({ type: Types.EMPTY_DISPATCH, payload: isLogging});
 }
 
 export const getAuthData = () => async (dispatch) => {

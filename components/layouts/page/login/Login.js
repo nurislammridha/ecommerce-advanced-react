@@ -3,12 +3,15 @@ import { Button, FormGroup, FormControl, ControlLabel, Spinner } from "react-boo
 import Form from "react-bootstrap/Form";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { handleLoginInput, loginAction } from "../../../../store/actions/auth/LoginAction";
+import { emptyDispatch, handleLoginInput, loginAction } from "../../../../store/actions/auth/LoginAction";
 import { useForm } from "react-hook-form";
-const Login = ({ router }, props) => {
+import { useRouter } from 'next/router'
+
+const Login = () => {
   const dispatch = useDispatch();
   const loginInpiut = useSelector((state) => state.authReducer.loginInpiut);
   const isLoading = useSelector((state) => state.authReducer.isLoading);
+  const isLogging = useSelector((state) => state.authReducer.isLogging);
   const { register, handleSubmit, errors, setValue } = useForm();
 
   const handleLoginInputChange = (name, value) => {
@@ -19,7 +22,11 @@ const Login = ({ router }, props) => {
     dispatch(loginAction(loginInpiut));
     // e.preventDefault();
   }
-
+  const router = useRouter()
+  if (isLogging === true) {
+    router.push('/myprofile')
+    dispatch(emptyDispatch())
+  }
   return (
     <>
       <div className="wishbanner pb">
@@ -39,7 +46,7 @@ const Login = ({ router }, props) => {
                     <Form.Control
                       type="text"
                       name="email"
-                      value={loginInpiut.email}
+                      value={loginInpiut && loginInpiut.email}
                       onChange={(e) => handleLoginInputChange('email', e.target.value)}
                       placeholder="Enter your register email or phone number"
                       ref={register({
@@ -60,7 +67,7 @@ const Login = ({ router }, props) => {
                       type="password"
                       placeholder="Enter Password"
                       name="password"
-                      value={loginInpiut.password}
+                      value={loginInpiut && loginInpiut.password}
                       onChange={(e) => handleLoginInputChange('password', e.target.value)}
                       ref={register({
                         required: true,

@@ -33,6 +33,7 @@ export const updatedUserData = (userInputData, userData) => (dispatch) => {
         }
 
         localStorage.setItem("loginData", JSON.stringify(userData));
+        dispatch(handleSetDataIntoInputField())
         dispatch(getUserDataAction())
         showToast('success', res.data.message);
         dispatch({ type: Types.UPDATED_USER_DATA, payload: response });
@@ -52,8 +53,7 @@ export const updatedUserData = (userInputData, userData) => (dispatch) => {
 
 // get user data for set input field 
 export const handleSetDataIntoInputField = () => (dispatch) => {
-  const getUserData = dispatch(getUserDataAction());
-  console.log('getUserData :>> ', getUserData);
-  dispatch({ type: Types.GET_USER_UPDATED_DATA, payload: getUserData })
+  const userStorageData = JSON.parse(localStorage.getItem("loginData"));
+  dispatch({ type: Types.GET_USER_UPDATED_DATA, payload: userStorageData.userData })
 
 }

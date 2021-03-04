@@ -14,6 +14,7 @@ const ProductAccountSetting = ({ router }, props) => {
   }, [])
   const userData = useSelector((state) => state.UserDataReducer.userData);
   const userInputData = useSelector((state) => state.UserReducer.userInputData);
+  const isLoading = useSelector((state) => state.UserReducer.isLoading);
 
   const handleChangeTextInput = (name, value) => {
     dispatch(changeUserUpdateInput(name, value))
@@ -22,7 +23,7 @@ const ProductAccountSetting = ({ router }, props) => {
     dispatch(updatedUserData(userInputData, userData))
   }
   useEffect(() => {
-    dispatch(handleSetDataIntoInputField())
+    dispatch(handleSetDataIntoInputField());
   }, [])
   return (
     <>
@@ -60,6 +61,7 @@ const ProductAccountSetting = ({ router }, props) => {
                       type="text"
                       // defaultValue={userData !== null && userData.first_name}
                       name="first_name"
+                      value={userInputData && userInputData.first_name}
                       onChange={(e) => handleChangeTextInput('first_name', e.target.value)}
                       ref={register({
                         required: true,
@@ -78,8 +80,8 @@ const ProductAccountSetting = ({ router }, props) => {
                     <Form.Control
                       placeholder="Edit Last name"
                       type="text"
-                      // defaultValue={userData !== null && userData.last_name}
                       name="last_name"
+                      value={userInputData && userInputData.last_name}
                       onChange={(e) => handleChangeTextInput('last_name', e.target.value)}
                       ref={register({
                         required: true,
@@ -100,8 +102,8 @@ const ProductAccountSetting = ({ router }, props) => {
                     <Form.Control
                       placeholder="Edit Email"
                       type="text"
-                      // defaultValue={userData !== null && userData.email}
                       name="email"
+                      value={userInputData && userInputData.email}
                       onChange={(e) => handleChangeTextInput('email', e.target.value)}
                       ref={register({
                         required: true,
@@ -119,8 +121,8 @@ const ProductAccountSetting = ({ router }, props) => {
                     <Form.Control
                       placeholder="Phone number"
                       type="number"
-                      // defaultValue={userData !== null && userData.phone_no}
                       name="phone_no"
+                      value={userInputData && userInputData.phone_no}
                       onChange={(e) => handleChangeTextInput('phone_no', e.target.value)}
                       ref={register({
                         required: true,
@@ -143,6 +145,7 @@ const ProductAccountSetting = ({ router }, props) => {
                     rows={4}
                     placeholder="Edit Address"
                     name="address"
+                    value={userInputData && userInputData.address ? userInputData.address : ''}
                     onChange={(e) => handleChangeTextInput('address', e.target.value)}
                     ref={register({
                       required: true,
@@ -156,7 +159,7 @@ const ProductAccountSetting = ({ router }, props) => {
                   </div>
                 </div>
 
-                <Row>
+                {/* <Row>
                   <div className="col-xl-4 col-lg-4 col-6">
                     <Form.Label>Password</Form.Label>
                     <Form.Control placeholder="Type old password" />
@@ -169,12 +172,25 @@ const ProductAccountSetting = ({ router }, props) => {
                     <Form.Label>New Password</Form.Label>
                     <Form.Control placeholder="Type new password" />
                   </div>
-                </Row>
-                <button type="submit" className="btn btn-warning float-right text-white mt-3">
-                  Save Changes
-                </button>
+                </Row> */}
+                
+                {
+                  isLoading && (
+                    <button type="submit" className="btn btn-warning float-right text-white mt-3">
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Saving...
+                    </button>
+                  )
+                }
+                {
+                  !isLoading && (
+                    <button type="submit" className="btn btn-warning float-right text-white mt-3">
+                      Save Changes
+                    </button>
+                  )
+                }
                 <div className="clearfix"></div>
               </Form>
+
             </div>
           </div>
         </div>

@@ -16,6 +16,8 @@ const initialState = {
   registrationStatus: false,
   redirected_route: null,
   loginLoading: false,
+  isLogging: false,
+
 };
 
 const AuthReducer = (state = initialState, action) => {
@@ -37,8 +39,12 @@ const AuthReducer = (state = initialState, action) => {
         tokenData: action.payload.tokenData,
         loginMessage: action.payload.loginMessage,
         isLoading: action.payload.isLoading,
+        isLogging: action.payload.isLogging,
       };
-
+    case Types.EMPTY_DISPATCH:
+      return {
+        isLogging: action.payload
+      }
     case Types.AUTH_GET_LOGIN_DATA:
       return {
         ...state,
