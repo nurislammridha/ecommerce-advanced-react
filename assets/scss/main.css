@@ -3,8 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("../../node_modules/slick-carousel/slick/slick.css");
 @import url("../../node_modules/slick-carousel/slick/slick-theme.css");
-@import url("https://use.fontawesome.com/releases/v5.11.1/css/all.css");
-
 body {
     font-family: "Poppins", sans-serif;
 }
@@ -149,56 +147,6 @@ form.search {
 .topRightMenu {
     text-align: right;
 }
-
-/** Mobile & Desktop Menu View Option */
-.menu-bar-icon {
-    font-size: 30px;
-    color: #fff;
-    margin-right: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.main-menu-mobile-mode {
-    background: #00c4ee;
-    /* position: fixed; */
-}
-
-.mobile-menu-area {
-    position: absolute;
-    width: 100%;
-    z-index: 100;
-    left: 0px;
-    top: 72px;
-}
-
-.navbar-sticky-top {
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-}
-
-@media all and (min-width: 990px) {
-    .main-menu-desktop-mode {
-        display: block;
-    }
-
-    .main-menu-mobile-mode {
-        display: none;
-    }
-}
-
-@media all and (max-width: 989px) {
-    .main-menu-desktop-mode {
-        display: none;
-    }
-
-    .main-menu-mobile-mode {
-        display: block;
-    }
-}
-
-/** Mobile & Desktop Menu View Option */
 
 
 /*** Header Top Bar ***/
@@ -918,14 +866,14 @@ h4.pt-2 {
     background-color: #ff4747 !important;
     padding: 10px 29px !important;
     color: #ffffff !important;
-    border-radius: 20px !important;
+    border-radius: 50px !important;
     margin-top: 45% !important;
     font-size: 18px !important;
     border: none;
 }
 
 .stock.cart {
-    padding-top: 48px !important;
+    /* padding-top: 48px !important; */
 }
 
 .stock.cart.two button {
@@ -936,7 +884,7 @@ h4.pt-2 {
     color: #373a3c;
     font-size: 16px;
     font-weight: 600;
-    padding-top: 22px;
+    /* padding-top: 22px; */
 }
 
 .chairDeliveryoption {
