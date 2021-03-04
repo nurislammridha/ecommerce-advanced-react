@@ -111,7 +111,6 @@ const Register = ({ router }, props) => {
                       {
                         isLoading === true && (
                           <>
-
                             <Button disabled={true} variant="primary">
                               <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Next
                             </Button>
