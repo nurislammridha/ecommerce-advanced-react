@@ -54,5 +54,6 @@ export const updatedUserData = (userInputData, userData) => (dispatch) => {
 export const handleSetDataIntoInputField = () => (dispatch) => {
   const getUserData = dispatch(getUserDataAction());
   console.log('getUserData :>> ', getUserData);
+  dispatch({ type: Types.GET_USER_UPDATED_DATA, payload: getUserData })
 
 }

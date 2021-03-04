@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { changeUserUpdateInput, updatedUserData } from "../../../../store/actions/user/UserAction";
+import { changeUserUpdateInput, handleSetDataIntoInputField, updatedUserData } from "../../../../store/actions/user/UserAction";
 import { getUserDataAction } from "../../../getUserData/Action/UserDataAction";
 import ProfileSideBar from "../myprofile/profileSideBar";
 const ProductAccountSetting = ({ router }, props) => {
@@ -21,6 +21,9 @@ const ProductAccountSetting = ({ router }, props) => {
   const handleUpdatedUserData = () => {
     dispatch(updatedUserData(userInputData, userData))
   }
+  useEffect(() => {
+    dispatch(handleSetDataIntoInputField())
+  }, [])
   return (
     <>
       <div className="wishbanner pb">
