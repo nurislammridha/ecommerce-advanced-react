@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import MainLayout from '../components/layouts/Layout';
-import Sidebar from '../components/layouts/Sidebar/sidebar';
 import { Card, Media } from 'react-bootstrap';
 import PageHeding from '../components/pages/sidbarLayout/PageHeding';
 import { FaThumbsUp } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAudienceData } from '../store/actions/AudiencePoll/AudiencePoll';
+import ProfileSideBar from '../components/layouts/page/myprofile/profileSideBar';
 
 export default function giftcard(props) {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ export default function giftcard(props) {
         <div class="container">
           <div className="row">
             <div className="col-md-3">
-              <Sidebar />
+            <ProfileSideBar />
             </div>
             <div className="col-md-9">
               {/* <PageHeding name="notification" /> */}

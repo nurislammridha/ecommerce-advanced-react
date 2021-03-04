@@ -4,7 +4,7 @@ const initialState = {
     isLoading: false,
     orderInputData: {
         Receiveremail: '',
-        contactNumber: null,
+        contactNumber: '',
         shipping_details: '',
         optionaEmail: ''
     },
@@ -42,7 +42,8 @@ const initialState = {
                 item_tax: 0
             }
         ]
-    }
+    },
+    isLoading: false,
 };
 
 const OrderReducer = (state = initialState, action) => {
@@ -53,6 +54,12 @@ const OrderReducer = (state = initialState, action) => {
             return {
                 ...state,
                 orderInputData: orderInputData,
+            };
+        case Types.ORDER_SUBMIT:
+            return {
+                ...state,
+                isLoading: action.payload.isLoading,
+                orderInputData: initialState.orderInputData
             }
         default:
             return {

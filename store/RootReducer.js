@@ -18,6 +18,8 @@ import MenuReducer from "../components/layouts/Header/_redux/MenuReducer/MenuRed
 import HomeCarouselReducer from "../pages/api/_redux/reducer/reducer";
 import AudiencePoll from "./reducers/AudiencePoll/AudiencePoll";
 import wishListReducer from "../components/WishList/_redux/Reducer/wishListReducer";
+import UserDataReducer from "../components/getUserData/Reducer/UserDataReducer";
+import UserReducer from "./reducers/user/UserReducer";
 
 export default combineReducers({
   product: ProductReducer,
@@ -38,4 +40,6 @@ export default combineReducers({
   HomeCarouselReducer: HomeCarouselReducer,
   AudiencePoll: AudiencePoll,
   wishListReducer: wishListReducer,
+  UserDataReducer: UserDataReducer,
+  UserReducer: UserReducer,
 });

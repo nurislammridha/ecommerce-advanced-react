@@ -8,6 +8,8 @@ import {
   Navbar,
   Nav,
   NavDropdown,
+  DropdownButton,
+  Dropdown,
 } from "react-bootstrap";
 import {
   FaSearchengin,
@@ -24,6 +26,7 @@ import { getCategoriesList } from "./_redux/MenuAction/MenuAction";
 
 import Menubar from "react-responsive-multi-level-menu";
 import SearchInput from "../../search-input/SearchInput";
+import { getUserDataAction, handleLogoutUser } from "../../getUserData/Action/UserDataAction";
 
 function handleSelect(info) {
   console.log("selected ", info);
@@ -118,11 +121,11 @@ const Header = () => {
   const categoriesMenuList = useSelector(
     (state) => state.MenuReducer.categoriesMenuList
   );
-  console.log("categoriesMenuList :>> ", categoriesMenuList);
 
   useEffect(() => {
     dispatch(getCartsAction());
     dispatch(getCategoriesList());
+    dispatch(getUserDataAction());
   }, []);
 
   const [enableMobileMenu, setEnableMenu] = useState(false);
@@ -153,6 +156,12 @@ const Header = () => {
         </span>
       </>
     )
+  }
+  const userData = useSelector((state) => state.UserDataReducer.userData)
+
+  const handleLogout = () => {
+    dispatch(handleLogoutUser())
+    
   }
 
   return (
@@ -207,12 +216,27 @@ const Header = () => {
                   <div className="col-lg-6">
                     <div className="rightnavbar d-flex flex-row ml-3">
                       <div className="loginguest">
-                        <p>Hey user/Guest</p>
-                        <Link href="/login">
-                          <span className="text-white pointer">
-                            Sign up or Login
-                          </span>
-                        </Link>
+                        {
+                          userData === null ?
+                            <>
+                              <p>Hey user/Guest</p>
+                              <Link href="/login">
+                                <span className="text-white pointer">
+                                  Sign up or Login
+                                 </span>
+                              </Link>
+                            </> :
+                            //  <p>{userData.first_name}</p>
+                            <DropdownButton className="user-profile" id="dropdown-item-button" title={userData.first_name}>
+                              <Link className="dropdown-item" href="/myprofile">
+                                <Dropdown.Item as="button">
+                                  <i className="fas fa-user mr-2"></i> Profile
+                              </Dropdown.Item>
+                              </Link>
+                              <Dropdown.Item as="button" onClick={() => handleLogout()}><i className="fas fa-sign-out-alt mr-2"></i>Logout</Dropdown.Item>
+                            </DropdownButton>
+                        }
+
                       </div>
                       <div className="mt-1 ml-3">
                         <button className="offer-zone-btn">Offer Zone</button>

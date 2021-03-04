@@ -1,53 +1,33 @@
 import React, { Component, useState, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { changeUserUpdateInput, updatedUserData } from "../../../../store/actions/user/UserAction";
+import { getUserDataAction } from "../../../getUserData/Action/UserDataAction";
+import ProfileSideBar from "../myprofile/profileSideBar";
 const ProductAccountSetting = ({ router }, props) => {
+  const { register, handleSubmit, errors, setValue, watch } = useForm();
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getUserDataAction())
+  }, [])
+  const userData = useSelector((state) => state.UserDataReducer.userData);
+  const userInputData = useSelector((state) => state.UserReducer.userInputData);
+
+  const handleChangeTextInput = (name, value) => {
+    dispatch(changeUserUpdateInput(name, value))
+  }
+  const handleUpdatedUserData = () => {
+    dispatch(updatedUserData(userInputData, userData))
+  }
   return (
     <>
       <div className="wishbanner pb">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-3 offset-lg-1">
-              <div className="sidebar card">
-                <ul>
-                  <li>
-                    <a href="">My Profile</a>
-                  </li>
-                  <li>
-                    <a href="">Account Setting</a>
-                  </li>
-                  <li>
-                    <a href="">My Card</a>
-                  </li>
-                  <li>
-                    <a href="">My Wish list</a>
-                  </li>
-                  <li>
-                    <a href="">My Orders</a>
-                  </li>
-                  <li>
-                    <a href="">My Wallet</a>
-                  </li>
-                  <li>
-                    <a href="">My Gift card</a>
-                  </li>
-                  <li>
-                    <a href="">My Vouchar</a>
-                  </li>
-                  <li>
-                    <a href="">Notifications</a>
-                  </li>
-                  <li>
-                    <a href="">Audience Pool</a>
-                  </li>
-                  <li>
-                    <a href="">My Reviews</a>
-                  </li>
-                  <li>
-                    <a href="">Refferal Programme</a>
-                  </li>
-                </ul>
-              </div>
+              <ProfileSideBar />
             </div>
 
             <div className="col-lg-7">
@@ -55,34 +35,100 @@ const ProductAccountSetting = ({ router }, props) => {
                 <h1>Edit and Update your Information</h1>
               </div>
               <div className="d-inline">
-                <img className="d-inline" src="/images/default/chair.png" />
-                <span className="accountText">
+                <img className="d-inline img-thumbnail" style={{ width: '125px' }} src="/images/default/chair.png" />
+                <p className="accountText">
                   You can change your profile photo at anytime
-                </span>
+                </p>
               </div>
 
-              <Form>
+              <Form
+                onSubmit={handleSubmit(handleUpdatedUserData)}
+                method="post"
+                autoComplete="off"
+                encType="multipart/form-data"
+                autoSave="off"
+              >
                 <Row>
                   {/* <Col> */}
                   <div className="col-6">
                     <Form.Label>First name</Form.Label>
-                    <Form.Control placeholder="Edit First name" />
+                    <Form.Control
+                      placeholder="Edit First name"
+                      type="text"
+                      // defaultValue={userData !== null && userData.first_name}
+                      name="first_name"
+                      onChange={(e) => handleChangeTextInput('first_name', e.target.value)}
+                      ref={register({
+                        required: true,
+                        maxLength: 100,
+                      })}
+                    />
+                    <div className="text-danger m-2">
+                      {errors.first_name &&
+                        errors.first_name.type === 'required' &&
+                        "First name can't be empty!"}
+                    </div>
                     {/* </Col> */}
                   </div>
                   <div className="col-6">
                     <Form.Label>Last Name</Form.Label>
-                    <Form.Control placeholder="Edit Last name" />
+                    <Form.Control
+                      placeholder="Edit Last name"
+                      type="text"
+                      // defaultValue={userData !== null && userData.last_name}
+                      name="last_name"
+                      onChange={(e) => handleChangeTextInput('last_name', e.target.value)}
+                      ref={register({
+                        required: true,
+                        maxLength: 100,
+                      })}
+                    />
+                    <div className="text-danger m-2">
+                      {errors.first_name &&
+                        errors.last_name.type === 'required' &&
+                        "Last name can't be empty!"}
+                    </div>
                   </div>
                   {/* <Col></Col> */}
                 </Row>
                 <Row>
                   <Col>
                     <Form.Label className="mt-2">Email</Form.Label>
-                    <Form.Control placeholder="Edit Email" />
+                    <Form.Control
+                      placeholder="Edit Email"
+                      type="text"
+                      // defaultValue={userData !== null && userData.email}
+                      name="email"
+                      onChange={(e) => handleChangeTextInput('email', e.target.value)}
+                      ref={register({
+                        required: true,
+                        maxLength: 100,
+                      })}
+                    />
+                    <div className="text-danger m-2">
+                      {errors.first_name &&
+                        errors.email.type === 'required' &&
+                        "Email can't be empty!"}
+                    </div>
                   </Col>
                   <Col>
                     <Form.Label className="mt-2">Contact Number</Form.Label>
-                    <Form.Control placeholder="Phone number" />
+                    <Form.Control
+                      placeholder="Phone number"
+                      type="number"
+                      // defaultValue={userData !== null && userData.phone_no}
+                      name="phone_no"
+                      onChange={(e) => handleChangeTextInput('phone_no', e.target.value)}
+                      ref={register({
+                        required: true,
+                        maxLength: 100,
+                      })}
+                    />
+                    <div className="text-danger m-2">
+                      {errors.first_name &&
+                        errors.phone_no.type === 'required' &&
+                        "Phone number can't be empty!"}
+                    </div>
                   </Col>
                   {/* <Col></Col> */}
                 </Row>
@@ -93,7 +139,18 @@ const ProductAccountSetting = ({ router }, props) => {
                     as="textarea"
                     rows={4}
                     placeholder="Edit Address"
+                    name="address"
+                    onChange={(e) => handleChangeTextInput('address', e.target.value)}
+                    ref={register({
+                      required: true,
+                      maxLength: 100,
+                    })}
                   />
+                  <div className="text-danger m-2">
+                    {errors.first_name &&
+                      errors.address.type === 'required' &&
+                      "Last name can't be empty!"}
+                  </div>
                 </div>
 
                 <Row>
@@ -110,7 +167,7 @@ const ProductAccountSetting = ({ router }, props) => {
                     <Form.Control placeholder="Type new password" />
                   </div>
                 </Row>
-                <button className="btn btn-warning float-right text-white mt-3">
+                <button type="submit" className="btn btn-warning float-right text-white mt-3">
                   Save Changes
                 </button>
                 <div className="clearfix"></div>

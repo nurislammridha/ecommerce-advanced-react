@@ -5,6 +5,7 @@ import { Card, Media } from 'react-bootstrap';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWallets } from "../../../../store/redux/wallets/actions/WalletAction";
 import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
+import ProfileSideBar from "../myprofile/profileSideBar";
 
 const Wallet = ({ router }, props) => {
   const dispatch = useDispatch();
@@ -20,46 +21,7 @@ const Wallet = ({ router }, props) => {
       <div className="container">
         <div className="row">
           <div className="col-md-3">
-            <div className="sidebar card">
-              <ul>
-                <li>
-                  <a href="">My Profile</a>
-                </li>
-                <li>
-                  <a href="">Account Setting</a>
-                </li>
-                <li>
-                  <a href="">My Card</a>
-                </li>
-                <li>
-                  <a href="">My Wish list</a>
-                </li>
-                <li>
-                  <a href="">My Orders</a>
-                </li>
-                <li>
-                  <a href="">My Wallet</a>
-                </li>
-                <li>
-                  <a href="">My Gift card</a>
-                </li>
-                <li>
-                  <a href="">My Vouchar</a>
-                </li>
-                <li>
-                  <a href="">Notifications</a>
-                </li>
-                <li>
-                  <a href="">Audience Pool</a>
-                </li>
-                <li>
-                  <a href="">My Reviews</a>
-                </li>
-                <li>
-                  <a href="">Refferal Programme</a>
-                </li>
-              </ul>
-            </div>
+            <ProfileSideBar />
           </div>
 
           <div className="col-md-9 ">
@@ -81,7 +43,7 @@ const Wallet = ({ router }, props) => {
                       height={80}
                     />
                   )}
-                  
+
                   {wallets.map.length > 0 && (
                     <>
                       {wallets.map((wallet, index) => (

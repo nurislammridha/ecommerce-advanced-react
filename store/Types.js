@@ -68,3 +68,7 @@ export const GET_AUDIENCE_POLL_LOADING = "GET_AUDIENCE_POLL_LOADING";
 export const CHANGE_PRODUCT_FILTER = "CHANGE_PRODUCT_FILTER";
 export const GET_CATEGORIES_LIST = "GET_CATEGORIES_LIST";
 export const GET_BRANDS_LIST_DATA = "GET_BRANDS_LIST_DATA";
+
+//**********************************User**************************************** */
+export const CHANGE_USER_INPUT_DATA = "CHANGE_USER_INPUT_DATA";
+export const UPDATED_USER_DATA = "UPDATED_USER_DATA";

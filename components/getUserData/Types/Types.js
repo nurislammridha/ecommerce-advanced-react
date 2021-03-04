@@ -1,0 +1,2 @@
+export const GET_USER_STORAGE_DATA = "GET_USER_STORAGE_DATA";
+export const LOGOUT_USER = "LOGOUT_USER";

@@ -3,6 +3,7 @@ import * as JwtDecode from "jwt-decode";
 // import { generateToken } from "../../services/token/TokenService";
 import axios from "axios";
 import { showToast } from "../../../components/master/Helper/ToastHelper";
+import { getUserDataAction } from "../../../components/getUserData/Action/UserDataAction";
 // import { API_POST_LOGIN } from "../../ApiEndpoint";
 
 
@@ -36,7 +37,8 @@ export const loginAction = (loginData) => (dispatch) => {
           response.isLoading = false;
           localStorage.setItem("loginData", JSON.stringify(response));
           localStorage.setItem("access_token", response.tokenData);
-          dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: response })
+          dispatch({ type: Types.AUTH_LOGIN_CHECK, payload: response });
+          dispatch(getUserDataAction())
         }
       })
       .catch((error) => {

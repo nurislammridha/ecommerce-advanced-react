@@ -4,6 +4,7 @@ import Rater from "react-rater";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMyOrders } from "../../../../store/redux/myOrders/actions/MyOrderAction";
 import LoadingSkelleton from "../../../master/skelleton/LoadingSkelleton";
+import ProfileSideBar from "../myprofile/profileSideBar";
 
 const MyOrder = ({ router }, props) => {
   const dispatch = useDispatch();
@@ -20,46 +21,7 @@ const MyOrder = ({ router }, props) => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-3 offset-lg-1">
-              <div className="sidebar card">
-                <ul>
-                  <li>
-                    <a href="">My Profile</a>
-                  </li>
-                  <li>
-                    <a href="">Account Setting</a>
-                  </li>
-                  <li>
-                    <a href="">My Card</a>
-                  </li>
-                  <li>
-                    <a href="">My Wish list</a>
-                  </li>
-                  <li>
-                    <a href="">My Orders</a>
-                  </li>
-                  <li>
-                    <a href="">My Wallet</a>
-                  </li>
-                  <li>
-                    <a href="">My Gift card</a>
-                  </li>
-                  <li>
-                    <a href="">My Vouchar</a>
-                  </li>
-                  <li>
-                    <a href="">Notifications</a>
-                  </li>
-                  <li>
-                    <a href="">Audience Pool</a>
-                  </li>
-                  <li>
-                    <a href="">My Reviews</a>
-                  </li>
-                  <li>
-                    <a href="">Refferal Programme</a>
-                  </li>
-                </ul>
-              </div>
+              <ProfileSideBar />
             </div>
 
             <div className="col-lg-7">
@@ -94,7 +56,7 @@ const MyOrder = ({ router }, props) => {
                           </div>
                         </div>
                         <div className="clear-fix"></div>
-                    
+
 
                         <div className="singleorderproduct">
                           <img src="/images/default/chair.png" />
@@ -102,7 +64,7 @@ const MyOrder = ({ router }, props) => {
                         <div className="wishsingleproductText orderproducttext">
                           <h1>Product title with link</h1>
                           <h4>৳ 500</h4>
-      
+
                           <h5>Order On:</h5>
                         </div>
                         <div className="orderquantity">
