@@ -10,6 +10,9 @@ export const handleLogoutUser = () => (dispatch) => {
   dispatch(getUserDataAction())
   dispatch({type: Types.LOGOUT_USER, payload: logout});
 }
+
+//updated user data in local localStorage
+
 function getUserData() {
   const userStorageData = JSON.parse(localStorage.getItem("loginData"));
   let data = {

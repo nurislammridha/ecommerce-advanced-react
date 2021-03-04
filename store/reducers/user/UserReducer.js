@@ -8,10 +8,11 @@ const initialState = {
     email: null,
     username: null,
     phone_no: null,
-    password: null,
+    password: '123456',
     language: "en",
     avatar: null,
-    banner: null
+    banner: null,
+    address: null
   },
   loading: false,
   error: null,
@@ -26,6 +27,11 @@ const UserReducer = (state = initialState, action) => {
         ...state,
         userInputData
       };
+    case Types.UPDATED_USER_DATA:
+      console.log('action.payload :>> ', action.payload);
+      return {
+
+      }
     default:
       return {
         ...state,

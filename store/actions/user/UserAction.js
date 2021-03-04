@@ -1,6 +1,7 @@
 import * as Types from "../../Types";
 import Axios from "axios";
 import { showToast } from "../../../components/master/Helper/ToastHelper";
+import { getUserDataAction } from "../../../components/getUserData/Action/UserDataAction";
 
 export const changeUserUpdateInput = (name, value) => async (dispatch) => {
   const updateData = {
@@ -11,33 +12,47 @@ export const changeUserUpdateInput = (name, value) => async (dispatch) => {
 };
 //updated user    
 export const updatedUserData = (userInputData, userData) => (dispatch) => {
-  console.log('userInputData :>> ', userInputData);
   let response = {
     isLoading: true,
     status: false,
     data: null
   }
   dispatch({ type: Types.UPDATED_USER_DATA, payload: response })
-  const URL = `${process.env.NEXT_PUBLIC_API_URL}updateUserProfile`;
+  userInputData.userData = userData.userData;
+  userInputData.username = userData.username;
+  const URL = `${process.env.NEXT_PUBLIC_API_URL}auth/updateUserProfile`;
   Axios.put(URL, userInputData)
-      .then((res) => {
-        console.log('res :>> ', res);
-        if (res.data.status) {
-          const { data } = res.data;
-          response.data = data.user;
-          response.isLoading = false;
-          dispatch({ type: Types.UPDATED_USER_DATA, payload: response });
-        }
-      })
-      .catch((error) => {
-        const responseLog = error.response;
+    .then((res) => {
+
+      if (res.data.status) {
+        const { data } = res.data;
+        response.data = data;
         response.isLoading = false;
-        if (typeof responseLog !== 'undefined') {
-          const { request, ...errorObject } = responseLog;
-          console.log('responseLog :>> ', responseLog);
-          // showToast('error', responseLog.data.message);
-          dispatch({ type: Types.UPDATED_USER_DATA, payload: responseLog })
+        const userData = {
+          userData: response.data
         }
-      })
+
+        localStorage.setItem("loginData", JSON.stringify(userData));
+        dispatch(getUserDataAction())
+        showToast('success', res.data.message);
+        dispatch({ type: Types.UPDATED_USER_DATA, payload: response });
+      }
+    })
+    .catch((error) => {
+      const responseLog = error.response;
+      response.isLoading = false;
+      if (typeof responseLog !== 'undefined') {
+        const { request, ...errorObject } = responseLog;
+        showToast('error', responseLog.data.message);
+        dispatch({ type: Types.UPDATED_USER_DATA, payload: responseLog })
+      }
+    })
   dispatch({ type: Types.UPDATED_USER_DATA, payload: response })
+}
+
+// get user data for set input field 
+export const handleSetDataIntoInputField = () => (dispatch) => {
+  const getUserData = dispatch(getUserDataAction());
+  console.log('getUserData :>> ', getUserData);
+
 }
