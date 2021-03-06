@@ -907,6 +907,7 @@ h4.pt-2 {
 .Chairinstock.icon svg {
     color: rgb(126, 122, 122);
     margin-left: 5px;
+    font-size: 20px;
 }
 
 .chairdetailstext {
@@ -918,8 +919,8 @@ h4.pt-2 {
     background-color: #ff4747 !important;
     padding: 10px 29px !important;
     color: #ffffff !important;
-    border-radius: 20px !important;
-    margin-top: 45% !important;
+    border-radius: 50px !important;
+    margin-top:30px !important;
     font-size: 18px !important;
     border: none;
 }
@@ -1184,10 +1185,12 @@ h4.pt-2 {
 }
 
 .chairreview::before {
+  
+    left: -32px;
     content: "";
     position: absolute;
     height: 1px;
-    width: 89%;
+    width: 104%;
     background: #e2e2e2;
     top: 11px;
 }
@@ -1252,7 +1255,7 @@ h4.pt-2 {
 
 .chairreviewcomment.two p {
     color: #646464;
-    font-size: 9px;
+    font-size: 14px;
     padding: 4px 0px 7px 18px;
     margin-bottom: 0px;
 }
@@ -1701,7 +1704,7 @@ button.productBtn.product.cartorder {
     content: "";
     height: 286px;
     width: 100%;
-    background: #fbfbfb;
+    /* background: #fbfbfb; */
     opacity: 0.6;
 }
 
@@ -3027,11 +3030,11 @@ span.favoriteicon-border {
 span.favoriteicon-border::before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
+    height: 22px;
+    width: 22px;
     border-radius: 50%;
     border: 1px solid lightgray;
-    right: -1px;
+    right: -3px;
     top: 1px;
 }
 
@@ -3092,4 +3095,11 @@ button#dropdown-item-button {
 }
 .dropdown-menu{
     margin-top: 5px!important;
+}
+/* product review */
+input.review-input {
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding-left: 6px;
 }

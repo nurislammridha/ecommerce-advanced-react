@@ -3,7 +3,7 @@ import React, { Component } from "react";
 const ProductDetailsDescrition = ({ router }, props) => {
   return (
     <>
-      <div className="homebanner">
+      <div className="homebanner pb">
         <div className="container ">
           <div className="productdescriptiondetails">
             <div className="row">

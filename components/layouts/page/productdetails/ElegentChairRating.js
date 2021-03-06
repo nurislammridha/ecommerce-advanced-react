@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { FaCartPlus, FaGooglePlay, FaUser } from "react-icons/fa";
+
 import Rater from "react-rater";
+import { MdThumbUp } from "react-icons/md";
 
 const ElegentChairRating = ({ router }, props) => {
   return (
@@ -58,7 +59,7 @@ const ElegentChairRating = ({ router }, props) => {
                 </div>
               </div>
             </div>
-            <div className="row">
+            {/* <div className="row product-review">
               <div className="chairreview comment">
                 <div className="chairreviewcomment one">
                   <img src="/images/default/departemntteamimg.png" />
@@ -71,10 +72,11 @@ const ElegentChairRating = ({ router }, props) => {
                     <br></br>
                   </div>
                   <p>02</p>
-                  <h1>" Great Product!!!"</h1>
+                 <MdThumbUp/>
+                 <input type="text" placeholder="write your review" className="review-input"></input>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="row">
               <div className="chairreview comment borderless">
                 <div className="chairreviewcomment one">
@@ -87,8 +89,15 @@ const ElegentChairRating = ({ router }, props) => {
                     <Rater total={5} rating={2} />
                     <br></br>
                   </div>
-                  <p>02</p>
-                  <h1>" Great Product!!!"</h1>
+                  <p>
+                    {" "}
+                    <MdThumbUp /> 02
+                  </p>
+                  <input
+                    type="text"
+                    placeholder="write your review"
+                    className="review-input"
+                  ></input>
                 </div>
               </div>
             </div>
@@ -104,8 +113,15 @@ const ElegentChairRating = ({ router }, props) => {
                     <Rater total={5} rating={2} />
                     <br></br>
                   </div>
-                  <p>02</p>
-                  <h1>" Great Product!!!"</h1>
+                  <p>
+                    {" "}
+                    <MdThumbUp /> 02
+                  </p>
+                  <input
+                    type="text"
+                    placeholder="write your review"
+                    className="review-input"
+                  ></input>
                 </div>
               </div>
             </div>

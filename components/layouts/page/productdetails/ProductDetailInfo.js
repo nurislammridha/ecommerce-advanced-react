@@ -218,8 +218,8 @@ const ProductDetailInfo = (props) => {
                                         </div> */}
 
                   <div className="chaircolor">
-                    <h2>Color:</h2>
-                    <h2>
+                    <h2 className="mt-4">Color:</h2>
+                    <h2 className="mt-4">
                       Quantity :
                       <button
                         className="btn btn-light quantity-btn decrement bg-light border rounded-circle text-dark ml-3"
