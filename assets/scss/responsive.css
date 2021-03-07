@@ -1,13 +1,26 @@
 
-@media only screen and (max-width: 1024px) {
-  .singlestatus h2 {
+@media only screen and  (min-width:1020px) and (max-width: 1029px) {
+  .Chairinstock span {
+    
+    padding: 6px 7px;
+  }
+  .stock.cart button {
    
+    padding: 9px 18px !important;
+  
+    font-size: 14px !important;
+    
+}
+}
+@media only screen and (max-width: 1024px) {
+  
+  .singlestatus h2 {
     margin-left: 10px;
   }
   .singlestatus {
     width: 51%;
   }
-  .wishsingleproductText h1{
+  .wishsingleproductText h1 {
     padding-top: 3px;
     font-size: 21px;
   }
@@ -17,22 +30,22 @@
   h3.d-inline.item {
     width: 30%;
     padding-left: 13px;
-}
-h3.d-inline.qty {
-  width: 16%;
-}
-h3.d-inline.unitPrice {
-  width: 32%;
-}
-.item-quantity {
-  margin-left: 10px;
-}
-label.form-check-label {
-  font-size: 13px;
-}
-input.form-control.sidebar-section-input {
-  font-size: 11px;
-}
+  }
+  h3.d-inline.qty {
+    width: 16%;
+  }
+  h3.d-inline.unitPrice {
+    width: 32%;
+  }
+  .item-quantity {
+    margin-left: 10px;
+  }
+  label.form-check-label {
+    font-size: 13px;
+  }
+  input.form-control.sidebar-section-input {
+    font-size: 11px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .carousel-image {
@@ -41,6 +54,7 @@ input.form-control.sidebar-section-input {
   }
   .elegentchairmenu {
     padding-bottom: 0px !important;
+    margin-top: 65px;
   }
   .promocodesection {
     margin-top: 0px;
@@ -110,10 +124,12 @@ input.form-control.sidebar-section-input {
     margin-bottom: 10px;
   }
   .col-lg-4.deliverysection {
-    /* padding-left: 0px;
-    margin-top: 29px; */
-    padding-left: 51px;
-    margin-top: -8px;
+    padding-left: 24px;
+    margin-top: 25px;
+  }
+  .border-bottom {
+    margin-left: -16px;
+    width: 104%;
   }
   .elegentsinglechair {
     margin-bottom: 20px;
@@ -134,165 +150,177 @@ input.form-control.sidebar-section-input {
     width: 100%;
   }
   .stock.cart {
-    padding-top: 17px!important;
-}
-.chaircolor h2 {
-  padding-top: 0px;
-}
-.elegentpaymenttext.one {
- 
-  margin-left: 21px;
-  margin-top: 23px;
-}
-.elegentpayment.mt-2 {
-  margin-top: -11px;
-}
-.productdescriptiondetails {
-  margin-top: -36px;
-}
-
-
+    padding-top: 17px !important;
+  }
+  .chaircolor h2 {
+    padding-top: 0px;
+  }
+  .elegentpaymenttext.one {
+    margin-left: 21px;
+    margin-top: 23px;
+  }
+  .elegentpayment.mt-2 {
+    margin-top: -11px;
+  }
+  .productdescriptiondetails {
+    /* margin-top: -36px; */
+  }
+  a.navbar-brand {
+    margin-left: 28px;
+  }
+  .chair-border {
+    position: relative;
+  }
+  .chair-border::before {
+    left: -30px;
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 106%;
+    background: #e2e2e2;
+    top: 60px;
+  }
+  .MuiPaper-root.searchInput.MuiPaper-elevation1.MuiPaper-rounded {
+    width: 512px;
+  }
 }
 @media only screen and (max-width: 700px) {
-.col-lg-4.deliverysection {
-  padding-left: 0px;
-  margin-top: 27px;
-}
-.chairdetails {
-  /* margin-top: -89px; */
-}
-.elegentsinglerating {
-  float: left;
-  width: 17%;
-  padding-top: 10px;
-  padding-left:0px;
-}
-.elegentsinglerating.two {
-  width: 13%;
-}
-.goStore {
-  text-align: left;
-}
-.elegentpayment.mt-2 {
-  margin-top: -10px!important;
-}
-.wishlisttitle {
-  margin-top: -36px;
-}
-.sidebar.card {
-  margin-top: 20px;
-}
-.audienceMedia.media {
-  display: block!important;
-}
-span.accountText {
-  font-size: 9px;
-}
-.singleWidget img{
-justify-content: center;
-}
-.singleWidget img {
-  
-  display: block;
-  margin: auto!important;
-}
-.singleWidget h4 {
-  
-  padding-top: 19px!important;
-}
-.wishbanner.pb {
-  
-margin-top: 49px;
-}
-.orderProductDetails.cartline::after {
-  width: 108%;
-}
-.profileItem.two h6 {
-  padding-left: 0px;
-}
-.myProfileStatus p,.myProfilePrice p{
-  font-size: 12px;
-}
-.myProfileTime{
-  padding-top: 0px!important;
-}
-button.btn.btn-outline-danger {
-  font-size: 13px;
-}
-.wishsingleproductText h1 {
-  font-size: 13px;
-}
-.wishsingleproductText h4 {
-  padding: 0px;
-  
-  font-size: 13px;
-}
-.wishsingleproductText h5 {
-  font-size: 12px;
-}
+  .col-lg-4.deliverysection {
+    padding-left: 0px;
+    margin-top: 27px;
+  }
+  .chairdetails {
+    /* margin-top: -89px; */
+  }
+  .elegentsinglerating {
+    float: left;
+    width: 17%;
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+  .elegentsinglerating.two {
+    width: 13%;
+  }
+  .goStore {
+    text-align: left;
+  }
+  .elegentpayment.mt-2 {
+    margin-top: -10px !important;
+  }
+  .wishlisttitle {
+    margin-top: -36px;
+  }
+  .sidebar.card {
+    margin-top: 20px;
+  }
+  .audienceMedia.media {
+    display: block !important;
+  }
+  span.accountText {
+    font-size: 9px;
+  }
+  .singleWidget img {
+    justify-content: center;
+  }
+  .singleWidget img {
+    display: block;
+    margin: auto !important;
+  }
+  .singleWidget h4 {
+    padding-top: 19px !important;
+  }
+  .wishbanner.pb {
+    margin-top: 49px;
+  }
+  .orderProductDetails.cartline::after {
+    width: 108%;
+  }
+  .profileItem.two h6 {
+    padding-left: 0px;
+  }
+  .myProfileStatus p,
+  .myProfilePrice p {
+    font-size: 12px;
+  }
+  .myProfileTime {
+    padding-top: 0px !important;
+  }
+  button.btn.btn-outline-danger {
+    font-size: 13px;
+  }
+  .wishsingleproductText h1 {
+    font-size: 13px;
+  }
+  .wishsingleproductText h4 {
+    padding: 0px;
 
-.orderquantity h2 {
-  padding-top: 22px;
-  font-size: 13px;
-  
+    font-size: 13px;
+  }
+  .wishsingleproductText h5 {
+    font-size: 12px;
+  }
+
+  .orderquantity h2 {
+    padding-top: 22px;
+    font-size: 13px;
+  }
+  .orderquantity h3 {
+    font-size: 12px;
+
+    padding-top: 20px;
+  }
+  .orderstatus {
+    margin-top: 54px;
+  }
+  .singlestatus {
+    width: 51%;
+  }
+  .singlestatus h2 {
+    padding-top: 7px;
+    margin-left: -83px;
+    font-size: 11px;
+  }
+  .singlestatus.two h2 {
+    margin-top: -21px;
+  }
+  h3.cod-text {
+    margin-top: -14px;
+  }
+  .orderstatus {
+    border-bottom: none !important;
+  }
+  h3.d-inline.item {
+    width: 24%;
+    padding-left: 10px;
+  }
+  h3.d-inline.qty {
+    width: 16%;
+  }
+  h3.d-inline.unitPrice {
+    width: 32%;
+  }
+  button.btn.btn-primary.float-right.mt-3.backCartbtn {
+    width: 36%;
+  }
+  .item-quantity {
+    margin-left: 10px;
+  }
+  button.border-rounded.text-white.btn.btn-primary {
+    margin-bottom: 14px;
+  }
+  .Loginform.sellerLoginForm {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .registrationBoxshadow.card {
+    width: 24rem;
+    margin-top: 0px;
+  }
 }
-.orderquantity h3 {
-  
-  font-size: 12px;
-  
-  padding-top: 20px;
-}
-.orderstatus {
- 
-  margin-top: 54px;
-}
-.singlestatus {
- 
-  width: 51%;
-}
-.singlestatus h2 {
-  padding-top: 7px;
-  margin-left: -83px;
-  font-size: 11px;
-}
-.singlestatus.two h2 {
-  margin-top: -21px;
-}
-h3.cod-text {
-  margin-top: -14px;
-}
-.orderstatus {
-   border-bottom: none!important;
-}
-h3.d-inline.item {
-  width: 24%;
-  padding-left: 10px;
-}
-h3.d-inline.qty {
-  width: 16%;
-}
-h3.d-inline.unitPrice {
-  width: 32%;
-}
-button.btn.btn-primary.float-right.mt-3.backCartbtn {
-  width: 36%;
-}
-.item-quantity {
-  margin-left: 10px;
-}
-button.border-rounded.text-white.btn.btn-primary {
-  
-  margin-bottom: 14px;
-  
-}
-.Loginform.sellerLoginForm {
-  margin-top: 0px;
-  padding-top: 0px;
-}
-.registrationBoxshadow.card {
- width: 24rem;
-  margin-top:0px;
-}
+@media only screen and (min-width: 500px) and (max-width: 560px) {
+  .MuiPaper-root.searchInput.MuiPaper-elevation1.MuiPaper-rounded {
+    width: 490px;
+  }
 }
 /*# sourceMappingURL=responsive.css.map */
 /* Extra Small Devices, Phones */
@@ -343,7 +371,7 @@ button.border-rounded.text-white.btn.btn-primary {
   .card.card-middle {
     margin-top: -30px;
   }
-  
+
   .elegentratingreview.one p {
     padding-top: 0px;
   }
@@ -351,21 +379,23 @@ button.border-rounded.text-white.btn.btn-primary {
     padding-top: 10px;
     font-size: 13px;
   }
-  .chairreview::before {
-  
-    left: -32px;
+  .chair-border {
+    position: relative;
+  }
+  .chair-border::before {
+    left: -30px;
     content: "";
     position: absolute;
     height: 1px;
-    width: 104%;
+    width: 109%;
     background: #e2e2e2;
-    top: 11px;
-}
+    top: 60px;
+  }
   .chairreview.one {
     margin-top: 10px;
     float: left;
     width: 38%;
-}
+  }
   .chairreview.two {
     padding: 0px 10px;
   }
@@ -379,12 +409,12 @@ button.border-rounded.text-white.btn.btn-primary {
   button.btn.btn-light.galleryBuy {
     margin-bottom: 15px;
   }
-  
+
   .chairDeliverydetails.bg-light.p-3 {
-    margin-top:0px;
-    width:auto;
+    margin-top: 0px;
+    width: auto;
     margin-left: 10px;
-}
+  }
   .elegentsinglechair {
     margin-bottom: 16px;
     float: left;
@@ -400,172 +430,164 @@ button.border-rounded.text-white.btn.btn-primary {
     margin-left: 0px;
   }
   .elegentchairmenu {
-     padding-left:0px;
+    padding-left: 0px;
   }
   .chairdetails {
     /* margin-top: -60px; */
-}
-.stock {
-  
-  width: 40%;
-}
-.profileItem.two h6 {
-  padding-left: 37px;
-}
-.myProfileStatus p,.myProfilePrice p{
-  font-size: 10px;
-}
-.myProfileTime{
-  padding-top: 0px!important;
-}
-button.btn.btn-outline-danger {
-  font-size: 10px;
-}
-.shippmentBoxText h5 {
-  font-size: 13px;
-}
-.myProfileTime p{
-  font-size: 12px;
-  line-height: 21px;
-  margin-top: 32px;
-  font-weight: 800;
-}
-.myProfileTitle h6 {
-  font-size: 12px;
-  padding-left: 4px;
-}
-.wishsingleproductText h1 {
-  font-size: 13px;
-}
-.wishsingleproductText h4 {
-  padding: 0px;
-  
-  font-size: 13px;
-}
-.wishsingleproductText h5 {
-  font-size: 12px;
-}
-.orderquantity h2 {
-  padding-top: 22px;
-  font-size: 13px;
-  
-}
-.orderquantity h3 {
-  
-  font-size: 12px;
-  
-  padding-top: 20px;
-}
-.orderstatus {
- 
-  margin-top: 54px;
-}
-.singlestatus {
- 
-  width: 51%;
-}
-.singlestatus h2 {
-  padding-top:0px;
-  
-  margin-left:5px;
-  font-size: 11px;
-}
-.singlestatus.two h2 {
-  margin-top: -21px;
-}
-h3.cod-text {
-  margin-top: -14px;
-}
-.orderstatus {
-   border-bottom: none!important;
-}
-.registrationBoxshadow.card {
-  width: 24rem!important;
-}
-a.navbar-brand {
-  margin-left: 20px;
-  margin-top: 10px;
-}
-span.badge.counter {
-  
-  top: 0px;
-  /* right: 30px; */
-  font-size: 9px;
-}
-button.viewButton {
-  margin-top: 10px;
-}
-
-.wishlisttitle {
-  margin-top:32px;
-}
-.main-menu-mobile-mode.navbar-sticky-top {
-  position: static;
-}
-.sliderCard.card {
-  margin-top: -51px;
-}
-.header-carticon {
-  font-size: 18px;
   }
-.search-suggestion-area {
-  width: 53.2%;
-  margin-top: -2px;
-  margin-left: 10px;
-}
-.chairdetails h1 {
-  
-  margin-top:0px;
-}
-.mobile-menu-area {
-  top:67px;
-}
-.elegentchairmenu {
-  margin-top: -53px;
-}
-.row.single-product-box {
-  margin-top: -20px;
-  
-}
-.col-lg-4.deliverysection {
-  
-  margin-top:0x;
-}
-.elegentsinglerating {
-  float: left;
-  width: 33%;
-}
-.elegentsinglerating.two {
-  width: 34%;
-}
-.productdescriptiondetails {
-  margin-top: 0px;
-}
-.elegentratingsection {
-  width: 100%;
-}
-.logo-bottom-text{
-  font-size: 10px;
-}
-a.navbar-brand {
-  margin-left: 8px;
-  margin-top: 10px;
-  width:64px;
-}
-.MuiPaper-root.searchInput.MuiPaper-elevation1.MuiPaper-rounded {
-  width: 219px;
-  margin-left: 10px;
-  /* height: 30px; */
-  position: relative;
-}
-input.MuiInputBase-input {
-  font-size: 12px;
-}
-.float-right.search-icon {
-  font-size: 10px;
-  position: absolute;
-  right: 0px;
-}
+  .stock {
+    width: 40%;
+  }
+  .profileItem.two h6 {
+    padding-left: 37px;
+  }
+  .myProfileStatus p,
+  .myProfilePrice p {
+    font-size: 10px;
+  }
+  .myProfileTime {
+    padding-top: 0px !important;
+  }
+  button.btn.btn-outline-danger {
+    font-size: 10px;
+  }
+  .shippmentBoxText h5 {
+    font-size: 13px;
+  }
+  .myProfileTime p {
+    font-size: 12px;
+    line-height: 21px;
+    margin-top: 32px;
+    font-weight: 800;
+  }
+  .myProfileTitle h6 {
+    font-size: 12px;
+    padding-left: 4px;
+  }
+  .wishsingleproductText h1 {
+    font-size: 13px;
+  }
+  .wishsingleproductText h4 {
+    padding: 0px;
+
+    font-size: 13px;
+  }
+  .wishsingleproductText h5 {
+    font-size: 12px;
+  }
+  .orderquantity h2 {
+    padding-top: 22px;
+    font-size: 13px;
+  }
+  .orderquantity h3 {
+    font-size: 12px;
+
+    padding-top: 20px;
+  }
+  .orderstatus {
+    margin-top: 54px;
+  }
+  .singlestatus {
+    width: 51%;
+  }
+  .singlestatus h2 {
+    padding-top: 0px;
+
+    margin-left: 5px;
+    font-size: 11px;
+  }
+  .singlestatus.two h2 {
+    margin-top: -21px;
+  }
+  h3.cod-text {
+    margin-top: -14px;
+  }
+  .orderstatus {
+    border-bottom: none !important;
+  }
+  .registrationBoxshadow.card {
+    width: 24rem !important;
+  }
+  a.navbar-brand {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  span.badge.counter {
+    top: 0px;
+    /* right: 30px; */
+    font-size: 9px;
+  }
+  button.viewButton {
+    margin-top: 10px;
+  }
+
+  .wishlisttitle {
+    margin-top: 32px;
+  }
+  .main-menu-mobile-mode.navbar-sticky-top {
+    position: static;
+  }
+  .sliderCard.card {
+    margin-top: -51px;
+  }
+  .header-carticon {
+    font-size: 18px;
+  }
+  .search-suggestion-area {
+    width: 53.2%;
+    margin-top: -2px;
+    margin-left: 10px;
+  }
+  .chairdetails h1 {
+    margin-top: 0px;
+  }
+  .mobile-menu-area {
+    top: 67px;
+  }
+  .elegentchairmenu {
+    margin-top: -53px;
+  }
+  .row.single-product-box {
+    margin-top: -20px;
+  }
+  .col-lg-4.deliverysection {
+    margin-top: 0x;
+  }
+  .elegentsinglerating {
+    float: left;
+    width: 33%;
+  }
+  .elegentsinglerating.two {
+    width: 34%;
+  }
+  .productdescriptiondetails {
+    margin-top: 0px;
+  }
+  .elegentratingsection {
+    width: 100%;
+  }
+  .logo-bottom-text {
+    font-size: 10px;
+  }
+  a.navbar-brand {
+    margin-left: 8px;
+    margin-top: 10px;
+    width: 64px;
+  }
+  .MuiPaper-root.searchInput.MuiPaper-elevation1.MuiPaper-rounded {
+    width: 219px;
+    margin-left: 10px;
+    /* height: 30px; */
+    position: relative;
+  }
+  input.MuiInputBase-input {
+    font-size: 12px;
+  }
+  .float-right.search-icon {
+    font-size: 10px;
+    position: absolute;
+    right: 0px;
+  }
 }
 @media (max-width: 400px) {
   .itemselection {

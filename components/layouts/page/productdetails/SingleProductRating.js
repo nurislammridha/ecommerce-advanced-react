@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaCartPlus, FaGooglePlay, FaUser } from "react-icons/fa";
+import { MdThumbUp } from "react-icons/md";
 import Rater from "react-rater";
 
 const singleProductRating = ({ router }, props) => {
@@ -70,8 +70,11 @@ const singleProductRating = ({ router }, props) => {
                     <Rater total={5} rating={2} />
                     <br></br>
                   </div>
-                  <p>02</p>
-                  <h1>" Great Product!!!"</h1>
+                  <p>
+                    {" "}
+                    <MdThumbUp /> 02
+                  </p>
+                  <input type="text" placeholder="Write your review" className="review-input"></input>
                 </div>
               </div>
             </div>
@@ -87,8 +90,11 @@ const singleProductRating = ({ router }, props) => {
                     <Rater total={5} rating={2} />
                     <br></br>
                   </div>
-                  <p>02</p>
-                  <h1>" Great Product!!!"</h1>
+                  <p>
+                    {" "}
+                    <MdThumbUp /> 02
+                  </p>
+                  <input type="text" placeholder="Write your review" className="review-input"></input>
                 </div>
               </div>
             </div>
@@ -104,8 +110,11 @@ const singleProductRating = ({ router }, props) => {
                     <Rater total={5} rating={2} />
                     <br></br>
                   </div>
-                  <p>02</p>
-                  <h1>" Great Product!!!"</h1>
+                  <p>
+                    {" "}
+                    <MdThumbUp /> 02
+                  </p>
+                  <input type="text" placeholder="Write your review" className="review-input"></input>
                 </div>
               </div>
             </div>

@@ -75,8 +75,8 @@ const ProductWishList = ({ router }, props) => {
                     <h4>৳ 500</h4>
 
                     <h5>Seller: Seller shop name</h5>
-                  </div>
-                  <div className="wishsingleproductIcon">
+                  </div> 
+                  <div className="wishsingleproductIcon red">
                     <FavoriteIcon />
                   </div>
                 </div>
@@ -92,7 +92,7 @@ const ProductWishList = ({ router }, props) => {
 
                     <h5>Seller: Seller shop name</h5>
                   </div>
-                  <div className="wishsingleproductIcon">
+                  <div className="wishsingleproductIcon red">
                     <FavoriteIcon />
                   </div>
                 </div>

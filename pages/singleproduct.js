@@ -5,6 +5,7 @@ import Rater from "react-rater";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import AddIcon from "@material-ui/icons/Add";
+import { Remove } from "@material-ui/icons";
 import HomeFlashSell from "../components/layouts/page/home/HomeFlashSell";
 
 export default function singleproduct(props) {
@@ -31,23 +32,20 @@ export default function singleproduct(props) {
               </div>
             </div>
             <div className="row">
-            
-                <div className="col-xl-1 col-lg-1 bg-white">
-              
-                  <div className="singleGallery mt-2 rounded">
-                  
-                    <p className="p-3 border rounded">Gallery</p>
-                    <p className="p-3 border rounded">Gallery</p>
-                    <p className="p-3 border rounded">Gallery</p>
-                    <p className="p-3 border rounded">Gallery</p>
-                    <p className="p-3 border rounded">Gallery</p>
-                  </div>
+              <div className="col-xl-1 col-lg-1 bg-white">
+                <div className="singleGallery mt-2 rounded">
+                  <p className="p-3 border rounded">Gallery</p>
+                  <p className="p-3 border rounded">Gallery</p>
+                  <p className="p-3 border rounded">Gallery</p>
+                  <p className="p-3 border rounded">Gallery</p>
+                  <p className="p-3 border rounded">Gallery</p>
                 </div>
-                <div className="col-xl-4 col-lg-4">
-                  <div className="singleGalleryImg bg-white rounded"></div>
-                </div>
-             
-              <div className="col-xl-4 col-lg-4 bg-white">
+              </div>
+              <div className="col-xl-4 col-lg-4">
+                <div className="singleGalleryImg bg-white rounded border"></div>
+              </div>
+
+              <div className="col-xl-4 col-lg-4 bg-white border rounded">
                 <div className="singleGalleryProduct bg-white rounded">
                   <div className="galleryHeading float-left mt-4 mb-2">
                     <h3>Product Title</h3>
@@ -73,8 +71,13 @@ export default function singleproduct(props) {
                     </p>
                     <p className="mt-3 mb-3">
                       Availability:{" "}
-                      <span className="text-green">In stock </span> /{" "}
-                      <sapn className="text-danger">Sold out</sapn>
+                      <span className="text-green font-weight-bold">
+                        In stock{" "}
+                      </span>{" "}
+                      /{" "}
+                      <sapn className="text-danger font-weight-bold">
+                        Sold out
+                      </sapn>
                     </p>
                     <p className="mb-5">
                       Color:
@@ -110,13 +113,13 @@ export default function singleproduct(props) {
                     <p className="mb-5">
                       {" "}
                       Qty:
-                      <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-5">
-                        <AddIcon />
+                      <button className="btn btn-light quantity-btn decrement bg-light border rounded-circle text-dark ml-3">
+                        <Remove />
                       </button>
-                      <span className="colorType  border rounded text-dark">
+                      <span className="colorType border rounded text-dark">
                         1
                       </span>
-                      <button className=" btn btn-light increment bg-light border rounded-circle text-dark ml-1">
+                      <button className="btn btn-light quantity-btn  increment bg-light border rounded-circle text-dark ml-2">
                         <AddIcon />
                       </button>
                     </p>
@@ -191,70 +194,72 @@ export default function singleproduct(props) {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-7 bg-white mt-3">
-                <div className="singleProductDetails">
-                  <div className="singleProductHeader pt-3">
-                    <h1>Product Details</h1>
-                  </div>
+           
+              <div className="row">
+                <div className="col-lg-7 bg-white mt-3 border">
+                  <div className="singleProductDetails ">
+                    <div className="singleProductHeader pt-3">
+                      <h1>Product Details</h1>
+                    </div>
 
-                  <div className="detailsTitle border-right pb-3 pt-3">
-                    <div className="singleDetail">
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
+                    <div className="detailsTitle border-right pb-3 pt-3">
+                      <div className="singleDetail">
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                      </div>
+                      <div className="singleDetailOne">
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                      </div>
                     </div>
-                    <div className="singleDetailOne">
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
+                    <div className="detailsTitle one pb-3 pt-3">
+                      <div className="singleDetail pl-3">
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                      </div>
+                      <div className="singleDetailOne">
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                        <p>Detail Title:</p>
+                      </div>
                     </div>
+                    <div className="clearfix"></div>
                   </div>
-                  <div className="detailsTitle one pb-3 pt-3">
-                    <div className="singleDetail pl-3">
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                    </div>
-                    <div className="singleDetailOne">
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                      <p>Detail Title:</p>
-                    </div>
+                  <div className="border-bottom productDescription"></div>
+                  <div className="productDescription pt-3 pb-2">
+                    <h5>Product description</h5>
+                    <p>
+                      In publishing and graphic design, Lorem ipsum is a
+                      placeholder text commonly used to demonstrate the visual
+                      form of a document or a typeface without relying on
+                      meaningful content.{" "}
+                    </p>
                   </div>
-                  <div className="clearfix"></div>
                 </div>
-                <div className="border-bottom productDescription"></div>
-                <div className="productDescription pt-3 pb-2">
-                  <h5>Product description</h5>
-                  <p>
-                    In publishing and graphic design, Lorem ipsum is a
-                    placeholder text commonly used to demonstrate the visual
-                    form of a document or a typeface without relying on
-                    meaningful content.{" "}
-                  </p>
+                <div className="col-lg-5">
+                  <SingleProductRating />
                 </div>
               </div>
-              <div className="col-lg-5">
-                <SingleProductRating />
-              </div>
-            </div>
+            
           </div>
         </div>
         <HomeFlashSell />

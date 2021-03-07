@@ -50,6 +50,7 @@ const ElegentChairRating = ({ router }, props) => {
             <div className="row">
               <div className="col-12">
                 <div className="chairreview">
+                <div className="chair-border"></div>
                   <div className="chairreview one">
                     <h1>Product Reviews</h1>
                   </div>
