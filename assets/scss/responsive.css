@@ -606,7 +606,9 @@ span.colorType.border.rounded.text-dark {
 .answer-question-section {
   margin-bottom: 56px;
 }
-
+.suggestion-product-section.card.pb-2 {
+  margin-top: 15px;
+}
 }
 @media (max-width: 400px) {
   .itemselection {

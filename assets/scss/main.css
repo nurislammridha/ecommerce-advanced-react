@@ -1120,7 +1120,7 @@ h4.pt-2 {
     background: #f8f8f8;
     padding-left: 29px;
     padding-top: 21px;
-    width: 77%;
+    /* width: 77%; */
 }
 
 .productdescription {
@@ -1191,7 +1191,7 @@ h4.pt-2 {
     content: "";
     position: absolute;
     height: 1px;
-    width: 109%;
+    width: 104%;
     background: #e2e2e2;
     top: 11px;
 }
@@ -1272,7 +1272,9 @@ h4.pt-2 {
 .review.two {
     padding: 0px;
 }
-
+.single-suggestion-product-header h1 {
+    font-size: 20px;
+}
 
 /* multipleproduct */
 
