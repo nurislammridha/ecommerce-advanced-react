@@ -402,6 +402,9 @@
   .chairreview.two {
     padding: 0px 10px;
   }
+  .singleProduct.singleproductborder {
+    margin-top: 0px;
+}
   .pb {
     padding-bottom: 20px;
   }
@@ -436,7 +439,7 @@
     padding-left: 0px;
   }
   .chairdetails {
-    /* margin-top: -60px; */
+    margin-top: 10px;
   }
   .stock {
     width: 40%;
@@ -521,7 +524,7 @@
     font-size: 9px;
   }
   button.viewButton {
-    margin-top: 10px;
+    margin-top:35px;
   }
 
   .wishlisttitle {
@@ -551,7 +554,7 @@
     margin-top: -53px;
   }
   .row.single-product-box {
-    margin-top: -20px;
+    margin-top:10px;
   }
   .col-lg-4.deliverysection {
     margin-top: 0x;

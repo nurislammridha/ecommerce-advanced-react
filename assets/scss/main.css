@@ -611,19 +611,20 @@ button.viewButton {
 
 .productPrice {
     text-align: center;
+    position: relative;
 }
 
 .productDetails {
     overflow: hidden;
-    height: 120px;
-    position: relative;
+    height: 130px;
+    
 }
 
 .productPrice del {
     color: #d04848f2;
     position: absolute;
-    left: 57px;
-    top: 58px;
+    top: 15px;
+    left: 79px;
 }
 
 .product-discount {
