@@ -6,7 +6,10 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import AddIcon from "@material-ui/icons/Add";
 import { Remove } from "@material-ui/icons";
+import { ExpandLess } from "@material-ui/icons";
+import { ExpandMore } from "@material-ui/icons";
 import HomeFlashSell from "../components/layouts/page/home/HomeFlashSell";
+import AnswerQuestion from "../components/layouts/page/productdetails/AnswerQuestion";
 
 export default function singleproduct(props) {
   return (
@@ -34,11 +37,16 @@ export default function singleproduct(props) {
             <div className="row">
               <div className="col-xl-1 col-lg-1 bg-white">
                 <div className="singleGallery mt-2 rounded">
+                  <p className="border rounded text-center">
+                  <ExpandLess/>
+                  </p>
                   <p className="p-3 border rounded">Gallery</p>
                   <p className="p-3 border rounded">Gallery</p>
                   <p className="p-3 border rounded">Gallery</p>
                   <p className="p-3 border rounded">Gallery</p>
                   <p className="p-3 border rounded">Gallery</p>
+                  <p className="border rounded text-center">
+                  <ExpandMore/></p>
                 </div>
               </div>
               <div className="col-xl-4 col-lg-4">
@@ -139,10 +147,10 @@ export default function singleproduct(props) {
                 <div className="galleryStore bg-white p-3">
                   <h1>Store Name</h1>
                   <p>
-                    <b>70%</b> Positive feedback
+                   70% Positive feedback
                   </p>
                   <p className="pb-2">
-                    <b>107 </b>Followers
+                   107 Followers
                   </p>
                   <div className="storeButton mt-2">
                     <button className="border border-success rounded-pill text-success bg-white">
@@ -162,104 +170,140 @@ export default function singleproduct(props) {
                   <span className="">Best Price :৳134 </span>
                   <span className="text-warning"> (30% OFF)</span>
                   <div className="galleryPayment mt-1">
-                    <p className="mb-0">
-                      Partial Payment{" "}
-                      <span className="text-success font-weight-bold">
+                    <p className="mb-0 ">
+                      <img
+                        src="/images/default/tag.png"
+                        className="d-inline mr-1 tag-img"
+                      ></img>
+                      Partial Payment:
+                      <span className="text-success font-weight-bold ml-2">
                         Accepted
                       </span>
                     </p>
                     <p>
-                      Cash on Delivery{" "}
-                      <span className="text-danger font-weight-bold">
+                      <img
+                        src="/images/default/tag.png"
+                        className="d-inline mr-1 tag-img"
+                      ></img>{" "}
+                      Cash on Delivery:
+                      <span className="text-danger font-weight-bold ml-2">
                         Not Availabe
                       </span>
                     </p>
                   </div>
                 </div>
                 <div className="galleryDescription bg-white mt-2 p-3 pl-3">
-                  <p>15 days easy return </p>
-                  <p>Delivery Policy</p>
-                  <p>1 year Warranty</p>
-                  <p>Authentic Product</p>
+                  <p className="mb-2">
+                    {" "}
+                    <img
+                      src="/images/default/return.png"
+                      className="d-inline mr-1 return-img"
+                    ></img>
+                    15 days easy return{" "}
+                  </p>
+                  <p className="mb-2">
+                    {" "}
+                    <img
+                      src="/images/default/delivery.png"
+                      className="d-inline mr-1 return-img"
+                    ></img>
+                    Delivery Policy
+                  </p>
+                  <p className="mb-2">
+                    {" "}
+                    <img
+                      src="/images/default/warranty.png"
+                      className="d-inline mr-1 return-img"
+                    ></img>
+                    1 year Warranty
+                  </p>
+                  <p className="mb-2">
+                    {" "}
+                    <img
+                      src="/images/default/authentic.png"
+                      className="d-inline mr-1 return-img"
+                    ></img>
+                    Authentic Product
+                  </p>
                 </div>
                 <div className="galleryDescription bg-white mt-2 p-3 pl-3">
-                  <p className="mb-1">To get this product </p>
-                  <button className="btn btn-warning text-white">
+                  <p className="mb-1 font-weight-bold">To get this product </p>
+                  <button className="btn btn-warning text-white login-gradient-color mt-3">
                     Login Now
                   </button>
-                  <p className="text-center">or</p>
-                  <button className="btn btn-primary bg-white border-primary text-primary">
+                  <p className="single-product-text">or</p>
+                  <button className="btn btn-primary bg-white border-primary text-primary sign-up-btn">
                     Sign Up
                   </button>
                 </div>
               </div>
             </div>
-           
-              <div className="row">
-                <div className="col-lg-7 bg-white mt-3 border">
-                  <div className="singleProductDetails ">
-                    <div className="singleProductHeader pt-3">
-                      <h1>Product Details</h1>
-                    </div>
 
-                    <div className="detailsTitle border-right pb-3 pt-3">
-                      <div className="singleDetail">
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                      </div>
-                      <div className="singleDetailOne">
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                      </div>
-                    </div>
-                    <div className="detailsTitle one pb-3 pt-3">
-                      <div className="singleDetail pl-3">
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                      </div>
-                      <div className="singleDetailOne">
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                        <p>Detail Title:</p>
-                      </div>
-                    </div>
-                    <div className="clearfix"></div>
+            <div className="row">
+              <div className="col-lg-7 bg-white mt-3 border">
+                <div className="singleProductDetails ">
+                  <div className="singleProductHeader pt-3">
+                    <h1>Product Details</h1>
                   </div>
-                  <div className="border-bottom productDescription"></div>
-                  <div className="productDescription pt-3 pb-2">
-                    <h5>Product description</h5>
-                    <p>
-                      In publishing and graphic design, Lorem ipsum is a
-                      placeholder text commonly used to demonstrate the visual
-                      form of a document or a typeface without relying on
-                      meaningful content.{" "}
-                    </p>
+
+                  <div className="detailsTitle border-right pb-3 pt-3">
+                    <div className="singleDetail">
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                    </div>
+                    <div className="singleDetailOne">
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                    </div>
                   </div>
+                  <div className="detailsTitle one pb-3 pt-3">
+                    <div className="singleDetail pl-3">
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                    </div>
+                    <div className="singleDetailOne">
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                      <p>Detail Title:</p>
+                    </div>
+                  </div>
+                  <div className="clearfix"></div>
                 </div>
-                <div className="col-lg-5">
-                  <SingleProductRating />
+                <div className="border-bottom productDescription"></div>
+                <div className="productDescription pt-3 pb-2">
+                  <h5>Product description</h5>
+                  <p>
+                    In publishing and graphic design, Lorem ipsum is a
+                    placeholder text commonly used to demonstrate the visual
+                    form of a document or a typeface without relying on
+                    meaningful content.{" "}
+                  </p>
                 </div>
               </div>
-            
+              <div className="col-lg-5">
+                <SingleProductRating />
+                <AnswerQuestion/>
+              </div>
+            </div>
           </div>
         </div>
         <HomeFlashSell />

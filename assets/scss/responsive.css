@@ -361,8 +361,11 @@
     width: 80px;
   }
   span.product-discount {
-    right: 107px;
-    bottom: 37px;
+    right: 6px;
+   top:31px;
+  }
+  .productTitle h3 {
+    height: auto;
   }
   .StoreImg {
     width: 100%;
@@ -588,6 +591,19 @@
     position: absolute;
     right: 0px;
   }
+  .singleProduct {
+   
+    margin-top: -48px;
+}
+span.colorType.border.rounded.text-dark {
+  
+  margin-left: 6px;
+  margin-right: 5px;
+}
+.answer-question-section {
+  margin-bottom: 56px;
+}
+
 }
 @media (max-width: 400px) {
   .itemselection {

@@ -3111,3 +3111,44 @@ span.colorType.border.rounded.text-dark {
     margin-left: 10px;
     margin-right: 10px;
 }
+img.d-inline.tag-img {
+    width: 10px;
+}
+img.d-inline.return-img {
+    width: 24px;
+   
+}
+button.btn.btn-warning.text-white.login-gradient-color {
+
+ background-image: linear-gradient(to bottom,#FCB802,#f58509);
+ margin-left: 20px;
+}
+button.btn.btn-primary.bg-white.border-primary.text-primary.sign-up-btn {
+    margin-left: 20px;
+    padding: 0px 44px;
+}
+p.single-product-text {
+     margin-left: 89px;
+}
+.answer-question-header{
+    background-color: #EFEFEF;
+}
+.answer-question-header h1{
+    font-size: 24px;
+}
+.answer-question-details {
+    /* background:#F9F8F8; */
+}
+.answer-question-details p{
+    font-size: 14px;
+}
+.answer-question-details {
+    border-bottom: 1px solid #F9F8F8!important;
+    height: 90px;
+}
+.productTitle {
+    padding-left: 9px;
+}
+.productPrice {
+    padding-left: 7px;
+}
